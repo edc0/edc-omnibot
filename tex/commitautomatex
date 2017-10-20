@@ -1,0 +1,31 @@
+NOTAS PRO COMMIT:
+
+Automatex2 gera automaticamente as páginas de figuras, tabelas, siglas e símbolos.
+Siglas e símbolos devem ser definidos.
+Listas só aparecem quando os glossários (\gls{}) forem utilizados para alguma coisa.
+Deve ser compilado com "makeglossaries"
+TODO: numero aparece grudado no item e nao na direita.
+
+inserir SIUNITX? -> para formatar unidades do SI
+colocar centering nas figuras
+centralizar legendas?? perguntar pro perondi
+colocar centering nas tabelas
+colocar [h] nas figuras
+\usepackage[inline]{enumitem} -> para enumerar uma na frente da outra
+
+fazer um fork para trabalhos genéricos -> trocar Trabalho de Conclusão por alguma string configurável
+trocar orientador por professor
+
+folha de aprovação tá estranha
+os abstract e resumo n tem q ficar na mesma pagina?
+
+virgula como separador
+\usepackage[subsection]{placeins} -> não deixa figuras passarem para próxima subsection (n é bem assim, mas dá pra redefinir e transformar em subsection. fácil de achar.)
+
+mostrar como se tira as informações do bibtex do google scholar
+
+espaçamento em todos parágrafos
+
+"and" no meio das citações
+
+tá certo o formato da bibliografia???

@@ -1,0 +1,86 @@
+% !TEX root = main.tex
+% !TEX program = pdflatex
+
+\documentclass[portugues]{automatex}
+
+\title{Desenvolvimento de plataforma robótica omnidirecional}
+\shorttitle{Robô móvel omnidirecional}
+\author{Emílio Dolgener Cantú}
+\supervisor{Eduardo Perondi}
+
+\newacronym{rpi}{RPi}{\emph{Raspberry Pi}, computador embarcado}
+\newacronym{imu}{IMU}{\emph{Inertial Measurement Unit}, ou Unidade de Medidas Inerciais}
+\newacronym{pid}{PID}{Controlador Proporcional-Integral-Derivativo}
+\newacronym{pi}{PI}{Controlador Proporcional-Integral}
+\newacronym{tomr}{TOMR}{\emph{Three-wheeld Omnidirectional Mobile Robot}, ou Robô Móvel Omnidirecional de Três Rodas}
+\newacronym{ins}{INS}{\emph{Inertial Navigation System}, ou Sistema de Navegação Inercial}
+\newacronym{pkm}{PKM}{\emph{Posture Kinematic Model}, ou Modelo Cinemático de Postura}
+\newacronym{ckm}{CKM}{\emph{Configuration Kinematic Model}, ou Modelo Cinemático de Configuração}
+\newacronym{cdm}{CDM}{\emph{Configuration Dynamic Model}, ou Modelo Dinâmico de Configuração}
+\newacronym{pdm}{PDM}{\emph{Posture Dynamic Model}, ou Modelo Dinâmico de Postura}
+\newacronym{i2c}{I2C}{\emph{Inter-Integrated Circuit}, ou Circuito Inter-Integrado}
+\newacronym{arm}{ARM}{\emph{Advanced RISC Machine}}
+\newacronym{gpio}{GPIO}{\emph{General Purpose Input/Output}}
+
+% Símbolos:
+\newglossaryentry{angvel}{
+  name = $\omega$ ,
+  description = Velocidade ângular,
+}
+\newglossaryentry{vx}{
+  name = ${v_x}$ ,
+  description = Velocidade linear no eixo X do sistema de coordenadas cartesiano,
+}
+\newglossaryentry{vy}{
+  name = ${v_y}$,
+  description = Velocidade linear no eixo Y do sistema de coordenadas cartesiano,
+}
+\newglossaryentry{deltam}{
+  name = $\delta_m$,
+  description = Grau de mobilidade,
+}
+\newglossaryentry{deltas}{
+  name = $\delta_s$,
+  description = Grau de dirigibilidade,
+}
+\newglossaryentry{velw}{
+  name =$\phi_i$,
+  description = Velocidade angular da roda \emph{i},
+}
+\newglossaryentry{raio}{
+  name = $r$,
+  description = Raio das rodas utilizadas,
+}
+\newglossaryentry{Raio}{
+  name = $R$,
+  description = Distância de cada roda até o centro geométrico da estrutura,
+}
+
+\agradecimentos{Agradeço a todo mundo que ajudou.}
+
+\resumo{O presente trabalho apresenta a implementação de uma base robótica omnidirecional holonômica, utilizando 3 omniwheels. Foram implementados um sistema de controle e um método de odometria em malha aberta. Os resultados foram xxxx.}
+\myabstract{This work shows the implementation of a holonomic omnidirectional robotic platform, using 3 omniwheels. Were also implemented a control system and a method for open loop odometry. As a result, xxxx.}
+
+\begin{document}
+
+\maketitle % TODO: tem como dispensar esse comando, tipo redefinindo o ambiente "document"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Início do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Trabalho principal
+\include{2intro}
+\include{3rev}
+\include{4met}
+\include{5result}
+\include{6conc}
+
+%% Bibliografia
+\bibliography{biblio}
+
+%% Anexos e Apêndices
+\apendices
+  \include{7ape1}
+
+\end{document}
