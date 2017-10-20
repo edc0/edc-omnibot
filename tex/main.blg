@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: elsarticle-harv.bst
+A level-1 auxiliary file: 2intro.aux
+A level-1 auxiliary file: 3rev.aux
+A level-1 auxiliary file: 4met.aux
+A level-1 auxiliary file: 5result.aux
+A level-1 auxiliary file: 6conc.aux
+A level-1 auxiliary file: 7ape1.aux
+Database file #1: biblio.bib
+Warning--empty journal in indiveri2009swedish
+Warning--there's a number but no volume in indiveri2009swedish
+You've used 25 entries,
+            2821 wiz_defined-function locations,
+            785 strings with 10081 characters,
+and the built_in function-call counts, 13662 in all, are:
+= -- 1435
+> -- 638
+< -- 24
++ -- 246
+- -- 213
+* -- 1117
+:= -- 2321
+add.period$ -- 86
+call.type$ -- 25
+change.case$ -- 213
+chr.to.int$ -- 25
+cite$ -- 27
+duplicate$ -- 555
+empty$ -- 967
+format.name$ -- 294
+if$ -- 2868
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 25
+newline$ -- 85
+num.names$ -- 100
+pop$ -- 218
+preamble$ -- 1
+purify$ -- 170
+quote$ -- 0
+skip$ -- 459
+stack$ -- 0
+substring$ -- 773
+swap$ -- 137
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 216
+warning$ -- 2
+while$ -- 118
+width$ -- 0
+write$ -- 291
+(There were 2 warnings)

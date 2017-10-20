@@ -1,0 +1,62 @@
+\section{Revisão Bibliográfica}
+\label{sec:revbib}
+
+\subsection{Fundamentação Teórica}
+
+% Robôs móveis: ESTA PARTE ESTÁ NA INTRODUÇÃO
+% - breve história
+% - tipos
+% - pq omnidirecionais?
+% - tipos de modelagem
+
+EM CONSTRUÇÃO
+
+% centralizado vs descentralizado: 22 do indiveri
+% intro do oubatti é muito boa
+% samani tem uma bela revisão de controle
+
+% Odometria e Localização
+% - métodos absolutos
+% - métodos relativos e dead reckoning
+% - fusão de sensores, kalman
+
+% Controle
+% - controle centralizado
+% - controle descentralizado
+% - coisas mais novas?
+% - geração de trajetória
+
+%A \textbf{modelagem cinemática} do \acrshort{tomr}, conforme desenvolvida por \cite{campion1996structural} e na forma utilizada por \cite{samani2007comprehensive}, apresentada mais adiante. Também existem \textbf{modelagens dinâmicas} também podem ser utilizadas, relacionando o comportamento do robô não às velocidades das suas rodas, mas sim ao torque aplicado a cada uma pelos motores. No entanto, no caso do \acrshort{tomr}, se podem utilizar as velocidades das rodas como entradas, desde que haja um \emph{loop} de controle que garanta tais velocidades durante o acionamento (CITAR AS NOTAS DE AULA DO WALTER??? control.pdf).
+
+% Hardware
+% - arduino
+% - raspberry pi
+% - módulos de sensores de baixo custo
+% - estrutura mecânica
+
+%O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
+
+% Software, implementação
+% - tempo de ciclo
+% - real-time
+% - protocolos de comunicação
+
+%Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, com um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
+
+\subsection{Estado da Arte}
+
+%% RODAS
+A grande maioria dos robôs construídos com \textbf{\emph{omniwheels}} utiliza 3 rodas em uma configuração triangular simétrica -- como apresentado na Figura \ref{fig:tomr_ritter} --, à exemplo de \cite{ritter2016modelagem}, \cite{samani2007comprehensive}, \cite{williams2002dynamic} e \cite{indiveri2009swedish}, entre outros. Alguns autores, como \cite{krinkin2015design} e \cite{rojas2006holonomic} utilizam 4 rodas, este último desenvolvendo algoritmos para que o robô continue operando mesmo que um dos motores deixe de funcionar. Em diversos trabalhos surge uma preocupação em relação a possíveis derrapagens das rodas ao aumentar a velocidade de operação. \cite{williams2002dynamic} apresenta um estudo sobre os coeficientes de atrito de rodas omnidirecionais em diversas superfícies e um modelo dinâmico que leva tal efeito em consideração.
+
+%% MODELAGEM e CONTROLE
+Há suficientes técnicas de \textbf{controle} para que cada autor utilize a que mais convenha às suas necessidades. \cite{ritter2016modelagem} utiliza um PID para cada roda, com parâmetros escolhidos empiricamente. Por sua vez, o robô torna-se difícil de controlar com velocidades acima de 1 m/s, segundo suas simulações. \cite{samani2007comprehensive} utiliza 3 PIDs, para controlar posição e orientação do robô. Em contraste, \cite{rojas2006holonomic} e \cite{indiveri2009swedish} também utilizam PIDs, porém para o controle de cada individual de cada motor, utilizando o modelo cinemático apenas. \cite{indiveri2009swedish} também sugere táticas para evitar saturação dos atuadores.
+
+Tanto \cite{treesatayapun2011discrete} e \cite{oubbati2005velocity} utilizam redes neurais para atribuir parâmetros aos controladores, sendo que no primeiro se tem uma estrutura de controle baseada em redes neurais enquanto no segundo se utilizam as redes para calcular os parâmetros de 5 PIDs, melhorando o desempenho em relação às não-linearidades dos modelos dinâmicos utilizados. \cite{oubbati2005velocity} ainda menciona que os resultados obtidos não foram tão bons quanto poderiam ser, devido à dificuldade de se coletar dados de treinamento para as redes.
+
+%% ODOMETRIA:
+A maioria das implementações de robôs móveis hoje em dia combinam diversas técnicas de \textbf{localização e odometria} para implementar a realimentação necessária pelos sistemas de controle, comparando os resultados entre si. \cite{ginzburg2013indoor} propõe um sistema de localização para robô omnidirecional baseado em odometria (localização relativa) e triangulação ativa de sensores no ambiente (localização absoluta), com fusão de dados para obter o resultado final. \cite{rojas2006holonomic} utiliza a leitura dos \emph{encoders} das rodas e uma câmera externa, enquanto \cite{garcia2015gyro} utiliza apenas um giroscópio e um sensor de distância. \cite{rohrig2010laser}, por outro lado, utiliza medições de distância utilizando sensores laser em AGVs.
+
+\cite{lowcostIMU} mostra que é possível executar um algoritmo de determinação de atitude a partir de uma IMU utilizando TRIAD, filtros de Kalman, covariância de Allen e a plataforma Arduino Uno com razoável precisão, até 40 Hz. \cite{park1996dead} também analisa fusão de dados utilizando um filtro de Kalman indireto para realizar \emph{dead-reckoning} a partir da leitura de \emph{encoders} e um giroscópio. Métodos de localização também são desenvolvidos em outras áreas, como relata \cite{jimenez2009comparison}, que implementa três métodos de localização baseados em INS para trajetórias de pedestres, e conclui que os resultados podem ser melhorados quando há mais qualidade na detecção da orientação. \cite{steinhoff2010pocket} obteve resultados similares na mesma área.
+
+%% SOFTWARE
+Dos trabalhos mencionados, poucos entram em detalhes quanto ao \emph{hardware} utilizado. \cite{oubbati2005velocity} utiliza um computador embarcado de 2,6 GHz, uma grande evolução em relação a \cite{feng1989servo}, que utilizava um computador Motorola 68000 com aproximadamente um milésimo da capacidade computacional daquele. \cite{takemura2007development} e \cite{loh2003mechatronics} utilizam computadores externos, envolvendo atrasos na comunicação entre tais computadores e o robô. \cite{lowcostIMU} apresenta um sistema que implementa um filtro de Kalman em um microprocessador Arduino UNO, uam alternativa de baixo custo, e diversos trabalhos mais recentes, como \cite{krinkin2015design}, utilizam especificamente o computador embarcado \textbf{Raspberry Pi} para o processamento e um \textbf{Arduino} para a interface com sensores e atuadores.
