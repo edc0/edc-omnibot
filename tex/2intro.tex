@@ -2,14 +2,14 @@
 
 %\subsection{Motivação}
 
-O interesse na área da robótica se dá pela multi-disciplinaridade do tema, que abrange um espectro de conhecimentos que vai desde mecânica estrutural até a aplicação de teorias de controle sofisticadas. A área ainda se extende por eletrônica, elétrica, computação e até mesmo psicologia. Assim, a área se mostra bastante adequada a um trabalho de conclusão de um curso igualmente abrangente, que é a Engenharia de Controle e Automação.
+O interesse na área da robótica se dá pela multi-disciplinaridade do tema, que abrange um espectro de conhecimentos que vai desde mecânica estrutural até a aplicação de teorias de controle sofisticadas. A área ainda se extende por eletrônica, elétrica, computação e até mesmo psicologia. Assim, considera-se que esta área é bastante adequada a um trabalho de conclusão de um curso igualmente abrangente, que é a Engenharia de Controle e Automação.
 
-Em aplicações industriais, a maioria dos robôs utilizados são manipuladores, que realizam tarefas repetitivas -- como soldagem ou montagem de peças -- com precisão e rapidez. Estes robôs, no entanto, são em geral fixos, e daí surge o estudo da robótica móvel: como um robô pode se mover sem supervisão e interagir com o mundo real? (\cite{siegwart2011introduction}) Além do interesse acadêmico, existe um significativo interesse comercial, visto que o mercado de robôs móveis, que estava em torno de 4,5 bilhões de dólares americanos em 2014, tende a duplicar até 2020 (\cite{marketsmarkets}).
+Em aplicações industriais, a maioria dos robôs utilizados são manipuladores, que realizam tarefas repetitivas -- como soldagem ou montagem de peças -- com precisão e rapidez adequados a cada aplicação. Estes robôs, no entanto, são em geral fixos, e daí surge o estudo da robótica móvel: como um robô pode se mover sem supervisão e interagir com o mundo real? (\cite{siegwart2011introduction}) Além do interesse acadêmico, existe um significativo interesse comercial, visto que o mercado de robôs móveis, que estava em torno de 4,5 bilhões de dólares americanos em 2014, tende a duplicar até 2020 (\cite{marketsmarkets}).
 
 \begin{figure}[h]
   \centering
   \includegraphics[width = 0.5\textwidth]{imagens/markets}
-  \caption{Projeção de crescimento do mercado de robótica até 2020.}
+  \caption{Projeção de crescimento do mercado de robótica móvel até 2020.}
   \label{fig:markets}
   \source{\cite{marketsmarkets}}
 \end{figure}
@@ -18,8 +18,7 @@ Segundo \cite{lynch2017modern}, robôs móveis são divididos em robôs não-hol
 
 %\subsection{Descrição do Trabalho}
 
-
-O presente trabalho consiste no desenvolvimento (tanto teórico quanto experimental) de uma plataforma robótica que possa se movimentar de maneira autônoma em qualquer direção do plano sem necessidade de reorientação -- apresentando holonomicidade. Para tal, a plataforma deste tipo utiliza 3 \emph{omniwheels}, cada uma acionada por um motor elétrico dedicado, conforme o modelo mostrado na Figura \ref{fig:tomr_ritter}. Como as rodas são montadas de maneira fixa no chassi, este tipo de robô ainda oferece a vantagem de ser construído com uma estrutura mecânica mais simples, como mencionado por \cite{siciliano2016springer}. As rodas omnidirecionais utilizadas podem ser vistas em detalhe na Figura \ref{fig:omniwheel}. O sistema de movimentação é controlado por software processado em um computador embarcado a partir dos sinais fornecidos por sensores inerciais e de odometria.
+O presente trabalho consiste no desenvolvimento (tanto teórico quanto experimental) de uma plataforma robótica que possa se movimentar de maneira autônoma em qualquer direção do plano sem necessidade de reorientação -- apresentando holonomicidade. Após uma avaliação na bibliografia sobre os tipos de robôs factíveis de serem construídos no tempo previsto com os recursos financeiros disponíveis, optou-se pela seguinte configuração. A plataforma considerada mais adequada utiliza 3 \emph{omniwheels}, cada uma acionada por um motor elétrico dedicado, conforme o modelo mostrado na Figura \ref{fig:tomr_ritter}. Como as rodas são montadas de maneira fixa no chassi, este tipo de robô ainda oferece a vantagem de ser construído com uma estrutura mecânica mais simples, como mencionado por \cite{siciliano2016springer}. As rodas omnidirecionais utilizadas podem ser vistas em detalhe na Figura \ref{fig:omniwheel}. O sistema de movimentação é controlado por software processado em um computador embarcado a partir dos sinais fornecidos por sensores inerciais e de odometria.
 
 \begin{figure}[h]
   \centering

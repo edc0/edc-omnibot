@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  19 OCT 2017 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  22 OCT 2017 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1452,14 +1452,14 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 22.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 
+l.22 
       [1
 
 
@@ -1469,38 +1469,40 @@ l.23
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
-Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 26.
+Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 25.
 (pdftex.def)             Requested size: 211.38832pt x 188.19495pt.
 
 <imagens/omniwheel.png, id=208, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
-Package pdftex.def Info: imagens/omniwheel.png used on input line 34.
+Package pdftex.def Info: imagens/omniwheel.png used on input line 33.
 (pdftex.def)             Requested size: 211.38832pt x 130.66934pt.
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 45.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 45.
-[2 <./imagens/tomr_ritter_mod.png> <./imagens/omniwheel.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 45.
-
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 44.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 45.
-)
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 44.
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 56.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 56.
+[2 <./imagens/tomr_ritter_mod.png>])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1514,7 +1516,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
-[3]
+[3 <./imagens/omniwheel.png (PNG copy)>]
 \openout2 = `3rev.aux'.
 
  (./3rev.tex
@@ -1556,9 +1558,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 59.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 59.
 [5
 
 ])
@@ -1911,13 +1913,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18247 strings out of 493013
- 291652 string characters out of 6135683
- 464280 words of memory out of 5000000
+ 18239 strings out of 493013
+ 291594 string characters out of 6135683
+ 464287 words of memory out of 5000000
  21108 multiletter control sequences out of 15000+600000
- 57869 words of font info for 221 fonts, out of 8000000 for 9000
+ 57519 words of font info for 215 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,11n,79p,1914b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,79p,1914b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
  replaced by a fixed one
 
@@ -1931,10 +1933,10 @@ ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (38 pages, 507541 bytes).
+Output written on main.pdf (38 pages, 508056 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
+ 500 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
  83 named destinations out of 1000 (max. 500000)
  31418 words of extra memory for PDF output out of 35830 (max. 10000000)
 
