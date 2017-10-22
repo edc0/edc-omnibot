@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -32,6 +32,10 @@ Ginzburg, S., Nokleby, S., 2013. Indoor localization of an omni-directional
 \bibitem[{Indiveri(2009)}]{indiveri2009swedish}
 Indiveri, G., 2009. Swedish wheeled omnidirectional mobile robots: Kinematics
   analysis and control~(1), 164--171.
+
+\bibitem[{Invensense(2013)}]{MPU6050}
+Invensense, 2013. Mpu6050. Revisão 3.4.
+\newline\urlprefix\url{https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf}
 
 \bibitem[{Jimenez et~al.(2009)Jimenez, Seco, Prieto, and
   Guevara}]{jimenez2009comparison}
@@ -109,6 +113,10 @@ Samani, H.~A., Abdollahi, A., Ostadi, H., DaneshPanah, M., 2007. Comprehensive
   omni-directional soccer player robots. International Journal of Advanced
   Robotic Systems.
 
+\bibitem[{Semiconductors(2000)}]{semiconductors2000i2c}
+Semiconductors, P., 2000. The i2c-bus specification. Philips Semiconductors
+  9397~(750), 00954.
+
 \bibitem[{Siciliano and Khatib(2016)}]{siciliano2016springer}
 Siciliano, B., Khatib, O., 2016. Springer handbook of robotics. Springer.
 
@@ -134,6 +142,9 @@ Takemura, Y., Sanada, A., Ichinose, T., Nakano, Y., Nassiraei, A.~A., Azeura,
 Treesatayapun, C., 2011. A discrete-time stable controller for an
   omni-directional mobile robot based on an approximated model. Control
   Engineering Practice 19~(2), 194--203.
+
+\bibitem[{Upton and Halfacree(2014)}]{upton2014raspberry}
+Upton, E., Halfacree, G., 2014. Raspberry Pi user guide. John Wiley \& Sons.
 
 \bibitem[{Williams et~al.(2002)Williams, Carter, Gallina, and
   Rosati}]{williams2002dynamic}

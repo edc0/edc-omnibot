@@ -17,5 +17,5 @@
 \contentsline {section}{\numberline {7}Resultados}{15}{section.7}
 \contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{17}{section.8}
 \contentsline {section}{\numberline {9}Refer\^encias}{19}{section.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{21}{section.9}
-\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{22}{subsection.9.1}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{23}{section.9}
+\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{24}{subsection.9.1}
