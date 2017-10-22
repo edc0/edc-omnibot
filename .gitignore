@@ -1,5 +1,5 @@
 # ignorar pastas grandes ou q n precisam ser publicas:
-/livros/
-/utils/
-/cad/
-/papers/
+livros/
+utils/
+cad/
+papers/
