@@ -3,7 +3,7 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: elsarticle-harv.bst
 A level-1 auxiliary file: 2intro.aux
-A level-1 auxiliary file: 3rev.aux
+A level-1 auxiliary file: 3revP.aux
 A level-1 auxiliary file: 4met.aux
 A level-1 auxiliary file: 5result.aux
 A level-1 auxiliary file: 6conc.aux
@@ -11,45 +11,45 @@ A level-1 auxiliary file: 7ape1.aux
 Database file #1: biblio.bib
 Warning--empty journal in indiveri2009swedish
 Warning--there's a number but no volume in indiveri2009swedish
-You've used 28 entries,
+You've used 29 entries,
             2821 wiz_defined-function locations,
-            804 strings with 10414 characters,
-and the built_in function-call counts, 14777 in all, are:
-= -- 1553
-> -- 677
+            809 strings with 10558 characters,
+and the built_in function-call counts, 15224 in all, are:
+= -- 1594
+> -- 704
 < -- 27
-+ -- 263
-- -- 225
-* -- 1196
-:= -- 2528
-add.period$ -- 95
-call.type$ -- 28
-change.case$ -- 232
-chr.to.int$ -- 28
-cite$ -- 30
-duplicate$ -- 604
-empty$ -- 1053
-format.name$ -- 313
-if$ -- 3096
++ -- 273
+- -- 234
+* -- 1235
+:= -- 2610
+add.period$ -- 98
+call.type$ -- 29
+change.case$ -- 239
+chr.to.int$ -- 29
+cite$ -- 31
+duplicate$ -- 622
+empty$ -- 1085
+format.name$ -- 325
+if$ -- 3186
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 28
-newline$ -- 95
-num.names$ -- 112
-pop$ -- 235
+missing$ -- 30
+newline$ -- 99
+num.names$ -- 116
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 186
+purify$ -- 193
 quote$ -- 0
-skip$ -- 499
+skip$ -- 511
 stack$ -- 0
-substring$ -- 825
-swap$ -- 142
+substring$ -- 836
+swap$ -- 144
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 240
+type$ -- 246
 warning$ -- 2
-while$ -- 128
+while$ -- 131
 width$ -- 0
-write$ -- 323
+write$ -- 334
 (There were 2 warnings)

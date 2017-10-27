@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  22 OCT 2017 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  27 OCT 2017 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,7 +953,7 @@ Package glossaries Info: Writing glossary file main.glo on input line 186.
 \openout5 = `main.acn'.
 
 Package glossaries Info: Writing glossary file main.acn on input line 186.
-) (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
+) (./main.aux (./2intro.aux) (./3revP.aux) (./4met.aux) (./5result.aux)
 (./6conc.aux) (./7ape1.aux))
 \openout1 = `main.aux'.
 
@@ -1517,9 +1517,9 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
 [3 <./imagens/omniwheel.png (PNG copy)>]
-\openout2 = `3rev.aux'.
+\openout2 = `3revP.aux'.
 
- (./3rev.tex
+ (./3revP.tex
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1542,8 +1542,6 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1558,12 +1556,32 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 43.
 [5
 
-])
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 54.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 62.
+[6])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1577,10 +1595,28 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 74.
-[6]
+[7]
 \openout2 = `4met.aux'.
 
  (./4met.tex
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+[8
+
+
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 
@@ -1594,13 +1630,10 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
-[7
-
-
-
+(babel)             in language  on input line 12.
+[9
 
 ]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
@@ -1613,16 +1646,16 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
-[8
+(babel)             in language  on input line 12.
+[10
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 12.
 
-Overfull \hbox (67.3191pt too wide) in paragraph at lines 15--19
+Overfull \hbox (67.3191pt too wide) in paragraph at lines 23--27
 \T1/txr/m/n/12 (-20) Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044
 064.html?p=970719369296201312SGmaint.te 
  []
@@ -1641,44 +1674,44 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 96.
-[9
-
-]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 97.
-[10]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 97.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 104.
 [11
 
+]
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 107.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 107.
+[12]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 107.
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 112.
+[13
+
 
 ]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
@@ -1691,14 +1724,14 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
-[12
+(babel)             in language  on input line 112.
+[14
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 112.
 )
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1713,52 +1746,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 75.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 75.
-[13
+[15
 
 ]
 \openout2 = `5result.aux'.
 
  (./5result.tex
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-[14
-
-
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 76.
-[15
-
-]
-\openout2 = `6conc.aux'.
-
- (./6conc.tex
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1790,10 +1783,50 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 76.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 76.
+[17
+
+]
+\openout2 = `6conc.aux'.
+
+ (./6conc.tex
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+[18
+
+
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+)
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
-[17
+[19
 
 ] (./main.bbl
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
@@ -1809,7 +1842,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-[18
+[20
 
 
 ]
@@ -1843,7 +1876,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 72.
-[19
+[21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
@@ -1862,10 +1895,10 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
-[20])
+(babel)             in language  on input line 145.
+[22])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1879,7 +1912,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
-[21]
+[23]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1893,7 +1926,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
-[22
+[24
 
 ]
 Package babel Info: Redefining portuges shorthand "|
@@ -1912,7 +1945,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
-[23
+[25
 
 ]
 \openout2 = `7ape1.aux'.
@@ -1934,12 +1967,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
-[24
+[26
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
- (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
+ (./main.aux (./2intro.aux) (./3revP.aux) (./4met.aux) (./5result.aux)
 (./6conc.aux) (./7ape1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
@@ -1948,13 +1981,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18271 strings out of 493013
- 292021 string characters out of 6135683
- 464390 words of memory out of 5000000
- 21117 multiletter control sequences out of 15000+600000
- 58371 words of font info for 226 fonts, out of 8000000 for 9000
+ 18295 strings out of 493013
+ 292257 string characters out of 6135683
+ 464459 words of memory out of 5000000
+ 21120 multiletter control sequences out of 15000+600000
+ 59151 words of font info for 240 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,11n,79p,1914b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,79p,1914b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
  replaced by a fixed one
 
@@ -1980,10 +2013,10 @@ ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (40 pages, 514893 bytes).
+Output written on main.pdf (42 pages, 521162 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 95 named destinations out of 1000 (max. 500000)
  31418 words of extra memory for PDF output out of 35830 (max. 10000000)
 

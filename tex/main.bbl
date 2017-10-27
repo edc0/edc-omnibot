@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -125,6 +125,11 @@ Siciliano, B., Khatib, O., 2016. Springer handbook of robotics. Springer.
 Siegwart, R., Nourbakhsh, I., Scaramuzza, D., 2011. Introduction to Autonomous
   Mobile Robots. Intelligent robotics and autonomous agents. MIT Press.
 \newline\urlprefix\url{https://books.google.com.br/books?id=4of6AQAAQBAJ}
+
+\bibitem[{Spong et~al.(2005)Spong, Hutchinson, and Vidyasagar}]{spong2005robot}
+Spong, M., Hutchinson, S., Vidyasagar, M., 2005. Robot Modeling and Control.
+  Wiley.
+\newline\urlprefix\url{https://books.google.com.br/books?id=wGapQAAACAAJ}
 
 \bibitem[{Steinhoff and Schiele(2010)}]{steinhoff2010pocket}
 Steinhoff, U., Schiele, B., 2010. Dead reckoning from the pocket-an

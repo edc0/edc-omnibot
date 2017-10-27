@@ -3,51 +3,19 @@
 
 \subsection{Fundamentação Teórica}
 
+SEÇÃO EM CONSTRUÇÃO
 
 % modelagem
 \cite{siegwart2011introduction}: considera omnidirecional uma coisa e holonômico outra. 3.2.1: dois sistemas de coordenadas, com 3 variáveis de interesse (x, y, $\theta$), e as matrizes de transformação de um para outro. Rodas omnidirecionais garantem que não haja nenhuma restrição de movimento ao robô. Mobilidade: $\delta_m = 3$ (manipula diretamente os 3 graus de liberdade pela mudança da velocidade das rodas). Dirigibilidade: numero de atributos controláveis para que se mude a direção do robô. $\delta_s = 0$. Manobrabilidade: $\delta_M = \delta_m+\delta_s = 3$. Differential Degrees of Freedom sempre igual a $\delta_m$ (graus de liberdade no velocity space $\dot\theta$). Como tem 3 DOF e 3 DDOF, é holonômico. A omnidirectional robot is a holonomic robot with DDOF = 3. Só cinemática é meio teórico. Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas.
 
-\cite{lynch2017modern}:
-SPRINGER:
-NISE:
-CRAIG:
-DORF:
-OGATA:
-ANDERSON: filtering
-THRUN:
-
 %controle
 \cite{siegwart2011introduction}: seguimento de trajetória: malha aberta (3.6.1); Feedback (3.6.2) do livro: It is very similar to the controllers presented in [39, 100]. Others can be found in [8, 52, 53, 137]. Controle com uma matriz de ganhos K para o espaço de estados. Estável e tal. Comentam sobre camadas: planejamento -> decisão -> controlador em tempo real -> hardware.
-PARK:
-SPRINGER:
-NISE:
-CRAIG:
-DORF:
-OGATA:
-ANDERSON: filtering
-THRUN:
 
 %odometria
 \cite{siegwart2011introduction}: manipuladores robóticos podem ter sua posição medida diretamente, pois possum uma parte fixa ao ambiente, enquanto robôs móveis devem ter sua posição inerentemente estimada, gerando erros, etc. Após obter os dados do ambiente, se deve fazer a \textbf{localização} do robô no ambiente. Sucesso em navegação necessita de \textbf{percepção} (a leitura dos sensores em si), \textbf{localização}, \textbf{cognição} (decidir agir de acordo com o esperado) e \textbf{controle da movimentação}, quando se aplica a ação desejada. Destas áreas, localização é uma das que mais vem sendo estudada. Diversas limitações surgem: ruídos dos sensores, ruídos dos atuadores, aliasing (?)... Odometria utilizando encoders, e dead-reckoning (definir) utilizando sensores de direção adicionais, necessitam de integrações, que acumulam erros. Assim o ideal é atualizar a posição de acordo com outros sensores de tempos em tempos, em relação a marcadores absolutos de posição no ambiente (landmarks). Mais detalhes nas fontes de erro na pg 185. Começa considerando ambientes cheios de objetos, para detectar a distância das paredes, e fala de lugares abertos como se fosse um problema. Talvez n seja bem localização o q eu tô fazendo. Markov: probabilidade sobre a posição. Kalman: fusão dos dados dos sensores (e é mais eficiente que Markov Chains). Filtro de Kalman é um método matemático que produz uma estimativa ótima do estado de um sistema baseado no conhecimento deste sistema e dos sensores utilizados, incluindo erros de medição e incertezas dos modelos.
-PARK:
-SPRINGER:
-NISE:
-CRAIG:
-DORF:
-OGATA:
-ANDERSON: filtering
-THRUN:
 
 %implantação
 \cite{siegwart2011introduction}: Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas. Para realizar a motorização, se deve entender do controle utilizado (pg 81).
-PARK:
-SPRINGER:
-NISE:
-CRAIG:
-DORF:
-OGATA:
-ANDERSON: filtering
-THRUN:
 
 % centralizado vs descentralizado: 22 do indiveri
 % intro do oubatti é muito boa
