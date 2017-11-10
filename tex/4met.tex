@@ -18,6 +18,9 @@ MODELAGEM: \cite{siegwart2011introduction}: considera omnidirecional uma coisa e
 \cite{spong2005robot} fala sobre o espaço de estados, pg 16 do pdf.
 DEVE TER EM TORNO DE DEZ PÁGINAS
 
+
+No caso de um robô omnidirecional com 3 rodas, \cite{siegwart2011introduction}: considera omnidirecional uma coisa e holonômico outra. 3.2.1: dois sistemas de coordenadas, com 3 variáveis de interesse (x, y, $\theta$), e as matrizes de transformação de um para outro. Rodas omnidirecionais garantem que não haja nenhuma restrição de movimento ao robô. Mobilidade: $\delta_m = 3$ (manipula diretamente os 3 graus de liberdade pela mudança da velocidade das rodas). Dirigibilidade: numero de atributos controláveis para que se mude a direção do robô. $\delta_s = 0$. Manobrabilidade: $\delta_M = \delta_m+\delta_s = 3$. Differential Degrees of Freedom sempre igual a $\delta_m$ (graus de liberdade no velocity space $\dot\theta$). Como tem 3 DOF e 3 DDOF, é holonômico. A omnidirectional robot is a holonomic robot with DDOF = 3. Só cinemática é meio teórico. Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas.
+
 PARK: pg 468
 
 Foram escolhidas rodas suecas de 90 graus para permitir o uso de apenas 3 rodas, gerando economia de atuadores, peso reduzido, menor custo total, etc.

@@ -3,14 +3,8 @@
 
 \subsection{Fundamentação Teórica}
 
-
 % modelagem
-\cite{siegwart2011introduction}: considera omnidirecional uma coisa e holonômico outra. 3.2.1: dois sistemas de coordenadas, com 3 variáveis de interesse (x, y, $\theta$), e as matrizes de transformação de um para outro. Rodas omnidirecionais garantem que não haja nenhuma restrição de movimento ao robô. Mobilidade: $\delta_m = 3$ (manipula diretamente os 3 graus de liberdade pela mudança da velocidade das rodas). Dirigibilidade: numero de atributos controláveis para que se mude a direção do robô. $\delta_s = 0$. Manobrabilidade: $\delta_M = \delta_m+\delta_s = 3$. Differential Degrees of Freedom sempre igual a $\delta_m$ (graus de liberdade no velocity space $\dot\theta$). Como tem 3 DOF e 3 DDOF, é holonômico. A omnidirectional robot is a holonomic robot with DDOF = 3. Só cinemática é meio teórico. Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas.
-
-NISE:
-CRAIG:
-DORF:
-OGATA:
+Para que se possa compreender o comportamento de um robô e desenvolver aplicações, é necessário obter o modelo de tal robô. Para robôs móveis, em contraste com braços robóticos, por exemplo, há um nível de complexidade adicional na estimação da posição do robô, visto que a plataforma móvel não possui nenhuma extremidade fixa em um ponto conhecido. No caso do robô omnidirecional com 3 rodas, se deseja obter um \textbf{modelo cinemático} que relacione as velocidades de cada roda à posição do robô no ambiente. Para robôs móveis em geral, primeiro se deve analisar as restrições de movimento adicionadas ao sistema por cada roda. Ao se utilisar rodas omnidirecionais, tais restrições não existem, simplificando a obtenção da cinemática direta do TOMR. Tal análise é demonstrada por diversos autores, como \cite{siegwart2011introduction}, por exemplo, e será utilizada nas próximas seções. Ainda de acordo com os autores, conforme a velocidade de operação aumenta, se torna importante realizar a análise dos efeitos dinâmicos do sistema -- massa e força -- durante a implantação. A \textbf{modelagem dinâmica} do robô em questão ainda é discutida, variando conforme a aplicação desejada. VERIFICAR ESSA ÚLTIMA INFO.
 
 %controle
 \cite{siegwart2011introduction}: seguimento de trajetória: malha aberta (3.6.1); Feedback (3.6.2) do livro: It is very similar to the controllers presented in [39, 100]. Others can be found in [8, 52, 53, 137]. Controle com uma matriz de ganhos K para o espaço de estados. Estável e tal. Comentam sobre camadas: planejamento -> decisão -> controlador em tempo real -> hardware.
@@ -20,11 +14,9 @@ OGATA:
 \cite{siciliano2016springer}: Capítulo 8, torque computado. Vou precisar?
 
 \cite{spong2005robot}: Capítulo 8.2, PD CONTROL REVISITED
-
-CRAIG:
-NISE:
-DORF:
-OGATA:
+% centralizado vs descentralizado: 22 do indiveri
+% intro do oubatti é muito boa
+% samani tem uma bela revisão de controle
 
 %odometria
 \cite{lynch2017modern}: Odometry is the process of estimating the chassis configuration q from wheel motions, essentially integrating the wheel velocities. Since wheel rotation sensing is available on all mobile robots, odometry is cheap and convenient. Estimation errors tend to accumulate over time, though, due to unexpected slipping and skidding of the wheels and due to numerical integration error. Therefore, it is common to supplement odometry with other position sensors, like GPS, visual recognition of landmarks, ultrasonic beacons, laser or ultrasonic range sensing, etc. Those sensing modalities have their own measurement uncertainty, but errors do not accumulate over time. As a result, odometry generally gives superior results on short time scales, but the odometric estimates should either (a) be periodically corrected by other sensing modalities or, preferably, (b) integrated with other sensing modalities in an estimation framework based on a Kalman filter, particle filter, or similar.
@@ -33,43 +25,12 @@ OGATA:
 
 \cite{siciliano2016springer}: Capítulo 35, Sensor Data Fusion
 
-NISE:
-CRAIG:
-DORF:
-OGATA:
-
 %implantação
 \cite{siegwart2011introduction}: Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas. Para realizar a motorização, se deve entender do controle utilizado (pg 81).
 
 \cite{siciliano2016springer}: Capítulo 12, Arquitetura de sistemas robóticos.
 
-NISE:
-CRAIG:
-DORF:
-OGATA:
-
-% centralizado vs descentralizado: 22 do indiveri
-% intro do oubatti é muito boa
-% samani tem uma bela revisão de controle
-
-% Odometria e Localização
-% - métodos absolutos
-% - métodos relativos e dead reckoning
-% - fusão de sensores, kalman
-
-% Controle
-% - controle centralizado
-% - controle descentralizado
-% - coisas mais novas?
-% - geração de trajetória
-
-%A \textbf{modelagem cinemática} do \acrshort{tomr}, conforme desenvolvida por \cite{campion1996structural} e na forma utilizada por \cite{samani2007comprehensive}, apresentada mais adiante. Também existem \textbf{modelagens dinâmicas} também podem ser utilizadas, relacionando o comportamento do robô não às velocidades das suas rodas, mas sim ao torque aplicado a cada uma pelos motores. No entanto, no caso do \acrshort{tomr}, se podem utilizar as velocidades das rodas como entradas, desde que haja um \emph{loop} de controle que garanta tais velocidades durante o acionamento (CITAR AS NOTAS DE AULA DO WALTER??? control.pdf).
-
-% Hardware
-% - arduino
-% - raspberry pi
-% - módulos de sensores de baixo custo
-% - estrutura mecânica
+\cite{craig2017introduction}: pg 350, chapter 12 -> linguagens de programação para robótica
 
 O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
 

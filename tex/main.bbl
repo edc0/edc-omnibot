@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -14,6 +14,10 @@ Campion, G., Bastin, G., Dandrea-Novel, B., 1996. Structural properties and
 Carrasco, M.~M., da~Silva, A.~L., 2016. Attitude determination for low cost imu
   and processor board using the methods of triad, kalman filter and allan
   variance. Revista Brasileira de Iniciação Científica 3~(2), 26--41.
+
+\bibitem[{Craig(2017)}]{craig2017introduction}
+Craig, J., 2017. Introduction to Robotics: Mechanics and Control. Pearson.
+\newline\urlprefix\url{https://books.google.com.br/books?id=JblZuwAACAAJ}
 
 \bibitem[{Feng et~al.(1989)Feng, Friedman, and Krogh}]{feng1989servo}
 Feng, D., Friedman, M.~B., Krogh, B.~H., 1989. The servo-control system for an
