@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  10 NOV 2017 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  13 NOV 2017 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,15 +953,13 @@ Package glossaries Info: Writing glossary file main.glo on input line 186.
 \openout5 = `main.acn'.
 
 Package glossaries Info: Writing glossary file main.acn on input line 186.
-) (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
-(./6conc.aux) (./7ape1.aux))
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 64.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 64.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 64.
@@ -1105,7 +1103,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<imagens/logo_ufrgs.png, id=77, 1003.75pt x 801.99625pt>
+<imagens/logo_ufrgs.png, id=4, 1003.75pt x 801.99625pt>
 File: imagens/logo_ufrgs.png Graphic file (type png)
 
 <use imagens/logo_ufrgs.png>
@@ -1140,7 +1138,7 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 66.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-<imagens/logo_eng.png, id=79, 200.75pt x 200.75pt>
+<imagens/logo_eng.png, id=6, 200.75pt x 200.75pt>
 File: imagens/logo_eng.png Graphic file (type png)
  <use imagens/logo_eng.png>
 Package pdftex.def Info: imagens/logo_eng.png used on input line 66.
@@ -1164,10 +1162,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
- [0] (./main.toc)
+ [0]
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write7
 \openout7 = `main.toc'.
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1316,7 +1316,10 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
- (./main.lof)
+
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
@@ -1355,7 +1358,10 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
- (./main.lot)
+
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
@@ -1435,12 +1441,45 @@ Package babel Info: Redefining portuges shorthand "|
  (./2intro.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- <imagens/markets.png, id=185, 527.9725pt x 352.31625pt>
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 1 undefined
+ on input line 7.
+
+
+Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
+line 7.
+
+<imagens/markets.png, id=80, 527.9725pt x 352.31625pt>
 File: imagens/markets.png Graphic file (type png)
 
 <use imagens/markets.png>
 Package pdftex.def Info: imagens/markets.png used on input line 11.
 (pdftex.def)             Requested size: 234.8775pt x 156.73454pt.
+
+
+Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
+line 14.
+
+
+Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
+line 14.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 1 undefined on input
+ line 17.
+
+
+LaTeX Warning: Reference `fig:tomr_ritter' on page 1 undefined on input line 21
+.
+
+
+Package natbib Warning: Citation `siciliano2016springer' on page 1 undefined on
+ input line 21.
+
+
+LaTeX Warning: Reference `fig:omniwheel' on page 1 undefined on input line 21.
+
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1465,14 +1504,22 @@ l.22
 
 
  <./imagens/markets.png>]
-<imagens/tomr_ritter_mod.png, id=203, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=87, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
 Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 25.
 (pdftex.def)             Requested size: 211.38832pt x 188.19495pt.
 
-<imagens/omniwheel.png, id=208, 1027.84pt x 635.37375pt>
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 2 undefined on i
+nput line 28.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 2 undefined on i
+nput line 28.
+
+<imagens/omniwheel.png, id=88, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
@@ -1480,29 +1527,65 @@ Package pdftex.def Info: imagens/omniwheel.png used on input line 33.
 (pdftex.def)             Requested size: 211.38832pt x 130.66934pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package natbib Warning: Citation `omniwheel' on page 2 undefined on input line 
+36.
 
+
+Package natbib Warning: Citation `omniwheel' on page 2 undefined on input line 
+36.
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+[2 <./imagens/tomr_ritter_mod.png> <./imagens/omniwheel.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for OMS+txr on input line 44.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 44.
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
+
+LaTeX Warning: Hyper reference `sec:revbib' on page 3 undefined on input line 5
+5.
 
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
+LaTeX Warning: Hyper reference `sec:montagem' on page 3 undefined on input line
+ 56.
 
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 56.
-[2 <./imagens/tomr_ritter_mod.png>])
+
+LaTeX Warning: Hyper reference `sec:teorico' on page 3 undefined on input line 
+57.
+
+
+LaTeX Warning: Hyper reference `sec:software' on page 3 undefined on input line
+ 58.
+
+
+LaTeX Warning: Hyper reference `sec:experimental' on page 3 undefined on input 
+line 59.
+
+
+LaTeX Warning: Hyper reference `sec:resultados' on page 3 undefined on input li
+ne 60.
+
+
+LaTeX Warning: Hyper reference `sec:custo' on page 3 undefined on input line 65
+.
+
+)
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1516,7 +1599,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
-[3 <./imagens/omniwheel.png (PNG copy)>]
+[3]
 \openout2 = `3rev.aux'.
 
  (./3rev.tex
@@ -1543,6 +1626,47 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 5 undefined
+ on input line 7.
+
+
+Package natbib Warning: Citation `kim2014minenergy' on page 5 undefined on inpu
+t line 7.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 5 undefined on input
+ line 10.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 5 undefined on input
+ line 13.
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 5 undefined
+ on input line 13.
+
+
+Package natbib Warning: Citation `siciliano2016springer' on page 5 undefined on
+ input line 15.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 5 undefined on i
+nput line 15.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 5 undefined on input
+ line 18.
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 5 undefined
+ on input line 18.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 5 undefined on input
+ line 18.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1556,12 +1680,75 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 19.
 [5
 
 ]
+
+Package natbib Warning: Citation `siciliano2016springer' on page 6 undefined on
+ input line 23.
+
+
+Package natbib Warning: Citation `craig2017introduction' on page 6 undefined on
+ input line 25.
+
+
+Package natbib Warning: Citation `upton2014raspberry' on page 6 undefined on in
+put line 27.
+
+
+Package natbib Warning: Citation `upton2014raspberry' on page 6 undefined on in
+put line 34.
+
+
+Package natbib Warning: Citation `MPU6050' on page 6 undefined on input line 34
+.
+
+
+Package natbib Warning: Citation `semiconductors2000i2c' on page 6 undefined on
+ input line 34.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 38.
+
+LaTeX Warning: Reference `fig:tomr_ritter' on page 6 undefined on input line 42
+.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 6 undefined on i
+nput line 42.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 6 undefined 
+on input line 42.
+
+
+Package natbib Warning: Citation `williams2002dynamic' on page 6 undefined on i
+nput line 42.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 6 undefined on i
+nput line 42.
+
+
+Package natbib Warning: Citation `krinkin2015design' on page 6 undefined on inp
+ut line 42.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 6 undefined on in
+put line 42.
+
+
+Package natbib Warning: Citation `williams2002dynamic' on page 6 undefined on i
+nput line 42.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 6 undefined 
+on input line 42.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1579,8 +1766,98 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
 [6]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
+
+Package natbib Warning: Citation `jung2001fault' on page 7 undefined on input l
+ine 44.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 7 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 7 undefined 
+on input line 47.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
+put line 47.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `treesatayapun2011discrete' on page 7 undefine
+d on input line 49.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 49.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 49.
+
+
+Package natbib Warning: Citation `ginzburg2013indoor' on page 7 undefined on in
+put line 52.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
+put line 52.
+
+
+Package natbib Warning: Citation `garcia2015gyro' on page 7 undefined on input 
+line 52.
+
+
+Package natbib Warning: Citation `rohrig2010laser' on page 7 undefined on input
+ line 52.
+
+
+Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
+ 54.
+
+
+Package natbib Warning: Citation `park1996dead' on page 7 undefined on input li
+ne 54.
+
+
+Package natbib Warning: Citation `jimenez2009comparison' on page 7 undefined on
+ input line 54.
+
+
+Package natbib Warning: Citation `steinhoff2010pocket' on page 7 undefined on i
+nput line 54.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 57.
+
+
+Package natbib Warning: Citation `feng1989servo' on page 7 undefined on input l
+ine 57.
+
+
+Package natbib Warning: Citation `takemura2007development' on page 7 undefined 
+on input line 57.
+
+
+Package natbib Warning: Citation `loh2003mechatronics' on page 7 undefined on i
+nput line 57.
+
+
+Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
+ 57.
+
+
+Package natbib Warning: Citation `krinkin2015design' on page 7 undefined on inp
+ut line 57.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1595,10 +1872,15 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 58.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
-[7])
+(babel)             in language  on input line 58.
+[7]
+
+Package natbib Warning: Citation `loh2003mechatronics' on page 8 undefined on i
+nput line 60.
+
+)
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1617,7 +1899,17 @@ Package babel Info: Redefining portuges shorthand "|
 
  (./4met.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 5.
+
+Overfull \hbox (0.1428pt too wide) in paragraph at lines 16--18
+[]\T1/txr/m/n/12 (-20) motores: https://www.banggood.com/6V-210RPM-Encoder-Moto
+r-DC-Gear-Motor-with-Mounting-
+ []
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 9 undefined
+ on input line 19.
+
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1629,9 +1921,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 21.
 [9
 
 
@@ -1648,19 +1940,68 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 21.
 [10
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 21.
 
-Overfull \hbox (67.3191pt too wide) in paragraph at lines 28--32
-\T1/txr/m/n/12 (-20) Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044
-064.html?p=970719369296201312SGmaint.te 
- []
+
+LaTeX Warning: Reference `eq:world_ref' on page 11 undefined on input line 27.
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 11 undefine
+d on input line 27.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 11 undefined on 
+input line 27.
+
+
+LaTeX Warning: Reference `eq:dk' on page 11 undefined on input line 48.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 11 undefined on i
+nput line 48.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 11 undefined on 
+input line 48.
+
+
+Package natbib Warning: Citation `pin1994new' on page 11 undefined on input lin
+e 48.
+
+
+LaTeX Warning: Reference `eq:ik' on page 11 undefined on input line 71.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 11 undefined on i
+nput line 71.
+
+
+Package natbib Warning: Citation `campion1996structural' on page 11 undefined o
+n input line 94.
+
+
+LaTeX Warning: Reference `eq:dk' on page 11 undefined on input line 94.
+
+
+LaTeX Warning: Reference `eq:ik' on page 11 undefined on input line 94.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 11 undefined
+ on input line 97.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 11 undefined on inpu
+t line 99.
+
+
+LaTeX Warning: Reference `eq:twist' on page 11 undefined on input line 99.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1676,12 +2017,33 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 62.
+(babel)             in language  on input line 107.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 62.
+(babel)             in language  on input line 107.
 [11
 
 ]
+
+Package natbib Warning: Citation `lynch2017modern' on page 12 undefined on inpu
+t line 109.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 12 undefined on i
+nput line 112.
+
+
+Package natbib Warning: Citation `lynch2017modern' on page 12 undefined on inpu
+t line 116.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 12 undefined
+ on input line 118.
+
+
+Package natbib Warning: Citation `siegwart2011introduction' on page 12 undefine
+d on input line 130.
+
+
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1692,12 +2054,12 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 155.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 155.
 [12]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 155.
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1709,9 +2071,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 160.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 160.
 [13
 
 
@@ -1726,14 +2088,14 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 160.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 160.
 [14
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 160.
 )
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1875,13 +2237,13 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
+(babel)             in language  on input line 68.
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 \T1/txr/m/n/12 (+20) URL []$\T1/txtt/m/n/12 http : / / www . nexusrobot . com /
  product / 58mm -[] plastic -[] omni -[] wheel -[] for -[] lego -[]
  []
@@ -1897,9 +2259,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 138.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 138.
 [22])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1955,6 +2317,10 @@ Package babel Info: Redefining portuges shorthand "|
  (./7ape1.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
+
+
+LaTeX Warning: Reference `tab:custo' on page 26 undefined on input line 6.
+
 )
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1972,24 +2338,45 @@ Package babel Info: Redefining portuges shorthand "|
 [26
 
 ]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
- (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
-(./6conc.aux) (./7ape1.aux))
+(./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
+(./6conc.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+(./7ape1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 81441A7BA0A23AC5A9CDD57808215FBE;1184.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  81441A7BA0A23AC5A9CDD57808215FBE;1184.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18297 strings out of 493013
- 292356 string characters out of 6135683
- 460484 words of memory out of 5000000
- 21123 multiletter control sequences out of 15000+600000
- 59096 words of font info for 239 fonts, out of 8000000 for 9000
+ 18255 strings out of 493013
+ 292014 string characters out of 6135683
+ 458620 words of memory out of 5000000
+ 21107 multiletter control sequences out of 15000+600000
+ 58658 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,12n,79p,1914b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,11n,79p,1914b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
  replaced by a fixed one
 
@@ -2006,19 +2393,19 @@ pdfTeX warning (dest): name{glo:arm} has been referenced but does not exist, re
 placed by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
-ts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (42 pages, 527636 bytes).
+texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
+ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on main.pdf (42 pages, 531281 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 506 compressed objects within 6 object streams
- 96 named destinations out of 1000 (max. 500000)
- 31418 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 31258 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{31}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -47,6 +47,16 @@ Jimenez, A.~R., Seco, F., Prieto, C., Guevara, J., 2009. A comparison of
   pedestrian dead-reckoning algorithms using a low-cost mems imu. In:
   Intelligent Signal Processing, 2009. WISP 2009. IEEE International Symposium
   on. IEEE, pp. 37--42.
+
+\bibitem[{Jung and Kim(2001)}]{jung2001fault}
+Jung, M.-J., Kim, J.-H., 2001. Fault tolerant control strategy for
+  omnikity-iii. In: Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
+  International Conference on. Vol.~4. IEEE, pp. 3370--3375.
+
+\bibitem[{Kim and Kim(2014)}]{kim2014minenergy}
+Kim, H., Kim, B.~K., 2014. Online minimum-energy trajectory planning and
+  control on a straight-line path for three-wheeled omnidirectional mobile
+  robots. IEEE Transactions on industrial electronics 61~(9), 4771--4779.
 
 \bibitem[{Krinkin et~al.(2015)Krinkin, Stotskaya, and
   Stotskiy}]{krinkin2015design}
@@ -129,11 +139,6 @@ Siciliano, B., Khatib, O., 2016. Springer handbook of robotics. Springer.
 Siegwart, R., Nourbakhsh, I., Scaramuzza, D., 2011. Introduction to Autonomous
   Mobile Robots. Intelligent robotics and autonomous agents. MIT Press.
 \newline\urlprefix\url{https://books.google.com.br/books?id=4of6AQAAQBAJ}
-
-\bibitem[{Spong et~al.(2005)Spong, Hutchinson, and Vidyasagar}]{spong2005robot}
-Spong, M., Hutchinson, S., Vidyasagar, M., 2005. Robot Modeling and Control.
-  Wiley.
-\newline\urlprefix\url{https://books.google.com.br/books?id=wGapQAAACAAJ}
 
 \bibitem[{Steinhoff and Schiele(2010)}]{steinhoff2010pocket}
 Steinhoff, U., Schiele, B., 2010. Dead reckoning from the pocket-an

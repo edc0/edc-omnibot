@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{section.1}
 \contentsline {section}{\numberline {2}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Estado da Arte}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Estado da Arte}{6}{subsection.2.2}
 \contentsline {section}{\numberline {3}Especifica\IeC {\c c}\IeC {\~a}o e montagem do prot\IeC {\'o}tipo}{9}{section.3}
 \contentsline {section}{\numberline {4}Desenvolvimento Te\IeC {\'o}rico}{11}{section.4}
 \contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{13}{section.5}

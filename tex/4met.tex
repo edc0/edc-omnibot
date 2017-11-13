@@ -1,3 +1,7 @@
+% !TEX root = main.tex
+% !TEX program = pdflatex
+
+
 \section{Especificação e montagem do protótipo}
 \label{sec:montagem}
 
@@ -7,58 +11,64 @@ Para o projeto, foi realizada a compra dos componentes no Apêndice A (COMO CITA
 
 Apesar da falta de redundância, robôs omnidirecionais com 3 rodas são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo, e
 
+Foram escolhidas rodas suecas de 90 graus para permitir o uso de apenas 3 rodas, gerando economia de atuadores, peso reduzido, menor custo total, etc.
+
+motores:
+https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SG
+
 \cite{siegwart2011introduction}, pg 97: sensores.
 
 \section{Desenvolvimento Teórico}
 \label{sec:teorico}
 
-SEÇÃO EM CONSTRUÇÃO
+%% MODELAGEM:
+%PARK: pg 468
 
-MODELAGEM: \cite{siegwart2011introduction}: considera omnidirecional uma coisa e holonômico outra. 3.2.1: dois sistemas de coordenadas, com 3 variáveis de interesse (x, y, $\theta$), e as matrizes de transformação de um para outro. Toda modelagem tá na pg 33.
-\cite{spong2005robot} fala sobre o espaço de estados, pg 16 do pdf.
-DEVE TER EM TORNO DE DEZ PÁGINAS
+Coordenadas de referência na Equação \ref{eq:world_ref} (\cite{siegwart2011introduction}), também utilizado por \cite{ritter2016modelagem}:
+\begin{equation}
+  \begin{pmatrix}
+    x \\
+    y \\
+    \theta
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    cos \theta & sen \theta & 0 \\
+    -sen\theta & cos \theta & 0 \\
+    0          & 0          & 1
+  \end{pmatrix}
+  \begin{pmatrix}
+    x_W \\
+    y_W \\
+    \theta
+  \end{pmatrix}
+  \label{eq:world_ref}
+\end{equation}
 
-
-No caso de um robô omnidirecional com 3 rodas, \cite{siegwart2011introduction}: considera omnidirecional uma coisa e holonômico outra. 3.2.1: dois sistemas de coordenadas, com 3 variáveis de interesse (x, y, $\theta$), e as matrizes de transformação de um para outro. Rodas omnidirecionais garantem que não haja nenhuma restrição de movimento ao robô. Mobilidade: $\delta_m = 3$ (manipula diretamente os 3 graus de liberdade pela mudança da velocidade das rodas). Dirigibilidade: numero de atributos controláveis para que se mude a direção do robô. $\delta_s = 0$. Manobrabilidade: $\delta_M = \delta_m+\delta_s = 3$. Differential Degrees of Freedom sempre igual a $\delta_m$ (graus de liberdade no velocity space $\dot\theta$). Como tem 3 DOF e 3 DDOF, é holonômico. A omnidirectional robot is a holonomic robot with DDOF = 3. Só cinemática é meio teórico. Para implementar, além das propriedades cinemáticas apresentadas, restrições dinâmicas devem ser inseridas nos modelos quando se aumentam as velocidades envolvidas.
-
-PARK: pg 468
-
-Foram escolhidas rodas suecas de 90 graus para permitir o uso de apenas 3 rodas, gerando economia de atuadores, peso reduzido, menor custo total, etc.
-
- CONTROLE:
- \cite{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
-motores:
-https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SGmaint.te
-
-ODOMETRIA:
-\cite{samani2007comprehensive}: Descrevem fórmulas para odometria, e dizem que se isso não for muito bom, nem adianta ter um controlador massa. Utilizam três rodas passivas com os encoders, para evitar problemas. Solução a meio enjambrada.
-
-\cite{siegwart2011introduction}: 5.6.3.1 Introduction to Kalman filter theory
-
-A \textbf{modelagem cinemática} do \acrshort{tomr}, conforme desenvolvida por \cite{campion1996structural} e na forma utilizada por \cite{samani2007comprehensive}, é dada por
+Cinemática direta, para um robô com 3 rodas dispostas em simetria radial em torno do centro da estrutura, é dada pela Equação \ref{eq:dk}. Diversos autores utilizam variações da mesma modelagem (\cite{rojas2006holonomic}, \cite{ritter2016modelagem}, \cite{pin1994new}, entre outros).
 
 \begin{equation}
+  \begin{pmatrix}
+    v_x \\
+    v_y \\
+    \omega
+  \end{pmatrix}
+  =
+  \frac{r}{3R}
+  \begin{pmatrix}
+    -\frac{3R}{\sqrt{3}} & 0   & \frac{3R}{\sqrt{3}} \\
+    R                    & -2R & R                   \\
+    1                    & 1   & R
+  \end{pmatrix}
   \begin{pmatrix}
     \dot{\phi_1} \\
     \dot{\phi_2} \\
     \dot{\phi_3}
   \end{pmatrix}.
-  =
-  \frac{1}{r}
-  \begin{pmatrix}
-    -sen(\theta)               & cos(\theta)                & R \\
-    -sen(\frac{\pi}{3}-\theta) & -cos(\frac{\pi}{3}-\theta) & R \\
-    sen(\frac{\pi}{3}+\theta)  & -cos(\frac{\pi}{3}+\theta) & R
-  \end{pmatrix}
-  \begin{pmatrix}
-    v_x \\
-    v_y \\
-    \omega
-  \end{pmatrix}.
-  \label{eq:pkm}
+  \label{eq:dk}
 \end{equation}
 
-Diversos autores utilizam variações da mesma modelagem (\cite{rojas2006holonomic}, \cite{ritter2016modelagem}, \cite{pin1994new}, entre outros). \cite{ritter2016modelagem} ainda implementa dois sistemas de coordenadas: um absoluto, do mundo, e outro centrado no robô, ambos rotacionados em relação um ao outro por $\theta$. Na Equação \ref{eq:pkm}, quando $\theta = 0$, temos as cinemáticas direta e inversa que pode ser utilizada para o controle das juntas, dadas por
+Cinemática inversa, obtida realizando a inversão da matriz 3x3, é dada pela Equação \ref{eq:ik}. Nota-se que esta inversão é simplificada no caso do robô com 3 rodas, visto que quando há mais rodas é formada uma matriz 3x$n$, e se deve realizar a pseudo-inversa, conforme demonstrado por \cite{rojas2006holonomic}. Nas equações apresentadas, $r$ é o raio de cada roda e $R$ o raio do robô (a distância do centro da roda ao centro da estrutura do robô).
 
 \begin{equation}
   \begin{pmatrix}
@@ -81,33 +91,66 @@ Diversos autores utilizam variações da mesma modelagem (\cite{rojas2006holonom
   \label{eq:ik}
 \end{equation}
 
-e
-con
+Como pela classificação de \cite{campion1996structural} um \acrshort{tomr} é caracterizado na categoria (3,0), o modelo cinemático das equações \ref{eq:dk} e \ref{eq:ik} é controlável, estável e descreve a posição, orientação e suas derivadas de forma suficiente. % O modelo cinemático da Equação \ref{eq:dk} também é utilizado por \cite{rojas2006holonomic} e \cite{ritter2016modelagem}.
+
+%% ODOMETRIA:
+\cite{samani2007comprehensive}: Descrevem fórmulas para odometria, e dizem que se isso não for muito bom, nem adianta ter um controlador massa. Utilizam três rodas passivas com os encoders, para evitar problemas. Solução a meio enjambrada.
+
+Para se realizar a odometria do robô com uma precisão melhor, \cite{lynch2017modern} ainda fornece as equações relacionadas ao \textbf{body twist} $v_b = (v_{bx}, v_{by}, \omega_b)^T$, que relaciona a velocidade do centro geométrico do robô com as velocidades de cada uma das rodas, que diferem caso o robô realize rotações durante a translação. Tal relação é dada pela Equação \ref{eq:twist}.
+
 \begin{equation}
-  \begin{pmatrix}
-    v_x \\
-    v_y \\
-    \omega
-  \end{pmatrix}
-  =
-  \frac{r}{3R}
-  \begin{pmatrix}
-    -\frac{3R}{\sqrt{3}} & 0   & \frac{3R}{\sqrt{3}} \\
-    R                    & -2R & R                   \\
-    1                    & 1   & R
-  \end{pmatrix}
-  \begin{pmatrix}
-    \dot{\phi_1} \\
-    \dot{\phi_2} \\
-    \dot{\phi_3}
-  \end{pmatrix}.
-  \label{eq:dk}
+  v_b = No-entendi-nada.
+  \label{eq:twist}
 \end{equation}
 
+Modelagens dinâmicas também podem ser utilizadas, relacionando o comportamento do robô não às velocidades das suas rodas, mas sim ao torque aplicado a cada uma pelos motores. No entanto, no caso do \acrshort{tomr}, se podem utilizar as velocidades das rodas como entradas, desde que haja um \emph{loop} de controle que garanta tais velocidades durante o acionamento (CITAR AS NOTAS DE AULA DO WALTER??? control.pdf).
 
-Como pela classificação de \cite{campion1996structural} um \acrshort{tomr} é caracterizado na categoria (3,0), o modelo cinemático da Equação \ref{eq:pkm} é controlável, estável e descreve a posição, orientação e suas derivadas de forma suficiente. O modelo cinemático da Equação \ref{eq:pkm} também é utilizado por \cite{rojas2006holonomic} e \cite{ritter2016modelagem}, \cite{loh2003mechatronics} mostra que um \acrshort{tomr} não possui singularidades a partir da mesma modelagem (VERIFICAR).
+%% PLANEJAMENTO DE TRAJETÓRIA:
+\cite{lynch2017modern}, capítulo 9.
 
-\textbf{Modelagens dinâmicas} também podem ser utilizadas, relacionando o comportamento do robô não às velocidades das suas rodas, mas sim ao torque aplicado a cada uma pelos motores. No entanto, no caso do \acrshort{tomr}, se podem utilizar as velocidades das rodas como entradas, desde que haja um \emph{loop} de controle que garanta tais velocidades durante o acionamento (CITAR AS NOTAS DE AULA DO WALTER??? control.pdf).
+%% CONTROLE:
+\cite{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
+motores:
+https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SG
+
+Given a desired trajectory q d (t), we can adopt the feedforward plus proportional feedback linear controller (11.1) of Chapter 11 to track the trajectory: \cite{lynch2017modern}
+
+\cite{samani2007comprehensive}: Definir os coeficientes dos PIDs é uma novela, pois devemos levar em consideração parâmetros que possuem muita variação, como o coeficiente de atrito do solo, características das baterias, entre outros. Controle deles é bem legal.
+%q̇ com (t) = q̇ d (t) + K p ( q̇ d (t) − q(t)),
+%(13.11)
+%where K p ∈ R 3×3 is positive definite and q(t) is an estimate of the actual con-
+%figuration derived from sensors. Then q̇ com (t) can be converted to commanded
+%wheel driving velocities u com (t) using Equation (13.7).
+
+
+%: seguimento de trajetória: malha aberta (3.6.1); Feedback (3.6.2) do livro: It is very similar to the controllers presented in [39, 100]. Others can be found in [8, 52, 53, 137]. Controle com uma matriz de ganhos K para o espaço de estados. Estável e tal. Comentam sobre camadas: planejamento -> decisão -> controlador em tempo real -> hardware.
+
+
+
+\cite{siegwart2011introduction}: 5.6.3.1 Introduction to Kalman filter theory
+
+%A \textbf{modelagem cinemática} do \acrshort{tomr}, conforme desenvolvida por \cite{campion1996structural} e na forma utilizada por \cite{samani2007comprehensive}, é dada por
+%\begin{equation}
+%  \begin{pmatrix}
+%    \dot{\phi_1} \\
+%    \dot{\phi_2} \\
+%    \dot{\phi_3}
+%  \end{pmatrix}.
+%  =
+%  \frac{1}{r}
+%  \begin{pmatrix}
+%    -sen(\theta)               & cos(\theta)                & R \\
+%    -sen(\frac{\pi}{3}-\theta) & -cos(\frac{\pi}{3}-\theta) & R \\
+%    sen(\frac{\pi}{3}+\theta)  & -cos(\frac{\pi}{3}+\theta) & R
+%  \end{pmatrix}
+%  \begin{pmatrix}
+%    v_x \\
+%    v_y \\
+%    \omega
+%  \end{pmatrix}.
+%  \label{eq:pkm}
+%\end{equation}
+
 
 \section{Implementação dos algoritmos}
 \label{sec:software}
