@@ -15,18 +15,18 @@ try:
         a.start(1)
         for dc in range (0,100,5):
             a.ChangeDutyCycle(dc)
-            sleep(0.05)
+            sleep(0.1)
         for dc in range (100,0,5):
             a.ChangeDutyCycle(dc)
-            sleep(0.01)
+            sleep(0.1)
         a.stop()
         b.start(1)
         for dc in range (0,100,5):
             b.ChangeDutyCycle(dc)
-            sleep(0.05)
+            sleep(0.1)
         for dc in range (100,0,5):
             b.ChangeDutyCycle(dc)
-            sleep(0.01)
+            sleep(0.1)
         b.stop()
         sleep(1)
 
