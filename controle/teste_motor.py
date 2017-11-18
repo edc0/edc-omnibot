@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD
 GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output
 GPIO.setup(23, GPIO.OUT)           # set GPIO23 as an output
 
-a = GPIO.PWM(24,0.5)               # pwm com 100 Hz no pino 24
+a = GPIO.PWM(24,100)               # pwm com 100 Hz no pino 24
 '''b = GPIO.PWM(23,100)
 
 a.start(0)
