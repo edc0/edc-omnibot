@@ -14,15 +14,15 @@ a.start(1)
 try:
     while True:
         a.ChangeDutyCycle(20)
-        sleep(500)
+        sleep(0.5)
         a.ChangeDutyCycle(50)
-        sleep(500)
+        sleep(0.5)
         a.ChangeDutyCycle(100)
-        sleep(500)
+        sleep(0.5)
         a.ChangeDutyCycle(30)
-        sleep(500)
+        sleep(0.5)
         a.ChangeDutyCycle(0)
-        sleep(500)
+        sleep(0.5)
 
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
     a.stop()
