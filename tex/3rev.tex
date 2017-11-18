@@ -20,20 +20,10 @@ A localização do robô no ambiente é essencial para o bom funcionamento de um
 %Caso necessário, capítulo 35 de \cite{siegwart2011introduction}: Sensor Data Fusion.
 
 %implantação
-\cite{siciliano2016springer}: Capítulo 12, Arquitetura de sistemas robóticos.
 
-\cite{craig2017introduction}: pg 350, chapter 12 -> linguagens de programação para robótica
+Poucos trabalhos entram em detalhes a respeito da implantação dos sistemas desenvolvidos. De acordo com \cite{craig2017introduction}, tal fato se deve às constantes mudanças e atualizações tecnológicas em \textit{hardware} e linguagens de programação. Os autores tratam, então, de apresentar os fundamentos básicos da implementação, cabendo a cada pesquisador definir suas soluções a partir do que está disponível. Para \cite{siciliano2016springer}, a escolha da arquitetura utilizada é muito subjetiva, sendo comum tratar o robô como um conjunto de subsistemas. Tal abordagem busca melhorar a modularidade do sistema, facilitar a reutilização de módulos em outros projetos e facilitar testes, validações e manutenção. Arquiteturas mais voltadas à robótica tendem a incluir capacidades de processamento em  tempo real, controle de atuadores e sensores, e por vezes operam em diferentes camadas de prioridade, com escalas de tempo diferentes para diferentes tarefas.
 
-O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
-
-% Software, implementação
-% - tempo de ciclo
-% - real-time
-% - protocolos de comunicação
-
-Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, csom um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
-
-ARDUINO? TEMPO REAL?
+\cite{craig2017introduction} ainda apresentam diversos paradigmas para as linguagens de programação utilizadas em robótica, sendo que uma das grandes tendências hoje é a utilização de linguagens gerais já existentes, com a adição de bibliotecas voltadas para o desenvolvimento de aplicações robóticas (ou o desenvolvimento das próprias bibliotecas). A escolha da linguagem a ser utilizada, conforme \cite{siciliano2016springer}, deve ser realizada com cuidado, com o objetivo de manter o desenvolvimento do sistema mais fácil, seguro e flexível. Assim, essa escolha pode ser baseada nas experiências anteriores do desenvolvedor, no tipo de robô e nas tarefas que se deseja executar, sem haver um consenso da comunidade acadêmica sobre qual a melhor abordagem.
 
 \subsection{Estado da Arte}
 

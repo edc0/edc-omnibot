@@ -1,8 +1,14 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{33}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Banggood.com(2017)}]{motor}
+Banggood.com, 2017. Specifications for 6v 210rpm dc motor with encoder and
+  geared reduction.
+  \url{https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html},
+  acessado em 03/10/2017.
 
 \bibitem[{Campion et~al.(1996)Campion, Bastin, and
   Dandrea-Novel}]{campion1996structural}
@@ -32,6 +38,10 @@ Garcia-Saura, C., 2015. Self-calibration of a differential wheeled robot using
 Ginzburg, S., Nokleby, S., 2013. Indoor localization of an omni-directional
   wheeled mobile robot. Transactions of the Canadian Society for Mechanical
   Engineering. Canada 37, 1043--1056.
+
+\bibitem[{Honeywell(2013)}]{HMC5883L}
+Honeywell, 2013. Hmc5883l 3-axis digital compass ic. Acessado em 17/11/2017.
+\newline\urlprefix\url{https://cdn-shop.adafruit.com/datasheets/HMC5883L_3-Axis_Digital_Compass_IC.pdf}
 
 \bibitem[{Indiveri(2009)}]{indiveri2009swedish}
 Indiveri, G., 2009. Swedish wheeled omnidirectional mobile robots: Kinematics

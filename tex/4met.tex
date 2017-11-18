@@ -5,16 +5,32 @@
 \section{Especificação e montagem do protótipo}
 \label{sec:montagem}
 
-SEÇÃO EM CONSTRUÇÃO
+Conforme mencionado nas seções anteriores, o robô construído possui três rodas em uma configuração simétrica. Apesar da falta de redundância -- pois se alguma das rodas falhar se perde a holonomicidade --, robôs omnidirecionais com 3 rodas (TOMR) são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo (pois motores e rodas são responsáveis por x\% do custo do projeto, conforme o \hyperref[sec:custo]{Apêndice A}), e uma certa economia de peso.
 
-Para o projeto, foi realizada a compra dos componentes no Apêndice A (COMO CITAR APENDICES??)
+As rodas utilizadas medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, mostrando boa capacidade de carga para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução de relação 1:34, com uma velocidade nominal no eixo de saída de 210 rpm. A fixação das rodas no motor foi realizada conforme o Apêndice B \textbf{n sei se vai ter essa frase aqui}. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341.2 pulsos do sensor \cite{motor}.
 
-Apesar da falta de redundância, robôs omnidirecionais com 3 rodas são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo, e
 
-Foram escolhidas rodas suecas de 90 graus para permitir o uso de apenas 3 rodas, gerando economia de atuadores, peso reduzido, menor custo total, etc.
+Mais info sobre a ponte H: http://linksprite.com/wiki/index.php5?title=DC_Motor_Driver_Breakout_%28L298_Chipset%29#Arduino_Sample_Code
 
-motores:
-https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SG
+Além da utilização dos \textit{encoders} para implementação da odometria, também foi instalada na estrutura uma bússola, para garantir uma medida absoluta da orientação do robô maior parte do algoritmo de localização. O modelo utilizado é a HMC5883L, em um módulo integrado (breakout board?), que utiliza comunicação pelo protocolo I2C e tem precisão de 2 graus (\cite{HMC5883L}). Devido ao baixo custo dos componentes utilizados e da modularidade do protocolo de comunicação (\cite{semiconductors2000i2c}), também foi adicionada uma unidade de medidas inerciais MPU6050, que possui acelerômetro e giroscópio em torno dos três eixos utilizados (\cite{MPU6050}).
+
+falar da bateria falar da bateria falar da bateria falar da bateria falar da bateria falar da bateria. Ligados à bateria, se tem dois reguladores de tensão MH-MINI-360 CITARDATASHEET, um trabalhando em 5V para alimentar o computador principal e os sensores, e outro com saída configurada em 6 V, para alimentar os motores e os drivers.
+
+O acionamento dos motores se dá por um circuito de pontes H. Há duas destas placas, e cada uma pode acionar dois motores. Assim, se tem a possibilidade de utilizar mais um motor em trabalhos futuros. Talvez eu devesse citar as especificações dessas coisas, certo? Cada driver é alimentado com a tensão regulada de 6 V, e o computador utilizado comanda o chaveamento via PWM.
+
+Todo o processamento é realizado por um \textbf{Raspberry Pi}, um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
+
+Para unir todos os componentes descritos, se projetou uma estrutura central, como um chassi. Tal estrutura pode ser vista na Figura \ref{fig:chassi}. No centro geométrico da estrutura e na periferia, próximo a uma das rodas, foram feitos dois orifícios que devem acomodar uma caneta hidrográfica cada. Assim, durante a fase de testes, se pode acompanhar graficamente a evolução cinemática do robô. Devido a localização central de uma das canetas, todos os componentes foram instalados na periferia da estrutura. Se tomou ainda o cuidado de instalar o CI de acelerômetro e giroscópio o mais próximo ao centro possível, para que as componentes de aceleração centrípeta dos movimentos com componentes de rotação não influciassem demasiado nos resultados. A IMU poderia ter sido colocada no centro geométrico, e este erro poderia ser introduzido no traço da caneta. No entanto, como a odometria e localização dependem muito mais dos sensores montados nos motores do que da IMU, se preferiu manter a caneta no centro, mantendo o MPU6050 o mais próximo possível. A bússola também foi montada relativamente próxima ao centro do robô, se tomando o cuidado de manter a mesma orientação dos eixos.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.45\textwidth]{imagens/proto01}
+  \caption{Chassi projetado. TROCAR A IMAGEM.}
+  \label{fig:chassi}
+\end{figure}
+
+O custo de aquisição dos componentes relatados pode ser visto detalhado no hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle), e que o chassi foi usinado no próprio laboratório com equipamento próprio, sendo computado apenas o custo do material utilizado.
+
 
 \cite{siegwart2011introduction}, pg 97: sensores.
 
@@ -156,6 +172,13 @@ Given a desired trajectory q d (t), we can adopt the feedforward plus proportion
 \label{sec:software}
 
 SEÇÃO EM CONSTRUÇÃO
+
+
+O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
+
+
+Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, csom um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
+
 
 \section{Avaliação experimental}
 \label{sec:experimental}
