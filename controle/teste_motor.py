@@ -33,12 +33,13 @@ try:
 a.start(1)
 try:
     while True:
-        for dc in range (0,101,5):
-            a.ChangeDutyCycle(dc)
-            sleep(50)
-        for dc in range (100,-1,5):
-            a.ChangeDutyCycle(dc)
-            sleep(50)
+        a.start(50)
+        #for dc in range (0,101,5):
+        #    a.ChangeDutyCycle(dc)
+        #    sleep(50)
+        #for dc in range (100,-1,5):
+        #    a.ChangeDutyCycle(dc)
+        #    sleep(50)
 
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
     a.stop()
