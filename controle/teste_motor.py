@@ -9,16 +9,16 @@ try:
     while True:
         GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True
         GPIO.output(23, 0)
-        sleep(0.5)                 # wait half a second
+        sleep(1)                 # wait half a second
         GPIO.output(24, 0)         # set GPIO24 to 0/GPIO.LOW/False
         GPIO.output(23, 0)
-        sleep(0.5)                 # wait half a second
+        sleep(1)                 # wait half a second
         GPIO.output(24, 0)
         GPIO.output(23, 1)
-        sleep(0.5)
+        sleep(1)
         GPIO.output(24, 0)
         GPIO.output(23, 0)
-        sleep(0.5)
+        sleep(1)
 
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
     GPIO.cleanup()                 # resets all GPIO ports used by this program
