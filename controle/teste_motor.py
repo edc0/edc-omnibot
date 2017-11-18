@@ -6,7 +6,7 @@ GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output
 GPIO.setup(23, GPIO.OUT)           # set GPIO23 as an output
 
 a = GPIO.PWM(24,400)               # pwm com 100 Hz no pino 24
-b = GPIO.PWM(23,100)
+b = GPIO.PWM(23,400)
 
 a.start(1)
 
@@ -22,10 +22,10 @@ try:
         a.stop()
         b.start(1)
         for dc in range (0,100,5):
-            a.ChangeDutyCycle(dc)
+            b.ChangeDutyCycle(dc)
             sleep(0.05)
         for dc in range (100,0,5):
-            a.ChangeDutyCycle(dc)
+            b.ChangeDutyCycle(dc)
             sleep(0.01)
         b.stop()
         sleep(1)
