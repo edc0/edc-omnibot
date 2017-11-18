@@ -13,14 +13,17 @@ a.start(1)
 
 try:
     while True:
+        a.ChangeDutyCycle(20)
+        sleep(500)
+        a.ChangeDutyCycle(50)
+        sleep(500)
+        a.ChangeDutyCycle(100)
+        sleep(500)
+        a.ChangeDutyCycle(30)
+        sleep(500)
+        a.ChangeDutyCycle(0)
+        sleep(500)
 
-        for dc in range (0,101,5):
-            a.ChangeDutyCycle(dc)
-            sleep(50)
-        for dc in range (100,-1,5):
-            a.ChangeDutyCycle(dc)
-            sleep(50)
-        
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
     a.stop()
     GPIO.cleanup()                 # resets all GPIO ports used by this program
