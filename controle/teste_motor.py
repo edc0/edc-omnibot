@@ -17,7 +17,7 @@ try:
             a.ChangeDutyCycle(dc)
             sleep(0.5)
         sleep(5)
-        for dc in range (100,0,5):
+        for dc in range (100,0,-5):
             a.ChangeDutyCycle(dc)
             sleep(0.5)
         a.stop()
@@ -27,7 +27,7 @@ try:
             b.ChangeDutyCycle(dc)
             sleep(0.1)
         sleep(5)
-        for dc in range (100,0,5):
+        for dc in range (100,0,-5):
             b.ChangeDutyCycle(dc)
             sleep(0.1)
         b.stop()
