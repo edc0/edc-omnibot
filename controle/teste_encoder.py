@@ -69,6 +69,8 @@ def main():
 	Volume = 0									# Current Volume
 	NewCounter = 0								# for faster reading with locks
         GPIO.setmode(GPIO.BCM)
+        GPIO.setup(23, GPIO.OUT)
+        GPIO.setup(24, GPIO.OUT)
         Ma = GPIO.PWM(23, 400)
         Mb = GPIO.PWM(24, 400)
 
