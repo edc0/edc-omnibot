@@ -93,7 +93,7 @@ def main():
 
             if (NewCounter !=0):					# Counter has CHANGED
             	Volume = Volume + NewCounter*abs(NewCounter)	# Decrease or increase volume
-            	print NewCounter, Volume			# some test print
+            	print NewCounter, Volume/341			# some test print
 
 
 
