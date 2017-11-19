@@ -72,10 +72,9 @@ def main():
 
 	init()										# Init interrupts, GPIO, ...
 
-	while True :								# start test
-
+	while True :
         Ma.start(50)
-        sleep(0.1)								# sleep 100 msec
+        sleep(0.1)
 
 												# because of threading make sure no thread
 												# changes value until we get them
