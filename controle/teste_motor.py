@@ -34,5 +34,6 @@ try:
         sleep(1)
 
 except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt
-    a.stop()
+    Ma.stop()
+    Mb.stop()
     GPIO.cleanup()                 # resets all GPIO ports used by this program
