@@ -18,16 +18,14 @@ LockRotary = threading.Lock()		# create lock for rotary switch
 
 # initialize interrupt handlers
 def init():
-	GPIO.setwarnings(True)
+    GPIO.setwarnings(True)
 	GPIO.setmode(GPIO.BCM)					# Use BCM mode
 											# define the Encoder switch inputs
-	GPIO.setup(Enc_A, GPIO.IN)
-	GPIO.setup(Enc_B, GPIO.IN)
+	GPIO.setup(Enc_A, GPIO.IN)              # setup callback thread for the A and B encoder
+	GPIO.setup(Enc_B, GPIO.IN)              # use interrupts for all inputs
 	GPIO.setup(Mot_A, GPIO.OUT)
     GPIO.setup(Mot_B, GPIO.OUT)
 
-    										# setup callback thread for the A and B encoder
-											# use interrupts for all inputs
 	GPIO.add_event_detect(Enc_A, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
 	GPIO.add_event_detect(Enc_B, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
 
