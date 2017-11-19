@@ -29,8 +29,8 @@ def init():
     GPIO.add_event_detect(Enc_A, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
     GPIO.add_event_detect(Enc_B, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
 
-    Ma = GPIO.PWM(Mot_A,400)               # pwm com 400 Hz no pino 24
-    Mb = GPIO.PWM(Mot_B,400)
+    #Ma = GPIO.PWM(Mot_A,400)               # pwm com 400 Hz no pino 24
+    #Mb = GPIO.PWM(Mot_B,400)
 
     return
 
@@ -68,12 +68,15 @@ def main():
 
 	Volume = 0									# Current Volume
 	NewCounter = 0								# for faster reading with locks
+    Ma = GPIO.PWM(23, 400)
+    Mb = GPIO.PWM(24, 400)
 
 
 	init()										# Init interrupts, GPIO, ...
 
 	while True :
             Ma.start(50)
+            Mb.stop()
             sleep(0.1)
 
             					# because of threading make sure no thread
