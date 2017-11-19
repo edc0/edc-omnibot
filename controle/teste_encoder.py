@@ -20,7 +20,7 @@ LockRotary = threading.Lock()		# create lock for rotary switch
 def init():
     GPIO.setwarnings(True)
 	GPIO.setmode(GPIO.BCM)					# Use BCM mode
-											# define the Encoder switch inputs
+
 	GPIO.setup(Enc_A, GPIO.IN)              # setup callback thread for the A and B encoder
 	GPIO.setup(Enc_B, GPIO.IN)              # use interrupts for all inputs
 	GPIO.setup(Mot_A, GPIO.OUT)
