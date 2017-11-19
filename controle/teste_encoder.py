@@ -6,6 +6,8 @@ from time import sleep
 						# GPIO Ports
 Enc_A = 4  				# Encoder input A: input GPIO 4
 Enc_B = 14  			        # Encoder input B: input GPIO 14
+Mot_A = 23
+Mot_B = 24
 
 Rotary_counter = 0  			# Start counting from 0
 Current_A = 1					# Assume that rotary switch is not
@@ -21,11 +23,18 @@ def init():
 											# define the Encoder switch inputs
 	GPIO.setup(Enc_A, GPIO.IN)
 	GPIO.setup(Enc_B, GPIO.IN)
-											# setup callback thread for the A and B encoder
+	GPIO.setup(Mot_A, GPIO.OUT)
+    GPIO.setup(Mot_B, GPIO.OUT)
+
+    										# setup callback thread for the A and B encoder
 											# use interrupts for all inputs
 	GPIO.add_event_detect(Enc_A, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
 	GPIO.add_event_detect(Enc_B, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
-	return
+
+    Ma = GPIO.PWM(Mot_A,400)               # pwm com 400 Hz no pino 24
+    Mb = GPIO.PWM(Mot_B,400)
+
+    return
 
 
 
@@ -66,7 +75,9 @@ def main():
 	init()										# Init interrupts, GPIO, ...
 
 	while True :								# start test
-		sleep(0.1)								# sleep 100 msec
+
+        Ma.start(50)
+        sleep(0.1)								# sleep 100 msec
 
 												# because of threading make sure no thread
 												# changes value until we get them
