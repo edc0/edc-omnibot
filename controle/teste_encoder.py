@@ -26,8 +26,8 @@ def init():
     GPIO.setup(Mot_A, GPIO.OUT)
     GPIO.setup(Mot_B, GPIO.OUT)
 
-	GPIO.add_event_detect(Enc_A, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
-	GPIO.add_event_detect(Enc_B, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
+    GPIO.add_event_detect(Enc_A, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
+    GPIO.add_event_detect(Enc_B, GPIO.RISING, callback=rotary_interrupt) 				# NO bouncetime
 
     Ma = GPIO.PWM(Mot_A,400)               # pwm com 400 Hz no pino 24
     Mb = GPIO.PWM(Mot_B,400)
