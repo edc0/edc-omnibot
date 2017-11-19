@@ -93,10 +93,6 @@ def main():
 
             if (NewCounter !=0):					# Counter has CHANGED
             	Volume = Volume + NewCounter*abs(NewCounter)	# Decrease or increase volume
-            	if Volume < 0:						# limit volume to 0...100
-            		Volume = 0
-            	if Volume > 100:					# limit volume to 0...100
-            		Volume = 100
             	print NewCounter, Volume			# some test print
 
 
