@@ -68,8 +68,8 @@ def main():
 
 	Volume = 0									# Current Volume
 	NewCounter = 0								# for faster reading with locks
-    Ma = GPIO.PWM(23, 400)
-    Mb = GPIO.PWM(24, 400)
+        Ma = GPIO.PWM(23, 400)
+        Mb = GPIO.PWM(24, 400)
 
 
 	init()										# Init interrupts, GPIO, ...
