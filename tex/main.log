@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  17 NOV 2017 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  19 NOV 2017 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,13 +953,14 @@ Package glossaries Info: Writing glossary file main.glo on input line 186.
 \openout5 = `main.acn'.
 
 Package glossaries Info: Writing glossary file main.acn on input line 186.
-) (./main.aux)
+) (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 64.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 64.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 64.
@@ -1103,7 +1104,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<imagens/logo_ufrgs.png, id=4, 1003.75pt x 801.99625pt>
+<imagens/logo_ufrgs.png, id=42, 1003.75pt x 801.99625pt>
 File: imagens/logo_ufrgs.png Graphic file (type png)
 
 <use imagens/logo_ufrgs.png>
@@ -1138,7 +1139,7 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 66.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-<imagens/logo_eng.png, id=6, 200.75pt x 200.75pt>
+<imagens/logo_eng.png, id=44, 200.75pt x 200.75pt>
 File: imagens/logo_eng.png Graphic file (type png)
  <use imagens/logo_eng.png>
 Package pdftex.def Info: imagens/logo_eng.png used on input line 66.
@@ -1162,12 +1163,10 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
- [0]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+ [0] (./main.toc)
 \tf@toc=\write7
 \openout7 = `main.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1316,10 +1315,7 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
-
-
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
-
+ (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
@@ -1358,10 +1354,7 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
-
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+ (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
@@ -1450,7 +1443,7 @@ Package natbib Warning: Citation `siegwart2011introduction' on page 1 undefined
 Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
 line 7.
 
-<imagens/markets.png, id=80, 527.9725pt x 352.31625pt>
+<imagens/markets.png, id=117, 527.9725pt x 352.31625pt>
 File: imagens/markets.png Graphic file (type png)
 
 <use imagens/markets.png>
@@ -1470,15 +1463,8 @@ Package natbib Warning: Citation `lynch2017modern' on page 1 undefined on input
  line 17.
 
 
-LaTeX Warning: Reference `fig:tomr_ritter' on page 1 undefined on input line 21
-.
-
-
 Package natbib Warning: Citation `siciliano2016springer' on page 1 undefined on
  input line 21.
-
-
-LaTeX Warning: Reference `fig:omniwheel' on page 1 undefined on input line 21.
 
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
@@ -1504,7 +1490,7 @@ l.22
 
 
  <./imagens/markets.png>]
-<imagens/tomr_ritter_mod.png, id=87, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=125, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
@@ -1519,7 +1505,7 @@ nput line 28.
 Package natbib Warning: Citation `ritter2016modelagem' on page 2 undefined on i
 nput line 28.
 
-<imagens/omniwheel.png, id=88, 1027.84pt x 635.37375pt>
+<imagens/omniwheel.png, id=126, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
@@ -1556,10 +1542,6 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 44.
-
-
-LaTeX Warning: Hyper reference `sec:revbib' on page 3 undefined on input line 5
-5.
 
 
 LaTeX Warning: Hyper reference `sec:montagem' on page 3 undefined on input line
@@ -1705,10 +1687,6 @@ Package natbib Warning: Citation `siciliano2016springer' on page 6 undefined on
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 28.
 
-LaTeX Warning: Reference `fig:tomr_ritter' on page 6 undefined on input line 32
-.
-
-
 Package natbib Warning: Citation `ritter2016modelagem' on page 6 undefined on i
 nput line 32.
 
@@ -1729,106 +1707,16 @@ Package natbib Warning: Citation `krinkin2015design' on page 6 undefined on inp
 ut line 32.
 
 
-Package natbibile \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
-[6]
-
-Package natbib Warning: Citation `jung2001fault' on page 7 undefined on input l
-ine 34.
+Package natbib Warning: Citation `rojas2006holonomic' on page 6 undefined on in
+put line 32.
 
 
-Package natbib Warning: Citation `ritter2016modelagem' on page 7 undefined on i
-nput line 37.
+Package natbib Warning: Citation `williams2002dynamic' on page 6 undefined on i
+nput line 32.
 
 
-Package natbib Warning: Citation `samani2007comprehensive' on page 7 undefined 
-on input line 37.
-
-
-Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
-put line 37.
-
-
-Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
-nput line 37.
-
-
-Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
-nput line 37.
-
-
-Package natbib Warning: Citation `treesatayapun2011discrete' on page 7 undefine
-d on input line 39.
-
-
-Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
-nput line 39.
-
-
-Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
-nput line 39.
-
-
-Package natbib Warning: Citation `ginzburg2013indoor' on page 7 undefined on in
-put line 42.
-
-
-Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
-put line 42.
-
-
-Package natbib Warning: Citation `garcia2015gyro' on page 7 undefined on input 
-line 42.
-
-
-Package natbib Warning: Citation `rohrig2010laser' on page 7 undefined on input
- line 42.
-
-
-Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
- 44.
-
-
-Package natbib Warning: Citation `park1996dead' on page 7 undefined on input li
-ne 44.
-
-
-Package natbib Warning: Citation `jimenez2009comparison' on page 7 undefined on
- input line 44.
-
-
-Package natbib Warning: Citation `steinhoff2010pocket' on page 7 undefined on i
-nput line 44.
-
-
-Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
-nput line 47.
-
-
-Package natbib Warning: Citation `feng1989servo' on page 7 undefined on input l
-ine 47.
-
-
-Package natbib Warning: Citation `takemura2007development' on page 7 undefined 
-on input line 47.
-
-
-Package natbib Warning: Citation `loh2003mechatronics' on page 7 undefined on i
-nput line 47.
-
-
-Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
- 47.
-
-
-Package natbib Warning: Citation `krinkin2015design' on page 7 undefined on inp
-ut line 47.
+Package natbib Warning: Citation `samani2007comprehensive' on page 6 undefined 
+on input line 32.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1839,85 +1727,4 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 48.
-[7]
-
-Package natbib Warning: Citation `loh2003mechatronics' on page 8 undefined on i
-nput line 50.
-
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 74.
-[8]
-\openout2 = `4met.aux'.
-
- (./4met.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-
-
-LaTeX Warning: Hyper reference `sec:custo' on page 9 undefined on input line 8.
-
-
-
-Package natbib Warning: Citation `motor' on page 9 undefined on input line 10.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.13 ...//linksprite.com/wiki/index.php5?title=DC_
-                                                  Motor_Driver_Breakout_%28L...
-
-? 
-! Emergency stop.
-<inserted text> 
-                $
-l.13 ...//linksprite.com/wiki/index.php5?title=DC_
-                                                  Motor_Driver_Breakout_%28L...
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory youn page 9 undefined on input line 10.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.13 ...//linksprite.com/wiki/index.php5?title=DC_
-                                                  Motor_Driver_Breakout_%28L...
-
-? 
-! Emergency stop.
-<inserted text> 
-                $
-l.13 ...//linksprite.com/wiki/index.php5?title=DC_
-                                                  Motor_Driver_Breakout_%28L...
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 18026 strings out of 493013
- 288099 string characters out of 6135683
- 453620 words of memory out of 5000000
- 20996 multiletter control sequences out of 15000+600000
- 54778 words of font info for 213 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 52i,11n,79p,1914b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+Overfull \hbox (9.12pt too wide) has occurred wh

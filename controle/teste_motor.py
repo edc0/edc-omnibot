@@ -4,6 +4,8 @@ from time import sleep             # lets us have a delay
 GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD
 GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output
 GPIO.setup(23, GPIO.OUT)           # set GPIO23 as an output
+GPIO.setup(22, GPIO.IN)
+GPIO.setup(27, GPIO.IN)
 
 Ma = GPIO.PWM(24,400)               # pwm com 100 Hz no pino 24
 Mb = GPIO.PWM(23,400)
