@@ -78,7 +78,7 @@ def main():
 	init()										# Init interrupts, GPIO, ...
 
 	while True :
-            Ma.start(50)
+            Ma.start(20)
             Mb.stop()
             sleep(0.1)
 
