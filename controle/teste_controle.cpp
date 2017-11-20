@@ -1,7 +1,19 @@
-#include <wiringPi.h>
+#include <wiringPi.h>   // para controlar GPIO
+#include <signal.h>     // para tratar o ctrl+C da saída do programa
+#include <iostream>
+
+void exit_from_key (int signum)
+{
+  cout << "Interrupt signal (" << signum << ") received.\n" ;
+
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+}
 
 int main (void)
 {
+  signal(SIGINT, exit_from_key);
+  
   wiringPiSetup();
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
