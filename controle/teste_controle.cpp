@@ -1,5 +1,5 @@
 #include <wiringPi.h>   // para controlar GPIO
-#include <signal.h>     // para tratar o ctrl+C da saída do programa
+#include <csignal>      // para tratar o ctrl+C da saída do programa
 #include <iostream>
 
 using namespace std;
