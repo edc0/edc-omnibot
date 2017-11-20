@@ -2,6 +2,8 @@
 #include <signal.h>     // para tratar o ctrl+C da saída do programa
 #include <iostream>
 
+using namespace std;
+
 void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
@@ -13,7 +15,7 @@ void exit_from_key (int signum)
 int main (void)
 {
   signal(SIGINT, exit_from_key);
-  
+
   wiringPiSetup();
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
