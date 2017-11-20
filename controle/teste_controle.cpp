@@ -9,8 +9,8 @@ void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
 
-  digitalWrite(4, LOW);
-  digitalWrite(5, LOW);
+  softPwmWrite(4, 0);
+  softPwmWrite(5, 0);
 
   exit(signum);
 }
