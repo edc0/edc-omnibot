@@ -10,6 +10,8 @@ void exit_from_key (int signum)
 
   digitalWrite(4, LOW);
   digitalWrite(5, LOW);
+
+  exit(signum);
 }
 
 int main (void)
