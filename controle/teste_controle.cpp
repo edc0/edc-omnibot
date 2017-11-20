@@ -11,7 +11,7 @@ int main (void)
 
   digitalWrite(5, LOW);
   digitalWrite(4, LOW);
-  
+
   for(;;)
   {
     digitalWrite(4, HIGH);
@@ -20,5 +20,7 @@ int main (void)
     delay(500);
     digitalWrite(5, HIGH);
     delay(1000);
+    digitalWrite(5, LOW);
+    delay(500);
   }
 }
