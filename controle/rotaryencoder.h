@@ -20,3 +20,5 @@ struct encoder encoders[max_encoders];
    The pointer will be NULL is the function failed for any reason
  */
  struct encoder *setupencoder(int pin_a, int pin_b);
+
+#endif /* ROTARYENCODER_H_ */
