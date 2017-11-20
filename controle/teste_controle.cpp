@@ -11,6 +11,7 @@ void exit_from_key (int signum)
 
   softPwmWrite(4, 0);
   softPwmWrite(5, 0);
+  delay(100);
 
   exit(signum);
 }
