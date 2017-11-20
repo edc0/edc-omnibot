@@ -1727,4 +1727,178 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 
-Overfull \hbox (9.12pt too wide) has occurred wh
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 33.
+[6]
+
+Package natbib Warning: Citation `jung2001fault' on page 7 undefined on input l
+ine 34.
+
+
+Package natbib Warning: Citation `ritter2016modelagem' on page 7 undefined on i
+nput line 37.
+
+
+Package natbib Warning: Citation `samani2007comprehensive' on page 7 undefined 
+on input line 37.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
+put line 37.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
+nput line 37.
+
+
+Package natbib Warning: Citation `indiveri2009swedish' on page 7 undefined on i
+nput line 37.
+
+
+Package natbib Warning: Citation `treesatayapun2011discrete' on page 7 undefine
+d on input line 39.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 39.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 39.
+
+
+Package natbib Warning: Citation `ginzburg2013indoor' on page 7 undefined on in
+put line 42.
+
+
+Package natbib Warning: Citation `rojas2006holonomic' on page 7 undefined on in
+put line 42.
+
+
+Package natbib Warning: Citation `garcia2015gyro' on page 7 undefined on input 
+line 42.
+
+
+Package natbib Warning: Citation `rohrig2010laser' on page 7 undefined on input
+ line 42.
+
+
+Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
+ 44.
+
+
+Package natbib Warning: Citation `park1996dead' on page 7 undefined on input li
+ne 44.
+
+
+Package natbib Warning: Citation `jimenez2009comparison' on page 7 undefined on
+ input line 44.
+
+
+Package natbib Warning: Citation `steinhoff2010pocket' on page 7 undefined on i
+nput line 44.
+
+
+Package natbib Warning: Citation `oubbati2005velocity' on page 7 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `feng1989servo' on page 7 undefined on input l
+ine 47.
+
+
+Package natbib Warning: Citation `takemura2007development' on page 7 undefined 
+on input line 47.
+
+
+Package natbib Warning: Citation `loh2003mechatronics' on page 7 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `lowcostIMU' on page 7 undefined on input line
+ 47.
+
+
+Package natbib Warning: Citation `krinkin2015design' on page 7 undefined on inp
+ut line 47.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 48.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 48.
+[7]
+
+Package natbib Warning: Citation `loh2003mechatronics' on page 8 undefined on i
+nput line 50.
+
+)
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 74.
+[8]
+\openout2 = `4met.aux'.
+
+ (./4met.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 5.
+
+
+LaTeX Warning: Hyper reference `sec:custo' on page 9 undefined on input line 8.
+
+
+
+Package natbib Warning: Citation `motor' on page 9 undefined on input line 10.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.13 ...//linksprite.com/wiki/index.php5?title=DC_
+                                                  Motor_Driver_Breakout_%28L...
+
+? 
+! Emergency stop.
+<inserted text> 
+                $
+l.13 ...//linksprite.com/wiki/index.php5?title=DC_
+                                                  Motor_Driver_Breakout_%28L...
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 18047 strings out of 493013
+ 288307 string characters out of 6135683
+ 454771 words of memory out of 5000000
+ 21005 multiletter control sequences out of 15000+600000
+ 54778 words of font info for 213 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 52i,11n,79p,1914b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

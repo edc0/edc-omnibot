@@ -68,6 +68,8 @@ def main():
 
 	Volume = 0									# Current Volume
 	NewCounter = 0								# for faster reading with locks
+    old = 0
+    new = 0
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(23, GPIO.OUT)
         GPIO.setup(24, GPIO.OUT)
@@ -78,7 +80,8 @@ def main():
 	init()										# Init interrupts, GPIO, ...
 
 	while True :
-            Mb.start(30)
+            sp = 35
+            Mb.start(1)
             Ma.stop()
             sleep(0.1)
 
@@ -90,6 +93,11 @@ def main():
             NewCounter = Rotary_counter			# get counter value
             Rotary_counter = 0						# RESET IT TO 0
             LockRotary.release()					# and release lock
+
+            e = sp - NewCounter
+            new = old + 0.5*e
+            Mb.ChangeDutyCycle(new)
+            old = new
 
             if (NewCounter !=0):					# Counter has CHANGED
             	Volume = Volume + NewCounter*abs(NewCounter)	# Decrease or increase volume
