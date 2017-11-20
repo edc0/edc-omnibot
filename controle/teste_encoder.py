@@ -68,8 +68,8 @@ def main():
 
 	Volume = 0									# Current Volume
 	NewCounter = 0								# for faster reading with locks
-    old = 0
-    new = 0
+        old = 0
+        new = 0
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(23, GPIO.OUT)
         GPIO.setup(24, GPIO.OUT)
