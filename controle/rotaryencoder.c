@@ -1,4 +1,3 @@
-//rotaryencoder.c
 #include <wiringPi.h>
 
 #include <stdio.h>
