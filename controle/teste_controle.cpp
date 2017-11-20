@@ -2,6 +2,7 @@
 #include <softPwm.h>
 #include <csignal>      // para tratar o ctrl+C da saída do programa
 #include <iostream>
+#include "rotaryencoder.h"
 
 using namespace std;
 
@@ -26,10 +27,13 @@ int main (void)
   softPwmCreate(4,0,100);
   softPwmCreate(5,0,100);
 
+  encoder *encoder = setupencoder(15,7);
 
   for(;;)
   {
     softPwmWrite(4,40);
+    cout << encoder->value;
+    delay(100);
     /*delay(1000);
     softPwmWrite(4,100);
     delay(1000);
