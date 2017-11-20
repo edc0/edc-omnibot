@@ -1,3 +1,6 @@
+#ifndef ROTARYENCODER_H_
+#define ROTARYENCODER_H_
+
 //18 pins / 2 pins per encoder = 9 maximum encoders
 #define max_encoders 9
 
