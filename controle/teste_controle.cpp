@@ -28,6 +28,7 @@ int main (void)
   softPwmCreate(5,0,100);
 
   encoder *encoder = setupencoder(15,7);
+  
 
   for(;;)
   {
