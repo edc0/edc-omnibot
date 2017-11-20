@@ -12,7 +12,7 @@ struct encoder
     volatile int lastEncoded;
 };
 
-//struct encoder encoders[max_encoders];
+struct encoder encoders[max_encoders];
 
 /*
    Should be run for every rotary encoder you want to control
