@@ -1,4 +1,5 @@
 #include <wiringPi.h>   // para controlar GPIO
+#include <softPwm.h>
 #include <csignal>      // para tratar o ctrl+C da saída do programa
 #include <iostream>
 
@@ -21,22 +22,25 @@ int main (void)
   wiringPiSetup();
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
+  softPwmCreate(4,0,100);
+  softPwmCreate(5,0,100);
 
   pinMode(15, INPUT);
   pinMode(7, INPUT);
 
-  digitalWrite(5, LOW);
-  digitalWrite(4, LOW);
-
   for(;;)
   {
-    digitalWrite(4, HIGH);
+    softPwmWrite(4,40);
     delay(1000);
-    digitalWrite(4, LOW);
+    softPwmWrite(4,100);
+    delay(1000);
+    softPwmWrite(4,20);
     delay(500);
-    digitalWrite(5, HIGH);
+    softPwmWrite(4,0);
+    delay(500);
+    softPwmWrite(5,30);
     delay(1000);
-    digitalWrite(5, LOW);
+    softPwmWrite(5,0);
     delay(500);
   }
 }
