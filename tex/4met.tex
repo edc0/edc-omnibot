@@ -10,7 +10,7 @@ Conforme mencionado nas seções anteriores, o robô construído possui três ro
 As rodas utilizadas medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, mostrando boa capacidade de carga para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução de relação 1:34, com uma velocidade nominal no eixo de saída de 210 rpm. A fixação das rodas no motor foi realizada conforme o Apêndice B \textbf{n sei se vai ter essa frase aqui}. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341.2 pulsos do sensor \cite{motor}.
 
 
-Mais info sobre a ponte H: http://linksprite.com/wiki/index.php5?title=DC_Motor_Driver_Breakout_%28L298_Chipset%29#Arduino_Sample_Code
+%Mais info sobre a ponte H: http://linksprite.com/wiki/index.php5?title=DC_Motor_Driver_Breakout_%28L298_Chipset%29#Arduino_Sample_Code
 
 Além da utilização dos \textit{encoders} para implementação da odometria, também foi instalada na estrutura uma bússola, para garantir uma medida absoluta da orientação do robô maior parte do algoritmo de localização. O modelo utilizado é a HMC5883L, em um módulo integrado (breakout board?), que utiliza comunicação pelo protocolo I2C e tem precisão de 2 graus (\cite{HMC5883L}). Devido ao baixo custo dos componentes utilizados e da modularidade do protocolo de comunicação (\cite{semiconductors2000i2c}), também foi adicionada uma unidade de medidas inerciais MPU6050, que possui acelerômetro e giroscópio em torno dos três eixos utilizados (\cite{MPU6050}).
 
@@ -39,7 +39,6 @@ Para unir todos os componentes descritos, se projetou uma estrutura central, com
 
 O custo de aquisição dos componentes relatados pode ser visto detalhado no hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle), e que o chassi foi usinado no próprio laboratório com equipamento próprio, sendo computado apenas o custo do material utilizado.
 
-
 \cite{siegwart2011introduction}, pg 97: sensores.
 
 \section{Desenvolvimento Teórico}
@@ -48,34 +47,52 @@ O custo de aquisição dos componentes relatados pode ser visto detalhado no hyp
 %% MODELAGEM:
 %PARK: pg 468
 
-Coordenadas de referência na Equação \ref{eq:world_ref} (\cite{siegwart2011introduction}), também utilizado por \cite{ritter2016modelagem}:
+Primeiramente, se definem dois sistemas de coordenadas. O primeiro, $(x_I,y_I)$, é o sistema de coordenadas global, fixo no ambiente. O segundo, $(x_R,y_R)$, está centrado no próprio robô. Ainda se pode definir o ângulo $\theta$ como a orientação do robô -- ou seja, o ângulo entre os dois sistemas de coordenadas. Tal relação pode ser vista na Figura \ref{fig:ref}, e a transformação de um sistema para o outro é descrita na Equação \ref{eq:world_ref}, conforme \cite{siegwart2011introduction} e \cite{ritter2016modelagem}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.65\textwidth]{imagens/ref}
+  \caption{Sistemas de coordenadas global I e relativo ao centro do robô R.}
+  \source{Adaptado de \cite{ritter2016modelagem}}
+  \label{fig:ref}
+\end{figure}
+
 \begin{equation}
   \begin{pmatrix}
-    x \\
-    y \\
+    x_I \\
+    y_I \\
     \theta
   \end{pmatrix}
   =
   \begin{pmatrix}
-    cos \theta & sen \theta & 0 \\
-    -sen\theta & cos \theta & 0 \\
+    cos \theta & -sen \theta & 0 \\
+    sen\theta  &  cos \theta & 0 \\
     0          & 0          & 1
   \end{pmatrix}
   \begin{pmatrix}
-    x_W \\
-    y_W \\
+    x_R \\
+    y_R \\
     \theta
   \end{pmatrix}
   \label{eq:world_ref}
 \end{equation}
 
-Cinemática direta, para um robô com 3 rodas dispostas em simetria radial em torno do centro da estrutura, é dada pela Equação \ref{eq:dk}. Diversos autores utilizam variações da mesma modelagem (\cite{rojas2006holonomic}, \cite{ritter2016modelagem}, \cite{pin1994new}, entre outros).
+O último termo da Equação \ref{eq:world_ref} também pode ser descrito como $q_R$, e o vetor de velocidades $[v_x, v_y, \omega_z]^T$, centrados no sistema de coordenadas do robô, é $\dot{q_R}$. Com o objetivo de mapear a velocidade de giro das rodas $\dot{\phi} = [\dot{\phi}_1, \dot{\phi}_2, \dot{\phi}_3]^T$ às velocidades $\dot{q_R}$, se utiliza a modelagem cinemática apresentada por \cite{siegwart2011introduction}, com as referências apresentadas na Figura \ref{fig:robo_vel}. Na figura,  A mesma modelagem é utilizada por \cite{ritter2016modelagem}, porém com outra sequência e sentido de giro para as rodas.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.65\textwidth]{imagens/robot_vel4}
+  \caption{Vista superior do robô, mostrando as convenções adotadas. $v_x$ e $v_y$ estão no sistema de coordenadas do robô.}
+  \label{fig:robo_vel}
+\end{figure}
+
+Assim, para um robô com 3 rodas dispostas em simetria radial em torno do centro da estrutura, a cinemática direta é dada pela Equação \ref{eq:dk}. Diversos autores utilizam variações da mesma modelagem (\cite{rojas2006holonomic}, \cite{pin1994new}, entre outros). Nas equações apresentadas, $r$ é o raio de cada roda e $R$ o raio do robô (a distância do centro da roda ao centro da estrutura do robô).
 
 \begin{equation}
   \begin{pmatrix}
     v_x \\
     v_y \\
-    \omega
+    \omega_z
   \end{pmatrix}
   =
   \frac{r}{3R}
@@ -92,7 +109,7 @@ Cinemática direta, para um robô com 3 rodas dispostas em simetria radial em to
   \label{eq:dk}
 \end{equation}
 
-Cinemática inversa, obtida realizando a inversão da matriz 3x3, é dada pela Equação \ref{eq:ik}. Nota-se que esta inversão é simplificada no caso do robô com 3 rodas, visto que quando há mais rodas é formada uma matriz 3x$n$, e se deve realizar a pseudo-inversa, conforme demonstrado por \cite{rojas2006holonomic}. Nas equações apresentadas, $r$ é o raio de cada roda e $R$ o raio do robô (a distância do centro da roda ao centro da estrutura do robô).
+Também se deseja utilizar a cinemática inversa do modelo, obtida realizando-se a inversão da matriz de transformação apresentada na Equação \ref{eq:dk}, é dada pela Equação \ref{eq:ik}. Nota-se que esta inversão é simplificada no caso do robô com 3 rodas, visto que quando há mais rodas é formada uma matriz $3 \times n$, sendo $n$ o número de rodas, e se deve utilizar uma matriz pseudo-inversa, conforme demonstrado por \cite{rojas2006holonomic}.
 
 \begin{equation}
   \begin{pmatrix}
@@ -110,29 +127,28 @@ Cinemática inversa, obtida realizando a inversão da matriz 3x3, é dada pela E
   \begin{pmatrix}
     v_x \\
     v_y \\
-    \omega
+    \omega_z
   \end{pmatrix}
   \label{eq:ik}
 \end{equation}
 
 Como pela classificação de \cite{campion1996structural} um \acrshort{tomr} é caracterizado na categoria (3,0), o modelo cinemático das equações \ref{eq:dk} e \ref{eq:ik} é controlável, estável e descreve a posição, orientação e suas derivadas de forma suficiente. % O modelo cinemático da Equação \ref{eq:dk} também é utilizado por \cite{rojas2006holonomic} e \cite{ritter2016modelagem}.
 
+EM CONSTRUÇÃO DAQUI PRA BAIXO:
+
 %% ODOMETRIA:
-\cite{samani2007comprehensive}: Descrevem fórmulas para odometria, e dizem que se isso não for muito bom, nem adianta ter um controlador massa. Utilizam três rodas passivas com os encoders, para evitar problemas. Solução a meio enjambrada.
 
-Para se realizar a odometria do robô com uma precisão melhor, \cite{lynch2017modern} ainda fornece as equações relacionadas ao \textbf{body twist} $v_b = (v_{bx}, v_{by}, \omega_b)^T$, que relaciona a velocidade do centro geométrico do robô com as velocidades de cada uma das rodas, que diferem caso o robô realize rotações durante a translação. Tal relação é dada pela Equação \ref{eq:twist}.
+ODOMETRIA:
+\cite{lynch2017modern}
 
-\begin{equation}
-  v_b = No-entendi-nada.
-  \label{eq:twist}
-\end{equation}
-
-Modelagens dinâmicas também podem ser utilizadas, relacionando o comportamento do robô não às velocidades das suas rodas, mas sim ao torque aplicado a cada uma pelos motores. No entanto, no caso do \acrshort{tomr}, se podem utilizar as velocidades das rodas como entradas, desde que haja um \emph{loop} de controle que garanta tais velocidades durante o acionamento (CITAR AS NOTAS DE AULA DO WALTER??? control.pdf).
+\cite{samani2007comprehensive}: Descrevem fórmulas para odometria, e dizem que se isso não for muito bom, nem adianta ter um controlador massa. Utilizam três rodas passivas com os encoders, para evitar problemas. 90\% encoders, 10\% visão computacional. Adicionam um modelo de ruído dos encoders à estimativa.
 
 %% PLANEJAMENTO DE TRAJETÓRIA:
+TRAJETÓRIA:
 \cite{lynch2017modern}, capítulo 9.
 
 %% CONTROLE:
+CONTROLE:
 \cite{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
 motores:
 https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SG
@@ -152,29 +168,6 @@ Given a desired trajectory q d (t), we can adopt the feedforward plus proportion
 
 
 \cite{siegwart2011introduction}: 5.6.3.1 Introduction to Kalman filter theory
-
-%A \textbf{modelagem cinemática} do \acrshort{tomr}, conforme desenvolvida por \cite{campion1996structural} e na forma utilizada por \cite{samani2007comprehensive}, é dada por
-%\begin{equation}
-%  \begin{pmatrix}
-%    \dot{\phi_1} \\
-%    \dot{\phi_2} \\
-%    \dot{\phi_3}
-%  \end{pmatrix}.
-%  =
-%  \frac{1}{r}
-%  \begin{pmatrix}
-%    -sen(\theta)               & cos(\theta)                & R \\
-%    -sen(\frac{\pi}{3}-\theta) & -cos(\frac{\pi}{3}-\theta) & R \\
-%    sen(\frac{\pi}{3}+\theta)  & -cos(\frac{\pi}{3}+\theta) & R
-%  \end{pmatrix}
-%  \begin{pmatrix}
-%    v_x \\
-%    v_y \\
-%    \omega
-%  \end{pmatrix}.
-%  \label{eq:pkm}
-%\end{equation}
-
 
 \section{Implementação dos algoritmos}
 \label{sec:software}

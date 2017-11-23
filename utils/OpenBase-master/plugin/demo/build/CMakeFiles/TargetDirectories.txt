@@ -1,0 +1,3 @@
+/home/edc/Dropbox/UFRGS/TCC/utils/OpenBase-master/plugin/demo/build/CMakeFiles/rebuild_cache.dir
+/home/edc/Dropbox/UFRGS/TCC/utils/OpenBase-master/plugin/demo/build/CMakeFiles/edit_cache.dir
+/home/edc/Dropbox/UFRGS/TCC/utils/OpenBase-master/plugin/demo/build/CMakeFiles/main.dir
