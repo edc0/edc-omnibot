@@ -10,8 +10,8 @@ GPIO.setup(27, GPIO.OUT)
 M1a = GPIO.PWM(2, 400000)               # pwm com 100 Hz no pino 24
 M1b = GPIO.PWM(3, 400000)
 
-M2a = GPIO.PWM(17, 400)
-M2b = GPIO.PWM(27, 400)
+M2a = GPIO.PWM(17, 400000)
+M2b = GPIO.PWM(27, 400000)
 
 M1a.start(1)
 M2a.start(1)
