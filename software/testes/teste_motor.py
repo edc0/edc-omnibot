@@ -23,7 +23,7 @@ try:
         for dc in range (0,100,1):
             M1a.ChangeDutyCycle(dc)
             M2a.ChangeDutyCycle(dc)
-            sleep(0.1)
+            #sleep(0.1)
         sleep(5)
         for dc in range (99,0,-1):
             M1a.ChangeDutyCycle(dc)
