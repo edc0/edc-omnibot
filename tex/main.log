@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  27 NOV 2017 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  27 NOV 2017 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1435,33 +1435,12 @@ Package babel Info: Redefining portuges shorthand "|
  (./2intro.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-
-
-Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
-line 7.
-
-<imagens/markets.png, id=190, 527.9725pt x 352.31625pt>
+ <imagens/markets.png, id=192, 527.9725pt x 352.31625pt>
 File: imagens/markets.png Graphic file (type png)
 
 <use imagens/markets.png>
 Package pdftex.def Info: imagens/markets.png used on input line 11.
 (pdftex.def)             Requested size: 234.8775pt x 156.73454pt.
-
-
-Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
-line 14.
-
-
-Package natbib Warning: Citation `marketsmarkets' on page 1 undefined on input 
-line 14.
-
-
-LaTeX Warning: Reference `fig:tomr_ritter' on page 1 undefined on input line 21
-.
-
-
-LaTeX Warning: Reference `fig:omniwheel' on page 1 undefined on input line 21.
-
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1486,27 +1465,19 @@ l.22
 
 
  <./imagens/markets.png>]
-<imagens/tomr_ritter_mod.png, id=201, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=210, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
 Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 25.
 (pdftex.def)             Requested size: 211.38832pt x 188.19495pt.
 
-<imagens/omniwheel.png, id=206, 1027.84pt x 635.37375pt>
+<imagens/omniwheel.png, id=215, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
 Package pdftex.def Info: imagens/omniwheel.png used on input line 33.
 (pdftex.def)             Requested size: 211.38832pt x 130.66934pt.
-
-
-Package natbib Warning: Citation `omniwheel' on page 2 undefined on input line 
-36.
-
-
-Package natbib Warning: Citation `omniwheel' on page 2 undefined on input line 
-36.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1599,11 +1570,6 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 28.
 
-
-LaTeX Warning: Reference `fig:tomr_ritter' on page 6 undefined on input line 32
-.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1679,7 +1645,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-] <imagens/proto01.png, id=393, 469.755pt x 335.75438pt>
+] <imagens/proto01.png, id=408, 469.755pt x 335.75438pt>
 File: imagens/proto01.png Graphic file (type png)
 
 <use imagens/proto01.png>
@@ -1708,14 +1674,14 @@ Package babel Info: Redefining portuges shorthand "|
 [10 <./imagens/proto01.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 44.
- <imagens/ref.png, id=410, 1160.335pt x 634.37pt>
+ <imagens/ref.png, id=425, 1160.335pt x 634.37pt>
 File: imagens/ref.png Graphic file (type png)
 
 <use imagens/ref.png>
 Package pdftex.def Info: imagens/ref.png used on input line 54.
 (pdftex.def)             Requested size: 305.33789pt x 166.92632pt.
 
-<imagens/robot_vel4.png, id=421, 828.09375pt x 742.775pt>
+<imagens/robot_vel4.png, id=436, 828.09375pt x 742.775pt>
 File: imagens/robot_vel4.png Graphic file (type png)
 
 <use imagens/robot_vel4.png>
@@ -2080,18 +2046,10 @@ Package babel Info: Redefining portuges shorthand "|
 [28
 
 ]
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
-(./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
-(./6conc.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-(./7ape1.aux))
+ (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
+(./6conc.aux) (./7ape1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2100,19 +2058,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18358 strings out of 493013
- 293181 string characters out of 6135683
- 461158 words of memory out of 5000000
- 21148 multiletter control sequences out of 15000+600000
+ 18359 strings out of 493013
+ 293190 string characters out of 6135683
+ 461889 words of memory out of 5000000
+ 21149 multiletter control sequences out of 15000+600000
  60465 words of font info for 258 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,12n,79p,1914b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,79p,1914b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
  replaced by a fixed one
 
@@ -2138,26 +2093,10 @@ ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (44 pages, 831174 bytes).
+Output written on main.pdf (44 pages, 830997 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 104 named destinations out of 1000 (max. 500000)
- 31433 words of extra memory for PDF output out of 35830 (max. 10000000)
-
-live/texmf-dist/f
-onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
-ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on main.pdf (44 pages, 830910 bytes).
-PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 543 compressed objects within 6 object streams
+ 647 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
  104 named destinations out of 1000 (max. 500000)
  31433 words of extra memory for PDF output out of 35830 (max. 10000000)
 
