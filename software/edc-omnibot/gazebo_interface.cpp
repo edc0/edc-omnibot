@@ -1,3 +1,8 @@
+/* NOT READY
+ * I've just separated into gazebo_interface.cpp and
+ * gazebo_interface.h, but didn't correct the erros it
+ * may cause (because I am not using this right now) */
+
 #include <algorithm>
 #include <boost/bind.hpp>
 #include <chrono>

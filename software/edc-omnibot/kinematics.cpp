@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 
+#include "kinematics.h"
+
 #define L 0.04 // distance between body center and wheel center
 #define r 0.01905 // wheel radius
 
@@ -90,55 +92,35 @@ double Vlow;
 double Vhigh;
 double scale;
 
-class Point {
+void Point::offset(double x, double y) {
+  this->x += x;
+  this->y += y;
+}
 
-    public: double x;
+void Point::rotate(double theta) {
+  w = (std::cos(theta) * this->y) + (std::sin(theta) * this->x);
+  this->x = (std::cos(theta) * this->x) - (std::sin(theta) * this->y);
+  this->y = w;
+}
 
-    public: double y;
+Point::Point(const Point& p) {
+  x = p.x;
+  y = p.y;
+}
 
-    private: static double w;
+Point::Point(double x, double y) {
+  this->x = x;
+  this->y = y;
+}
 
-    public: void offset(double x, double y) {
-        this->x += x;
-        this->y += y;
-    }
-
-    public: void rotate(double theta) {
-              w = (std::cos(theta) * this->y) + (std::sin(theta) * this->x);
-        this->x = (std::cos(theta) * this->x) - (std::sin(theta) * this->y);
-        this->y = w;
-    }
-
-    public: Point() {}
-
-    public: Point(const Point& p) {
-        x = p.x;
-        y = p.y;
-    }
-
-    public: Point(double x, double y) {
-        this->x = x;
-        this->y = y;
-    }
-
-    public: Point(Point p, double xOffset, double yOffset) {
-        x = p.x + xOffset;
-        y = p.y + yOffset;
-    }
-};
+Point::Point(Point p, double xOffset, double yOffset) {
+  x = p.x + xOffset;
+  y = p.y + yOffset;
+}
 
 std::vector<Point> points;
 std::vector<double> angles;
 
-enum Movements {
-    MOVEMENT_DIRECT,
-    MOVEMENT_DIRECT_M,
-    MOVEMENT_DIRECT_W,
-    MOVEMENT_NONE,
-    MOVEMENT_ABSOLUTE_M,
-    MOVEMENT_ABSOLUTE_W,
-    MOVEMENT_BEZIER_W
-};
 Movements movement = MOVEMENT_NONE;
 
 long long binomialCoefficient_c;
