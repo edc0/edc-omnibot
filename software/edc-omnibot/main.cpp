@@ -1,4 +1,9 @@
+/* If your program is called foobar.cpp then build with:
+ * g++ -Wall -pthread -o foobar foobar.cpp -lpigpio -lrt
+ */
+
 #include <iostream>
+#include <pigpio.h>
 
 #include "kinematics.h"
 
