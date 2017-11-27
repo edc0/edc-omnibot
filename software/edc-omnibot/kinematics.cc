@@ -288,7 +288,3 @@ double normalizeRadian(double radian) {
 // they lose their references, and it's only possible to read from them
 // to restore their references, they must be decladed again like this:
 double Point::w;
-
-
-int main()
-{return(0);}
