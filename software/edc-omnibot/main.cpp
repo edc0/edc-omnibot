@@ -15,6 +15,8 @@ int SP = 128;
 // setando pinos para os testes
 M1a = 2;
 M2a = 3;
+E1a = 26;
+E1b = 19;
 
 using namespace std;
 
@@ -42,7 +44,6 @@ void loop (void)
   }
 }
 
-
 int main(void)
 {
   signal(SIGINT, exit_from_key);
@@ -51,6 +52,8 @@ int main(void)
   // setando os pinos de saída:
   gpioSetMode(M1a, PI_OUTPUT);
   gpioSetMode(M2a, PI_OUTPUT);
+  gpioSetMode(E1a, PI_INPUT);
+  gpioSetMode(E2a, PI_INPUT);
 
   // chama função loop() a cada 2ms
   gpioSetTimerFunc(0, 2, loop);
