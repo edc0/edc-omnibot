@@ -77,7 +77,7 @@ int main(void)
   gpioSetMode(E2a, PI_INPUT);
 
   // chama função loop() a cada 2ms
-  gpioSetTimerFuncEx(3, 2, loop);
+  gpioSetTimerFunc(3, 20, loop);
 
   for(;;)
   {}
