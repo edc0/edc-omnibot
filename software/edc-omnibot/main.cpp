@@ -214,9 +214,9 @@ int main(void)
   // chama função loop() a cada 2ms
   gpioSetTimerFunc(3, 10, loop);
 
-  re_decoder dec(E1a, E1b, dec_callback1);
-  re_decoder dec(E2a, E2b, dec_callback2);
-  re_decoder dec(E3a, E3b, dec_callback3);
+  re_decoder dec1(E1a, E1b, dec_callback1);
+  re_decoder dec2(E2a, E2b, dec_callback2);
+  re_decoder dec3(E3a, E3b, dec_callback3);
 
   inp = 0;
 
