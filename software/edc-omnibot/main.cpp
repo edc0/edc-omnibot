@@ -65,7 +65,7 @@ void dec_callback(int way)
   rps_0 = rps;
   rps_avg = (rps_0+rps_1+rps_2+rps_3+rps_4)/5.0;
 
-  std::cout << "rps=" << rps_avg << std::endl;
+  //std::cout << "rps=" << rps_avg << std::endl;
   pos_old = pos;
   t_pos_old = t_pos;
 
@@ -76,6 +76,7 @@ void loop (void)
   erro = inp - rps_avg; // 3000 para testes, erro positivo
 
   val_new = val_old + 0.2*erro; //erro negativo diminui o valor de acionamento
+  cout >> val_new;
   if(val_new > 0)
   {
     gpioPWM(M1a, 0);
