@@ -17,7 +17,7 @@ int SP = 50; // rotações por segundo
 static int pos = 0;
 static int pos_old;
 static int t_pos, t_pos_old;
-double rps;
+double rps, rps_0=0, rps_1=0, rps_2=0, rps_3=0, rps_4=0, rps_avg;
 
 // ticks para medir velocidade do encoder
 uint32_t startTick, endTick;
@@ -58,9 +58,18 @@ void dec_callback(int way)
 
   rps = 2932/double(t_pos-t_pos_old);
 
-  std::cout << "rps=" << rps << std::endl;
+  // média móvel dos ultimos 5 valores
+  rps_4=rps_3;
+  rps_3=rps_2;
+  rps_2=rps_1;
+  rps_1=rps_0;
+  rps_0 = rps;
+  rps_avg = (rps_0+rps_1+rps_2+rps_3+rps_4)/5.0;
+
+  std::cout << "rps=" << rps_avg << std::endl;
   pos_old = pos;
   t_pos_old = t_pos;
+
 }
 
 void loop (void)
