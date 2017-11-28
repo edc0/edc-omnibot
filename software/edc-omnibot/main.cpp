@@ -21,11 +21,6 @@ int diffTick;
 double val_old=0;
 double val_new=0;
 double erro;
-// setando pinos para os testes
-M1a = 2;
-M2a = 3;
-E1a = 26;
-E1b = 19;
 
 
 using namespace std;
@@ -68,6 +63,12 @@ int main(void)
 {
   signal(SIGINT, exit_from_key);
   gpioInitialise();
+
+  // setando pinos para os testes
+  M1a = 2;
+  M2a = 3;
+  E1a = 26;
+  E1b = 19;
 
   // setando os pinos de saída:
   gpioSetMode(M1a, PI_OUTPUT);
