@@ -83,6 +83,9 @@ void loop (void)
 
     gpioPWM(M2a, 0);
     gpioPWM(M2b, int(val_new));
+
+    gpioPWM(M2a, 0);
+    gpioPWM(M2b, int(val_new));
   }
   if(val_new < 0)
   {
@@ -91,6 +94,9 @@ void loop (void)
 
     gpioPWM(M2a, -int(val_new));
     gpioPWM(M2b, 0);
+
+    gpioPWM(M3a, -int(val_new));
+    gpioPWM(M3b, 0);
   }
 
   val_old=val_new;
@@ -122,6 +128,11 @@ int main(void)
   gpioSetMode(M2b, PI_OUTPUT);
   gpioSetPWMfrequency(M2a, 10000);
   gpioSetPWMfrequency(M2b, 10000);
+
+  gpioSetMode(M3a, PI_OUTPUT);
+  gpioSetMode(M3b, PI_OUTPUT);
+  gpioSetPWMfrequency(M3a, 10000);
+  gpioSetPWMfrequency(M3b, 10000);
 
   gpioSetMode(E1a, PI_INPUT);
   gpioSetMode(E2a, PI_INPUT);
