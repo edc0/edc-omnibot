@@ -38,24 +38,19 @@ using namespace std;
 void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
-  gpioTerminate(); // desliga motores
+  gpioPWM(M1a, 0);
+  gpioPWM(M1b, 0);
   gpioDelay(10000);
+  gpioTerminate(); // desliga motores
   exit(signum);
 }
-
-int calcVel(int micros)
-{
-  rps = 2932/micros;
-  return rps;
-}
-
 
 void dec_callback(int way)
 {
   t_pos = gpioTick();
   pos += way;
 
-  rps = 2932/double(t_pos-t_pos_old);
+  rps = way*2932/double(t_pos-t_pos_old);
 
   // média móvel dos ultimos 5 valores
   rps_4=rps_3;
