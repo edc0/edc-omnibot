@@ -14,9 +14,14 @@ int M1a, M1b, M2a, M2b, M3a, M3b;
 int E1a, E1b, E2a, E2b, E3a, E3b;
 int SP = 50; // rotações por segundo
 
+static int pos = 0;
+static int pos_old;
+static int t_pos, t_pos_old;
+double rps;
+
 // ticks para medir velocidade do encoder
 uint32_t startTick, endTick;
-int diffTick;
+int diffTick = 0;
 
 // para interagir com user
 int inp;
@@ -41,7 +46,6 @@ void exit_from_key (int signum)
 
 int calcVel(int micros)
 {
-  int rps;
   rps = 2932/micros;
   return rps;
 }
@@ -49,11 +53,14 @@ int calcVel(int micros)
 
 void dec_callback(int way)
 {
-   static int pos = 0;
+  t_pos = gpioTick();
+  pos += way;
 
-   pos += way;
+  rps = 2932/double(t_pos-t_pos_old);
 
-   std::cout << "pos=" << pos << std::endl;
+  std::cout << "rps=" << rps << std::endl;
+  pos_old = pos;
+  t_pos_old = t_pos;
 }
 
 void loop (void)
