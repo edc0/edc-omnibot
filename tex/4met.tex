@@ -178,6 +178,8 @@ O código de \cite{ritter2016modelagem} foi desmembrado em módulos, para separa
 
 COLOCAR DIAGRAMA DAS BIBLIOTECAS
 
+Foi utilizada pigpio \cite{pigpio}.
+
 Além de utilizar os comandos fornecidos por \cite{ritter2016modelagem}, foram implementados os modos de movimentação citados por \cite{loh2003mechatronics}: translação retilínea , translação curvilínea -- ambas sem alteração na orientação --, rotação pura e um caminho combinado de rotação em torno do seu centro e translação retilínia em relação às referências globais.
 
 O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).

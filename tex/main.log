@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  27 NOV 2017 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  27 NOV 2017 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1548,44 +1548,41 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \outTeX Warning: Hyper reference `sec:software' on page 3 undefined on input line
+ 58.
 
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
+LaTeX Warning: Hyper reference `sec:experimental' on page 3 undefined on input 
+line 59.
 
 
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
+LaTeX Warning: Hyper reference `sec:resultados' on page 3 undefined on input li
+ne 60.
 
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 18.
-[5
+! Missing } inserted.
+<inserted text> 
+                }
+l.62 \end{itemize}
+                  
+? 
+! Emergency stop.
+<inserted text> 
+                }
+l.62 \end{itemize}
+                  
+End of file on the terminal!
 
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 28.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
+ 
+Here is how much of TeX's memory you used:
+ 17905 strings out of 493013
+ 286879 string characters out of 6135683
+ 451831 words of memory out of 5000000
+ 20968 multiletter control sequences out of 15000+600000
+ 44609 words of font info for 144 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 52i,11n,79p,1914b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
+ut line 33.
 [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1768,6 +1765,11 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 172.
 
+
+Package natbib Warning: Citation `pigpio' on page 15 undefined on input line 18
+1.
+
+
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1778,9 +1780,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 193.
 [15
 
 ]
@@ -1794,14 +1796,14 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 193.
 [16
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 193.
 )
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1949,13 +1951,13 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 69.
 [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 \T1/txr/m/n/12 (+20) URL []$\T1/txtt/m/n/12 http : / / www . nexusrobot . com /
  product / 58mm -[] plastic -[] omni -[] wheel -[] for -[] lego -[]
  []
@@ -1971,9 +1973,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 134.
 [24])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -2046,10 +2048,18 @@ Package babel Info: Redefining portuges shorthand "|
 [28
 
 ]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
- (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
-(./6conc.aux) (./7ape1.aux))
+(./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
+(./6conc.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+(./7ape1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2061,13 +2071,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18359 strings out of 493013
- 293190 string characters out of 6135683
+ 18363 strings out of 493013
+ 293243 string characters out of 6135683
  461889 words of memory out of 5000000
- 21149 multiletter control sequences out of 15000+600000
+ 21152 multiletter control sequences out of 15000+600000
  60465 words of font info for 258 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,12n,79p,1914b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,79p,1914b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
  replaced by a fixed one
 
@@ -2093,10 +2103,10 @@ ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (44 pages, 830997 bytes).
+Output written on main.pdf (44 pages, 831749 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 563 compressed objects within 6 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
+ 105 named destinations out of 1000 (max. 500000)
  31433 words of extra memory for PDF output out of 35830 (max. 10000000)
 

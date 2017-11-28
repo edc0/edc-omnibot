@@ -11,45 +11,45 @@ A level-1 auxiliary file: 7ape1.aux
 Database file #1: biblio.bib
 Warning--empty journal in indiveri2009swedish
 Warning--there's a number but no volume in indiveri2009swedish
-You've used 33 entries,
+You've used 34 entries,
             2821 wiz_defined-function locations,
-            833 strings with 11385 characters,
-and the built_in function-call counts, 16951 in all, are:
-= -- 1796
-> -- 745
-< -- 34
-+ -- 289
-- -- 246
-* -- 1352
-:= -- 2902
-add.period$ -- 112
-call.type$ -- 33
-change.case$ -- 267
-chr.to.int$ -- 33
-cite$ -- 35
-duplicate$ -- 701
-empty$ -- 1220
-format.name$ -- 347
-if$ -- 3558
+            838 strings with 11486 characters,
+and the built_in function-call counts, 17266 in all, are:
+= -- 1832
+> -- 755
+< -- 35
++ -- 293
+- -- 249
+* -- 1372
+:= -- 2963
+add.period$ -- 115
+call.type$ -- 34
+change.case$ -- 274
+chr.to.int$ -- 34
+cite$ -- 36
+duplicate$ -- 716
+empty$ -- 1241
+format.name$ -- 351
+if$ -- 3620
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 32
-newline$ -- 112
-num.names$ -- 132
-pop$ -- 264
+newline$ -- 116
+num.names$ -- 136
+pop$ -- 267
 preamble$ -- 1
-purify$ -- 213
+purify$ -- 218
 quote$ -- 0
-skip$ -- 582
+skip$ -- 594
 stack$ -- 0
-substring$ -- 955
-swap$ -- 163
+substring$ -- 968
+swap$ -- 164
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 282
+type$ -- 291
 warning$ -- 2
-while$ -- 148
+while$ -- 151
 width$ -- 0
-write$ -- 380
+write$ -- 391
 (There were 2 warnings)

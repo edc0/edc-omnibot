@@ -10,13 +10,22 @@
 double teste;
 int M1a, M1b, M2a, M2b, M3a, M3b;
 int E1a, E1b, E2a, E2b, E3a, E3b;
-int SP = 128;
+int SP = 128; // rotações por segundo
 
+// ticks para medir velocidade do encoder
+uint32_t startTick, endTick;
+int diffTick;
+
+// valores para atualizar o controlador
+double val_old=0;
+double val_new=0;
+double erro;
 // setando pinos para os testes
 M1a = 2;
 M2a = 3;
 E1a = 26;
 E1b = 19;
+
 
 using namespace std;
 
@@ -30,8 +39,18 @@ void exit_from_key (int signum)
   exit(signum);
 }
 
+int calcVel(int micros)
+{
+  int rps;
+  rps = 2932/micros;
+  return rps;
+}
+
 void loop (void)
 {
+  erro = SP - calcVel(3000); // 3000 para testes, erro positivo
+
+
   if(SP > 0)
   {
     gpioPWM(M1a, 0);
@@ -60,3 +79,15 @@ int main(void)
 
   return 0;
 }
+
+
+
+startTick = gpioTick();
+
+// do some processing
+
+endTick = gpioTick();
+
+diffTick = endTick - startTick;
+
+printf("some processing took %d microseconds", diffTick);
