@@ -48,9 +48,8 @@ void loop (void)
 
   if(SP > 0)
   {
-    cout << "cheguei bitches";
-    gpioPWM(M1a, 0);
-    gpioPWM(M1b, SP);
+    gpioPWM(M1a, SP);
+    gpioPWM(M1b, 0);
   }
   if(SP <= 0)
   {
