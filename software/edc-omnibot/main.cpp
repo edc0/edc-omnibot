@@ -80,7 +80,7 @@ int main(void)
   return 0;
 }
 
-
+/*
 
 startTick = gpioTick();
 
@@ -91,3 +91,4 @@ endTick = gpioTick();
 diffTick = endTick - startTick;
 
 printf("some processing took %d microseconds", diffTick);
+*/
