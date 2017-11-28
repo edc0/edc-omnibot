@@ -84,8 +84,8 @@ void loop (void)
     gpioPWM(M2a, 0);
     gpioPWM(M2b, int(val_new));
 
-    gpioPWM(M2a, 0);
-    gpioPWM(M2b, int(val_new));
+    gpioPWM(M3a, 0);
+    gpioPWM(M3b, int(val_new));
   }
   if(val_new < 0)
   {
