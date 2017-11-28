@@ -36,7 +36,7 @@ void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
   gpioTerminate(); // desliga motores
-  delay(100);
+  sleep(0.1);
   exit(signum);
 }
 
