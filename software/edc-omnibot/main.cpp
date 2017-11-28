@@ -79,7 +79,7 @@ void dec_callback1(int way)
   rps1_4=rps1_3;
   rps1_3=rps1_2;
   rps1_2=rps1_1;
-  rps_1=rps1_0;
+  rps1_1=rps1_0;
   rps1_0 = rps1;
   rps1_avg = (rps1_0+rps1_1+rps1_2+rps1_3+rps1_4)/5.0;
 
