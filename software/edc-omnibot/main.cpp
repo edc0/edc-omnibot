@@ -12,7 +12,6 @@
 double teste;
 int M1a, M1b, M2a, M2b, M3a, M3b;
 int E1a, E1b, E2a, E2b, E3a, E3b;
-int SP = 50; // rotações por segundo
 
 static int pos = 0;
 static int pos_old;
@@ -23,7 +22,7 @@ double rps, rps_0=0, rps_1=0, rps_2=0, rps_3=0, rps_4=0, rps_avg;
 uint32_t startTick, endTick;
 int diffTick = 0;
 
-// para interagir com user
+// para interagir com user, set point da velocidade
 int inp;
 
 // valores para atualizar o controlador
@@ -74,22 +73,21 @@ void dec_callback(int way)
 
 void loop (void)
 {
-  erro = SP - calcVel(3000); // 3000 para testes, erro positivo
+  erro = inp - rps_avg; // 3000 para testes, erro positivo
 
-  if(SP != inp)
+  val_new = val_old + 0.02*erro; //erro negativo diminui o valor de acionamento
+  if(val_new > 0)
   {
-    SP = inp;
-    if(SP > 0)
-    {
-      gpioPWM(M1a, 0);
-      gpioPWM(M1b, SP);
-    }
-    if(SP <= 0)
-    {
-      gpioPWM(M1a, SP);
-      gpioPWM(M1b, 0);
-    }
+    gpioPWM(M1a, 0);
+    gpioPWM(M1b, int(val_new));
   }
+  if(val_new < 0)
+  {
+    gpioPWM(M1a, int(val_new));
+    gpioPWM(M1b, 0);
+  }
+
+  val_old=val_new;
 }
 
 int main(void)
@@ -115,7 +113,7 @@ int main(void)
 
   re_decoder dec(E1a, E1b, dec_callback);
 
-  inp = 50;
+  inp = 0;
 
   for(;;)
   {
