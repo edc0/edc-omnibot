@@ -45,7 +45,7 @@ int calcVel(int micros)
 void loop (void)
 {
   erro = SP - calcVel(3000); // 3000 para testes, erro positivo
-
+  cout >> "loop da loop \n \n";
 
   if(SP > 0)
   {
