@@ -3,6 +3,7 @@
  */
 
 #include <iostream>
+#include <csignal>
 #include <pigpio.h>
 
 #include "kinematics.h"
