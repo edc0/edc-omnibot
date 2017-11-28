@@ -49,17 +49,19 @@ void loop (void)
 {
   erro = SP - calcVel(3000); // 3000 para testes, erro positivo
 
-
-  SP = inp;
-  if(SP > 0)
+  if(SP != inp)
   {
-    gpioPWM(M1a, 0);
-    gpioPWM(M1b, SP);
-  }
-  if(SP <= 0)
-  {
-    gpioPWM(M1a, SP);
-    gpioPWM(M1b, 0);
+    SP = inp;
+    if(SP > 0)
+    {
+      gpioPWM(M1a, 0);
+      gpioPWM(M1b, SP);
+    }
+    if(SP <= 0)
+    {
+      gpioPWM(M1a, SP);
+      gpioPWM(M1b, 0);
+    }
   }
 }
 
@@ -81,10 +83,10 @@ int main(void)
   gpioSetMode(E2a, PI_INPUT);
 
   // chama função loop() a cada 2ms
-  gpioSetTimerFunc(3, 10, loop);
+  gpioSetTimerFunc(3, 5, loop);
 
   inp = 50;
-  
+
   for(;;)
   {
     cin >> inp;
