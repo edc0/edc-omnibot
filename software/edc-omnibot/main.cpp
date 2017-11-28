@@ -75,7 +75,7 @@ void loop (void)
 {
   erro = inp - rps_avg; // 3000 para testes, erro positivo
 
-  val_new = val_old + 0.02*erro; //erro negativo diminui o valor de acionamento
+  val_new = val_old + 0.2*erro; //erro negativo diminui o valor de acionamento
   if(val_new > 0)
   {
     gpioPWM(M1a, 0);
