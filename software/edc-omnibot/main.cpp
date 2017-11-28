@@ -149,27 +149,27 @@ void loop (void)
   }
   if(val1_new < 0)
   {
-    gpioPWM(M1a, -int(val_new));
+    gpioPWM(M1a, -int(val1_new));
     gpioPWM(M1b, 0);
   }
   if(val2_new > 0)
   {
     gpioPWM(M2a, 0);
-    gpioPWM(M2b, int(val_new));
+    gpioPWM(M2b, int(val2_new));
   }
   if(val2_new < 0)
   {
-    gpioPWM(M2a, -int(val_new));
+    gpioPWM(M2a, -int(val2_new));
     gpioPWM(M2b, 0);
   }
   if(val3_new > 0)
   {
     gpioPWM(M3a, 0);
-    gpioPWM(M3b, int(val_new));
+    gpioPWM(M3b, int(val3_new));
   }
   if(val3_new < 0)
   {
-    gpioPWM(M3a, -int(val_new));
+    gpioPWM(M3a, -int(val3_new));
     gpioPWM(M3b, 0);
   }
 
