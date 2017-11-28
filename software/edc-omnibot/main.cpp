@@ -40,6 +40,10 @@ void exit_from_key (int signum)
   cout << "Interrupt signal (" << signum << ") received.\n" ;
   gpioPWM(M1a, 0);
   gpioPWM(M1b, 0);
+  gpioPWM(M2a, 0);
+  gpioPWM(M2b, 0);
+  gpioPWM(M3a, 0);
+  gpioPWM(M3b, 0);
   gpioDelay(10000);
   gpioTerminate(); // desliga motores
   exit(signum);
@@ -71,7 +75,7 @@ void loop (void)
   erro = inp - rps_avg; // 3000 para testes, erro positivo
 
   val_new = val_old + 0.5*erro; //erro negativo diminui o valor de acionamento
-  cout << val_new <<"\n"<<erro<<"\n\n" ;
+  //cout << val_new <<"\n"<<erro<<"\n\n" ;
   if(val_new > 0)
   {
     gpioPWM(M1a, 0);
@@ -103,6 +107,8 @@ int main(void)
   M1b = 3;
   M2a = 17;
   M2b = 27;
+  M3a = 16;
+  M3b = 20;
   E1a = 26;
   E1b = 19;
 
