@@ -11,11 +11,14 @@
 double teste;
 int M1a, M1b, M2a, M2b, M3a, M3b;
 int E1a, E1b, E2a, E2b, E3a, E3b;
-int SP = 128; // rotações por segundo
+int SP = 50; // rotações por segundo
 
 // ticks para medir velocidade do encoder
 uint32_t startTick, endTick;
 int diffTick;
+
+// para interagir com user
+int inp;
 
 // valores para atualizar o controlador
 double val_old=0;
@@ -46,6 +49,8 @@ void loop (void)
 {
   erro = SP - calcVel(3000); // 3000 para testes, erro positivo
 
+
+  SP = inp;
   if(SP > 0)
   {
     gpioPWM(M1a, 0);
@@ -78,8 +83,12 @@ int main(void)
   // chama função loop() a cada 2ms
   gpioSetTimerFunc(3, 10, loop);
 
+  inp = 50;
+  
   for(;;)
-  {}
+  {
+    cin >> inp;
+  }
 
   return 0;
 }
