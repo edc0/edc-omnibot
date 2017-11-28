@@ -109,13 +109,13 @@ int main(void)
   // setando os pinos de saída:
   gpioSetMode(M1a, PI_OUTPUT);
   gpioSetMode(M1b, PI_OUTPUT);
-  gpioSetPWMFrequency(M1a, 10000);
-  gpioSetPWMFrequency(M1b, 10000);
+  gpioSetPWMfrequency(M1a, 10000);
+  gpioSetPWMfrequency(M1b, 10000);
 
   gpioSetMode(M2a, PI_OUTPUT);
   gpioSetMode(M2b, PI_OUTPUT);
-  gpioSetPWMFrequency(M2a, 10000);
-  gpioSetPWMFrequency(M2b, 10000);
+  gpioSetPWMfrequency(M2a, 10000);
+  gpioSetPWMfrequency(M2b, 10000);
 
   gpioSetMode(E1a, PI_INPUT);
   gpioSetMode(E2a, PI_INPUT);
