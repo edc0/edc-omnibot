@@ -7,6 +7,7 @@
 #include <pigpio.h>
 
 #include "kinematics.h"
+#include "rotary_encoder.hpp"
 
 double teste;
 int M1a, M1b, M2a, M2b, M3a, M3b;
@@ -45,6 +46,16 @@ int calcVel(int micros)
   return rps;
 }
 
+
+void dec_callback(int way)
+{
+   static int pos = 0;
+
+   pos += way;
+
+   std::cout << "pos=" << pos << std::endl;
+}
+
 void loop (void)
 {
   erro = SP - calcVel(3000); // 3000 para testes, erro positivo
@@ -70,6 +81,7 @@ int main(void)
   signal(SIGINT, exit_from_key);
   gpioInitialise();
 
+
   // setando pinos para os testes
   M1a = 2;
   M1b = 3;
@@ -84,6 +96,8 @@ int main(void)
 
   // chama função loop() a cada 2ms
   gpioSetTimerFunc(3, 10, loop);
+
+  re_decoder dec(E1a, E1b, dec_callback);
 
   inp = 50;
 
