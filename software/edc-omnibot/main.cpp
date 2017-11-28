@@ -84,7 +84,7 @@ void loop (void)
   }
   if(val_new < 0)
   {
-    gpioPWM(M1a, int(val_new));
+    gpioPWM(M1a, -int(val_new));
     gpioPWM(M1b, 0);
   }
 
