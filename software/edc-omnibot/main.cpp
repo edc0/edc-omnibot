@@ -48,13 +48,13 @@ void loop (void)
 
   if(SP > 0)
   {
-    gpioPWM(M1b, SP);
     gpioPWM(M1a, 0);
+    gpioPWM(M1b, SP);
   }
   if(SP <= 0)
   {
     gpioPWM(M1a, SP);
-    gpioPWM(M2a, 0);
+    gpioPWM(M1b, 0);
   }
 }
 
@@ -65,13 +65,13 @@ int main(void)
 
   // setando pinos para os testes
   M1a = 2;
-  M2a = 3;
+  M1b = 3;
   E1a = 26;
   E1b = 19;
 
   // setando os pinos de saída:
   gpioSetMode(M1a, PI_OUTPUT);
-  gpioSetMode(M2a, PI_OUTPUT);
+  gpioSetMode(M1b, PI_OUTPUT);
   gpioSetMode(E1a, PI_INPUT);
   gpioSetMode(E2a, PI_INPUT);
 
