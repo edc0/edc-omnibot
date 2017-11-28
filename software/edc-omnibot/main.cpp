@@ -23,7 +23,7 @@ uint32_t startTick, endTick;
 int diffTick = 0;
 
 // para interagir com user, set point da velocidade
-int inp;
+double inp;
 
 // valores para atualizar o controlador
 double val_old=0;
