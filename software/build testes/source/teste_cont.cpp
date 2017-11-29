@@ -133,6 +133,8 @@ void dec_callback3(int way)
 
 void loop (void)
 {
+  cout << gpioTick();
+  cout << "\n";
   erro1 = inp - rps1_avg; // 3000 para testes, erro positivo
   erro2 = inp - rps2_avg;
   erro3 = inp - rps3_avg;
