@@ -5,22 +5,6 @@
 #include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
-OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
-{
-  Mot_A = MA;
-  Mot_B = MB;
-
-  Enc_A = EA;
-  Enc_B = EB;
-
-  gpioSetMode(Mot_A, PI_OUTPUT);
-  gpioSetMode(Mot_B, PI_OUTPUT);
-  gpioSetPWMfrequency(Mot_A, 10000);
-  gpioSetPWMfrequency(Mot_B, 10000);
-
-  re_decoder dec(Enc_A, Enc_B, dec_callback);
-}
-
 void OmniRPiInterface::dec_callback(int way)
 {
   t_pos = gpioTick();
@@ -36,6 +20,22 @@ void OmniRPiInterface::dec_callback(int way)
   //getAngSpd??
   pos_old = pos;
   t_pos_old = t_pos;
+}
+
+OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
+{
+  Mot_A = MA;
+  Mot_B = MB;
+
+  Enc_A = EA;
+  Enc_B = EB;
+
+  gpioSetMode(Mot_A, PI_OUTPUT);
+  gpioSetMode(Mot_B, PI_OUTPUT);
+  gpioSetPWMfrequency(Mot_A, 10000);
+  gpioSetPWMfrequency(Mot_B, 10000);
+
+  re_decoder dec(Enc_A, Enc_B, dec_callback);
 }
 
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
