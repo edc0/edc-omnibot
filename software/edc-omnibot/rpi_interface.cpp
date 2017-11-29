@@ -52,20 +52,20 @@ double OmniRPiInterface::getWheelPos()       // returns pos (mas se é public, p
 void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
   spd_error = sp - getAngSpd();
-  control_new = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
+  control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
 
-  if(control_new > 0)
+  if(control > 0)
   {
     gpioPWM(Mot_A, 0);
-    gpioPWM(Mot_B, int(control_new));
+    gpioPWM(Mot_B, int(control));
   }
-  if(control_new < 0)
+  if(control < 0)
   {
-    gpioPWM(Mot_A, -int(control_new));
+    gpioPWM(Mot_A, -int(control));
     gpioPWM(Mot_B, 0);
   }
 
-  control_old = control_new;
+  control_old = control;
 }
 
 double OmniRPiInterface::getspd_error(double sp) // returns current controller error signal
