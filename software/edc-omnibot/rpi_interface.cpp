@@ -1,7 +1,7 @@
 // Did not put declare variables as extern here because this interface is to be
 // used exclusively with the <kinematics> library.
 
-#include <pigpio>
+#include <pigpio.h>
 #include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
