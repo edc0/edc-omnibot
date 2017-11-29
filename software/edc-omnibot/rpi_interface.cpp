@@ -74,7 +74,7 @@ double OmniRPiInterface::getError(double sp) // returns current controller error
   return(error);
 }
 
-double OmniRPiInterface::getAngSpd(int n = 5) // returns current wheel speed (average of n last readings)
+double OmniRPiInterface::getAngSpd(int n) // returns current wheel speed (average of n last readings)
 {
   double rps_avg=0;
   for(int i = 0; i<n; i++)
