@@ -11,11 +11,15 @@
 \contentsline {subsection}{\numberline {2.1}Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Estado da Arte}{6}{subsection.2.2}
 \contentsline {section}{\numberline {3}Especifica\IeC {\c c}\IeC {\~a}o e montagem do prot\IeC {\'o}tipo}{9}{section.3}
-\contentsline {section}{\numberline {4}Desenvolvimento Te\IeC {\'o}rico}{11}{section.4}
-\contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{15}{section.5}
-\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{17}{section.6}
-\contentsline {section}{\numberline {7}Resultados}{19}{section.7}
-\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{21}{section.8}
-\contentsline {section}{\numberline {9}Refer\^encias}{23}{section.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{27}{section.9}
-\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{28}{subsection.9.1}
+\contentsline {section}{\numberline {4}Desenvolvimento Te\IeC {\'o}rico}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Modelagem Cinem\IeC {\'a}tica}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Odometria}{14}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Planejamento de Trajet\IeC {\'o}ria}{15}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Controle}{16}{subsection.4.4}
+\contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{19}{section.5}
+\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{21}{section.6}
+\contentsline {section}{\numberline {7}Resultados}{23}{section.7}
+\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{25}{section.8}
+\contentsline {section}{\numberline {9}Refer\^encias}{27}{section.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{31}{section.9}
+\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{32}{subsection.9.1}

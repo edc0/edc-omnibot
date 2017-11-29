@@ -55,12 +55,13 @@
 \bibcite{jimenez2009comparison}{{11}{2009}{{Jimenez et~al.}}{{Jimenez, Seco, Prieto, and Guevara}}}
 \bibcite{pigpio}{{12}{2017}{{Joan}}{{}}}
 \bibcite{jung2001fault}{{13}{2001}{{Jung and Kim}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Refer\^encias}{27}{section.9}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Refer\^encias}{23}{section.9}}
 \bibcite{kim2014minenergy}{{14}{2014}{{Kim and Kim}}{{}}}
 \bibcite{krinkin2015design}{{15}{2015}{{Krinkin et~al.}}{{Krinkin, Stotskaya, and Stotskiy}}}
 \bibcite{loh2003mechatronics}{{16}{2003}{{Loh et~al.}}{{Loh, Low, and Leow}}}
-\bibcite{lynch2017modern}{{17}{2017}{{Lynch and Park}}{{}}}
-\bibcite{marketsmarkets}{{18}{2015}{{Markets and Markets}}{{}}}
+\@writefile{toc}{\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{25}{section.9}}
+\@input{7ape1.aux}
+}}{{}}}
 \bibcite{omniwheel}{{19}{2016}{{Nexus}}{{}}}
 \bibcite{oubbati2005velocity}{{20}{2005}{{Oubbati et~al.}}{{Oubbati, Schanz, Buchheim, and Levi}}}
 \bibcite{park1996dead}{{21}{1996}{{Park et~al.}}{{Park, Chung, Chung, and Lee}}}
@@ -77,5 +78,5 @@
 \bibcite{treesatayapun2011discrete}{{32}{2011}{{Treesatayapun}}{{}}}
 \bibcite{upton2014raspberry}{{33}{2014}{{Upton and Halfacree}}{{}}}
 \bibcite{williams2002dynamic}{{34}{2002}{{Williams et~al.}}{{Williams, Carter, Gallina, and Rosati}}}
-\@writefile{toc}{\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{31}{section.9}}
+\@writefile{toc}{\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{27}{section.9}}
 \@input{7ape1.aux}

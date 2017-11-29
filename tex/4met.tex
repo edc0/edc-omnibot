@@ -18,34 +18,34 @@ falar da bateria falar da bateria falar da bateria falar da bateria falar da bat
 
 O acionamento dos motores se dá por um circuito de pontes H. Há duas destas placas, e cada uma pode acionar dois motores. Assim, se tem a possibilidade de utilizar mais um motor em trabalhos futuros. Talvez eu devesse citar as especificações dessas coisas, certo? Cada driver é alimentado com a tensão regulada de 6 V, e o computador utilizado comanda o chaveamento via PWM.
 
-Power pins
-The maximum permitted current draw from the 3.3 V pins is 50 mA.
-
-Maximum permitted current draw from the 5 V pin is the USB input current (usually 1 A) minus any current draw from the rest of the board.[18]
-
-Model A: 1000 mA - 500 mA -> max current draw: 500 mA
-Model B: 1000 mA - 700 mA -> max current draw: 300 mA
-
 Todo o processamento é realizado por um \textbf{Raspberry Pi}, um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
 
 Para unir todos os componentes descritos, se projetou uma estrutura central, como um chassi. Tal estrutura pode ser vista na Figura \ref{fig:chassi}. No centro geométrico da estrutura e na periferia, próximo a uma das rodas, foram feitos dois orifícios que devem acomodar uma caneta hidrográfica cada. Assim, durante a fase de testes, se pode acompanhar graficamente a evolução cinemática do robô. Devido a localização central de uma das canetas, todos os componentes foram instalados na periferia da estrutura. Se tomou ainda o cuidado de instalar o CI de acelerômetro e giroscópio o mais próximo ao centro possível, para que as componentes de aceleração centrípeta dos movimentos com componentes de rotação não influciassem demasiado nos resultados. A IMU poderia ter sido colocada no centro geométrico, e este erro poderia ser introduzido no traço da caneta. No entanto, como a odometria e localização dependem muito mais dos sensores montados nos motores do que da IMU, se preferiu manter a caneta no centro, mantendo o MPU6050 o mais próximo possível. A bússola também foi montada relativamente próxima ao centro do robô, se tomando o cuidado de manter a mesma orientação dos eixos.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width = 0.45\textwidth]{imagens/proto01}
-  \caption{Chassi projetado. TROCAR A IMAGEM.}
+  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \caption{Chassi projetado. TROCAR FIGURA}
   \label{fig:chassi}
 \end{figure}
 
-O custo de aquisição dos componentes relatados pode ser visto detalhado no hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle), e que o chassi foi usinado no próprio laboratório com equipamento próprio, sendo computado apenas o custo do material utilizado.
+A plataforma projetada foi então fabricada, utilizando chapas de acrílico transparente de 5 mm de espessura. Se cogitou produzir tal estrutura em alumínio, porém se mostrou mais prático utilizar o acrílico. Entre as vantagens do material plástico se podem destacar a fácil obtenção, baixo custo, isolamento elétrico (permitindo montar os componentes eletrônicos diretamente sobre o chassi) e a possibilidade de se usinar utilizando uma máquina de corte a \textit{laser}, que elimina o limite inferior de tamanho de brocas e fresas em relação a fresadora CNC considerada originalmente. A espessura foi escolhida empiricamente, dentro das disponíveis, de maneira relativamente conservadora, e atendeu as necessidades. Na Figura \ref{fig:montagem} se pode ver a montagem final do protótipo.
 
-\cite{siegwart2011introduction}, pg 97: sensores.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \caption{Protótipo montado, sem as canetas. TROCAR FIGURA}
+  \label{fig:montagem}
+\end{figure}
+
+O custo de aquisição dos componentes relatados pode ser visto detalhado no hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle).
 
 \section{Desenvolvimento Teórico}
 \label{sec:teorico}
 
 %% MODELAGEM:
 %PARK: pg 468
+\subsection{Modelagem Cinemática}
 
 Primeiramente, se definem dois sistemas de coordenadas. O primeiro, $(x_I,y_I)$, é o sistema de coordenadas global, fixo no ambiente. O segundo, $(x_R,y_R)$, está centrado no próprio robô. Ainda se pode definir o ângulo $\theta$ como a orientação do robô -- ou seja, o ângulo entre os dois sistemas de coordenadas. Tal relação pode ser vista na Figura \ref{fig:ref}, e a transformação de um sistema para o outro é descrita na Equação \ref{eq:world_ref}, conforme \cite{siegwart2011introduction} e \cite{ritter2016modelagem}.
 
@@ -136,6 +136,7 @@ Como pela classificação de \cite{campion1996structural} um \acrshort{tomr} é 
 
 %% ODOMETRIA:
 % lynch, pg 492 do pdf
+\subsection{Odometria}
 
 Durante a operação do robô, se torna necessário calcular a posição da estrutura. Para o cálculo da odometria, se utiliza a metodologia mostrada em \cite{lynch2017modern}. Se assume que durante um certo intervalo de tempo $\Delta t$ se tenha velocidades de rotação constantes nas rodas, o que permite considerar $\dot{\phi_i}.\Delta t = \Delta \phi_i$. Considera-se também que a unidade de tempo deste período é arbitrária, e como se deseja integrar no mesmo intervalo posteriormente, se assume um período unitário $\Delta t = 1$. Este procedimento está descrito na Equação \ref{eq:odo}, modificada a partir da Equação \ref{eq:dk}. Na prática, é fácil contar os deslocamentos angulares $\Delta \phi_i$, visto que o número de pulsos por revolução dos \textit{encoders} é determinado.
 
@@ -190,6 +191,8 @@ Sendo $k$ o instante antes do período de tempo analisado, para se obter a nova 
 %\cite{samani2007comprehensive}: Adicionam um modelo de ruído dos encoders à estimativa. TIRAR OU ELABORAR?
 
 %% PLANEJAMENTO DE TRAJETÓRIA:
+\subsection{Planejamento de Trajetória}
+
 Para o robô desenvolvido, não há a necessidade de implementar algoritmos complexos de planejamento de trajetória (detecção de obstáculos, caminhos de mínima energia, etc.). Serão abordados caminhos ``ponto a ponto'', que levam de um ponto inicial a um ponto final, ambos em repouso (\cite{lynch2017modern}).
 
 Apesar de ser uma trajetória simples, ainda se podem aplicar considerações para uma melhor operação do sistema. Uma dessas considerações é o chamado \textit{time-scaling} da trajetóra, ou seja, a geração de uma função $s(t)$ que suavize o comportamento do robô por meio de restrições em velocidades e acelerações. Na Figura \ref{fig:poly5} se pode ver uma curva de perfil de velocidade polinomial de quinta ordem, que pode garantir velocidades e acelerações nulas nos pontos de origem e destino.
@@ -212,10 +215,11 @@ No entanto, a interpolação de um polinômio a cada cálculo de trajetória é 
   \label{fig:trap}
 \end{figure}
 
+%% CONTROLE:
+\subsection{Controle}
+
 EM CONSTRUÇÃO DAQUI PRA BAIXO
 
-%% CONTROLE:
-CONTROLE:
 \cite{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
 motores:
 https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html?p=970719369296201312SG

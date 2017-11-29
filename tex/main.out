@@ -11,10 +11,14 @@
 \BOOKMARK [2][-]{subsection.2.2}{Estado da Arte}{section.2}% 11
 \BOOKMARK [1][-]{section.3}{Especifica\347\343o e montagem do prot\363tipo}{}% 12
 \BOOKMARK [1][-]{section.4}{Desenvolvimento Te\363rico}{}% 13
-\BOOKMARK [1][-]{section.5}{Implementa\347\343o dos algoritmos}{}% 14
-\BOOKMARK [1][-]{section.6}{Avalia\347\343o experimental}{}% 15
-\BOOKMARK [1][-]{section.7}{Resultados}{}% 16
-\BOOKMARK [1][-]{section.8}{Conclus\343o e Trabalhos Futuros}{}% 17
-\BOOKMARK [1][-]{section.9}{Refer\352ncias}{}% 18
-\BOOKMARK [1][-]{section.9}{Ap\352ndices}{}% 19
-\BOOKMARK [2][-]{subsection.9.1}{Custo dos componentes utilizados}{section.9}% 20
+\BOOKMARK [2][-]{subsection.4.1}{Modelagem Cinem\341tica}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Odometria}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.3}{Planejamento de Trajet\363ria}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.4}{Controle}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Implementa\347\343o dos algoritmos}{}% 18
+\BOOKMARK [1][-]{section.6}{Avalia\347\343o experimental}{}% 19
+\BOOKMARK [1][-]{section.7}{Resultados}{}% 20
+\BOOKMARK [1][-]{section.8}{Conclus\343o e Trabalhos Futuros}{}% 21
+\BOOKMARK [1][-]{section.9}{Refer\352ncias}{}% 22
+\BOOKMARK [1][-]{section.9}{Ap\352ndices}{}% 23
+\BOOKMARK [2][-]{subsection.9.1}{Custo dos componentes utilizados}{section.9}% 24
