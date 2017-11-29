@@ -4,4 +4,6 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Desenho de uma roda omnidirecional.\relax }}{3}{figure.caption.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces Chassi projetado. TROCAR A IMAGEM.\relax }}{10}{figure.caption.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Sistemas de coordenadas global I e relativo ao centro do rob\IeC {\^o} R.\relax }}{11}{figure.caption.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Vista superior do rob\IeC {\^o}, mostrando as conven\IeC {\c c}\IeC {\~o}es adotadas. $v_x$ e $v_y$ est\IeC {\~a}o no sistema de coordenadas do rob\IeC {\^o}.\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {6}{\ignorespaces Vista superior do rob\IeC {\^o}, mostrando as conven\IeC {\c c}\IeC {\~o}es adotadas. As grandezas $v_x$ e $v_y$ est\IeC {\~a}o no sistema de coordenadas do rob\IeC {\^o}.\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Deslocamento, velocidade e acelera\IeC {\c c}\IeC {\~a}o durante uma trajet\IeC {\'o}ria gerada por polin\IeC {\^o}mio de quinta ordem. Acelera\IeC {\c c}\IeC {\~a}o e velocidade s\IeC {\~a}o nulas tanto no ponto de origem quanto no ponto de destino.\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Deslocamento e velocidade durante um deslocamento com perfil de velocidades trapezoidal. Tal perfil foi adotado neste trabalho.\relax }}{14}{figure.caption.8}

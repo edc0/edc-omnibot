@@ -211,7 +211,7 @@ int main(void)
   gpioSetMode(E1a, PI_INPUT);
   gpioSetMode(E2a, PI_INPUT);
 
-  // chama função loop() a cada 2ms
+  // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
   re_decoder dec1(E1a, E1b, dec_callback1);

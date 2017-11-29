@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  28 NOV 2017 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  28 NOV 2017 22:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1435,7 +1435,7 @@ Package babel Info: Redefining portuges shorthand "|
  (./2intro.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- <imagens/markets.png, id=192, 527.9725pt x 352.31625pt>
+ <imagens/markets.png, id=199, 527.9725pt x 352.31625pt>
 File: imagens/markets.png Graphic file (type png)
 
 <use imagens/markets.png>
@@ -1465,14 +1465,14 @@ l.22
 
 
  <./imagens/markets.png>]
-<imagens/tomr_ritter_mod.png, id=210, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=217, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
 Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 25.
 (pdftex.def)             Requested size: 211.38832pt x 188.19495pt.
 
-<imagens/omniwheel.png, id=215, 1027.84pt x 635.37375pt>
+<imagens/omniwheel.png, id=222, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
@@ -1645,7 +1645,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-] <imagens/proto01.png, id=408, 469.755pt x 335.75438pt>
+] <imagens/proto01.png, id=415, 469.755pt x 335.75438pt>
 File: imagens/proto01.png Graphic file (type png)
 
 <use imagens/proto01.png>
@@ -1674,19 +1674,19 @@ Package babel Info: Redefining portuges shorthand "|
 [10 <./imagens/proto01.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 44.
- <imagens/ref.png, id=425, 1160.335pt x 634.37pt>
+ <imagens/ref.png, id=432, 1160.335pt x 634.37pt>
 File: imagens/ref.png Graphic file (type png)
 
 <use imagens/ref.png>
 Package pdftex.def Info: imagens/ref.png used on input line 54.
 (pdftex.def)             Requested size: 305.33789pt x 166.92632pt.
 
-<imagens/robot_vel4.png, id=436, 828.09375pt x 742.775pt>
+<imagens/robot_vel4.png, id=443, 828.09375pt x 742.775pt>
 File: imagens/robot_vel4.png Graphic file (type png)
 
 <use imagens/robot_vel4.png>
 Package pdftex.def Info: imagens/robot_vel4.png used on input line 84.
-(pdftex.def)             Requested size: 305.33789pt x 273.88173pt.
+(pdftex.def)             Requested size: 234.8775pt x 210.67302pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1712,9 +1712,6 @@ Package babel Info: Redefining portuges shorthand "|
 
 
  <./imagens/ref.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1729,7 +1726,40 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 141.
 [12 <./imagens/robot_vel4.png>]
-Overfull \hbox (29.09914pt too wide) in paragraph at lines 151--155
+<imagens/poly5.png, id=488, 989.6975pt x 255.95625pt>
+File: imagens/poly5.png Graphic file (type png)
+ <use imagens/poly5.png>
+Package pdftex.def Info: imagens/poly5.png used on input line 199.
+(pdftex.def)             Requested size: 399.29463pt x 103.26334pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 206.
+[13] <imagens/trapezoidal.png, id=502, 976.64874pt x 349.305pt>
+File: imagens/trapezoidal.png Graphic file (type png)
+
+<use imagens/trapezoidal.png>
+Package pdftex.def Info: imagens/trapezoidal.png used on input line 209.
+(pdftex.def)             Requested size: 295.94795pt x 105.84763pt.
+
+Overfull \hbox (29.09914pt too wide) in paragraph at lines 218--222
 \T1/txr/m/n/12 (-20) Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044
 064.html?p=970719369296201312SG 
  []
@@ -1745,28 +1775,12 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 172.
+(babel)             in language  on input line 239.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 172.
-[13]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
+(babel)             in language  on input line 239.
+[14 <./imagens/poly5.png> <./imagens/trapezoidal.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 172.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 172.
-[14
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 172.
+(babel)             in language  on input line 239.
 
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1778,11 +1792,12 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 261.
 [15
 
+
 ]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -1794,14 +1809,14 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 261.
 [16
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 261.
 )
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
@@ -2061,11 +2076,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 18363 strings out of 493013
- 293243 string characters out of 6135683
- 461913 words of memory out of 5000000
- 21152 multiletter control sequences out of 15000+600000
- 60465 words of font info for 258 fonts, out of 8000000 for 9000
+ 18405 strings out of 493013
+ 293742 string characters out of 6135683
+ 462462 words of memory out of 5000000
+ 21165 multiletter control sequences out of 15000+600000
+ 61488 words of font info for 275 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,12n,79p,1914b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
@@ -2089,14 +2104,14 @@ onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
 ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on main.pdf (44 pages, 831705 bytes).
+/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (44 pages, 886670 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
- 31433 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 686 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 31443 words of extra memory for PDF output out of 35830 (max. 10000000)
 
