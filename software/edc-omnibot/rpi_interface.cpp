@@ -68,7 +68,7 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
   control_old = control;
 }
 
-double OmniRPiInterface::getspd_error(double sp) // returns current controller error signal
+double OmniRPiInterface::getError(double sp) // returns current controller error signal
 {
   spd_error = sp - getAngSpd();
   return(spd_error);
