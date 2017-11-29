@@ -36,7 +36,7 @@ public:
   double getWheelPos();       // returns pos (mas se é public, pra q?)
   void setSetpoint(double sp);// define velocidade desejada
   double getError(double sp); // returns current controller error signal
-  double getAngSpd(int n);// returns current wheel speed (average of n last readings)
+  double getAngSpd(int n = 5);// returns current wheel speed (average of n last readings)
   OmniRPiInterface(int MA, int MB, int EA, int EB); // class constructor
 };
 
