@@ -51,8 +51,8 @@ double OmniRPiInterface::getWheelPos()       // returns pos (mas se é public, p
 
 void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
-  erro = sp - getAngSpd();
-  control_new = control_old + Kp*erro1;   //q q eu faço com os integral e derivativo?
+  spd_error = sp - getAngSpd();
+  control_new = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
 
   if(control_new > 0)
   {
@@ -68,10 +68,10 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
   control_old = control_new;
 }
 
-double OmniRPiInterface::getError(double sp) // returns current controller error signal
+double OmniRPiInterface::getspd_error(double sp) // returns current controller error signal
 {
-  error = sp - getAngSpd();
-  return(error);
+  spd_error = sp - getAngSpd();
+  return(spd_error);
 }
 
 double OmniRPiInterface::getAngSpd(int n) // returns current wheel speed (average of n last readings)
