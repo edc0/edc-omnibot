@@ -134,7 +134,7 @@ void dec_callback3(int way)
 void loop (void)
 {
   erro1 = inp - rps1_avg; // 3000 para testes, erro positivo
-  erro2 = -inp - rps2_avg;
+  erro2 = inp - rps2_avg;
   erro3 = inp - rps3_avg;
 
   val1_new = val1_old + 3*erro1; //erro negativo diminui o valor de acionamento
@@ -165,11 +165,11 @@ void loop (void)
   if(val3_new > 0)
   {
     gpioPWM(M3a, 0);
-    gpioPWM(M3b, 0);//int(val3_new));
+    gpioPWM(M3b, int(val3_new));
   }
   if(val3_new < 0)
   {
-    gpioPWM(M3a, 0);//-int(val3_new));
+    gpioPWM(M3a, -int(val3_new));
     gpioPWM(M3b, 0);
   }
 
