@@ -5,25 +5,37 @@
 #include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
+OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
+{
+  Mot_A = MA;
+  Mot_B = MB;
+
+  Enc_A = EA;
+  Enc_B = EB;
+
+  gpioSetMode(Mot_A, PI_OUTPUT);
+  gpioSetMode(Mot_B, PI_OUTPUT);
+  gpioSetPWMfrequency(Mot_A, 10000);
+  gpioSetPWMfrequency(Mot_B, 10000);
+
+  re_decoder dec(Enc_A, Enc_B, dec_callback);
+}
+
 void OmniRPiInterface::dec_callback(int way)
 {
-  t_pos2 = gpioTick();
-  pos2 += way; // para odometria
+  t_pos = gpioTick();
+  pos += way; // para odometria
 
-  rps2 = way*2932/double(t_pos2-t_pos2_old);
+  // atualiza os valores de velocidade
+  rps[4]=rps[3];
+  rps[3]=rps[2];
+  rps[2]=rps[1];
+  rps[1]=rps[0];
+  rps[0] = way*2932/double(t_pos-t_pos_old);
 
-  // média móvel dos ultimos 5 valores
-  rps2_4=rps2_3;
-  rps2_3=rps2_2;
-  rps2_2=rps2_1;
-  rps2_1=rps2_0;
-  rps2_0 = rps2;
-  rps2_avg = (rps2_0+rps2_1+rps2_2+rps2_3+rps2_4)/5.0;
-
-  //std::cout << "rps2=" << rps2_avg << std::endl;
-  pos2_old = pos2;
-  t_pos2_old = t_pos2;
-
+  //getAngSpd??
+  pos_old = pos;
+  t_pos_old = t_pos;
 }
 
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
@@ -52,6 +64,8 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
     gpioPWM(Mot_A, -int(control_new));
     gpioPWM(Mot_B, 0);
   }
+
+  control_old = control_new;
 }
 
 double OmniRPiInterface::getError(double sp) // returns current controller error signal
