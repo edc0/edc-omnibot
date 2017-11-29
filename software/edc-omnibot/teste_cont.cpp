@@ -137,9 +137,9 @@ void loop (void)
   erro2 = inp - rps2_avg;
   erro3 = inp - rps3_avg;
 
-  val1_new = val1_old + erro1; //erro negativo diminui o valor de acionamento
-  val2_new = val2_old + erro2;
-  val3_new = val3_old + erro3;
+  val1_new = val1_old + 3*erro1; //erro negativo diminui o valor de acionamento
+  val2_new = val2_old + 3*erro2;
+  val3_new = val3_old + 3*erro3;
 
   //cout << val_new <<"\n"<<erro<<"\n\n" ;
   if(val1_new > 0)
@@ -152,15 +152,15 @@ void loop (void)
     gpioPWM(M1a, -int(val1_new));
     gpioPWM(M1b, 0);
   }
-  if(val2_new < 0)
-  {
-    gpioPWM(M2a, 0);
-    gpioPWM(M2b, -int(val2_new));
-  }
   if(val2_new > 0)
   {
-    gpioPWM(M2a, int(val2_new));
     gpioPWM(M2b, 0);
+    gpioPWM(M2a, int(val2_new));
+  }
+  if(val2_new < 0)
+  {
+    gpioPWM(M2b, -int(val2_new));
+    gpioPWM(M2a, 0);
   }
   if(val3_new > 0)
   {
