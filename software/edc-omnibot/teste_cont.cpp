@@ -155,11 +155,11 @@ void loop (void)
   if(val2_new < 0)
   {
     gpioPWM(M2a, 0);
-    gpioPWM(M2b, int(val2_new));
+    gpioPWM(M2b, -int(val2_new));
   }
   if(val2_new > 0)
   {
-    gpioPWM(M2a, -int(val2_new));
+    gpioPWM(M2a, int(val2_new));
     gpioPWM(M2b, 0);
   }
   if(val3_new > 0)
