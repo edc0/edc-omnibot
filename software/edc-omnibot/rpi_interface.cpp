@@ -76,6 +76,7 @@ double OmniRPiInterface::getAngSpd(int n) // returns current wheel speed (averag
     rps_avg = rps_avg + rps[i];
   }
   rps_avg = rps_avg/double(n);
+  return(rps_avg);
 }
 
 void OmniRPiInterface::stop()
