@@ -93,16 +93,6 @@ void dec_callback3(int way)
   Motor3.t_pos_old = Motor3.t_pos;
 }
 
-void loop (void)
-{
-  Motor1.setSetpoint(Vleft);
-  Motor2.setSetpoint(Vback);
-  Motor3.setSetpoint(Vright);
-  odometry();
-}
-
-int tempo, tempo_old, t_diff;
-
 void odometry()
 {
   tempo_old = tempo;
@@ -119,6 +109,16 @@ void odometry()
   theta += omegap*t_diff; // ERRADO
 }
 
+void loop (void)
+{
+  Motor1.setSetpoint(Vleft);
+  Motor2.setSetpoint(Vback);
+  Motor3.setSetpoint(Vright);
+  odometry();
+}
+
+int tempo, tempo_old, t_diff;
+
 int main(void)
 {
   signal(SIGINT, exit_from_key);
@@ -134,8 +134,6 @@ int main(void)
 
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
-
-  inp = 0;
 
   cout << "\nVxw: ";
   cin >> Vxw;
