@@ -52,7 +52,7 @@ void dec_callback1(int way)
   Motor1.rps[3]=Motor1.rps[2];
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
-  Motor1.rps[0] = way*18410/double(Motor1.t_pos-Motor1.t_pos_old);
+  Motor1.rps[0] = way*2000/double(Motor1.t_pos-Motor1.t_pos_old);
 
   //getAngSpd??
   Motor1.pos_old = Motor1.pos;
@@ -149,14 +149,14 @@ int main(void)
   cout << "\nVelocidade da roda 2: " << Vback;
   cout << "\nVelocidade da roda 3: " << Vright;
 
-  /*int stop = 1;
+  int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
   while (stop!=0)
   {
     cin >> stop;
-  }*/
+  }
 
-  for(;;){}
+  //for(;;){}
 /*
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
