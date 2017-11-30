@@ -38,7 +38,7 @@ public:
   double getError(double sp); // returns current controller error signal
   double getAngSpd(int n = 5);// returns current wheel speed (average of n last readings)
   void stop();
-  void startDecoder();
+  //void startDecoder();
   OmniRPiInterface(int MA, int MB, int EA, int EB); // class constructor
 };
 
