@@ -113,11 +113,10 @@ void odometry()
 
 void loop (void)
 {
-  cout << "loopdalo0p";
   Motor1.setSetpoint(Vleft);
   Motor2.setSetpoint(Vback);
   Motor3.setSetpoint(Vright);
-  odometry();
+  //odometry();
 }
 
 
