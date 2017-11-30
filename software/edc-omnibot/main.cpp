@@ -156,7 +156,7 @@ int main(void)
     cin >> stop;
   }*/
 
-  for(;;)
+  for(;;){}
 /*
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
