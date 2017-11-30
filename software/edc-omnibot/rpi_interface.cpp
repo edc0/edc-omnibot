@@ -30,7 +30,6 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
   spd_error = sp - getAngSpd();
   control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
-  std::cout << "controlooooo\n\n";
   if(control > 0)
   {
     gpioPWM(Mot_A, 0);
