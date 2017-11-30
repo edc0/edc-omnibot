@@ -3,7 +3,7 @@
 
 PROG = teste
 CC = g++
-CPPFLAGS = –Wall –pthread
+CPPFLAGS = -Wall -pthread
 LDFLAGS = -lpigpio -lrt
 OBJS = main.o kinematics.o rpi_interface.o rotary_encoder.o
 
