@@ -29,6 +29,57 @@ void exit_from_key (int signum)
   exit(signum);
 }
 
+void dec_callback1(int way)
+{
+  Motor1.t_pos = gpioTick();
+  Motor1.pos += way; // para odometria
+
+  // atualiza os valores de velocidade
+  Motor1.rps[4]=Motor1.rps[3];
+  Motor1.rps[3]=Motor1.rps[2];
+  Motor1.rps[2]=Motor1.rps[1];
+  Motor1.rps[1]=Motor1.rps[0];
+  Motor1.rps[0] = way*2932/double(Motor1.t_pos-Motor1.t_pos_old);
+
+  //getAngSpd??
+  Motor1.pos_old = Motor1.pos;
+  Motor1.t_pos_old = Motor1.t_pos;
+}
+
+void dec_callback2(int way)
+{
+  Motor2.t_pos = gpioTick();
+  Motor2.pos += way; // para odometria
+
+  // atualiza os valores de velocidade
+  Motor2.rps[4]=Motor2.rps[3];
+  Motor2.rps[3]=Motor2.rps[2];
+  Motor2.rps[2]=Motor2.rps[1];
+  Motor2.rps[1]=Motor2.rps[0];
+  Motor2.rps[0] = way*2932/double(Motor2.t_pos-Motor2.t_pos_old);
+
+  //getAngSpd??
+  Motor2.pos_old = Motor2.pos;
+  Motor2.t_pos_old = Motor2.t_pos;
+}
+
+void dec_callback3(int way)
+{
+  Motor3.t_pos = gpioTick();
+  Motor3.pos += way; // para odometria
+
+  // atualiza os valores de velocidade
+  Motor3.rps[4]=Motor3.rps[3];
+  Motor3.rps[3]=Motor3.rps[2];
+  Motor3.rps[2]=Motor3.rps[1];
+  Motor3.rps[1]=Motor3.rps[0];
+  Motor3.rps[0] = way*2932/double(Motor3.t_pos-Motor3.t_pos_old);
+
+  //getAngSpd??
+  Motor3.pos_old = Motor3.pos;
+  Motor3.t_pos_old = Motor3.t_pos;
+}
+
 void loop (void)
 {
   Motor1.setSetpoint(inp);
@@ -53,9 +104,9 @@ int main(void)
   OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
   OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
 
-  re_decoder dec1(E1a, E1b, Motor1.dec_callback);
-  re_decoder dec2(E2a, E2b, Motor2.dec_callback);
-  re_decoder dec3(E3a, E3b, Motor3.dec_callback);
+  re_decoder dec1(E1a, E1b, dec_callback1);
+  re_decoder dec2(E2a, E2b, dec_callback2);
+  re_decoder dec3(E3a, E3b, dec_callback3);
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
