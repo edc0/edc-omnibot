@@ -52,7 +52,7 @@ void dec_callback1(int way)
   Motor1.rps[3]=Motor1.rps[2];
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
-  Motor1.rps[0] = way*0.01841*1000000/double(Motor1.t_pos-Motor1.t_pos_old);
+  Motor1.rps[0] = way*18410/double(Motor1.t_pos-Motor1.t_pos_old);
 
   //getAngSpd??
   Motor1.pos_old = Motor1.pos;
