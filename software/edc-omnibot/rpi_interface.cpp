@@ -2,7 +2,7 @@
 // used exclusively with the <kinematics> library.
 
 #include <pigpio.h>
-#include <stdio.h>
+#include <iostream>
 #include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
