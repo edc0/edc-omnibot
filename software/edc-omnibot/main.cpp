@@ -96,7 +96,6 @@ void dec_callback3(int way)
 
 void loop (void)
 {
-  cout << "loop da loop\n";
   Motor1.setSetpoint(inp);
   Motor2.setSetpoint(-inp);
 }
@@ -109,19 +108,19 @@ int main(void)
   Motor1.start();
   Motor2.start();
   Motor3.start();
-  cout<<"we did start the fire\n";
 
   re_decoder dec1(E1a, E1b, dec_callback1);
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
+
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
   inp = 0;
-
   for(;;)
   {
     cin >> inp;
+    cout << inp;
   }
 
   return 0;
