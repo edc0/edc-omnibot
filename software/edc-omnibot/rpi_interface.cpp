@@ -13,6 +13,8 @@ OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
 
   Enc_A = EA;
   Enc_B = EB;
+
+  Kp = 3;
 }
 
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
