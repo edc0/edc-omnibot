@@ -2,6 +2,7 @@
 // used exclusively with the <kinematics> library.
 
 #include <pigpio.h>
+#include <stdio.h>
 #include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
@@ -29,7 +30,7 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
   spd_error = sp - getAngSpd();
   control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
-  cout << "controlooooo\n\n";
+  std::cout << "controlooooo\n\n";
   if(control > 0)
   {
     gpioPWM(Mot_A, 0);
