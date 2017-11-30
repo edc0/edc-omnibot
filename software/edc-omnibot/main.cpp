@@ -104,6 +104,10 @@ int main(void)
   signal(SIGINT, exit_from_key);
   gpioInitialise();
 
+  Motor1.start();
+  Motor2.start();
+  Motor3.start();
+  
   re_decoder dec1(E1a, E1b, dec_callback1);
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);

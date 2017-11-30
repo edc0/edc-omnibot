@@ -39,6 +39,7 @@ public:
   double getAngSpd(int n = 5);// returns current wheel speed (average of n last readings)
   void stop();
   //void startDecoder();
+  void start();
   OmniRPiInterface(int MA, int MB, int EA, int EB); // class constructor
 };
 

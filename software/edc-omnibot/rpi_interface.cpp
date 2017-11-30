@@ -12,11 +12,6 @@ OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
 
   Enc_A = EA;
   Enc_B = EB;
-
-  gpioSetMode(Mot_A, PI_OUTPUT);
-  gpioSetMode(Mot_B, PI_OUTPUT);
-  gpioSetPWMfrequency(Mot_A, 10000);
-  gpioSetPWMfrequency(Mot_B, 10000);
 }
 
 void OmniRPiInterface::dec_callback(int way)
@@ -87,4 +82,12 @@ void OmniRPiInterface::stop()
 {
   gpioWrite(Mot_A, 0);
   gpioWrite(Mot_B, 0);
+}
+
+void OmniRPiInterface::start()
+{
+  gpioSetMode(Mot_A, PI_OUTPUT);
+  gpioSetMode(Mot_B, PI_OUTPUT);
+  gpioSetPWMfrequency(Mot_A, 10000);
+  gpioSetPWMfrequency(Mot_B, 10000);
 }
