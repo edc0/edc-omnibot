@@ -32,7 +32,7 @@ public:
 
 public:
   void resetPos();            // reinicia os contadores de posição
-  void dec_callback(int way); // callback para atualização do encoder
+  //void dec_callback(int way); // callback para atualização do encoder
   double getWheelPos();       // returns pos (mas se é public, pra q?)
   void setSetpoint(double sp);// define velocidade desejada
   double getError(double sp); // returns current controller error signal

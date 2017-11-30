@@ -120,7 +120,6 @@ int main(void)
   for(;;)
   {
     cin >> inp;
-    cout << inp;
   }
 
   return 0;

@@ -14,24 +14,6 @@ OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
   Enc_B = EB;
 }
 
-void OmniRPiInterface::dec_callback(int way)
-{
-  t_pos = gpioTick();
-  pos += way; // para odometria
-
-  // atualiza os valores de velocidade
-  rps[4]=rps[3];
-  rps[3]=rps[2];
-  rps[2]=rps[1];
-  rps[1]=rps[0];
-  rps[0] = way*2932/double(t_pos-t_pos_old);
-
-  //getAngSpd??
-  pos_old = pos;
-  t_pos_old = t_pos;
-}
-
-
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
 {
   pos = 0;
@@ -47,7 +29,7 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
   spd_error = sp - getAngSpd();
   control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
-
+  cout << "controlooooo\n\n";
   if(control > 0)
   {
     gpioPWM(Mot_A, 0);
