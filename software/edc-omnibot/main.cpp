@@ -53,7 +53,7 @@ void dec_callback1(int way)
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
   Motor1.rps[0] = way*2000/double(Motor1.t_pos-Motor1.t_pos_old);
-  cout << double(Motor1.t_pos-Motor1.t_pos_old);
+  cout << double(Motor1.t_pos-Motor1.t_pos_old) << "\n";
 
 
   //getAngSpd??
@@ -174,7 +174,7 @@ int main(void)
 
   cout << "\nDistância em X: " << xw << "\n";
   cout << "Distância em Y: " << yw << "\n";
-  cout << "Rotação, rad/s: " << theta << "\n";
+  cout << "Rotação em rad: " << theta << "\n";
 
   return 0;
 }
