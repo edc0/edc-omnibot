@@ -72,7 +72,7 @@ void dec_callback2(int way)
   Motor2.rps[2]=Motor2.rps[1];
   Motor2.rps[1]=Motor2.rps[0];
   Motor2.rps[0] = way*18410/double(Motor2.t_pos-Motor2.t_pos_old);
-
+  cout << double(Motor2.t_pos-Motor2.t_pos_old) << "\n\n"
   //getAngSpd??
   Motor2.pos_old = Motor2.pos;
   Motor2.t_pos_old = Motor2.t_pos;
