@@ -37,6 +37,7 @@ public:
   void setSetpoint(double sp);// define velocidade desejada
   double getError(double sp); // returns current controller error signal
   double getAngSpd(int n = 5);// returns current wheel speed (average of n last readings)
+  void stop();
   OmniRPiInterface(int MA, int MB, int EA, int EB); // class constructor
 };
 

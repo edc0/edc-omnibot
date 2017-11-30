@@ -83,3 +83,9 @@ double OmniRPiInterface::getAngSpd(int n) // returns current wheel speed (averag
   }
   rps_avg = rps_avg/double(n);
 }
+
+void OmniRPiInterface::stop()
+{
+  gpioWrite(Mot_A, 0);
+  gpioWrite(Mot_B, 0);
+}

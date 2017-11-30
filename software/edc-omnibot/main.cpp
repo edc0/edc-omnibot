@@ -21,12 +21,9 @@ using namespace std;
 void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
-  gpioWrite(M1a, 0);
-  gpioWrite(M1b, 0);
-  gpioWrite(M2a, 0);
-  gpioWrite(M2b, 0);
-  gpioWrite(M3a, 0);
-  gpioWrite(M3b, 0);
+  Motor1.stop();
+  Motor2.stop();
+  Motor3.stop();
   gpioDelay(10000);
   gpioTerminate(); // desliga motores
   exit(signum);
