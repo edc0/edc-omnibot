@@ -120,6 +120,7 @@ int main(void)
   for(;;)
   {
     cin >> inp;
+    cout << Motor2.set_point << "\n";
   }
 
   return 0;
