@@ -1,5 +1,5 @@
 /* If your program is called foobar.cpp then build with:
- * g++ -Wall -pthread -o foobar foobar.cpp -lpigpio -lrt
+ * g++ -Wall -pthread kinematics.o rotary_encoder.o rpi_interface.o -o foobar main.cpp -lpigpio -lrt
  */
 
 #include <iostream>
@@ -13,6 +13,19 @@
 
 // para interagir com user, set point da velocidade
 double inp;
+
+// setando pinos para os testes
+int M1a = 2,  M1b = 3,
+    M2a = 17, M2b = 27,
+    M3a = 16, M3b = 20;
+
+int E1a = 26, E1b = 19,
+    E2a = 25, E2b = 8,
+    E3a = 23, E3b = 24;
+
+OmniRPiInterface Motor1(M1a, M1b, E1a, E1b);
+OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
+OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
 
 using namespace std;
 
@@ -90,19 +103,6 @@ int main(void)
 {
   signal(SIGINT, exit_from_key);
   gpioInitialise();
-
-  // setando pinos para os testes
-  int M1a = 2,  M1b = 3,
-  M2a = 17, M2b = 27,
-  M3a = 16, M3b = 20;
-
-  int E1a = 26, E1b = 19,
-  E2a = 25, E2b = 8,
-  E3a = 23, E3b = 24;
-
-  OmniRPiInterface Motor1(M1a, M1b, E1a, E1b);
-  OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
-  OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
 
   re_decoder dec1(E1a, E1b, dec_callback1);
   re_decoder dec2(E2a, E2b, dec_callback2);
