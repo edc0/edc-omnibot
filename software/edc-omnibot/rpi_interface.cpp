@@ -34,8 +34,6 @@ OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
   gpioSetMode(Mot_B, PI_OUTPUT);
   gpioSetPWMfrequency(Mot_A, 10000);
   gpioSetPWMfrequency(Mot_B, 10000);
-
-  re_decoder dec(Enc_A, Enc_B, dec_callback);
 }
 
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
@@ -88,4 +86,9 @@ void OmniRPiInterface::stop()
 {
   gpioWrite(Mot_A, 0);
   gpioWrite(Mot_B, 0);
+}
+
+void OmniRPiInterface::startDecoder()
+{
+  re_decoder dec(Enc_A, Enc_B, this.dec_callback);
 }

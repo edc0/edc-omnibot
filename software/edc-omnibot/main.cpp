@@ -53,6 +53,10 @@ int main(void)
   OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
   OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
 
+  Motor1.startDecoder();
+  Motor2.startDecoder();
+  Motor3.startDecoder();
+  
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
