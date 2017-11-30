@@ -201,6 +201,7 @@ double getRandom(double maximumValue) {
  * relative to the mobile platform's frame.
  */
 void inverseKinematicsMobile() {
+    std::cout << "cheguei na mobile";
     omegapL = omegap * L;
     sqrtVym2 = sqrt32 * Vym;
     Vxm2 = Vxm / 2.0;
@@ -208,6 +209,7 @@ void inverseKinematicsMobile() {
     Vleft  = omegapLVxm2 - sqrtVym2;
     Vback  = omegapL + Vxm;
     Vright = omegapLVxm2 + sqrtVym2;
+    std::cout << "terminei a mobile";
 }
 
 /**
@@ -218,9 +220,11 @@ void inverseKinematicsMobile() {
  * Also runs inverseKinematicsMobile().
  */
 void inverseKinematicsWorld() {
+    std::cout << "cheguei na world";
     Vxm = (std::cos(theta) * Vxw) + (std::sin(theta) * Vyw);
     Vym = (std::cos(theta) * Vyw) - (std::sin(theta) * Vxw);
     inverseKinematicsMobile();
+    std::cout << "terminei a world";
 }
 
 bool isStopPose() {
