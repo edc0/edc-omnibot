@@ -7,7 +7,7 @@
 
 Conforme mencionado nas seções anteriores, o robô construído possui três rodas em uma configuração simétrica. Apesar da falta de redundância -- pois se alguma das rodas falhar se perde a holonomicidade --, robôs omnidirecionais com 3 rodas (TOMR) são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo (pois motores e rodas são responsáveis por x\% do custo do projeto, conforme o \hyperref[sec:custo]{Apêndice A}), e uma certa economia de peso.
 
-As rodas utilizadas medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, mostrando boa capacidade de carga para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução de relação 1:34, com uma velocidade nominal no eixo de saída de 210 rpm. A fixação das rodas no motor foi realizada conforme o Apêndice B \textbf{n sei se vai ter essa frase aqui}. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341.2 pulsos do sensor \cite{motor}.
+As rodas utilizadas medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, mostrando boa capacidade de carga para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução de relação 1:34, com uma velocidade nominal no eixo de saída de 210 rpm. A fixação das rodas no motor foi realizada conforme o Apêndice B \textbf{n sei se vai ter essa frase aqui}. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341,2 pulsos do sensor \cite{motor}, e 0.01841 rad/pulso.
 
 
 %Mais info sobre a ponte H: http://linksprite.com/wiki/index.php5?title=DC_Motor_Driver_Breakout_%28L298_Chipset%29#Arduino_Sample_Code
@@ -245,6 +245,10 @@ FALAR DA BÚSSOLA?
 
 SEÇÃO EM CONSTRUÇÃO
 
+A implementação é difícil de encontrar nos trabalhos da bibliografia, portanto alguma coisa.
+
+PROBLEMA: velocidade das rodas precisa o suficiente! Fazer experimentos em relação a isso.
+
 O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
 
 O código de \cite{ritter2016modelagem} foi desmembrado em módulos, para separar a implementação já realizada da cinemática direta e inversa dos módulos de comunicação com o simulador utilizado. Foram escritos novos módulos para realizar a interface da Raspberry com os motores, sensores e periféricos em geral, e com essa modularidade se pode até fazer uma biblioteca para arduino blabalbalabballab, como na Figura \ref{fig:libs}.
@@ -265,7 +269,11 @@ Bibliotecas desenvolvidas: \\
 
 Todas as bibliotecas que utilizam entradas e saídas pelos pinos do RPi utilizam a biblioteca pigpio \cite{pigpio}, muito legalzona, até colocar nos agradecimentos.
 
+Para calibrar o controlador em relação ao tamanho real das rodas, e obter velocidade ok, se utilizou a modelagem para definir qual deslocamento do robô, em rotação pura, necessita de 2pi rad de giro nas rodas. Foram feitos experimentos com diversos valors para calibrar isso ae.
+
 Além de utilizar os comandos fornecidos por \cite{ritter2016modelagem}, foram implementados os modos de movimentação citados por \cite{loh2003mechatronics}: translação retilínea , translação curvilínea -- ambas sem alteração na orientação --, rotação pura e um caminho combinado de rotação em torno do seu centro e translação retilínia em relação às referências globais.
+
+A obtenção do ângulo atual e m relação as coordenadas globais teve q ser diferente da utilizada por \cite{ritter2016modelagem}, que possuia um valor absoluto para este angulo. No caso do trablho descrito aqui, só se sabe a velocidade angular, que tambem deve ser integrada, e por isso podem aparecer mais erros.
 
 O procedimento de opereação pode ser representado pelo diagrama apresentado na Figura \ref{fig:operation}.
 

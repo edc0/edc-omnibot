@@ -52,9 +52,9 @@
 \citation{lynch2017modern}
 \citation{samani2007comprehensive}
 \citation{lynch2017modern}
-\citation{upton2014raspberry}
 \citation{ritter2016modelagem}
 \citation{ritter2016modelagem}
+citation{ritter2016modelagem}
 \citation{pigpio}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{19}{section.5}}
 \newlabel{sec:software}{{5}{19}{Implementação dos algoritmos}{section.5}{}}
@@ -63,7 +63,6 @@
 \citation{pigpio}
 \citation{ritter2016modelagem}
 \citation{loh2003mechatronics}
-\citation{ritter2016modelagem}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Fluxograma de opera\IeC {\c c}\IeC {\~a}o do rob\IeC {\^o}. TROCAR FIGURA\relax }}{20}{figure.caption.11}}
 \newlabel{fig:operation}{{11}{20}{Fluxograma de operação do robô. TROCAR FIGURA\relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{21}{section.6}}
