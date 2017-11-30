@@ -95,8 +95,9 @@ void dec_callback3(int way)
 
 void loop (void)
 {
-  Motor1.setSetpoint(inp);
-  Motor2.setSetpoint(-inp);
+  Motor1.setSetpoint(Vleft);
+  Motor2.setSetpoint(Vback);
+  Motor3.setSetpoint(Vright);
 }
 
 int main(void)
@@ -116,9 +117,20 @@ int main(void)
   gpioSetTimerFunc(3, 10, loop);
 
   inp = 0;
+
+  Vxw = 0.5;
+  Vyw = 0.5;
+  omegap = 0.1;
+
+  inverseKinematicsWorld();
+
+  cout << "Velocidade da roda 1: " << Vleft << "\n";
+  cout << "Velocidade da roda 2: " << Vback << "\n";
+  cout << "Velocidade da roda 3: " << Vright << "\n";
+
   for(;;)
   {
-    cin >> inp;
+
   }
 
   return 0;
