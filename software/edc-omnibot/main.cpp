@@ -96,14 +96,14 @@ void dec_callback3(int way)
 static int tempo, tempo_old, t_diff;
 
 void odometry()
-{
+{/*
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
   Vleft = Motor1.getAngSpd()*r;
   Vback = Motor2.getAngSpd()*r;
   Vright= Motor3.getAngSpd()*r;
-
+*/
   forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
 
   xw += Vxw*t_diff;
