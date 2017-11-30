@@ -154,7 +154,7 @@ int main(void)
   cout << "Presione ZERO para parar:\n";
   while (stop!=0)
   {
-    cin << stop;
+    cin >> stop;
   }
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
