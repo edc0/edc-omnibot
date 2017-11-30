@@ -90,5 +90,5 @@ void OmniRPiInterface::stop()
 
 void OmniRPiInterface::startDecoder()
 {
-  re_decoder dec(Enc_A, Enc_B, this.dec_callback);
+  re_decoder dec(Enc_A, Enc_B, dec_callback);
 }
