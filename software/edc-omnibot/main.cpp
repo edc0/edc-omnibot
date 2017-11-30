@@ -145,9 +145,9 @@ int main(void)
 
   inverseKinematicsWorld();
 
-  cout << "\nVelocidade da roda 1: " << Vleft;
-  cout << "Velocidade da roda 2: " << Vback;
-  cout << "Velocidade da roda 3: " << Vright;
+  cout << "\n\nVelocidade da roda 1: " << Vleft;
+  cout << "\nVelocidade da roda 2: " << Vback;
+  cout << "\nVelocidade da roda 3: " << Vright;
 
   /*int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
@@ -157,7 +157,7 @@ int main(void)
   }*/
 
   for(;;)
-
+/*
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
 
@@ -168,7 +168,7 @@ int main(void)
   Motor2.setSetpoint(0);
   Motor3.setSetpoint(0);
 
-  odometry();
+  odometry();*/
 
   cout << "\nDistância em X: " << xw << "\n";
   cout << "Distância em Y: " << yw << "\n";
