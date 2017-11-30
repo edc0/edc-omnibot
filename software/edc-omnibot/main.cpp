@@ -11,8 +11,8 @@
 #include "rpi_interface.h"
 
 
-// para interagir com user, set point da velocidade
-double inp;
+#define L 0.125 // distance between body center and wheel center
+#define r 0.029 // wheel radius
 
 // setando pinos para os testes
 int M1a = 2,  M1b = 3,
