@@ -69,7 +69,7 @@ void dec_callback2(int way)
   Motor2.rps[3]=Motor2.rps[2];
   Motor2.rps[2]=Motor2.rps[1];
   Motor2.rps[1]=Motor2.rps[0];
-  Motor2.rps[0] = way*0.01841*1000000/double(Motor2.t_pos-Motor2.t_pos_old);
+  Motor2.rps[0] = way*18410/double(Motor2.t_pos-Motor2.t_pos_old);
 
   //getAngSpd??
   Motor2.pos_old = Motor2.pos;
@@ -86,7 +86,7 @@ void dec_callback3(int way)
   Motor3.rps[3]=Motor3.rps[2];
   Motor3.rps[2]=Motor3.rps[1];
   Motor3.rps[1]=Motor3.rps[0];
-  Motor3.rps[0] = way*0.01841*1000000/double(Motor3.t_pos-Motor3.t_pos_old);
+  Motor3.rps[0] = way*18410/double(Motor3.t_pos-Motor3.t_pos_old);
 
   //getAngSpd??
   Motor3.pos_old = Motor3.pos;
@@ -113,6 +113,7 @@ void odometry()
 
 void loop (void)
 {
+  cout << "loopdalo0p";
   Motor1.setSetpoint(Vleft);
   Motor2.setSetpoint(Vback);
   Motor3.setSetpoint(Vright);
@@ -151,11 +152,11 @@ int main(void)
 
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
-  /*while (stop!=0)
+  while (stop!=0)
   {
     cin >> stop;
-  }*/
-  for(;;)
+  }
+
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
 
