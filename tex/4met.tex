@@ -245,20 +245,41 @@ FALAR DA BÚSSOLA?
 
 SEÇÃO EM CONSTRUÇÃO
 
-O código de \cite{ritter2016modelagem} foi desmembrado em módulos, para separar a implementação já realizada da cinemática direta e inversa dos módulos de comunicação com o simulador utilizado. Foram escritos novos módulos para realizar a interface da Raspberry com os motores, sensores e periféricos em geral, e com essa modularidade se pode até fazer uma biblioteca para arduino blabalbalabballab.
+O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
 
-COLOCAR DIAGRAMA DAS BIBLIOTECAS
+O código de \cite{ritter2016modelagem} foi desmembrado em módulos, para separar a implementação já realizada da cinemática direta e inversa dos módulos de comunicação com o simulador utilizado. Foram escritos novos módulos para realizar a interface da Raspberry com os motores, sensores e periféricos em geral, e com essa modularidade se pode até fazer uma biblioteca para arduino blabalbalabballab, como na Figura \ref{fig:libs}.
 
-Foi utilizada pigpio \cite{pigpio}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \caption{Bibliotecas utilizadas. TROCAR FIGURA}
+  \label{fig:libs}
+\end{figure}
+
+Bibliotecas desenvolvidas: \\
+- kinematics.h, a partir da cinemática de \cite{ritter2016modelagem}; \\
+- rotary\_encoder.h, para realizar a decodificação dos encoders, desenvolvida por QUEM?? \cite{pigpio}, talvez?\\
+- rpi\_interface.h, para realizar o acionamento e loops de controle para cada uma das rodas (desenvolvida pelo próprio autor);\\
+- planning.h, que implementa as trajetórias de teste; \\
+- user\_interface.h, que contem algumas funções básicas para conversar com o usuário, operador do sistema. IMAGINA Q MASSA UM APP C/ Bluetooth COM UM BOTÃO SÓ?
+
+Todas as bibliotecas que utilizam entradas e saídas pelos pinos do RPi utilizam a biblioteca pigpio \cite{pigpio}, muito legalzona, até colocar nos agradecimentos.
 
 Além de utilizar os comandos fornecidos por \cite{ritter2016modelagem}, foram implementados os modos de movimentação citados por \cite{loh2003mechatronics}: translação retilínea , translação curvilínea -- ambas sem alteração na orientação --, rotação pura e um caminho combinado de rotação em torno do seu centro e translação retilínia em relação às referências globais.
 
-O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} (\cite{upton2014raspberry}).
+O procedimento de opereação pode ser representado pelo diagrama apresentado na Figura \ref{fig:operation}.
 
 
-Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, csom um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \caption{Fluxograma de operação do robô. TROCAR FIGURA}
+  \label{fig:operation}
+\end{figure}
 
-O \emph{fast mode} é suportado pelo Raspberry Pi 3 B+.
+%Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, csom um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
+
+%O \emph{fast mode} é suportado pelo Raspberry Pi 3 B+.
 
 Seguir o perfil de velocidade não é muito fácil, visto que dead zone.
 
