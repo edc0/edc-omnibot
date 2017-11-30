@@ -7,7 +7,7 @@
 #include <pigpio.h>
 
 #include "kinematics.h"
-// #include "rotary_encoder.hpp"
+#include "rotary_encoder.hpp"
 #include "rpi_interface.h"
 
 
@@ -53,6 +53,9 @@ int main(void)
   OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
   OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
 
+  re_decoder dec1(E1a, E1b, Motor1.dec_callback);
+  re_decoder dec2(E2a, E2b, Motor2.dec_callback);
+  re_decoder dec3(E3a, E3b, Motor3.dec_callback);
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
