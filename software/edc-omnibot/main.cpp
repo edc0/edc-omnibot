@@ -118,9 +118,12 @@ int main(void)
 
   inp = 0;
 
-  Vxw = 0.5;
-  Vyw = 0.5;
-  omegap = 0.1;
+  cout << "\nVxw: ";
+  cin >> Vxw;
+  cout << "\nVyw: ";
+  cin >> Vyw;
+  cout << "\nomegap: ";
+  cin >> omegap;
 
   inverseKinematicsWorld();
 
