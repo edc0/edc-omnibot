@@ -149,12 +149,14 @@ int main(void)
   cout << "Velocidade da roda 2: " << Vback;
   cout << "Velocidade da roda 3: " << Vright;
 
-  int stop = 1;
+  /*int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
   while (stop!=0)
   {
     cin >> stop;
-  }
+  }*/
+
+  for(;;)
 
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
