@@ -53,7 +53,7 @@ void dec_callback1(int way)
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
   Motor1.rps[0] = way*2000/double(Motor1.t_pos-Motor1.t_pos_old);
-  cout << "good: " << Motor1.rps[0];
+  cout << double(Motor1.t_pos-Motor1.t_pos_old);
 
 
   //getAngSpd??
@@ -72,8 +72,7 @@ void dec_callback2(int way)
   Motor2.rps[2]=Motor2.rps[1];
   Motor2.rps[1]=Motor2.rps[0];
   Motor2.rps[0] = way*18410/double(Motor2.t_pos-Motor2.t_pos_old);
-  cout << "bad: " << Motor2.rps[0];
-  
+
   //getAngSpd??
   Motor2.pos_old = Motor2.pos;
   Motor2.t_pos_old = Motor2.t_pos;
