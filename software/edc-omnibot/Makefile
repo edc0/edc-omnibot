@@ -10,7 +10,7 @@ OBJS = main.o kinematics.o rpi_interface.o rotary_encoder.o
 $(PROG) : $(OBJS)
 	$(CC) $(CPPFLAGS) -o $(PROG) $(OBJS) $(LDFLAGS)
 main.o :
-	$(CC) $(CPPFLAGS) -c main.cpp
+	$(CC) $(CPPFLAGS) -c main.cpp $(LDFLAGS)
 kinematics.o : kinematics.h
 	$(CC) $(CPPFLAGS) -c kinematics.cpp $(LDFLAGS)
 rotary_encoder.o : rotary_encoder.h
