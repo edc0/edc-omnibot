@@ -138,23 +138,24 @@ int main(void)
 
   cout << "\nVxw: ";
   cin >> Vxw;
-  cout << "\nVyw: ";
+  cout << "Vyw: ";
   cin >> Vyw;
-  cout << "\nomegap: ";
+  cout << "omegap: ";
   cin >> omegap;
 
   inverseKinematicsWorld();
 
-  cout << "Velocidade da roda 1: " << Vleft << "\n";
-  cout << "Velocidade da roda 2: " << Vback << "\n";
-  cout << "Velocidade da roda 3: " << Vright << "\n";
+  cout << "\nVelocidade da roda 1: " << Vleft;
+  cout << "Velocidade da roda 2: " << Vback;
+  cout << "Velocidade da roda 3: " << Vright;
 
   int stop = 1;
-  cout << "Presione ZERO para parar:\n";
-  while (stop!=0)
+  cout << "\nPresione ZERO para parar:\n";
+  /*while (stop!=0)
   {
     cin >> stop;
-  }
+  }*/
+  for(;;)
   // cancela o loop:
   gpioSetTimerFunc(3, 10, NULL);
 
@@ -167,7 +168,7 @@ int main(void)
 
   odometry();
 
-  cout << "Distância em X: " << xw << "\n";
+  cout << "\nDistância em X: " << xw << "\n";
   cout << "Distância em Y: " << yw << "\n";
   cout << "Rotação, rad/s: " << theta << "\n";
 
