@@ -61,7 +61,6 @@ void dec_callback1(int way)
 
 void dec_callback2(int way)
 {
-  cout << "callbackenc2\n\n";
   Motor2.t_pos = gpioTick();
   Motor2.pos += way; // para odometria
 
@@ -120,7 +119,6 @@ int main(void)
   for(;;)
   {
     cin >> inp;
-    cout << Motor2.set_point << "\n";
   }
 
   return 0;
