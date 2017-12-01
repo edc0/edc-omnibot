@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -48,7 +48,7 @@ Indiveri, G., 2009. Swedish wheeled omnidirectional mobile robots: Kinematics
   analysis and control~(1), 164--171.
 
 \bibitem[{Invensense(2013)}]{MPU6050}
-Invensense, 2013. Mpu6050. Revisão 3.4.
+Invensense, 2013. Mpu6050. Acessado em 18/11/2017.
 \newline\urlprefix\url{https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf}
 
 \bibitem[{Jimenez et~al.(2009)Jimenez, Seco, Prieto, and
@@ -97,6 +97,10 @@ Markets, Markets, 2015. Mobile robots market by environment (aerial, ground,
   asia-pacific, and the row) - global forecast to 2020.
   \url{http://www.marketsandmarkets.com/Market-Reports/mobile-robots-market-43703276.html},
   acessado em 27/09/2017.
+
+\bibitem[{MPS(2008)}]{MP2307}
+MPS, 2008. Synchronous rectified step-down converter. Acessado em 30/11/2017.
+\newline\urlprefix\url{https://cdn.solarbotics.com/products/datasheets/mp2307.pdf}
 
 \bibitem[{Nexus(2016)}]{omniwheel}
 Nexus, 2016. 58mm plastic omniwheel. Acessado em 8/10/2017.
@@ -158,6 +162,10 @@ Siegwart, R., Nourbakhsh, I., Scaramuzza, D., 2011. Introduction to Autonomous
 Steinhoff, U., Schiele, B., 2010. Dead reckoning from the pocket-an
   experimental study. In: Pervasive Computing and Communications (PerCom), 2010
   IEEE International Conference on. IEEE, pp. 162--170.
+
+\bibitem[{STMicroelectronics(2000)}]{L298N}
+STMicroelectronics, 2000. Dual full-bridge driver. Acessado em 30/11/2017.
+\newline\urlprefix\url{http://www.st.com/content/ccc/resource/technical/document/datasheet/82/cc/3f/39/0a/29/4d/f0/CD00000240.pdf/files/CD00000240.pdf/jcr:content/translations/en.CD00000240.pdf}
 
 \bibitem[{Takemura et~al.(2007)Takemura, Sanada, Ichinose, Nakano, Nassiraei,
   Azeura, Kitazumi, Ogawa, Godler, Ishii, et~al.}]{takemura2007development}

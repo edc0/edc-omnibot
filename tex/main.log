@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  30 NOV 2017 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  1 DEC 2017 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1502,12 +1502,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 56.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 56.
-[2 <./imagens/tomr_ritter_mod.png>]
-
-LaTeX Warning: Hyper reference `sec:resultados' on page 3 undefined on input li
-ne 60.
-
-)
+[2 <./imagens/tomr_ritter_mod.png>])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1561,9 +1556,9 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 16.
 [5
 
 ]
@@ -1637,30 +1632,42 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 19.
 [9
 
 
 
 
-] <imagens/edc.png, id=446, 451.6875pt x 451.6875pt>
+] <imagens/chassidxf.png, id=450, 839.135pt x 660.4675pt>
+File: imagens/chassidxf.png Graphic file (type png)
+
+<use imagens/chassidxf.png>
+Package pdftex.def Info: imagens/chassidxf.png used on input line 25.
+(pdftex.def)             Requested size: 211.38832pt x 166.3762pt.
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+[10 <./imagens/chassidxf.png>]
+<imagens/edc.png, id=462, 451.6875pt x 451.6875pt>
 File: imagens/edc.png Graphic file (type png)
  <use imagens/edc.png>
-Package pdftex.def Info: imagens/edc.png used on input line 27.
-(pdftex.def)             Requested size: 211.38832pt x 211.39027pt.
-File: imagens/edc.png Graphic file (type png)
-
-<use imagens/edc.png>
 Package pdftex.def Info: imagens/edc.png used on input line 36.
 (pdftex.def)             Requested size: 211.38832pt x 211.39027pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (19.99446pt too wide) in paragraph at lines 41--42
+Overfull \hbox (19.99446pt too wide) in paragraph at lines 46--47
 []\T1/txr/m/n/12 (-20) O custo de aqui-si-ção dos com-po-nen-tes re-la-ta-dos p
 ode ser visto de-ta-lhado no hy-per-ref[sec:custo]Apêndice
  []
@@ -1676,61 +1683,10 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-[10 <./imagens/edc.png>]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-[11]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-[12
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
- <imagens/ref.png, id=467, 1160.335pt x 634.37pt>
-File: imagens/ref.png Graphic file (type png)
- <use imagens/ref.png>
-Package pdftex.def Info: imagens/ref.png used on input line 54.
-(pdftex.def)             Requested size: 305.33789pt x 166.92632pt.
-
-<imagens/robot_vel4.png, id=478, 828.09375pt x 742.775pt>
-File: imagens/robot_vel4.png Graphic file (type png)
-
-<use imagens/robot_vel4.png>
-Package pdftex.def Info: imagens/robot_vel4.png used on input line 84.
-(pdftex.def)             Requested size: 234.8775pt x 210.67302pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+[11 <./imagens/edc.png>]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -1741,456 +1697,4 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
-[13
-
- <./imagens/ref.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 139.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
-[14 <./imagens/robot_vel4.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
-
-<imagens/poly5.png, id=522, 989.6975pt x 255.95625pt>
-File: imagens/poly5.png Graphic file (type png)
- <use imagens/poly5.png>
-Package pdftex.def Info: imagens/poly5.png used on input line 202.
-(pdftex.def)             Requested size: 399.29463pt x 103.26334pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 209.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 209.
-[15] <imagens/trapezoidal.png, id=537, 976.64874pt x 349.305pt>
-File: imagens/trapezoidal.png Graphic file (type png)
-
-<use imagens/trapezoidal.png>
-Package pdftex.def Info: imagens/trapezoidal.png used on input line 212.
-(pdftex.def)             Requested size: 295.94795pt x 105.84763pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 219.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 226.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 226.
-[16 <./imagens/poly5.png> <./imagens/trapezoidal.png>]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
-[17]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
-[18
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
-File: imagens/edc.png Graphic file (type png)
- <use imagens/edc.png>
-Package pdftex.def Info: imagens/edc.png used on input line 258.
-(pdftex.def)             Requested size: 211.38832pt x 211.39027pt.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 269.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 269.
-[19
-
-]
-File: imagens/edc.png Graphic file (type png)
- <use imagens/edc.png>
-Package pdftex.def Info: imagens/edc.png used on input line 283.
-(pdftex.def)             Requested size: 211.38832pt x 211.39027pt.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 294.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 294.
-[20]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 294.
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 75.
-[21
-
-
-]
-\openout2 = `5result.aux'.
-
- (./5result.tex
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-[22
-
-
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--10
-
- []
-
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 76.
-[23
-
-]
-\openout2 = `6conc.aux'.
-
- (./6conc.tex
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-[24
-
-
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
-[25
-
-] (./main.bbl
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-[26
-
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 10.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `txtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
-\T1/txr/m/n/12 (+20) URL []$\T1/txtt/m/n/12 https : / / cdn -[] shop . adafruit
- . com / datasheets / HMC5883L _ 3 -[] Axis _ Digital _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-\T1/txr/m/n/12 (+20) URL []$\T1/txtt/m/n/12 https : / / store . invensense . co
-m / datasheets / invensense / MPU -[] 6050 _
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
-[27
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
-\T1/txr/m/n/12 (+20) URL []$\T1/txtt/m/n/12 http : / / www . nexusrobot . com /
- product / 58mm -[] plastic -[] omni -[] wheel -[] for -[] lego -[]
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 134.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 134.
-[28])
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
-[29]
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
-[30
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-[31
-
-]
-\openout2 = `7ape1.aux'.
-
- (./7ape1.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-)
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12pt too wide) has occurred while \output is active
-    []
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-[32
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
- (./main.aux (./2intro.aux) (./3rev.aux) (./4met.aux) (./5result.aux)
-(./6conc.aux) (./7ape1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6F7F4521343A60AB56843C627A2174FA;1453.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
- ) 
-Here is how much of TeX's memory you used:
- 18421 strings out of 493013
- 293942 string characters out of 6135683
- 463647 words of memory out of 5000000
- 21172 multiletter control sequences out of 15000+600000
- 61337 words of font info for 273 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 52i,12n,79p,1914b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:tomr} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:i2c} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:gpio} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:rpi} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:arm} has been referenced but does not exist, re
-placed by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
-ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (48 pages, 784482 bytes).
-PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 632 compressed objects within 7 object streams
- 121 named destinations out of 1000 (max. 500000)
- 31475 words of extra memory for PDF output out of 35830 (max. 10000000)
-
+(babel)             in language  on input line 
