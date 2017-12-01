@@ -99,9 +99,9 @@ void odometry()
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
-  Vleft = Motor1.getAngSpd()*r;
-  Vback = Motor2.getAngSpd()*r;
-  Vright= Motor3.getAngSpd()*r;
+  Vleft = Motor1.getAngSpd()*r*6.28;
+  Vback = Motor2.getAngSpd()*r*6.28;
+  Vright= Motor3.getAngSpd()*r*6.28;
 
   forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
 
