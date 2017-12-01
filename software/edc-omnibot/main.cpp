@@ -85,7 +85,7 @@ void dec_callback3(int way)
   Motor3.rps[3]=Motor3.rps[2];
   Motor3.rps[2]=Motor3.rps[1];
   Motor3.rps[1]=Motor3.rps[0];
-  Motor3.rps[0] = 18410*way/double(Motor3.t_pos-Motor3.t_pos_old);
+  Motor3.rps[0] = way/double(Motor3.t_pos-Motor3.t_pos_old);
 
   //getAngSpd??
   Motor3.pos_old = Motor3.pos;
