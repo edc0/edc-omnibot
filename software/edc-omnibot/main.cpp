@@ -102,12 +102,12 @@ void odometry()
   Vleft = Motor1.getAngSpd()*r;
   Vback = Motor2.getAngSpd()*r;
   Vright= Motor3.getAngSpd()*r;
-*/
+
   forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
 
   xw += Vxw*t_diff;
   yw += Vyw*t_diff;
-  theta += omegap*t_diff; // ERRADO
+  theta += omegap*t_diff; // ERRADO*/
 }
 
 void loop (void)
@@ -132,8 +132,6 @@ int main(void)
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
 
-  // chama função loop() a cada 10ms
-  gpioSetTimerFunc(3, 10, loop);
 
   cout << "\nVxw: ";
   cin >> Vxw;
@@ -144,9 +142,12 @@ int main(void)
 
   inverseKinematicsWorld();
 
+
   cout << "\n\nVelocidade da roda 1: " << Vleft;
   cout << "\nVelocidade da roda 2: " << Vback;
   cout << "\nVelocidade da roda 3: " << Vright;
+  // chama função loop() a cada 10ms
+  gpioSetTimerFunc(3, 10, loop);
 
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
