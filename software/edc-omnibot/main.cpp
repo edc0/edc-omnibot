@@ -124,6 +124,10 @@ int main(void)
   signal(SIGINT, exit_from_key);
   gpioInitialise();
 
+  Motor1.stop();
+  Motor2.stop();
+  Motor3.stop();
+
   Motor1.start();
   Motor2.start();
   Motor3.start();
