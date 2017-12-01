@@ -95,7 +95,7 @@ void dec_callback3(int way)
 static int tempo, tempo_old, t_diff;
 
 void odometry()
-{/*
+{
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
@@ -112,10 +112,10 @@ void odometry()
 
 void loop (void)
 {
-  Motor1.setSetpoint(Vleft);
-  Motor2.setSetpoint(Vback);
-  Motor3.setSetpoint(Vright);
-  //odometry();
+  Motor1.setSetpoint(VleftTarget);
+  Motor2.setSetpoint(VbackTarget);
+  Motor3.setSetpoint(VrightTarget);
+  odometry();
 }
 
 
@@ -145,11 +145,13 @@ int main(void)
   cin >> omegap;
 
   inverseKinematicsWorld();
+  VleftTarget=Vleft;
+  VbackTarget=Vback;
+  VrightTarget=Vright;
 
-
-  cout << "\n\nVelocidade da roda 1: " << Vleft;
-  cout << "\nVelocidade da roda 2: " << Vback;
-  cout << "\nVelocidade da roda 3: " << Vright;
+  cout << "\n\nVelocidade da roda 1: " << VleftTarget;
+  cout << "\nVelocidade da roda 2: " << VbackTarget;
+  cout << "\nVelocidade da roda 3: " << VrightTarget;
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
@@ -166,9 +168,9 @@ int main(void)
   odometry();
 
   // para motores
-  Motor1.setSetpoint(0);
-  Motor2.setSetpoint(0);
-  Motor3.setSetpoint(0);
+  Motor1.stop();
+  Motor2.stop();
+  Motor3.stop();
 
   odometry();
 
