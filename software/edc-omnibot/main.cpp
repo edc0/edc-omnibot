@@ -125,7 +125,7 @@ void loop (void)
 
   xError     = xTarget - xw;
   yError     = yTarget - yw;
-  thetaErro r= thetaTarget - theta;
+  thetaError = thetaTarget - theta;
 
   Vxw = Vxw + 0.5*xError;
   Vyw = Vyw + 0.5*xError;
@@ -135,7 +135,7 @@ void loop (void)
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
-  
+
   if(VleftTarget > VMAX || VbackTarget > VMAX || VrightTarget > VMAX)
   {
     VleftTarget=VleftTarget/VMAX;
