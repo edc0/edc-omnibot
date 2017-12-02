@@ -107,7 +107,7 @@ void odometry()
 
   xw += Vxw*t_diff;
   yw += Vyw*t_diff;
-  theta += omegap*t_diff; // ERRADO*/
+  //theta += omegap*t_diff; // ERRADO*/
 }
 
 void loop (void)

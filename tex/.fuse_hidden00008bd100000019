@@ -1,0 +1,226 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Banggood.com}{2017}{motor}
+Banggood.com  \harvardyearleft 2017\harvardyearright , `Specifications for 6v
+  210rpm dc motor with encoder and geared reduction.',
+  \url{https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html}.
+\newblock Acessado em 03/10/2017.
+
+\harvarditem[Campion et~al.]{Campion, Bastin \harvardand\
+  Dandrea-Novel}{1996}{campion1996structural}
+Campion, G., Bastin, G. \harvardand\ Dandrea-Novel, B.  \harvardyearleft
+  1996\harvardyearright , `Structural properties and classification of
+  kinematic and dynamic models of wheeled mobile robots', {\em IEEE
+  transactions on robotics and automation} {\bf 12}(1),~47--62.
+
+\harvarditem{Carrasco \harvardand\ da~Silva}{2016}{lowcostIMU}
+Carrasco, M.~M. \harvardand\ da~Silva, A.~L.  \harvardyearleft
+  2016\harvardyearright , `Attitude determination for low cost imu and
+  processor board using the methods of triad, kalman filter and allan
+  variance', {\em Revista Brasileira de Iniciação Científica} {\bf
+  3}(2),~26--41.
+
+\harvarditem{Craig}{2017}{craig2017introduction}
+Craig, J.  \harvardyearleft 2017\harvardyearright , {\em Introduction to
+  Robotics: Mechanics and Control}, Pearson.
+\newline\harvardurl{https://books.google.com.br/books?id=JblZuwAACAAJ}
+
+\harvarditem[Feng et~al.]{Feng, Friedman \harvardand\
+  Krogh}{1989}{feng1989servo}
+Feng, D., Friedman, M.~B. \harvardand\ Krogh, B.~H.  \harvardyearleft
+  1989\harvardyearright , The servo-control system for an omnidirectional
+  mobile robot, {\em in} `Robotics and Automation, 1989. Proceedings., 1989
+  IEEE International Conference on', IEEE, pp.~1566--1571.
+
+\harvarditem{Garcia-Saura}{2015}{garcia2015gyro}
+Garcia-Saura, C.  \harvardyearleft 2015\harvardyearright , `Self-calibration of
+  a differential wheeled robot using only a gyroscope and a distance sensor',
+  {\em arXiv preprint arXiv:1509.02154} .
+
+\harvarditem{Ginzburg \harvardand\ Nokleby}{2013}{ginzburg2013indoor}
+Ginzburg, S. \harvardand\ Nokleby, S.  \harvardyearleft 2013\harvardyearright ,
+  `Indoor localization of an omni-directional wheeled mobile robot', {\em
+  Transactions of the Canadian Society for Mechanical Engineering. Canada} {\bf
+  37},~1043--1056.
+
+\harvarditem{Honeywell}{2013}{HMC5883L}
+Honeywell  \harvardyearleft 2013\harvardyearright , `Hmc5883l 3-axis digital
+  compass ic'.
+\newblock Acessado em 17/11/2017.
+\newline\harvardurl{https://cdn-shop.adafruit.com/datasheets/HMC5883L_3-Axis_Digital_Compass_IC.pdf}
+
+\harvarditem{Indiveri}{2009}{indiveri2009swedish}
+Indiveri, G.  \harvardyearleft 2009\harvardyearright , `Swedish wheeled
+  omnidirectional mobile robots: Kinematics analysis and control',
+  (1),~164--171.
+
+\harvarditem{Invensense}{2013}{MPU6050}
+Invensense  \harvardyearleft 2013\harvardyearright , `Mpu6050'.
+\newblock Acessado em 18/11/2017.
+\newline\harvardurl{https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf}
+
+\harvarditem[Jimenez et~al.]{Jimenez, Seco, Prieto \harvardand\
+  Guevara}{2009}{jimenez2009comparison}
+Jimenez, A.~R., Seco, F., Prieto, C. \harvardand\ Guevara, J.  \harvardyearleft
+  2009\harvardyearright , A comparison of pedestrian dead-reckoning algorithms
+  using a low-cost mems imu, {\em in} `Intelligent Signal Processing, 2009.
+  WISP 2009. IEEE International Symposium on', IEEE, pp.~37--42.
+
+\harvarditem{Joan}{2017}{pigpio}
+Joan  \harvardyearleft 2017\harvardyearright , `Reference for pigpio c
+  interface'.
+\newblock Acessado em 27/11/2017.
+\newline\harvardurl{http://abyz.me.uk/rpi/pigpio/cif.html}
+
+\harvarditem{Jung \harvardand\ Kim}{2001}{jung2001fault}
+Jung, M.-J. \harvardand\ Kim, J.-H.  \harvardyearleft 2001\harvardyearright ,
+  Fault tolerant control strategy for omnikity-iii, {\em in} `Robotics and
+  Automation, 2001. Proceedings 2001 ICRA. IEEE International Conference on',
+  Vol.~4, IEEE, pp.~3370--3375.
+
+\harvarditem{Kim \harvardand\ Kim}{2014}{kim2014minenergy}
+Kim, H. \harvardand\ Kim, B.~K.  \harvardyearleft 2014\harvardyearright ,
+  `Online minimum-energy trajectory planning and control on a straight-line
+  path for three-wheeled omnidirectional mobile robots', {\em IEEE Transactions
+  on industrial electronics} {\bf 61}(9),~4771--4779.
+
+\harvarditem[Krinkin et~al.]{Krinkin, Stotskaya \harvardand\
+  Stotskiy}{2015}{krinkin2015design}
+Krinkin, K., Stotskaya, E. \harvardand\ Stotskiy, Y.  \harvardyearleft
+  2015\harvardyearright , Design and implementation raspberry pi-based
+  omni-wheel mobile robot, {\em in} `Artificial Intelligence and Natural
+  Language and Information Extraction, Social Media and Web Search FRUCT
+  Conference (AINL-ISMW FRUCT), 2015', IEEE, pp.~39--45.
+
+\harvarditem[Loh et~al.]{Loh, Low \harvardand\ Leow}{2003}{loh2003mechatronics}
+Loh, W., Low, K.~H. \harvardand\ Leow, Y.  \harvardyearleft
+  2003\harvardyearright , Mechatronics design and kinematic modelling of a
+  singularityless omni-directional wheeled mobile robot, {\em in} `Robotics and
+  Automation, 2003. Proceedings. ICRA'03. IEEE International Conference on',
+  Vol.~3, IEEE, pp.~3237--3242.
+
+\harvarditem{Lynch \harvardand\ Park}{2017}{lynch2017modern}
+Lynch, K. \harvardand\ Park, F.  \harvardyearleft 2017\harvardyearright , {\em
+  Modern Robotics: Mechanics, Planning, and Control}, Cambridge University
+  Press.
+\newline\harvardurl{https://books.google.com.br/books?id=86G0nQAACAAJ}
+
+\harvarditem{Markets \harvardand\ Markets}{2015}{marketsmarkets}
+Markets \harvardand\ Markets  \harvardyearleft 2015\harvardyearright , `Mobile
+  robots market by environment (aerial, ground, and marine), component
+  (hardware and software), application (professional service and personal
+  service), and geography (north america, europe, asia-pacific, and the row) -
+  global forecast to 2020',
+  \url{http://www.marketsandmarkets.com/Market-Reports/mobile-robots-market-43703276.html}.
+\newblock Acessado em 27/09/2017.
+
+\harvarditem{MPS}{2008}{MP2307}
+MPS  \harvardyearleft 2008\harvardyearright , `Synchronous rectified step-down
+  converter'.
+\newblock Acessado em 30/11/2017.
+\newline\harvardurl{https://cdn.solarbotics.com/products/datasheets/mp2307.pdf}
+
+\harvarditem{Nexus}{2016}{omniwheel}
+Nexus  \harvardyearleft 2016\harvardyearright , `58mm plastic omniwheel'.
+\newblock acessado em 8/10/2017.
+\newline\harvardurl{http://www.nexusrobot.com/product/58mm-plastic-omni-wheel-for-lego-nxt-and-servo-motor-14135.html}
+
+\harvarditem[Oubbati et~al.]{Oubbati, Schanz, Buchheim \harvardand\
+  Levi}{2005}{oubbati2005velocity}
+Oubbati, M., Schanz, M., Buchheim, T. \harvardand\ Levi, P.  \harvardyearleft
+  2005\harvardyearright , Velocity control of an omnidirectional robocup player
+  with recurrent neural networks, {\em in} `RoboCup', Springer, pp.~691--701.
+
+\harvarditem[Park et~al.]{Park, Chung, Chung \harvardand\
+  Lee}{1996}{park1996dead}
+Park, K., Chung, D., Chung, H. \harvardand\ Lee, J.~G.  \harvardyearleft
+  1996\harvardyearright , Dead reckoning navigation of a mobile robot using an
+  indirect kalman filter, {\em in} `Multisensor Fusion and Integration for
+  Intelligent Systems, 1996. IEEE/SICE/RSJ International Conference on', IEEE,
+  pp.~132--138.
+
+\harvarditem{Pin \harvardand\ Killough}{1994}{pin1994new}
+Pin, F.~G. \harvardand\ Killough, S.~M.  \harvardyearleft 1994\harvardyearright
+  , `A new family of omnidirectional and holonomic wheeled platforms for mobile
+  robots', {\em IEEE transactions on robotics and automation} {\bf
+  10}(4),~480--489.
+
+\harvarditem{Ritter}{2016}{ritter2016modelagem}
+Ritter, G.~A.  \harvardyearleft 2016\harvardyearright , Modelo genérico de
+  plataforma robótica omnidirecional em código aberto, PhD thesis, UNISC,
+  Santa Cruz do Sul, RS.
+\newblock Trabalho de Conclusão de Curso de Engenharia de Computação.
+
+\harvarditem[R{\"o}hrig et~al.]{R{\"o}hrig, He{\ss}, Kirsch \harvardand\
+  K{\"u}nemund}{2010}{rohrig2010laser}
+R{\"o}hrig, C., He{\ss}, D., Kirsch, C. \harvardand\ K{\"u}nemund, F.
+  \harvardyearleft 2010\harvardyearright , Localization of an omnidirectional
+  transport robot using ieee 802.15. 4a ranging and laser range finder, {\em
+  in} `Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International
+  Conference on', IEEE, pp.~3798--3803.
+
+\harvarditem{Rojas \harvardand\ F{\"o}rster}{2006}{rojas2006holonomic}
+Rojas, R. \harvardand\ F{\"o}rster, A.~G.  \harvardyearleft
+  2006\harvardyearright , `Holonomic control of a robot with an omnidirectional
+  drive', {\em KI-K{\"u}nstliche Intelligenz} {\bf 20}(2),~12--17.
+
+\harvarditem[Samani et~al.]{Samani, Abdollahi, Ostadi \harvardand\
+  DaneshPanah}{2007}{samani2007comprehensive}
+Samani, H.~A., Abdollahi, A., Ostadi, H. \harvardand\ DaneshPanah, M.
+  \harvardyearleft 2007\harvardyearright , `Comprehensive omni-directional
+  soccer player robots', {\em International Journal of Advanced Robotic
+  Systems} .
+
+\harvarditem{Semiconductors}{2000}{semiconductors2000i2c}
+Semiconductors, P.  \harvardyearleft 2000\harvardyearright , `The i2c-bus
+  specification', {\em Philips Semiconductors} {\bf 9397}(750),~00954.
+
+\harvarditem{Siciliano \harvardand\ Khatib}{2016}{siciliano2016springer}
+Siciliano, B. \harvardand\ Khatib, O.  \harvardyearleft 2016\harvardyearright ,
+  {\em Springer handbook of robotics}, Springer.
+
+\harvarditem[Siegwart et~al.]{Siegwart, Nourbakhsh \harvardand\
+  Scaramuzza}{2011}{siegwart2011introduction}
+Siegwart, R., Nourbakhsh, I. \harvardand\ Scaramuzza, D.  \harvardyearleft
+  2011\harvardyearright , {\em Introduction to Autonomous Mobile Robots},
+  Intelligent robotics and autonomous agents, MIT Press.
+\newline\harvardurl{https://books.google.com.br/books?id=4of6AQAAQBAJ}
+
+\harvarditem{Steinhoff \harvardand\ Schiele}{2010}{steinhoff2010pocket}
+Steinhoff, U. \harvardand\ Schiele, B.  \harvardyearleft 2010\harvardyearright
+  , Dead reckoning from the pocket-an experimental study, {\em in} `Pervasive
+  Computing and Communications (PerCom), 2010 IEEE International Conference
+  on', IEEE, pp.~162--170.
+
+\harvarditem{STMicroelectronics}{2000}{L298N}
+STMicroelectronics  \harvardyearleft 2000\harvardyearright , `Dual full-bridge
+  driver'.
+\newblock Acessado em 30/11/2017.
+\newline\harvardurl{http://www.st.com/content/ccc/resource/technical/document/datasheet/82/cc/3f/39/0a/29/4d/f0/CD00000240.pdf/files/CD00000240.pdf/jcr:content/translations/en.CD00000240.pdf}
+
+\harvarditem[Takemura et~al.]{Takemura, Sanada, Ichinose, Nakano, Nassiraei,
+  Azeura, Kitazumi, Ogawa, Godler, Ishii et~al.}{2007}{takemura2007development}
+Takemura, Y., Sanada, A., Ichinose, T., Nakano, Y., Nassiraei, A.~A., Azeura,
+  K., Kitazumi, Y., Ogawa, Y., Godler, I., Ishii, K. et~al.  \harvardyearleft
+  2007\harvardyearright , Development of “hibikino-musashi”
+  omni-directional mobile robot, {\em in} `International Congress Series', Vol.
+  1301, Elsevier, pp.~201--205.
+
+\harvarditem{Treesatayapun}{2011}{treesatayapun2011discrete}
+Treesatayapun, C.  \harvardyearleft 2011\harvardyearright , `A discrete-time
+  stable controller for an omni-directional mobile robot based on an
+  approximated model', {\em Control Engineering Practice} {\bf
+  19}(2),~194--203.
+
+\harvarditem{Upton \harvardand\ Halfacree}{2014}{upton2014raspberry}
+Upton, E. \harvardand\ Halfacree, G.  \harvardyearleft 2014\harvardyearright ,
+  {\em Raspberry Pi user guide}, John Wiley \& Sons.
+
+\harvarditem[Williams et~al.]{Williams, Carter, Gallina \harvardand\
+  Rosati}{2002}{williams2002dynamic}
+Williams, R.~L., Carter, B.~E., Gallina, P. \harvardand\ Rosati, G.
+  \harvardyearleft 2002\harvardyearright , `Dynamic model with slip for wheeled
+  omnidirectional robots', {\em IEEE transactions on Robotics and Automation}
+  {\bf 18}(3),~285--293.
+
+\end{thebibliography}

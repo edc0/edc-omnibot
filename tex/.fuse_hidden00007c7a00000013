@@ -122,8 +122,8 @@
 
 %% Bibliografia
 %  https://gking.harvard.edu/files/natnotes2.pdf
-\bibliographystyle{elsarticle-harv} % TODO: dá pra escolher um estilo melhor que esse
-\setcitestyle{authoryear,open={(},close={)},aysep={,}}
+\bibliographystyle{elsarticle-harvard} % TODO: dá pra escolher um estilo melhor que esse
+\setcitestyle{authoryear,open={(},close={)},aysep={,}} % citet para texto corrido, citep para entre parenteses
 
 %% Personalização/formatação das figuras e tabelas
 \def\fps@figure{!h}
