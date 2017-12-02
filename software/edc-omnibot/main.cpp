@@ -130,9 +130,9 @@ void loop (void)
   yError  =   yw  - yTarget;
   thetaError=theta-thetaTarget;
 
-  Vxw = Vxw + 0.5*xError;
-  Vyw = Vyw + 0.5*xError;
-  omegap = omegap + 0.5*thetaError;
+  Vxw = Vxw - 0.5*xError;
+  Vyw = Vyw - 0.5*xError;
+  omegap = omegap - 0.5*thetaError;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
