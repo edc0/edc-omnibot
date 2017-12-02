@@ -141,14 +141,14 @@ void loop (void)
   VrightTarget=Vright;
 
   scaling();
+*/
+  Motor1.setSetpoint(VleftTarget);
+  Motor2.setSetpoint(VbackTarget);
+  Motor3.setSetpoint(VrightTarget);
 
   cout << "V1: " << VleftTarget << "\n";
   cout << "V2: " << VbackTarget << "\n";
   cout << "V3: " << VrightTarget << "\n\n";
-  */
-  Motor1.setSetpoint(VleftTarget);
-  Motor2.setSetpoint(VbackTarget);
-  Motor3.setSetpoint(VrightTarget);
 }
 
 
