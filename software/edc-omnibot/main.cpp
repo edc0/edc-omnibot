@@ -110,9 +110,12 @@ void odometry()
   yw += Vyw*t_diff/1000000;
   theta += omegap*t_diff/1000000; // ERRADO, falta a compensação do angulo percorrido
 
+  /*
   cout << "x: " << xw << "\n";
   cout << "y: " << yw << "\n";
   cout << "w: " << theta << "\n\n";
+  */
+
 }
 
 void loop (void)
@@ -120,7 +123,21 @@ void loop (void)
   Motor1.setSetpoint(VleftTarget);
   Motor2.setSetpoint(VbackTarget);
   Motor3.setSetpoint(VrightTarget);
+
   odometry();
+
+  xError  =   xw  - xTarget;
+  yError  =   yw  - yTarget;
+  thetaError=theta-thetaTarget;
+
+  Vxw = Vxw + 0.5*xError;
+  Vyw = Vyw + 0.5*xError;
+  omegap = omegap + 0.5*thetaError;
+
+  inverseKinematicsWorld();
+  VleftTarget=Vleft;
+  VbackTarget=Vback;
+  VrightTarget=Vright;
 }
 
 
@@ -142,12 +159,12 @@ int main(void)
   re_decoder dec3(E3a, E3b, dec_callback3);
 
 
-  cout << "\nVxw: ";
-  cin >> Vxw;
-  cout << "Vyw: ";
-  cin >> Vyw;
-  cout << "omegap: ";
-  cin >> omegap;
+  cout << "\nX: ";
+  cin >> xTarget;
+  cout << "Y: ";
+  cin >> yTarget;
+  cout << "Theta: ";
+  cin >> thetaTarget;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
