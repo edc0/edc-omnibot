@@ -92,7 +92,8 @@ void dec_callback3(int way)
   Motor3.t_pos_old = Motor3.t_pos;
 }
 
-static int tempo, tempo_old, t_diff;
+static uint32_t tempo, tempo_old;
+static int t_diff;
 
 void odometry()
 {
