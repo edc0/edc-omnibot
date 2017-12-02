@@ -171,11 +171,11 @@ int main(void)
 
 
   cout << "\nX: ";
-  cin >> xTarget;
+  cin >> Vxw;
   cout << "Y: ";
-  cin >> yTarget;
+  cin >> Vyw;
   cout << "Theta: ";
-  cin >> thetaTarget;
+  cin >> omegap;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
