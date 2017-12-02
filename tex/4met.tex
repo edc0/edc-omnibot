@@ -223,7 +223,7 @@ No entanto, a interpolação de um polinômio a cada cálculo de trajetória é 
 %% CONTROLE:
 \subsection{Controle}
 
-EM CONSTRUÇÃO DAQUI PRA BAIXO
+SUBSECTION EM CONSTRUÇÃO
 
 \cite{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
 motores:
@@ -241,9 +241,21 @@ Given a desired trajectory q d (t), we can adopt the feedforward plus proportion
 
 %: seguimento de trajetória: malha aberta (3.6.1); Feedback (3.6.2) do livro: It is very similar to the controllers presented in [39, 100]. Others can be found in [8, 52, 53, 137]. Controle com uma matriz de ganhos K para o espaço de estados. Estável e tal. Comentam sobre camadas: planejamento -> decisão -> controlador em tempo real -> hardware.
 
+\subsection{Limitações de Velocidade}
 
-\cite{lynch2017modern} falar um pouquinho de bodytwist??
-FALAR DA BÚSSOLA?
+É importante ressaltar que toda a cinemática desenvolvida nas subseções anteriores não considera limites de velocidade para os atuadores. Numa aplicação real, entretanto, existe um ponto de saturação no acionamento de cada motor, que deve ser levada em consideração. Na Figura \ref{fig:twist_sat} se pode ver o efeito dessas limitações, conforme descrito em \cite{lynch2017modern}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.63\textwidth]{imagens/twist_sat}
+  \caption{Limites de velocidade translacional e rotacional em função dos limites de saturação dos motores reais.}
+  \source{Adaptado de \cite{lynch2017modern} para as coordenadas utilizadas.}
+  \label{fig:twist_sat}
+\end{figure}
+
+Quando não há rotações ($\omega_z = 0$), o limite de velocidade do corpo do robô é descrito pelo hexágono mostrado na porção esquerda da Figura \ref{fig:twist_sat}: a maior velocidade possível é na direção em que uma das rodas está sendo ``arrastada'', e as componentes de velocidade das outras rodas se somam. Numa situação em que haja necessidade de rotação, a velocidade angular do robô se torna limitada da maneira mostrada no volume tridimensional à direita da Figura \ref{fig:twist_sat}, e se torna fácil enxergar que, para realizar um movimento de rotação na maior velocidade ângular possível, não se pode ter movimentos de translação, para que todos os componentes de velocidade das rodas contribuam apenas para a rotação.
+
+Se pode dizer, então, que para aplicações reais nas quais a holonomicidade da plataforma é de fato desejável, se deve implantar um sistema de planejamento de trajetória que leve em consideração as limitações de velocidade descritas acima.
 
 \section{Implementação dos algoritmos}
 \label{sec:software}
@@ -294,7 +306,7 @@ O procedimento de opereação pode ser representado pelo diagrama apresentado na
 
 %O \emph{fast mode} é suportado pelo Raspberry Pi 3 B+.
 
-Seguir o perfil de velocidade não é muito fácil, visto que dead zone.
+Seguir o perfil de velocidade não é muito fácil, visto que dead zone. budibudibuidi \cite{indiveri2009swedish} trata saturação.
 
 \section{Avaliação experimental}
 \label{sec:experimental}
