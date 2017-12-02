@@ -24,6 +24,8 @@ int E1a = 26, E1b = 19,
     E2a = 25, E2b = 8,
     E3a = 23, E3b = 24;
 
+double Vaux; //variável pra fazer as trajetórias ficarem na minha coordenada
+
 OmniRPiInterface Motor1(M1a, M1b, E1a, E1b);
 OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
 OmniRPiInterface Motor3(M3a, M3b, E3a, E3b);
@@ -142,9 +144,9 @@ void loop (void)
 
   scaling();
 */
-  Motor1.setSetpoint(VleftTarget);
-  Motor2.setSetpoint(VbackTarget);
-  Motor3.setSetpoint(VrightTarget);
+  Motor1.setSetpoint(VbackTarget);
+  Motor2.setSetpoint(VrightTarget);
+  Motor3.setSetpoint(VleftTarget);
 
   cout << "x: " << xw << "\n";
   cout << "y: " << yw << "\n";
@@ -170,9 +172,10 @@ int main(void)
   re_decoder dec3(E3a, E3b, dec_callback3);
 
   cout << "\nX: ";
-  cin >> Vxw;
-  cout << "Y: ";
   cin >> Vyw;
+  cout << "Y: ";
+  cin >> Vaux;
+  Vxw = -Vaux;
   cout << "Theta: ";
   cin >> omegap;
 
@@ -181,9 +184,9 @@ int main(void)
   VbackTarget=Vback;
   VrightTarget=Vright;
 
-  cout << "\n\nVelocidade da roda 1: " << VleftTarget;
-  cout << "\nVelocidade da roda 2: " << VbackTarget;
-  cout << "\nVelocidade da roda 3: " << VrightTarget;
+  cout << "\n\nVelocidade da roda 1: " << VbackTarget;
+  cout << "\nVelocidade da roda 2: " << VrightTarget;
+  cout << "\nVelocidade da roda 3: " << VleftTarget;
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
@@ -206,8 +209,8 @@ int main(void)
 
   odometry();
 
-  cout << "\nDistância em X: " << xw << "\n";
-  cout << "Distância em Y: " << yw << "\n";
+  cout << "\nDistância em X: " << yw << "\n";
+  cout << "Distância em Y: " << -xw << "\n";
   cout << "Rotação em rad: " << theta << "\n";
 
   return 0;
