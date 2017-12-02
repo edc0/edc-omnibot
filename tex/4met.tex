@@ -223,11 +223,25 @@ No entanto, a interpolação de um polinômio a cada cálculo de trajetória é 
 %% CONTROLE:
 \subsection{Controle}
 
+SUBSECTION EM CONSTRUÇÃO
+
+Diversas abordagens podem ser utilizadas para a implantação de controladores em robôs omnidirecionais. Se pode realizar o controle das coordenadas desejadas, em x, y e z, ou o controle da posição de cada roda, independentemente. No caso, foram realizados três controladores de posição, em X, Y e $\omega$, utilizando a odometria discutida acima. O controlador então decide o set point de velocidade para cada roda, e envia os sinais de comando para um conjunto secundário de controladores de velocidade, 1 para cada roda. Se pode ver um esquema do sistema utilzado na FIgura \ref{fig:controle}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \caption{Arquitetura de controle utilizada.}
+  %\source{\citet{lynch2017modern}}
+  \label{fig:controle}
+\end{figure}
+
+Estabilidade, tipo do controle, proporcional, integral, derivativo, digital, tempo de ciclo, q q eu digo aqui, pô?
+
 \citet{lynch2017modern}:
 
 Loop de velocidade dentro do loop de posição. Posição das rodas ou posição em x e y e $\omega_z$?
 
-SUBSECTION EM CONSTRUÇÃO
+
 
 \citet{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.
 motores:
@@ -269,6 +283,19 @@ SEÇÃO EM CONSTRUÇÃO
 A implementação é difícil de encontrar nos trabalhos da bibliografia, portanto alguma coisa.
 
 PROBLEMA: velocidade das rodas precisa o suficiente! Fazer experimentos em relação a isso.
+
+ordem das coisas: \\
+-análise dos códigos de cinemática \\
+-desmembramento das funções do ritter \\
+-código de acionamento dos motores \\
+-bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
+-implementação dos algoritmos de odometria \\
+-testes para calibração dos movimentos (isso já é resultado??) \\
+-implementação do controle de posição \\
+-algoritmo de limitação de velocidade, escalonamento \\
+-organização do código \\
+-interface com o usuário \\
+-sequencia final de operação do código \\
 
 O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} \citep{upton2014raspberry}.
 
@@ -315,8 +342,38 @@ Seguir o perfil de velocidade não é muito fácil, visto que dead zone. budibud
 \section{Avaliação experimental}
 \label{sec:experimental}
 
-SEÇÃO EM CONSTRUÇÃO
+Se deseja avaliar o comportamento dos algoritmos implementados e da modelagem realizada operando o robô em três situações:
+\begin{itemize}
+  \item{trajetória retilínea, sem nenhum movimento de rotação, em diversas direções e com diversas velocidades de acionamento, conforme mostrado na Figura \ref{fig:reta};}
+  \item{trajetória de rotação pura, analisando a variação de ângulo atingida em função do ângulo desejado e da velocidade desejada. Tal situação é ilustrada na Figura \ref{fig:giro};}
+  \item{trajetória híbrida, realizando tanto uma translação retilínea arbitrária quanto uma rotação sobreposta, como no diagrama da Figura \ref{fig:hibrida}.}
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{imagens/reta}
+  \caption{Trajetória retilínea pura.}
+  \label{fig:reta}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.35\textwidth]{imagens/giro}
+  \caption{Trajetória de giro.}
+  \label{fig:giro}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{imagens/hibrida}
+  \caption{Trajetória combinada.}
+  \label{fig:hibrida}
+\end{figure}
+
+Se espera com a primeira trajetória, avaliar a robustez dos algoritmos quando se necessita o acionamento combinado de múltiplas rodas. Por exemplo, no eixo X, não há necessidade de movimento em uma das rodas. Em outras direções, se introduz movimentos mais lentos das rodas, o que já se viu que é um problema por causa do atrito viscoso da caixa de redução.
+
+Com a trajetória de giro, em que as três rodas devem operar com a mesma velocidade, se deseja avaliar alguma coisa relacionada a isso. Na última trajetória, híbrida, se deseja mostrar o funcionamento do algoritmo de limitação de velocidade, e os efeitos deste fator.
 
 Se notou que o acionamento dos motores depende de alguns fatores. Variando a frequência dos PWMs mudou o q?
 
-O protótipo foi acionado sobre um papel enorme, com duas canetas de cores distintas instaladas nos orifícios destinados a tal. Seguem os resultados:
+O protótipo foi acionado sobre um papel enorme, com duas canetas de cores distintas instaladas nos orifícios destinados a tal.

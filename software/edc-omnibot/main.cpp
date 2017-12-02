@@ -126,9 +126,9 @@ void loop (void)
 
   odometry();
 
-  xError  =   xw  - xTarget;
-  yError  =   yw  - yTarget;
-  thetaError=theta-thetaTarget;
+  xError  =   xw  - 0.4*xTarget;
+  yError  =   yw  - 0.4*yTarget;
+  thetaError=theta- 0.4*thetaTarget;
 
   Vxw = Vxw - xError;
   Vyw = Vyw - xError;
