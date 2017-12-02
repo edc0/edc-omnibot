@@ -174,8 +174,7 @@ int main(void)
   cout << "\nX: ";
   cin >> Vyw;
   cout << "Y: ";
-  cin >> Vaux;
-  Vxw = -Vaux;
+  cin >> Vxw;
   cout << "Theta: ";
   cin >> omegap;
 
