@@ -13,6 +13,7 @@
 
 #define L 0.125 // distance between body center and wheel center
 #define r 0.029 // wheel radius
+#define VMAX 2
 
 // setando pinos para os testes
 int M1a = 2,  M1b = 3,
@@ -120,29 +121,35 @@ void odometry()
 
 void loop (void)
 {
-  Motor1.setSetpoint(VleftTarget);
-  Motor2.setSetpoint(VbackTarget);
-  Motor3.setSetpoint(VrightTarget);
-
   odometry();
 
-  xError  =   xw  - 0.4*xTarget;
-  yError  =   yw  - 0.4*yTarget;
-  thetaError=theta- 0.4*thetaTarget;
+  xError     = xTarget - xw;
+  yError     = yTarget - yw;
+  thetaErro r= thetaTarget - theta;
 
-  Vxw = Vxw - xError;
-  Vyw = Vyw - xError;
-  omegap = omegap - thetaError;
+  Vxw = Vxw + 0.5*xError;
+  Vyw = Vyw + 0.5*xError;
+  omegap = omegap + 0.3*thetaError;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
+  
+  if(VleftTarget > VMAX || VbackTarget > VMAX || VrightTarget > VMAX)
+  {
+    VleftTarget=VleftTarget/VMAX;
+    VbackTarget=VbackTarget/VMAX;
+    VrightTarget=VrightTarget/VMAX;
+  }
 
   cout << "V1: " << VleftTarget << "\n";
   cout << "V2: " << VbackTarget << "\n";
   cout << "V3: " << VrightTarget << "\n\n";
 
+  Motor1.setSetpoint(VleftTarget);
+  Motor2.setSetpoint(VbackTarget);
+  Motor3.setSetpoint(VrightTarget);
 }
 
 
