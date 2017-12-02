@@ -109,7 +109,7 @@ void odometry()
 
   xw += Vxw*t_diff/1000000;
   yw += Vyw*t_diff/1000000;
-  theta += omegap*t_diff/1000000; // ERRADO, falta a compensação do angulo percorrido
+  theta += omegap*t_diff/10000000; // ERRADO, falta a compensação do angulo percorrido
 
   /*
   cout << "x: " << xw << "\n";
