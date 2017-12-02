@@ -106,8 +106,8 @@ void odometry()
 
   forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
 
-  xw += Vxw*t_diff;
-  yw += Vyw*t_diff;
+  xw += Vxw*t_diff/1000000;
+  yw += Vyw*t_diff/1000000;
   //theta += omegap*t_diff; // ERRADO*/
 }
 
