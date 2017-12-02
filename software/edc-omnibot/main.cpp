@@ -146,9 +146,9 @@ void loop (void)
   Motor2.setSetpoint(VbackTarget);
   Motor3.setSetpoint(VrightTarget);
 
-  cout << "V1: " << VleftTarget << "\n";
-  cout << "V2: " << VbackTarget << "\n";
-  cout << "V3: " << VrightTarget << "\n\n";
+  cout << "x: " << xw << "\n";
+  cout << "y: " << yw << "\n";
+  cout << "z: " << theta << "\n\n";
 }
 
 
@@ -168,7 +168,6 @@ int main(void)
   re_decoder dec1(E1a, E1b, dec_callback1);
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
-
 
   cout << "\nX: ";
   cin >> Vxw;
