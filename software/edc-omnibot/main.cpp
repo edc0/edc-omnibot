@@ -138,6 +138,11 @@ void loop (void)
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
+
+  cout << "V1: " << VleftTarget << "\n";
+  cout << "V2: " << VbackTarget << "\n";
+  cout << "V3: " << VrightTarget << "\n\n";
+
 }
 
 
