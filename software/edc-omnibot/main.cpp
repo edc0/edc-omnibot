@@ -116,13 +116,17 @@ void odometry()
   cout << "y: " << yw << "\n";
   cout << "w: " << theta << "\n\n";
   */
+}
 
+void scaling(void)
+{
+  //descobre qual a maior das três velocidades, mantem ela saturada no máximo, escala as outras para continuarem proporcionais
 }
 
 void loop (void)
 {
   odometry();
-
+  /*
   xError     = xTarget - xw;
   yError     = yTarget - yw;
   thetaError = thetaTarget - theta;
@@ -136,17 +140,12 @@ void loop (void)
   VbackTarget=Vback;
   VrightTarget=Vright;
 
-  if(VleftTarget > VMAX || VbackTarget > VMAX || VrightTarget > VMAX)
-  {
-    VleftTarget=VleftTarget/VMAX;
-    VbackTarget=VbackTarget/VMAX;
-    VrightTarget=VrightTarget/VMAX;
-  }
+  scaling();
 
   cout << "V1: " << VleftTarget << "\n";
   cout << "V2: " << VbackTarget << "\n";
   cout << "V3: " << VrightTarget << "\n\n";
-
+  */
   Motor1.setSetpoint(VleftTarget);
   Motor2.setSetpoint(VbackTarget);
   Motor3.setSetpoint(VrightTarget);
