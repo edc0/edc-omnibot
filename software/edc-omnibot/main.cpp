@@ -112,7 +112,7 @@ void odometry()
 
   cout << "x: " << xw << "\n";
   cout << "y: " << yw << "\n";
-  cout << "w: " << theta << "\n";
+  cout << "w: " << theta << "\n\n";
 }
 
 void loop (void)
