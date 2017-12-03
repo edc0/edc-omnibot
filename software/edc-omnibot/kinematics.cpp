@@ -11,8 +11,12 @@
 
 #include "kinematics.h"
 
-#define L 0.125 // distance between body center and wheel center
-#define r 0.029 // wheel radius
+#define L 0.125       // distance between body center and wheel center
+#define r 0.029       // wheel radius
+#define ppr 341.2     // pulses per encoder revolution
+#define uss 1000000   // microseconds per second
+#define rev 6.28314
+#define PMS 534.18
 
 #define pi30 0.1047197551196597705355242034774843062905347323976457118988037109375 // long double thirty = 30; long double mOne = -1; printf("%1.70Lf\n", (long double) acos(mOne) / thirty);
 #define pi12 1.5707963267948965579989817342720925807952880859375 // long double two = 2; long double mOne = -1; printf("%1.70Lf\n", (long double) acos(mOne) / two);

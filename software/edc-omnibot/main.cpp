@@ -11,9 +11,12 @@
 #include "rpi_interface.h"
 
 
-#define L 0.125 // distance between body center and wheel center
-#define r 0.029 // wheel radius
-#define VMAX 2
+#define L 0.125       // distance between body center and wheel center
+#define r 0.029       // wheel radius
+#define ppr 341.2     // pulses per encoder revolution
+#define uss 1000000   // microseconds per second
+#define rev 6.28314
+#define PMS 534.18
 
 // setando pinos para os testes
 int M1a = 2,  M1b = 3,
@@ -23,8 +26,6 @@ int M1a = 2,  M1b = 3,
 int E1a = 26, E1b = 19,
     E2a = 25, E2b = 8,
     E3a = 23, E3b = 24;
-
-double Vaux; //variável pra fazer as trajetórias ficarem na minha coordenada
 
 OmniRPiInterface Motor1(M1a, M1b, E1a, E1b);
 OmniRPiInterface Motor2(M2a, M2b, E2a, E2b);
@@ -55,7 +56,8 @@ void dec_callback1(int way)
   Motor1.rps[3]=Motor1.rps[2];
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
-  Motor1.rps[0] = 2931.5*way/double(Motor1.t_pos-Motor1.t_pos_old);
+  Motor1.rps[0] = PMS*way/double(Motor1.t_pos-Motor1.t_pos_old);
+  // velocidade já em m/s
 
   //getAngSpd??
   Motor1.pos_old = Motor1.pos;
@@ -72,7 +74,9 @@ void dec_callback2(int way)
   Motor2.rps[3]=Motor2.rps[2];
   Motor2.rps[2]=Motor2.rps[1];
   Motor2.rps[1]=Motor2.rps[0];
-  Motor2.rps[0] = 2931.5*way/double(Motor2.t_pos-Motor2.t_pos_old);
+  Motor2.rps[0] = PMS*way/double(Motor2.t_pos-Motor2.t_pos_old);
+  // velocidade já em m/s
+
   //getAngSpd??
   Motor2.pos_old = Motor2.pos;
   Motor2.t_pos_old = Motor2.t_pos;
@@ -88,7 +92,8 @@ void dec_callback3(int way)
   Motor3.rps[3]=Motor3.rps[2];
   Motor3.rps[2]=Motor3.rps[1];
   Motor3.rps[1]=Motor3.rps[0];
-  Motor3.rps[0] = 2931.5*way/double(Motor3.t_pos-Motor3.t_pos_old);
+  Motor3.rps[0] = PMS*way/double(Motor3.t_pos-Motor3.t_pos_old);
+  // velocidade já em m/s
 
   //getAngSpd??
   Motor3.pos_old = Motor3.pos;
@@ -103,15 +108,15 @@ void odometry()
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
-  Vleft = Motor1.getAngSpd()*r*6.28;
-  Vback = Motor2.getAngSpd()*r*6.28;
-  Vright= Motor3.getAngSpd()*r*6.28;
+  Vleft = Motor1.getWhlSpd();
+  Vback = Motor2.getWhlSpd();
+  Vright= Motor3.getWhlSpd();
 
   forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
 
-  xw += Vxw*t_diff/1000000;
-  yw += Vyw*t_diff/1000000;
-  theta += omegap*t_diff/10000000; // ERRADO, falta a compensação do angulo percorrido
+  xw += Vxw*t_diff/uss;
+  yw += Vyw*t_diff/uss;
+  theta += omegap*t_diff/uss; // ERRADO, falta a compensação do angulo percorrido
 
   /*
   cout << "x: " << xw << "\n";

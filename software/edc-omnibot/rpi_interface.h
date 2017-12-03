@@ -36,7 +36,7 @@ public:
   double getWheelPos();       // returns pos (mas se é public, pra q?)
   void setSetpoint(double sp);// define velocidade desejada
   double getError(double sp); // returns current controller error signal
-  double getAngSpd(int n = 5);// returns current wheel speed (average of n last readings)
+  double getWhlSpd(int n = 5);// returns current wheel speed (average of n last readings)
   void stop();
   //void startDecoder();
   void start();

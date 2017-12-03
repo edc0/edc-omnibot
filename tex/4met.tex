@@ -104,7 +104,7 @@ Assim, para um robô com 3 rodas dispostas em simetria radial em torno do centro
   \begin{pmatrix}
     -\frac{3R}{\sqrt{3}} & 0   & \frac{3R}{\sqrt{3}} \\
     R                    & -2R & R                   \\
-    1                    & 1   & R
+    1                    & 1   & 1
   \end{pmatrix}
   \begin{pmatrix}
     \dot{\phi_1} \\
@@ -156,7 +156,7 @@ Durante a operação do robô, se torna necessário calcular a posição da estr
   \begin{pmatrix}
     -\frac{3R}{\sqrt{3}} & 0   & \frac{3R}{\sqrt{3}} \\
     R                    & -2R & R                   \\
-    1                    & 1   & R
+    1                    & 1   & 1
   \end{pmatrix}
   \begin{pmatrix}
     \Delta{\phi_1} \\
@@ -291,6 +291,10 @@ ordem das coisas: \\
 -bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
 -implementação dos algoritmos de odometria \\
 -testes para calibração dos movimentos (isso já é resultado??) \\
+% 341.2/2pi pulsos/rad -> 54.3 pulsos/rad (0.01842 rad/pulso, 0.0029308323 rotações/pulso)
+% VER O PAPEL NO MURAL
+
+As equações implementadas relacionam as matrizes de transformação com a velocidade linear da periferia das rodas, $\dot{\phi}_i r$, em m/s. A leitura dos encoders é realizada em pulsos/$\mu$s. O fator de conversão aplicado é (em teoria) 534.18. Ao se utilizar o comando inverseKinematicsWorld, se obtêm as velocidades em m/s e a velocidade angular em rad/s. \\
 -implementação do controle de posição \\
 -algoritmo de limitação de velocidade, escalonamento \\
 -organização do código \\
