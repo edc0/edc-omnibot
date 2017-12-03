@@ -140,7 +140,7 @@ void odometry()
 
   xw += Vxw*double(t_diff)/double(uss);
   yw += Vyw*double(t_diff)/double(uss);
-  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
+  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r/double(3*L*ppr); //multiplicar por 5.43
   //theta += omegap*t_diff/uss; //atualiza theta, no fim
 
   Motor1.pos_old = Motor1.pos;
