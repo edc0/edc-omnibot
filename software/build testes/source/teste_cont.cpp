@@ -63,6 +63,7 @@ using namespace std;
 void exit_from_key (int signum)
 {
   cout << "Interrupt signal (" << signum << ") received.\n" ;
+  arq.close();
   gpioWrite(M1a, 0);
   gpioWrite(M1b, 0);
   gpioWrite(M2a, 0);
