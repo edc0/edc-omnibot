@@ -116,7 +116,7 @@ void odometry()
 
   xw += Vxw*t_diff/uss;
   yw += Vyw*t_diff/uss;
-  theta += omegap*t_diff/uss; // ERRADO, falta a compensação do angulo percorrido
+  theta += omegap*t_diff/uss/10; // ERRADO, falta a compensação do angulo percorrido
 
   /*
   cout << "x: " << xw << "\n";
@@ -153,8 +153,8 @@ void loop (void)
   Motor2.setSetpoint(VrightTarget);
   Motor3.setSetpoint(VleftTarget);
 
-  cout << "x: " << xw << "\n";
-  cout << "y: " << yw << "\n";
+  cout << "x: " << yw << "\n";
+  cout << "y: " << xw << "\n";
   cout << "z: " << theta << "\n\n";
 }
 
@@ -213,8 +213,8 @@ int main(void)
 
   odometry();
 
-  cout << "\nDistância em X: " << yw << "\n";
-  cout << "Distância em Y: " << -xw << "\n";
+  cout << "\nDistância em X: "<< yw << "\n";
+  cout << "Distância em Y: "  << xw << "\n";
   cout << "Rotação em rad: " << theta << "\n";
 
   return 0;
