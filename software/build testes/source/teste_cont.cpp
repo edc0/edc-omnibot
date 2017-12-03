@@ -148,6 +148,7 @@ void loop (void)
   val2_new = val2_old + Kp*erro2;
   val3_new = val3_old + Kp*erro3;
 
+  arq << inp << ",";
 
   arq << val1_new << ",";
   arq << val2_new << ",";
@@ -158,6 +159,21 @@ void loop (void)
   arq << rps3_avg << "\n";
 
   //cout << val_new <<"\n"<<erro<<"\n\n" ;
+  if(val1_new>255)
+    val1_new = 255;
+  if(val1_new<-255)
+    val1_new = -255;
+
+  if(val2_new>255)
+    val2_new = 255;
+  if(val2_new<-255)
+    val2_new = -255;
+
+  if(val3_new>255)
+    val3_new = 255;
+  if(val3_new<-255)
+    val3_new = -255;
+
   if(val1_new > 0)
   {
     gpioPWM(M1a, 0);
@@ -227,13 +243,6 @@ int main(void)
   gpioSetMode(E1a, PI_INPUT);
   gpioSetMode(E2a, PI_INPUT);
 
-  // chama função loop() a cada 10ms
-  gpioSetTimerFunc(3, 10, loop);
-
-  re_decoder dec1(E1a, E1b, dec_callback1);
-  re_decoder dec2(E2a, E2b, dec_callback2);
-  re_decoder dec3(E3a, E3b, dec_callback3);
-
   arq.open("testes.txt", ios::out|ios::app);
   inp = 0;
   cout << "Entre o ganho Kp:" << endl;
@@ -242,6 +251,13 @@ int main(void)
   arq << "\n\n\n";
   arq << "Ganho: " << Kp;
   arq << "\n\n";
+
+  // chama função loop() a cada 10ms
+  gpioSetTimerFunc(3, 10, loop);
+
+  re_decoder dec1(E1a, E1b, dec_callback1);
+  re_decoder dec2(E2a, E2b, dec_callback2);
+  re_decoder dec3(E3a, E3b, dec_callback3);
 
   for(;;)
   {
