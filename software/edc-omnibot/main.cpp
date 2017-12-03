@@ -112,14 +112,19 @@ void odometry()
   Vback = Motor2.getWhlSpd();
   Vright= Motor3.getWhlSpd();
 
-  forwardKinematicsWorld(); // atualiza Vxw, Vyw e omegap
+  forwardKinematicsMobile(); // atualiza Vxw, Vyw e omegap
 
+  xm += (Vxm*sin(omegap)+Vym*(cos(omegap)-1))/omegap;
+  ym += (Vym*sin(omegap)+Vxm*(1-cos(omegap)))/omegap;
+
+  xw = xm*cos(theta)-ym*sin(theta); //theta anterior
+  yw = xm*sin(theta)+ym*cos(theta);
+  theta += omegap*t_diff/uss; //atualiza theta, no fim
+
+
+  /*
   xw += Vxw*t_diff/uss;
   yw += Vyw*t_diff/uss;
-  theta += omegap*t_diff/uss/10; // ERRADO, falta a compensação do angulo percorrido
-  theta = 0;
-  
-  /*
   cout << "x: " << xw << "\n";
   cout << "y: " << yw << "\n";
   cout << "w: " << theta << "\n\n";
