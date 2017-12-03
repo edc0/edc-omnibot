@@ -114,34 +114,11 @@ void odometry()
   Vback = PMS*(Motor2.pos-Motor2.pos_old)/double(t_diff);
   Vright =PMS*(Motor3.pos-Motor3.pos_old)/double(t_diff);
 
-  /*Vleft = Motor1.getWhlSpd();
-  Vback = Motor2.getWhlSpd();
-  Vright= Motor3.getWhlSpd();
-  */
-  /*
-  forwardKinematicsMobile(); // atualiza Vxw, Vyw e omegap
-
-  if(abs(omegap)<0.01)
-  {
-    xm += Vxm*t_diff/uss;
-    ym += Vym*t_diff/uss;
-  }
-  else
-  {
-    xm += (Vxm*t_diff/uss*sin(omegap*t_diff/uss)+Vym*t_diff/uss*(cos(omegap*t_diff/uss)-1))/omegap;
-    ym += (Vym*t_diff/uss*sin(omegap*t_diff/uss)+Vxm*t_diff/uss*(1-cos(omegap*t_diff/uss)))/omegap;
-  }
-
-  xw = xm*cos(theta)-ym*sin(theta); //theta anterior
-  yw = xm*sin(theta)+ym*cos(theta);
-  */
   forwardKinematicsWorld();
-
 
   xw += Vxw*double(t_diff)/double(uss);
   yw += Vyw*double(t_diff)/double(uss);
-  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r/double(3*L*ppr); //multiplicar por 5.43
-  //theta += omegap*t_diff/uss; //atualiza theta, no fim
+  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
 
   Motor1.pos_old = Motor1.pos;
   Motor2.pos_old = Motor2.pos;

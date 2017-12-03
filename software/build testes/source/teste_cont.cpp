@@ -5,11 +5,17 @@
 #include <iostream>
 #include <csignal>
 #include <pigpio.h>
+#include <fstream>
 
 #include "kinematics.h"
 #include "rotary_encoder.hpp"
 
-double teste;
+#define PMS 534.18
+
+
+ofstream arq; //arquivo de testes
+
+double Kp;
 int M1a, M1b, M2a, M2b, M3a, M3b;
 int E1a, E1b, E2a, E2b, E3a, E3b;
 
@@ -73,7 +79,7 @@ void dec_callback1(int way)
   t_pos1 = gpioTick();
   pos1 += way; // para odometria
 
-  rps1 = way*2932/double(t_pos1-t_pos1_old);
+  rps1 = PMS*way/double(t_pos1-t_pos1_old);
 
   // média móvel dos ultimos 5 valores
   rps1_4=rps1_3;
@@ -94,7 +100,7 @@ void dec_callback2(int way)
   t_pos2 = gpioTick();
   pos2 += way; // para odometria
 
-  rps2 = way*2932/double(t_pos2-t_pos2_old);
+  rps2 = PMS*way/double(t_pos2-t_pos2_old);
 
   // média móvel dos ultimos 5 valores
   rps2_4=rps2_3;
@@ -115,7 +121,7 @@ void dec_callback3(int way)
   t_pos3 = gpioTick();
   pos3 += way; // para odometria
 
-  rps3 = way*2932/double(t_pos3-t_pos3_old);
+  rps3 = PMS*way/double(t_pos3-t_pos3_old);
 
   // média móvel dos ultimos 5 valores
   rps3_4=rps3_3;
@@ -133,15 +139,22 @@ void dec_callback3(int way)
 
 void loop (void)
 {
-  cout << gpioTick();
-  cout << "\n";
   erro1 = inp - rps1_avg; // 3000 para testes, erro positivo
   erro2 = inp - rps2_avg;
   erro3 = inp - rps3_avg;
 
-  val1_new = val1_old + 3*erro1; //erro negativo diminui o valor de acionamento
-  val2_new = val2_old + 3*erro2;
-  val3_new = val3_old + 3*erro3;
+  val1_new = val1_old + Kp*erro1; //erro negativo diminui o valor de acionamento
+  val2_new = val2_old + Kp*erro2;
+  val3_new = val3_old + Kp*erro3;
+
+
+  arq << val1_new << ",";
+  arq << val2_new << ",";
+  arq << val3_new << ",";
+
+  arq << rps1_avg << ",";
+  arq << rps2_avg << ",";
+  arq << rps3_avg << "\n";
 
   //cout << val_new <<"\n"<<erro<<"\n\n" ;
   if(val1_new > 0)
@@ -220,7 +233,14 @@ int main(void)
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
 
+  arq.open("testes.txt", ios::out|ios::app);
   inp = 0;
+  cout << "Entre o ganho Kp:" << endl;
+  cin >> Kp;
+
+  arq << "\n\n\n";
+  arq << "Ganho: " << Kp;
+  arq << "\n\n";
 
   for(;;)
   {
