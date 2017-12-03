@@ -12,6 +12,7 @@
 
 #define PMS 534.18
 
+using namespace std;
 
 ofstream arq; //arquivo de testes
 
@@ -56,7 +57,6 @@ double val3_old=0;
 double val3_new=0;
 double erro3;
 
-using namespace std;
 
 /* para encerrar com ctrl+c */
 // TODO: timeout
