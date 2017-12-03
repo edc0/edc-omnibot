@@ -5,6 +5,7 @@
 #include <iostream>
 #include <csignal>
 #include <pigpio.h>
+#include <cmath>
 
 #include "kinematics.h"
 #include "rotary_encoder.hpp"
