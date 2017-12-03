@@ -115,8 +115,16 @@ void odometry()
 
   forwardKinematicsMobile(); // atualiza Vxw, Vyw e omegap
 
-  xm += (Vxm*sin(omegap)+Vym*(cos(omegap)-1))/omegap;
-  ym += (Vym*sin(omegap)+Vxm*(1-cos(omegap)))/omegap;
+  if(abs(omegap)<0.01)
+  {
+    xm += Vxm*t_diff/uss;
+    ym += Vym*t_diff/uss;
+  }
+  else
+  {
+    xm += (Vxm*t_diff/uss*sin(omegap*t_diff/uss)+Vym*t_diff/uss*(cos(omegap*t_diff/uss)-1))/omegap;
+    ym += (Vym*t_diff/uss*sin(omegap*t_diff/uss)+Vxm*t_diff/uss*(1-cos(omegap*t_diff/uss)))/omegap;
+  }
 
   xw = xm*cos(theta)-ym*sin(theta); //theta anterior
   yw = xm*sin(theta)+ym*cos(theta);
