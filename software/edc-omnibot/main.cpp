@@ -113,6 +113,7 @@ void odometry()
   Vback = Motor2.getWhlSpd();
   Vright= Motor3.getWhlSpd();
 
+  /*
   forwardKinematicsMobile(); // atualiza Vxw, Vyw e omegap
 
   if(abs(omegap)<0.01)
@@ -128,16 +129,14 @@ void odometry()
 
   xw = xm*cos(theta)-ym*sin(theta); //theta anterior
   yw = xm*sin(theta)+ym*cos(theta);
-  theta += omegap*t_diff/uss; //atualiza theta, no fim
+  */
 
+  forwardKinematicsWorld();
 
-  /*
   xw += Vxw*t_diff/uss;
   yw += Vyw*t_diff/uss;
-  cout << "x: " << xw << "\n";
-  cout << "y: " << yw << "\n";
-  cout << "w: " << theta << "\n\n";
-  */
+  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r/(3*L*ppr);
+  //theta += omegap*t_diff/uss; //atualiza theta, no fim
 }
 
 void scaling(void)
