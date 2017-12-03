@@ -87,7 +87,7 @@ Point::Point(const Point& p) {
   y = p.y;
 }
 
-Point::Point(double x, double y) {
+Point::Point(double x, double y) {// ERRADO, falta a compensação do angulo percorr
   this->x = x;
   this->y = y;
 }

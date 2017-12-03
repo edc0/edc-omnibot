@@ -289,6 +289,9 @@ ordem das coisas: \\
 -desmembramento das funções do ritter \\
 -código de acionamento dos motores \\
 -bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
+-controle de velocidade\\
+
+Se implementou um controle proporcional simples, COLOCAR A LEI AQUI, mas se ontou que em trajetórias que necessitam do movimento das trê rodas em velocidades muito distintas se tem problemas. Para se mover em uma reta no eixo x, por exemplo, apenas as rodas 1 e 3 (verificar numeros) precisam girar, e na mesma velocidade, e fica simples de ver que o desempenho do controlador para as duas rodas vai ser similar. No entanto, na movimentação no eixo y são necessárias q a roda 1 esteja girando com o triplo da velocidade das outras duas (verificar), e assim vence a zona morta muito antes. Para solucionar isso, q q eu fáoc meu deus?\\
 -implementação dos algoritmos de odometria \\
 -testes para calibração dos movimentos (isso já é resultado??) \\
 % 341.2/2pi pulsos/rad -> 54.3 pulsos/rad (0.01842 rad/pulso, 0.0029308323 rotações/pulso)
