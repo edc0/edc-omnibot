@@ -13,9 +13,9 @@ public:
   int Enc_A; // terminais do encoder
   int Enc_B;
 
-  int pos;     // giro atualizado do motor (somatorio dos encoders)
-  int t_pos;   // tempo da atualização
-  uint32_t pos_old;
+  double pos;     // giro atualizado do motor (somatorio dos encoders)
+  uint32_t t_pos;   // tempo da atualização
+  double pos_old;
   uint32_t t_pos_old;
 
   double rps[5];  // vetor para armazenar 5 velocidades
