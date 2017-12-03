@@ -133,8 +133,8 @@ void odometry()
 
   forwardKinematicsWorld();
 
-  xw += Vxw*t_diff/uss;
-  yw += Vyw*t_diff/uss;
+  xw += Vxw*double(t_diff)/double(uss);
+  yw += Vyw*double(t_diff)/double(uss);
   theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
   //theta += omegap*t_diff/uss; //atualiza theta, no fim
 }
