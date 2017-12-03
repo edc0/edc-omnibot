@@ -117,7 +117,8 @@ void odometry()
   xw += Vxw*t_diff/uss;
   yw += Vyw*t_diff/uss;
   theta += omegap*t_diff/uss/10; // ERRADO, falta a compensação do angulo percorrido
-
+  theta = 0;
+  
   /*
   cout << "x: " << xw << "\n";
   cout << "y: " << yw << "\n";
