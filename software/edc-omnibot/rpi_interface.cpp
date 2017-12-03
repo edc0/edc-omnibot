@@ -30,7 +30,7 @@ double OmniRPiInterface::getWheelPos()       // returns pos (mas se é public, p
 
 void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 {
-  spd_error = sp - getAngSpd();
+  spd_error = sp - getWhlSpd();
   control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
 
   if(control>255)
@@ -54,7 +54,7 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
 
 double OmniRPiInterface::getError(double sp) // returns current controller error signal
 {
-  spd_error = sp - getAngSpd();
+  spd_error = sp - getWhlSpd();
   return(spd_error);
 }
 
