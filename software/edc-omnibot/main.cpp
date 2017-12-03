@@ -61,7 +61,7 @@ void dec_callback1(int way)
   // velocidade já em m/s
 
   //getAngSpd??
-  Motor1.pos_old = Motor1.pos;
+  //Motor1.pos_old = Motor1.pos; //pos_old vai ser usada só dentro de loop()
   Motor1.t_pos_old = Motor1.t_pos;
 }
 
@@ -79,7 +79,7 @@ void dec_callback2(int way)
   // velocidade já em m/s
 
   //getAngSpd??
-  Motor2.pos_old = Motor2.pos;
+  //Motor2.pos_old = Motor2.pos;
   Motor2.t_pos_old = Motor2.t_pos;
 }
 
@@ -97,7 +97,7 @@ void dec_callback3(int way)
   // velocidade já em m/s
 
   //getAngSpd??
-  Motor3.pos_old = Motor3.pos;
+  //Motor3.pos_old = Motor3.pos;
   Motor3.t_pos_old = Motor3.t_pos;
 }
 
@@ -109,10 +109,15 @@ void odometry()
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
-  Vleft = Motor1.getWhlSpd();
+
+  Vleft = PMS*(Motor1.pos-Motor1.pos_old)/double(t_diff);
+  Vback = PMS*(Motor2.pos-Motor2.pos_old)/double(t_diff);
+  Vright =PMS*(Motor3.pos-Motor3.pos_old)/double(t_diff);
+
+  /*Vleft = Motor1.getWhlSpd();
   Vback = Motor2.getWhlSpd();
   Vright= Motor3.getWhlSpd();
-
+  */
   /*
   forwardKinematicsMobile(); // atualiza Vxw, Vyw e omegap
 
@@ -137,6 +142,10 @@ void odometry()
   yw += Vyw*double(t_diff)/double(uss);
   theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
   //theta += omegap*t_diff/uss; //atualiza theta, no fim
+
+  Motor1.pos_old = Motor1.pos;
+  Motor2.pos_old = Motor2.pos;
+  Motor3.pos_old = Motor3.pos;
 }
 
 void scaling(void)
