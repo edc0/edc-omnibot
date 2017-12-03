@@ -135,8 +135,8 @@ void odometry()
   xw = xm*cos(theta)-ym*sin(theta); //theta anterior
   yw = xm*sin(theta)+ym*cos(theta);
   */
-
   forwardKinematicsWorld();
+
 
   xw += Vxw*double(t_diff)/double(uss);
   yw += Vyw*double(t_diff)/double(uss);
@@ -240,8 +240,8 @@ int main(void)
 
   odometry();
 
-  cout << "\nDistância em X: "<< yw << "\n";
-  cout << "Distância em Y: "  << xw << "\n";
+  cout << "\nDistância em X: "<< xw << "\n";
+  cout << "Distância em Y: "  << yw << "\n";
   cout << "Rotação em rad: " << theta << "\n";
 
   return 0;
