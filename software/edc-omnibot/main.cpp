@@ -18,6 +18,7 @@
 #define uss 1000000   // microseconds per second
 #define rev 6.28314
 #define PMS 534.18
+#define VMAX 0.8 // verificar esse número
 
 // setando pinos para os testes
 int M1a = 2,  M1b = 3,
@@ -128,6 +129,44 @@ void odometry()
 void scaling(void)
 {
   //descobre qual a maior das três velocidades, mantem ela saturada no máximo, escala as outras para continuarem proporcionais
+  if(Vleft > VMAX)
+  {
+    Vback = Vback*VMAX/Vleft;
+    Vright = Vright*VMAX/Vleft;
+    Vleft = VMAX;
+  }
+  if(Vback > VMAX)
+  {
+    Vleft = Vleft*VMAX/Vback;
+    Vright = Vright*VMAX/Vback;
+    Vback = VMAX;
+  }
+  if(Vright > VMAX)
+  {
+    Vback = Vback*VMAX/Vleft;
+    Vleft = Vleft*VMAX/Vleft;
+    Vright = VMAX;
+  }
+
+  // caso em que o valor sature no negativo:
+  if(Vleft < -VMAX)
+  {
+    Vback = Vback*VMAX/(-Vleft);
+    Vright = Vright*VMAX/(-Vleft); //vleft negativo preserva o sinal original
+    Vleft = -VMAX;
+  }
+  if(Vback < -VMAX)
+  {
+    Vleft = Vleft*VMAX/(-Vback);
+    Vright = Vright*VMAX/(-Vback);
+    Vback = -VMAX;
+  }
+  if(Vright < -VMAX)
+  {
+    Vback = Vback*VMAX/(-Vright);
+    Vleft = Vleft*VMAX/(-Vright);
+    Vright = -VMAX;
+  }
 }
 
 void loop (void)
@@ -146,9 +185,9 @@ void loop (void)
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
-
+  */
   scaling();
-*/
+
   Motor1.setSetpoint(VbackTarget);
   Motor2.setSetpoint(VrightTarget);
   Motor3.setSetpoint(VleftTarget);
