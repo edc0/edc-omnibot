@@ -326,6 +326,13 @@ Bibliotecas desenvolvidas: \\
 
 Todas as bibliotecas que utilizam entradas e saídas pelos pinos do RPi utilizam a biblioteca pigpio \citet{pigpio}, muito legalzona, até colocar nos agradecimentos.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.35\textwidth]{imagens/edc}
+  \caption{Estrutura dos subsistemas. TROCAR FIGURA}
+  \label{fig:sistema}
+\end{figure}
+
 Para calibrar o controlador em relação ao tamanho real das rodas, e obter velocidade ok, se utilizou a modelagem para definir qual deslocamento do robô, em rotação pura, necessita de 2pi rad de giro nas rodas. Foram feitos experimentos com diversos valors para calibrar isso ae.
 
 Além de utilizar os comandos fornecidos por \citet{ritter2016modelagem}, foram implementados os modos de movimentação citados por \citet{loh2003mechatronics}: translação retilínea , translação curvilínea -- ambas sem alteração na orientação --, rotação pura e um caminho combinado de rotação em torno do seu centro e translação retilínia em relação às referências globais.

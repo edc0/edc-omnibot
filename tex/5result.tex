@@ -1,7 +1,27 @@
 \section{Resultados}
 \label{sec:resultados}
 
-DEVE TER EM TORNO DE DEZ PAGINAS
+A implantação do sistema descrito nas seções anteriores é, de certa maneira, hierárquica: para que um subssistema de alto-nível funcione, os que estão abaixo dele devem estar funcionando também. Tal conceito pode ser visto na Figura \ref{fig:sistema} Portanto, os testes e validações ocorreram de maneira concomitante ao desenvolvimento do software e montagem da estrutura.
+
+Durante os testes de acionamento dos motores, se percebeu uma não linearidade do tipo ``zona-morta'', e foi realizado um ensaio para quantificar o problema. Os resultados de tal ensaio podem ser vistos na Figura \ref{fig:zonamorta}. Foi implementado um controlador proporcional para a velocidade, com ganho bastante baixo, de modo a tornar a resposta do sistema lenta, e foram definidos \emph{setpoints} que propositalmente levassem a saturação dos \textit{drivers} dos atuadores. Na Figura, se pode enxergar a zona morta em torno de $t=$1.5 s, quando a velocidade da roda se eleva repentinamente, e entre $t=$ 4 s e $t=$ 5 s, quando foi realizado o comando de inversão da velocidade da roda, e para um intervalo de valores de acionamento em torno da origem, não há movimento no eixo. Esta não linearidade é oriunda do atrito estático introduzido pelos componentes mecânicos responsáveis pela relação de redução. \textit{tenho mais um gráfico mostrando q dá pra andar bem devagar se já estiver andando no inicio... temos espaço??}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = \textwidth]{imagens/zonamorta}
+  \caption{Análise da linearidade do tipo ``zona-morta'' presente nos motores utilizados.}
+  \label{fig:zonamorta}
+\end{figure}
+
+O ensaio foi realizado simultaneamente com as três rodas, e como todas as leituras apresentaram resultados similares, apenas uma aparece no gráfico.
+
+Uma consequência deste efeito foi verificada no acionamento do robô em trajetórias que exigem baixas velocidades de alguma das rodas. Esta situação pode ser vista na Figura \ref{fig:zm3rodas}. Na figura, se pode ver como os motores que devem operar em velocidades menores entram em operação mais tarde, causando desvios de trajetória. \textit{tenho mais um monte de dados parecidos, para varias velocidades e vários ganhos}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = \textwidth]{imagens/zm3rodas}
+  \caption{Análise da linearidade do tipo ``zona-morta'' presente nos motores utilizados.}
+  \label{fig:zm3rodas}
+\end{figure}
 
 Desvio padrão do tmepo de execução do loop: 16,68573853
 
