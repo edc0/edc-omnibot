@@ -17,10 +17,12 @@
 \contentsline {subsection}{\numberline {4.3}Planejamento de Trajet\IeC {\'o}ria}{15}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Controle}{16}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Limita\IeC {\c c}\IeC {\~o}es de Velocidade}{18}{subsection.4.5}
-\contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{19}{section.5}
-\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{23}{section.6}
-\contentsline {section}{\numberline {7}Resultados}{25}{section.7}
-\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{27}{section.8}
-\contentsline {section}{\numberline {9}Refer\^encias}{29}{section.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{33}{section.9}
-\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{34}{subsection.9.1}
+\contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{21}{section.5}
+\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{25}{section.6}
+\contentsline {section}{\numberline {7}Resultados}{27}{section.7}
+\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{29}{section.8}
+\contentsline {section}{\numberline {9}Refer\^encias}{31}{section.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{35}{section.9}
+\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{36}{subsection.9.1}
+\contentsline {subsection}{\numberline {B}Fun\IeC {\c c}\IeC {\~a}o do loop de controle}{37}{subsection.9.2}
+\contentsline {subsection}{\numberline {C}Dimens\IeC {\~o}es da estrutura mec\IeC {\^a}nica}{38}{subsection.9.3}

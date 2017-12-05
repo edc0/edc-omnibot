@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -24,6 +24,12 @@ Carrasco, M.~M., da~Silva, A.~L., 2016. Attitude determination for low cost imu
 \bibitem[{Craig(2017)}]{craig2017introduction}
 Craig, J., 2017. Introduction to Robotics: Mechanics and Control. Pearson.
 \newline\urlprefix\url{https://books.google.com.br/books?id=JblZuwAACAAJ}
+
+\bibitem[{Cunha(2001)}]{cunha2001zm}
+Cunha, M. A.~B., 2001. Controle em cascata de um atuador hidráulico:
+  contribuições teóricas e experimentais. Ph.D. thesis, UFSC,
+  Florianópolis, SC, tese de doutorado em Controle, Automação e Informática
+  Industrial.
 
 \bibitem[{Feng et~al.(1989)Feng, Friedman, and Krogh}]{feng1989servo}
 Feng, D., Friedman, M.~B., Krogh, B.~H., 1989. The servo-control system for an

@@ -5,16 +5,14 @@
 \section{Especificação e montagem do protótipo}
 \label{sec:montagem}
 
-Conforme mencionado nas seções anteriores, o robô construído possui três rodas em uma configuração simétrica. Apesar da falta de redundância -- pois se alguma das rodas falhar se perde a holonomicidade --, robôs omnidirecionais com 3 rodas (TOMR) são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo (pois motores e rodas são responsáveis por 53\% do custo do projeto, conforme o \hyperref[sec:custo]{Apêndice A}), e uma certa economia de peso.
-eird since it's a conversion from a regula
-As rodas utilizadas -- mostradas na Figura \ref{fig:omniwheel} --, medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, e possuem capacidade de carga nominal de 3 kg \citep{omniwheel}, suficiente para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução, com uma velocidade nominal no eixo de saída de 210 rpm para uma tensão de 6 V. A máxima potência do motor está especificada para uma corrente de 1,1 A, a 110 rpm. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341,2 pulsos do sensor, e portanto cada pulso representa 0.01841 radianos \citep{motor}.
+Conforme mencionado nas seções anteriores, o robô construído possui três rodas em uma configuração simétrica. Apesar da falta de redundância -- pois se alguma das rodas falhar se perde a holonomicidade --, robôs omnidirecionais com 3 rodas (TOMR) são utilizados com mais frequência por serem mais simples de se implementar, apresentarem custo mais baixo (pois motores e rodas são responsáveis por 53\% do custo do projeto, conforme o \hyperref[sec:custo]{Apêndice A}), e uma certa economia de peso. As rodas utilizadas -- mostradas na Figura \ref{fig:omniwheel} --, medem 58 mm de diâmetro, com estrutura em plástico e dez roletes emborrachados, e possuem capacidade de carga nominal de 3 kg \citep{omniwheel}, suficiente para os fins de demonstração do projeto. Cada roda é acionada por um motor de corrente contínua com caixa de redução, com uma velocidade nominal no eixo de saída de 210 rpm para uma tensão de 6 V. A máxima potência do motor está especificada para uma corrente de 1,1 A, a 110 rpm. Incluso no motor está um \textit{encoder} de quadratura, que permite a leitura da velocidade da roda e da direção de rotação. Com a relação de redução, se tem que para cada revolução da roda se tem 341,2 pulsos do sensor, e portanto cada pulso representa 0.01841 radianos \citep{motor}.
 %Mais info sobre a ponte H: http://linksprite.com/wiki/index.php5?title=DC_Motor_Driver_Breakout_%28L298_Chipset%29#Arduino_Sample_Code
 
 Além da utilização dos \textit{encoders} para implementação da odometria, também foi instalada na estrutura uma bússola, para garantir uma medida absoluta da orientação do robô (sem os erros que se acumulam nos métodos de \textit{dead-reckoning}). O modelo utilizado é a HMC5883L, já instalada em uma placa com alguns componentes necessários para seu funcionamento. A precisão do circuito, de acordo com o fabricante, é de 2 graus \citep{HMC5883L}. Para complementar a odometria, também foi instalada no robô uma unidade de medidas inerciais MPU6050, que possui acelerômetro e giroscópio em torno dos três eixos utilizados \citep{MPU6050}. Os sensores descritos neste parágrafo foram adquiridos e montados à estrutura, porém não foi realizada sua implementação. Os dois periféricos utilizam o protocolo de comunicação I2C \citep{semiconductors2000i2c}, também compatível com o computador utilizado.
 
-Foi adquirida também uma bateria com capacidade de carga de 2000 mAh e 7,2 V de tensão nominal. Ligados à bateria, se tem 3 reguladores de tensão \textit{step down} MP2307, especificados para fornecer corrente constante de 3 A cada um, suportando picos de até 4 A \citep{MP2307}. A tensão de saída dos reguladores foi configurada em 5 V (para o computador), 3,3 V (para os \textit{encoders}) e 6 V (para os motores). A bússola e a IMU tem tensão de alimentação de 3,3 V, podendo ser ligadas ao mesmo regulador que os \textit{encoders} quando forem eventualmente integradas ao sistema. Como cada motor opera em geral com correntes abaixo de 1 A, o regulador utilizado é adequado, porém apresenta margens de capacidade consideravelmente pequenas.
+Foi adquirida também uma bateria NiCd, com capacidade de carga de 2000 mAh e 7,2 V de tensão nominal. Este tipo de bateria se caracteriza por apresentar recarga rápida e boa capacidade de utilização com correntes altas. Ligados à bateria, se tem 2 reguladores de tensão \textit{step down} MP2307, especificados para fornecer corrente constante de até 3 A cada um, suportando picos de até 4 A \citep{MP2307}. A tensão de saída dos reguladores foi configurada em 5.1 V (para o computador) e 6 V (para os motores). Como cada motor opera em geral com correntes abaixo de 1 A, o regulador utilizado é adequado, porém apresenta margens de capacidade consideravelmente pequenas. Os \textit{encoders} sãp alimentados pelo próprio computador, que possui saída regulada de 3,3 V capaz de fornecer até 500 mA \citep{upton2014raspberry}. A bússola e a IMU tem tensão de alimentação de 3,3 V, podendo ser adicionado ao sistema mais um regulador de tensão quando forem eventualmente integradas ao sistema, pois há espaço suficiente no chassi para tal. Neste caso, se recomenda alimentar os \textit{encoders} a partir do mesmo regulador.
 
-O acionamento dos motores se dá por um circuito de pontes H. Há duas destas placas, e cada uma pode acionar dois motores. Assim, se tem a possibilidade de utilizar mais um motor em trabalhos futuros. Os \textit{driver} são desenvolvidos em torno do circuito L298N, que pode fornecer 4 A de corrente contínua distribuída entre as cargas \citep{L298N}. O chaveamento de cada canal dos \textit{drivers} é feito por meio de modulação de largura de pulso, fornecida pelo computador. Assim como os demais componentes, os \textit{drivers} foram fornecidos integrados a uma placa montada, com terminais para fixação de cabeamento e dissipadores de calor.
+O acionamento dos motores se dá por um circuito de pontes H. Há duas destas placas, e cada uma pode acionar dois motores. Assim, se tem a possibilidade de utilizar mais um motor (ou outro atuador) em trabalhos futuros. Os \textit{drivers} são desenvolvidos em torno do circuito L298N, que pode fornecer 4 A de corrente contínua distribuída entre as cargas \citep{L298N}. O chaveamento de cada canal dos \textit{drivers} é feito por meio de modulação de largura de pulso, fornecida pelo computador. Assim como os demais componentes, os \textit{drivers} foram fornecidos integrados a uma placa montada, com terminais para fixação de cabeamento e dissipadores de calor.
 
 Todo o processamento é realizado por um \textbf{Raspberry Pi}, um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} \citep{upton2014raspberry}.
 
@@ -33,17 +31,14 @@ A plataforma projetada foi então fabricada, utilizando chapas de acrílico tran
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width = 0.45\textwidth]{imagens/edc}
-  \caption{Protótipo montado, sem as canetas. TROCAR FIGURA}
+  \includegraphics[width = 0.45\textwidth]{imagens/roboto}
+  \caption{Protótipo montado, sem as canetas.}
   \label{fig:montagem}
 \end{figure}
 
-TERMINAR DE FALAR SOBRE AS LIGAÇÕES ELÉTRICAS QUANDO EU FIZER A LIGAÇÃO DEFINITIVA.
-TERMINAR DE FALAR SOBRE AS LIGAÇÕES ELÉTRICAS QUANDO EU FIZER A LIGAÇÃO DEFINITIVA.
-TERMINAR DE FALAR SOBRE AS LIGAÇÕES ELÉTRICAS QUANDO EU FIZER A LIGAÇÃO DEFINITIVA.
-TERMINAR DE FALAR SOBRE AS LIGAÇÕES ELÉTRICAS QUANDO EU FIZER A LIGAÇÃO DEFINITIVA.
+A bateria foi fixada sobre a estrutura utilizando presilhas plásticas. Ao redor da bateria foram fixados 3 barramentos, para aterramento, alimentação dos \textit{drivers} e alimentação dos \textit{encoders}. Foram instalados um conector para a bateria e outro conector para o caso em que se deseja utilizar uma fonte externa.  Além dos fios que alimentam os reguladores de tensão, um par de fios sobressalente (conectados ao terminal positivo e negativo da fonte ou bateira) foi instalado junto a estes conectores, e pode ser utilizado em trabalhos futuros.
 
-O custo de aquisição dos componentes relatados pode ser visto detalhado no \hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle).
+O custo de aquisição dos componentes relatados pode ser visto detalhado no \hyperref[sec:custo]{Apêndice A}. Cabe ressaltar que todos os itens foram comprados em dobro, para realizar a montagem de dois robôs para futuros trabalhos no LAMECC (Laboratório de Mecatrônia e Controle). Mais detalhes sobre as dimensões do chassi podem ser vistos no diagrama apresentado no \hyperref[sec:draw]{Apêndice C}.
 
 \section{Desenvolvimento Teórico}
 \label{sec:teorico}
@@ -231,13 +226,24 @@ Diversas abordagens podem ser utilizadas para a implantação de controladores e
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width = 0.45\textwidth]{imagens/edc}
+  \includegraphics[width = 0.35\textwidth]{imagens/edc}
   \caption{Arquitetura de controle utilizada.}
   %\source{\citet{lynch2017modern}}
   \label{fig:controle}
 \end{figure}
 
 Estabilidade, tipo do controle, proporcional, integral, derivativo, digital, tempo de ciclo, q q eu digo aqui, pô?
+
+Não linearidade do tipo zona morta, como será relatado a seguir. COrreção como na Figura \ref{fig:cont_zm}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.35\textwidth]{imagens/edc}
+  \caption{Um tipo de correção para não linearidades do tipo zona-morta.}
+  %\source{\citet{lynch2017modern}}
+  \label{fig:cont_zm}
+\end{figure}
+
 
 \citet{lynch2017modern}:
 
@@ -280,67 +286,64 @@ Se pode dizer, então, que para aplicações reais nas quais a holonomicidade da
 \section{Implementação dos algoritmos}
 \label{sec:software}
 
-SEÇÃO EM CONSTRUÇÃO
+Os aspectos teóricos desenvolvidos na seção anterior foram implementados em software para a aplicação prática do sistema. A implementação é, em geral, difícil de se encontrar nos trabalhos da bibliografia, e mesmo que todos os autores descrevessem seus algoritmos em detalhes, os rápidos avanços na área tornam obsoletos os recursos utilizados. tá meio ruim isso aqui.
 
-A implementação é difícil de encontrar nos trabalhos da bibliografia, portanto alguma coisa.
 
-PROBLEMA: velocidade das rodas precisa o suficiente! Fazer experimentos em relação a isso.
-
-ordem das coisas: \\
--análise dos códigos de cinemática \\
--desmembramento das funções do ritter \\
--código de acionamento dos motores \\
--bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
--controle de velocidade\\
-
-Se implementou um controle proporcional simples, COLOCAR A LEI AQUI, mas se ontou que em trajetórias que necessitam do movimento das trê rodas em velocidades muito distintas se tem problemas. Para se mover em uma reta no eixo x, por exemplo, apenas as rodas 1 e 3 (verificar numeros) precisam girar, e na mesma velocidade, e fica simples de ver que o desempenho do controlador para as duas rodas vai ser similar. No entanto, na movimentação no eixo y são necessárias q a roda 1 esteja girando com o triplo da velocidade das outras duas (verificar), e assim vence a zona morta muito antes. Para solucionar isso, q q eu fáoc meu deus?\\
--implementação dos algoritmos de odometria \\
--testes para calibração dos movimentos (isso já é resultado??) \\
-% 341.2/2pi pulsos/rad -> 54.3 pulsos/rad (0.01842 rad/pulso, 0.0029308323 rotações/pulso)
-% VER O PAPEL NO MURAL
-
-As equações implementadas relacionam as matrizes de transformação com a velocidade linear da periferia das rodas, $\dot{\phi}_i r$, em m/s. A leitura dos encoders é realizada em pulsos/$\mu$s. O fator de conversão aplicado é (em teoria) 534.18. Ao se utilizar o comando inverseKinematicsWorld, se obtêm as velocidades em m/s e a velocidade angular em rad/s. \\
--implementação do controle de posição \\
--algoritmo de limitação de velocidade, escalonamento \\
--organização do código \\
--interface com o usuário \\
--sequencia final de operação do código \\
-
-O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} \citep{upton2014raspberry}.
-
-O código de \citet{ritter2016modelagem} foi desmembrado em módulos, para separar a implementação já realizada da cinemática direta e inversa dos módulos de comunicação com o simulador utilizado. Foram escritos novos módulos para realizar a interface da Raspberry com os motores, sensores e periféricos em geral, e com essa modularidade se pode até fazer uma biblioteca para arduino blabalbalabballab, como na Figura \ref{fig:libs}.
+O sistema proposto foi desenvolvido e testado em módulos, conforme as divisões da seção anterior, e se pode enxergar a hierarquia de cada bloco na Figura \ref{fig:sistema}. Seguindo a figura, os subsistemas foram implementados de baixo para cima. \textit{<- mais ou menos, pq eu comecei com a cinemática.}
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width = 0.45\textwidth]{imagens/edc}
-  \caption{Bibliotecas utilizadas. TROCAR FIGURA}
-  \label{fig:libs}
-\end{figure}
-
-Bibliotecas desenvolvidas: \\
-- kinematics.h, a partir da cinemática de \cite{ritter2016modelagem}; \\
-- rotary\_encoder.h, para realizar a decodificação dos encoders, desenvolvida por QUEM?? \cite{pigpio}, talvez?\\
-- rpi\_interface.h, para realizar o acionamento e loops de controle para cada uma das rodas (desenvolvida pelo próprio autor);\\
-- planning.h, que implementa as trajetórias de teste; \\
-- user\_interface.h, que contem algumas funções básicas para conversar com o usuário, operador do sistema. IMAGINA Q MASSA UM APP C/ Bluetooth COM UM BOTÃO SÓ?
-
-Todas as bibliotecas que utilizam entradas e saídas pelos pinos do RPi utilizam a biblioteca pigpio \citet{pigpio}, muito legalzona, até colocar nos agradecimentos.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width = 0.35\textwidth]{imagens/edc}
-  \caption{Estrutura dos subsistemas. TROCAR FIGURA}
+  \includegraphics[width = 0.6\textwidth]{imagens/sistema}
+  \caption{Estrutura e hierarquia dos subsistemas.}
   \label{fig:sistema}
 \end{figure}
 
-Para calibrar o controlador em relação ao tamanho real das rodas, e obter velocidade ok, se utilizou a modelagem para definir qual deslocamento do robô, em rotação pura, necessita de 2pi rad de giro nas rodas. Foram feitos experimentos com diversos valors para calibrar isso ae.
+Foram omitidos da figura, por simplicidade, os algoritmos de limitação de velocidade, de compensação de zona-morta e de FALTA UM.
 
+O \textit{software} foi implementado em um computador embarcado Raspberry Pi, conforme proposto por \citet{ritter2016modelagem}. O \textbf{Raspberry Pi} é um \emph{single board computer}, que utiliza a arquitetura \acrshort{arm} em seu processador, ideal para dispositivos alimentados por baterias por consumir pouca energia e gerar pouco calor. O processador possui quatro núcleos, e um \emph{clock} de 1,2 GHz -- poder computacional equivalente há um computador de mesa comum. O \acrshort{rpi} utiliza um sistema operacional GNU/Linux, e \emph{software} deve ser desenvolvido para ser executado nesta plataforma. Há ainda 40 pinos de \acrshort{gpio} que podem ser utilizados para conectar sensores, atuadores e diversos componentes, e suporte nativo a \acrshort{i2c} \citep{upton2014raspberry}.
+
+Uma preocupação que se tem ao utilizar um computador se deve ao fato do mesmo não ser caracterizado como um sistema de tempo real. No caso, temporização precisa não é garantida, e a ordem de prioridade de execução de tarefas é gerenciada pelo \textit{kernel VERIFICA}. Assim, funções que seriam executadas imediatamente em um microcontrolador (como rotinas de interrupção), são executadas ``assim que possível'', o que pode prejudicar o desempenho do sistema.
+
+Com isso em mente, foi implementado um software com a linguagem C++, uma das linguagens suportadas pelas bibliotecas de acesso às portas \acrshort{gpio} que apresenta melhores velocidades de execução. \textit{(citar alguém?)} Com esta escolha de linguagem, também se pode utilizar parcialmente os códigos implementados para o trabalho de \citet{ritter2016modelagem}, que também utilizou a mesma linguagem de programação.
+
+%ordem das coisas:
+%-análise dos códigos de cinemática
+%-desmembramento das funções do ritter
+
+A primeira etapa do desenvolvimento foi a de separar o código desenvolvido por \citet{ritter2016modelagem} em duas partes: uma destinada aos comandos de acionamento, que naquele trabalho eram realizados em um simulador, e outra relacionada à cinemática do robô. Esta segunda porção foi encapsulada em uma biblioteca própria, que pode assim ser utilizada por qualquer desenvolvedor de software no âmbito de TOMR. A biblioteca foi então devidamente analisada e testada no computador embarcado. A biblioteca se chama kinematics.h.
+
+%-código de acionamento dos motores
+%-bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
+Em seguida, foram realizados testes de acionamento e leitura dos sensores dos motores, se baseando na biblioteca PIGPIO \textit{como referenciar a bibioteca?} \citep{pigpio} para a utilização das entradas e saídas físicas do computador. Utilizando o conceito de orientação a objetos, foi criada uma classe que descreve os parâmetros de cada conjunto motor/sensor e as operações a serem realizadas sobre eles. Esta classe foi batizada de RPiInterface, pois realiza a interface entre o processamento da Raspberry Pi com os sensores e atuadores físicos.
+
+A leitura dos sensores de velocidade, no entanto, foi realizada no main.cpp, devido à utilização de uma biblioteca específica de decodificação de encoders utilizada (rotary\_encoder.h), que implementa interrupções e \textit{n sei direito pq não rolou deixar dentro da classe.}
+
+As equações implementadas relacionam as matrizes de transformação com a velocidade linear da periferia das rodas, $\dot{\phi}_i r$, em m/s. A leitura dos encoders é realizada em pulsos/$\mu$s. O fator de conversão aplicado é (em teoria) 534.18. Ao se utilizar o comando inverseKinematicsWorld, se obtêm as velocidades em m/s e a velocidade angular em rad/s.
+
+% 341.2/2pi pulsos/rad -> 54.3 pulsos/rad (0.01842 rad/pulso, 0.0029308323 rotações/pulso)
+% VER O PAPEL NO MURAL
+
+%-controle de velocidade
+Na mesma classe se implementou a função de atualização da lei de controle de velocidade de cada motor. Esta função é executada a cada 10ms pela função loop() (mostrada no \hyperref[sec:custo]{Apêndice B})
+
+Se implementou um controle proporcional simples, COLOCAR A LEI AQUI, mas se ontou que em trajetórias que necessitam do movimento das trê rodas em velocidades muito distintas se tem problemas. Para se mover em uma reta no eixo x, por exemplo, apenas as rodas 1 e 3 (verificar numeros) precisam girar, e na mesma velocidade, e fica simples de ver que o desempenho do controlador para as duas rodas vai ser similar. Mais sobre o tema é descrito na próxima seção. No entanto, na movimentação no eixo y são necessárias q a roda 1 esteja girando com o triplo da velocidade das outras duas (verificar), e assim vence a zona morta muito antes. Para solucionar isso, se utilizou uma técnica de eliminação de zona morta, confrome sdkasldkjabsdlkjbladkjbsa.
+
+%implementação dos algoritmos de odometria
+Após a verificação do sistema de controle de velocidade, foram implementadas da maneira descrita na seção anterior as fórmulas relacionadas à odometria. Os dados de velocidade foram obtidos se acumulando diretamente a contagem de pulsos de em cada encoder, e avaliando a taxa de variação desta contagem e de uma contagem anterior no intervalo de tempo em que a função foi chamada novamente. A precisão da odometria é essencial para o funcionamento do controle de posição, e portanto o sistema foi testado antes do desenvolvimento do outro, com os resultados descritos na seção seguinte.
+
+%-implementação do controle de posição
+O controle de posição foi implementado para ser executado dentro da mesma função loop().
+
+%algoritmo de limitação de velocidade, escalonamento \\
+Seguir o perfil de velocidade não é muito fácil, visto que dead zone. budibudibuidi \citet{indiveri2009swedish} trata saturação.
+
+%-organização do código
+%-interface com o usuário
 Além de utilizar os comandos fornecidos por \citet{ritter2016modelagem}, foram implementados os modos de movimentação citados por \citet{loh2003mechatronics}: translação retilínea , translação curvilínea -- ambas sem alteração na orientação --, rotação pura e um caminho combinado de rotação em torno do seu centro e translação retilínia em relação às referências globais.
 
-A obtenção do ângulo atual e m relação as coordenadas globais teve q ser diferente da utilizada por \citet{ritter2016modelagem}, que possuia um valor absoluto para este angulo. No caso do trablho descrito aqui, só se sabe a velocidade angular, que tambem deve ser integrada, e por isso podem aparecer mais erros.
-
+%-sequencia final de operação do código
+Se notou que o acionamento dos motores depende de a
 O procedimento de opereação pode ser representado pelo diagrama apresentado na Figura \ref{fig:operation}.
-
 
 \begin{figure}[h]
   \centering
@@ -349,11 +352,7 @@ O procedimento de opereação pode ser representado pelo diagrama apresentado na
   \label{fig:operation}
 \end{figure}
 
-%Para a comunicação dos periféricos com este computador, é necessário utilizar algum protocolo de comunicação. O protocolo \textbf{\acrlong{i2c}}, é geralmente utilizado em robôs, csom um grande suporte tanto pela \acrshort{rpi} (\cite{upton2014raspberry}) quanto pelos componentes em geral utilizados (\cite{MPU6050} e a bússola e o arduino se eu usar). Com este protocolo, descrito em \cite{semiconductors2000i2c}, dados podem ser transmitidos a 100 Kbps -- ou 400 Kbps quando utilizado o \emph{fast mode}. São utilizados duas linhas bidirecionais no barramento: SDA para os dados e SCL para os sinais de \emph{clock}. O número de dispositivos conectados ao barramento só depende do limite de capacitância descrito na especificação. Resistores de \emph{pull-up} são necessários para manter a linha em estado lógico alto quando não utilizada, porém estes resistores estão presentes internamente no \emph{Raspberry Pi}, por exemplo.
-
-%O \emph{fast mode} é suportado pelo Raspberry Pi 3 B+.
-
-Seguir o perfil de velocidade não é muito fácil, visto que dead zone. budibudibuidi \citet{indiveri2009swedish} trata saturação.
+Fazer algum arquivo de log para cada execução?
 
 \section{Avaliação experimental}
 \label{sec:experimental}
