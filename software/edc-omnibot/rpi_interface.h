@@ -30,6 +30,9 @@ public:
   double Ki;
   double Kd;
 
+  // compensação da zona morta
+  double zm;
+
 public:
   void resetPos();            // reinicia os contadores de posição
   //void dec_callback(int way); // callback para atualização do encoder

@@ -14,7 +14,8 @@ OmniRPiInterface::OmniRPiInterface(int MA, int MB, int EA, int EB)
   Enc_A = EA;
   Enc_B = EB;
 
-  Kp = 4;
+  Kp = 15;
+  zm = 115;
 }
 
 void OmniRPiInterface::resetPos()            // reinicia os contadores de posição
@@ -33,19 +34,19 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
   spd_error = sp - getWhlSpd();
   control = control_old + Kp*spd_error;   //q q eu faço com os integral e derivativo?
 
-  if(control>255)
-    control = 255;
-  if(control<-255)
-    control = -255;
+  if(control+zm>255)
+    control = 255-zm;
+  if(control-zm<-255)
+    control = -255+zm;
 
   if(control > 0)
   {
     gpioPWM(Mot_A, 0);
-    gpioPWM(Mot_B, int(control+120));
+    gpioPWM(Mot_B, int(control+zm));
   }
   if(control < 0)
   {
-    gpioPWM(Mot_A, -int(control-120));
+    gpioPWM(Mot_A, -int(control-zm));
     gpioPWM(Mot_B, 0);
   }
 
