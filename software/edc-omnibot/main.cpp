@@ -180,7 +180,7 @@ void loop (void)
 
   Vxw = 0;//Vxw + 0.5*xError;
   Vyw = 0;//Vyw + 0.5*xError;
-  omegap = omegap + 0.03*thetaError;
+  omegap = omegap + 0.003*thetaError;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
