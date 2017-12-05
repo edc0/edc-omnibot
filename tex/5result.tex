@@ -3,6 +3,16 @@
 
 A implantação do sistema descrito nas seções anteriores é, de certa maneira, hierárquica: para que um subssistema de alto-nível funcione, os que estão abaixo dele devem estar funcionando também. Tal conceito pode ser visto na Figura \ref{fig:sistema} Portanto, os testes e validações ocorreram de maneira concomitante ao desenvolvimento do software e montagem da estrutura.
 
+Devido ao fato do computador não ser um sistema 100\% apropriado para tempo real balbalbalbalbabalalbal a tmeporização dos sensores fic preocupante. ASsim, s emediu as leituras obtidas para cada encoder, e se obteve o seguinte, comforme  aFIgura \ref{fig:pos_encoder}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.3\textwidth]{imagens/edc}
+  \caption{Encoderdoderdoder.}
+  \label{fig:pos_encoder}
+\end{figure}
+
+
 Durante os testes de acionamento dos motores, se percebeu uma não linearidade do tipo ``zona-morta'', e foi realizado um ensaio para quantificar o problema. Os resultados de tal ensaio podem ser vistos na Figura \ref{fig:zonamorta}. Foi implementado um controlador proporcional para a velocidade, com ganho bastante baixo, de modo a tornar a resposta do sistema lenta, e foram definidos \emph{setpoints} que propositalmente levassem a saturação dos \textit{drivers} dos atuadores. Na Figura, se pode enxergar a zona morta em torno de $t=$1.5 s, quando a velocidade da roda se eleva repentinamente, e entre $t=$ 4 s e $t=$ 5 s, quando foi realizado o comando de inversão da velocidade da roda, e para um intervalo de valores de acionamento em torno da origem, não há movimento no eixo. Esta não linearidade é oriunda do atrito estático introduzido pelos componentes mecânicos responsáveis pela relação de redução. \textit{tenho mais um gráfico mostrando q dá pra andar bem devagar se já estiver andando no inicio... temos espaço??}
 
 \begin{figure}[h]
@@ -24,8 +34,23 @@ Uma consequência deste efeito foi verificada no acionamento do robô em trajet�
 \end{figure}
 
 
-\cite{cunha2001zm} propõe um jeito de se resolver isso.
+\cite{cunha2001zm} propõe um jeito de se resolver isso. Aplicando esse jeito, se conseguiram melhorar bastante os resultaos, veja na FIgura \ref{fig:zm_comp}, logo abaix alskdjhalksjdhlaskdjhal.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 0.3\textwidth]{imagens/edc}
+  \caption{Blabla bla blab balbalbala.}
+  \label{fig:zm_comp}
+\end{figure}
 
 Desvio padrão do tmepo de execução do loop: 16,68573853
 
 Tempo médio a cada chamada do loop de controle, em $\mu$s: 10000,03822
+
+resultados do controle de velocidade
+
+resultados da limitação de velocidade
+
+resultados do controle de posição
+
+tempo de duração da bateria

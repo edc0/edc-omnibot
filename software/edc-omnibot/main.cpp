@@ -151,20 +151,20 @@ void scaling(void)
   // caso em que o valor sature no negativo:
   if(VleftTarget < -VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/(-abs(VleftTarget));
-    VrightTarget = VrightTarget*VMAX/(-abs(VleftTarget)); //vleft negativo preserva o sinal original
+    VbackTarget = VbackTarget*VMAX/abs(VleftTarget);
+    VrightTarget = VrightTarget*VMAX/abs(VleftTarget); //vleft negativo preserva o sinal original
     VleftTarget = -VMAX;
   }
   if(VbackTarget < -VMAX)
   {
-    VleftTarget = VleftTarget*VMAX/(-abs(VbackTarget));
-    VrightTarget = VrightTarget*VMAX/(-abs(VbackTarget));
+    VleftTarget = VleftTarget*VMAX/abs(VbackTarget);
+    VrightTarget = VrightTarget*VMAX/abs(VbackTarget);
     VbackTarget = -VMAX;
   }
   if(VrightTarget < -VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/(-abs(VrightTarget));
-    VleftTarget = VleftTarget*VMAX/(-abs(VrightTarget));
+    VbackTarget = VbackTarget*VMAX/abs(VrightTarget);
+    VleftTarget = VleftTarget*VMAX/abs(VrightTarget);
     VrightTarget = -VMAX;
   }
 }

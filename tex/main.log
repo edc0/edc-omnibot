@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  5 DEC 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.2)  5 DEC 2017 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1438,7 +1438,7 @@ Package babel Info: Redefining portuges shorthand "|
  (./2intro.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- <imagens/markets.png, id=259, 527.9725pt x 352.31625pt>
+ <imagens/markets.png, id=263, 527.9725pt x 352.31625pt>
 File: imagens/markets.png Graphic file (type png)
 
 <use imagens/markets.png>
@@ -1468,14 +1468,14 @@ l.22
 
 
  <./imagens/markets.png>]
-<imagens/tomr_ritter_mod.png, id=277, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=281, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
 Package pdftex.def Info: imagens/tomr_ritter_mod.png used on input line 25.
 (pdftex.def)             Requested size: 211.38832pt x 188.19495pt.
 
-<imagens/omniwheel.png, id=282, 1027.84pt x 635.37375pt>
+<imagens/omniwheel.png, id=286, 1027.84pt x 635.37375pt>
 File: imagens/omniwheel.png Graphic file (type png)
 
 <use imagens/omniwheel.png>
@@ -1643,7 +1643,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-] <imagens/chassidxf.png, id=485, 839.135pt x 660.4675pt>
+] <imagens/chassidxf.png, id=489, 839.135pt x 660.4675pt>
 File: imagens/chassidxf.png Graphic file (type png)
 
 <use imagens/chassidxf.png>
@@ -1664,7 +1664,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 29.
 [10 <./imagens/chassidxf.png>]
-<imagens/roboto.png, id=497, 1021.8175pt x 1039.885pt>
+<imagens/roboto.png, id=501, 1021.8175pt x 1039.885pt>
 File: imagens/roboto.png Graphic file (type png)
 
 <use imagens/roboto.png>
@@ -1703,13 +1703,13 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
- <imagens/ref.png, id=514, 1160.335pt x 634.37pt>
+ <imagens/ref.png, id=518, 1160.335pt x 634.37pt>
 File: imagens/ref.png Graphic file (type png)
  <use imagens/ref.png>
 Package pdftex.def Info: imagens/ref.png used on input line 54.
 (pdftex.def)             Requested size: 305.33789pt x 166.92632pt.
 
-<imagens/robot_vel4.png, id=525, 828.09375pt x 742.775pt>
+<imagens/robot_vel4.png, id=529, 828.09375pt x 742.775pt>
 File: imagens/robot_vel4.png Graphic file (type png)
 
 <use imagens/robot_vel4.png>
@@ -1757,7 +1757,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 194.
 
-<imagens/poly5.png, id=569, 989.6975pt x 255.95625pt>
+<imagens/poly5.png, id=573, 989.6975pt x 255.95625pt>
 File: imagens/poly5.png Graphic file (type png)
  <use imagens/poly5.png>
 Package pdftex.def Info: imagens/poly5.png used on input line 202.
@@ -1783,7 +1783,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 209.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 209.
-[15] <imagens/trapezoidal.png, id=585, 976.64874pt x 349.305pt>
+[15] <imagens/trapezoidal.png, id=589, 976.64874pt x 349.305pt>
 File: imagens/trapezoidal.png Graphic file (type png)
 
 <use imagens/trapezoidal.png>
@@ -1806,7 +1806,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 226.
 [16 <./imagens/poly5.png> <./imagens/trapezoidal.png>]
-<imagens/edc.png, id=597, 451.6875pt x 451.6875pt>
+<imagens/edc.png, id=601, 451.6875pt x 451.6875pt>
 File: imagens/edc.png Graphic file (type png)
  <use imagens/edc.png>
 Package pdftex.def Info: imagens/edc.png used on input line 229.
@@ -1834,7 +1834,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 270.
 
-<imagens/twist_sat.png, id=615, 910.40125pt x 403.5075pt>
+<imagens/twist_sat.png, id=619, 910.40125pt x 403.5075pt>
 File: imagens/twist_sat.png Graphic file (type png)
 
 <use imagens/twist_sat.png>
@@ -1887,7 +1887,7 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 286.
- <imagens/sistema.png, id=636, 977.6525pt x 873.2625pt>
+ <imagens/sistema.png, id=640, 977.6525pt x 873.2625pt>
 File: imagens/sistema.png Graphic file (type png)
 
 <use imagens/sistema.png>
@@ -1964,19 +1964,19 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 357.
- <imagens/reta.png, id=682, 745.78625pt x 224.84pt>
+ <imagens/reta.png, id=686, 745.78625pt x 224.84pt>
 File: imagens/reta.png Graphic file (type png)
  <use imagens/reta.png>
 Package pdftex.def Info: imagens/reta.png used on input line 369.
 (pdftex.def)             Requested size: 375.80544pt x 113.29799pt.
 
-<imagens/giro.png, id=683, 315.1775pt x 277.035pt>
+<imagens/giro.png, id=687, 315.1775pt x 277.035pt>
 File: imagens/giro.png Graphic file (type png)
  <use imagens/giro.png>
 Package pdftex.def Info: imagens/giro.png used on input line 376.
 (pdftex.def)             Requested size: 164.41711pt x 144.51979pt.
 
-<imagens/hibrida.png, id=684, 755.82375pt x 237.88875pt>
+<imagens/hibrida.png, id=688, 755.82375pt x 237.88875pt>
 File: imagens/hibrida.png Graphic file (type png)
 
 <use imagens/hibrida.png>
@@ -2022,20 +2022,51 @@ Package babel Info: Redefining portuges shorthand "|
  (./5result.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
+File: imagens/edc.png Graphic file (type png)
+ <use imagens/edc.png>
+Package pdftex.def Info: imagens/edc.png used on input line 10.
+(pdftex.def)             Requested size: 140.92793pt x 140.93144pt.
 
-<imagens/zonamorta.png, id=699, 791.20593pt x 239.39438pt>
+<imagens/zonamorta.png, id=704, 791.20593pt x 239.39438pt>
 File: imagens/zonamorta.png Graphic file (type png)
 
 <use imagens/zonamorta.png>
-Package pdftex.def Info: imagens/zonamorta.png used on input line 10.
+Package pdftex.def Info: imagens/zonamorta.png used on input line 20.
 (pdftex.def)             Requested size: 469.75502pt x 142.13275pt.
 
-<imagens/zm3rodas.png, id=701, 820.56563pt x 316.93407pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagens/zm3rodas.png, id=706, 820.56563pt x 316.93407pt>
 File: imagens/zm3rodas.png Graphic file (type png)
 
 <use imagens/zm3rodas.png>
-Package pdftex.def Info: imagens/zm3rodas.png used on input line 21.
+Package pdftex.def Info: imagens/zm3rodas.png used on input line 31.
 (pdftex.def)             Requested size: 469.75502pt x 181.43773pt.
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 34.
+[27
+
+
+
+
+]
+File: imagens/edc.png Graphic file (type png)
+ <use imagens/edc.png>
+Package pdftex.def Info: imagens/edc.png used on input line 41.
+(pdftex.def)             Requested size: 140.92793pt x 140.93144pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2054,12 +2085,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 76.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 76.
-[27
-
-
-
-
- <./imagens/zonamorta.png (PNG copy)>]
+[28 <./imagens/zonamorta.png (PNG copy)> <./imagens/zm3rodas.png (PNG copy)>]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -2073,13 +2099,31 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 76.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 76.
-[28 <./imagens/zm3rodas.png (PNG copy)>]
+[29]
 \openout2 = `6conc.aux'.
 
  (./6conc.tex
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12pt too wide) has occurred while \output is active
+    []
+ []
+
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+[30
+
+
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2093,15 +2137,12 @@ Overfull \hbox (9.12pt too wide) has occurred while \output is active
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
-[29
+(babel)             in language  on input line 33.
+[31
 
-
-
-
-]
+])
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -2115,7 +2156,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
-[30] (./main.bbl
+[32] (./main.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 10.
@@ -2152,7 +2193,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
-[31
+[33
 
 
 
@@ -2176,7 +2217,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 136.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 136.
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 173--175
 \T1/txtt/m/n/12 82 / cc / 3f / 39 / 0a / 29 / 4d / f0 / CD00000240 . pdf / file
 s / CD00000240 . pdf / jcr :
@@ -2196,7 +2237,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
-[33]
+[35]
 Overfull \hbox (9.12pt too wide) has occurred while \output is active
     []
  []
@@ -2210,7 +2251,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 83.
-[34
+[36
 
 ]
 Package babel Info: Redefining portuges shorthand "|
@@ -2229,7 +2270,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
-[35
+[37
 
 ]
 \openout2 = `7ape1.aux'.
@@ -2251,7 +2292,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
-[36
+[38
 
 ]
 \openout2 = `8ape2.aux'.
@@ -2278,7 +2319,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 85.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 85.
-[37
+[39
 
 
 ]
@@ -2305,7 +2346,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
-[38
+[40
 
 
 ]
@@ -2317,17 +2358,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: EED4B23CF26C7E01C5A3D81FDC1ED8E5;1702.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
  ) 
 Here is how much of TeX's memory you used:
- 18569 strings out of 493013
- 296106 string characters out of 6135683
- 465542 words of memory out of 5000000
- 21235 multiletter control sequences out of 15000+600000
+ 18575 strings out of 493013
+ 296184 string characters out of 6135683
+ 465655 words of memory out of 5000000
+ 21237 multiletter control sequences out of 15000+600000
  63473 words of font info for 302 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,12n,79p,2005b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2356,10 +2393,10 @@ ts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (54 pages, 2160842 bytes).
+Output written on main.pdf (56 pages, 2158111 bytes).
 PDF statistics:
- 847 PDF objects out of 1000 (max. 8388607)
- 724 compressed objects within 8 object streams
- 142 named destinations out of 1000 (max. 500000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 739 compressed objects within 8 object streams
+ 146 named destinations out of 1000 (max. 500000)
  31544 words of extra memory for PDF output out of 35830 (max. 10000000)
 

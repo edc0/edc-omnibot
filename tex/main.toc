@@ -20,9 +20,9 @@
 \contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{21}{section.5}
 \contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{25}{section.6}
 \contentsline {section}{\numberline {7}Resultados}{27}{section.7}
-\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{29}{section.8}
-\contentsline {section}{\numberline {9}Refer\^encias}{31}{section.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{35}{section.9}
-\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{36}{subsection.9.1}
-\contentsline {subsection}{\numberline {B}Fun\IeC {\c c}\IeC {\~a}o do loop de controle}{37}{subsection.9.2}
-\contentsline {subsection}{\numberline {C}Dimens\IeC {\~o}es da estrutura mec\IeC {\^a}nica}{38}{subsection.9.3}
+\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{31}{section.8}
+\contentsline {section}{\numberline {9}Refer\^encias}{33}{section.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{37}{section.9}
+\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{38}{subsection.9.1}
+\contentsline {subsection}{\numberline {B}Fun\IeC {\c c}\IeC {\~a}o do loop de controle}{39}{subsection.9.2}
+\contentsline {subsection}{\numberline {C}Dimens\IeC {\~o}es da estrutura mec\IeC {\^a}nica}{40}{subsection.9.3}
