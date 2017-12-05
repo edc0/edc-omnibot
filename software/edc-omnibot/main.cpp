@@ -186,7 +186,7 @@ void loop (void)
   VbackTarget=Vback;
   VrightTarget=Vright;
   */
-  scaling();
+  //scaling();
 
   Motor1.setSetpoint(VbackTarget);
   Motor2.setSetpoint(VrightTarget);

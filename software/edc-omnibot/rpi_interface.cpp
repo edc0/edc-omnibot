@@ -41,11 +41,11 @@ void OmniRPiInterface::setSetpoint(double sp)// define velocidade desejada
   if(control > 0)
   {
     gpioPWM(Mot_A, 0);
-    gpioPWM(Mot_B, int(control));
+    gpioPWM(Mot_B, int(control+120));
   }
   if(control < 0)
   {
-    gpioPWM(Mot_A, -int(control));
+    gpioPWM(Mot_A, -int(control+120));
     gpioPWM(Mot_B, 0);
   }
 
