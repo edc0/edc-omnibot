@@ -175,22 +175,19 @@ void loop (void)
   /*
   xError     = xTarget - xw;
   yError     = yTarget - yw;
+  */
   thetaError = thetaTarget - theta;
 
-  Vxw = Vxw + 0.5*xError;
-  Vyw = Vyw + 0.5*xError;
+  Vxw = 0;//Vxw + 0.5*xError;
+  Vyw = 0;//Vyw + 0.5*xError;
   omegap = omegap + 0.3*thetaError;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
-  */
-  scaling();
 
-  cout << "V1: " << VbackTarget << "\n";
-  cout << "V2: " << VrightTarget << "\n";
-  cout << "V3: " << VleftTarget << "\n\n";
+  scaling();
 
   Motor1.setSetpoint(VbackTarget);
   Motor2.setSetpoint(VrightTarget);
@@ -225,21 +222,18 @@ int main(void)
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
 
-  cout << "\nX: ";
-  cin >> Vyw;
+  cout << "\nTheta: ";
+  cin >> thetaTarget;/*
   cout << "Y: ";
   cin >> Vxw;
   cout << "Theta: ";
-  cin >> omegap;
+  cin >> omegap;*/
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
 
-  cout << "\n\nVelocidade da roda 1: " << VbackTarget;
-  cout << "\nVelocidade da roda 2: " << VrightTarget;
-  cout << "\nVelocidade da roda 3: " << VleftTarget;
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
