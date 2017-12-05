@@ -169,6 +169,8 @@ void scaling(void)
   }
 }
 
+double thetaAc = 0;
+
 void loop (void)
 {
   odometry();
@@ -177,10 +179,11 @@ void loop (void)
   yError     = yTarget - yw;
   */
   thetaError = thetaTarget - theta;
+  thetaAc += thetaError;
 
   Vxw = 0;//Vxw + 0.5*xError;
   Vyw = 0;//Vyw + 0.5*xError;
-  omegap = omegap + 0.003*thetaError;
+  omegap = 0.3*thetaError + 0.0002*thetaAc;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
