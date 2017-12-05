@@ -129,43 +129,43 @@ void odometry()
 void scaling(void)
 {
   //descobre qual a maior das três velocidades, mantem ela saturada no máximo, escala as outras para continuarem proporcionais
-  if(Vleft > VMAX)
+  if(VleftTarget > VMAX)
   {
-    Vback = Vback*VMAX/Vleft;
-    Vright = Vright*VMAX/Vleft;
-    Vleft = VMAX;
+    VbackTarget = VbackTarget*VMAX/VleftTarget;
+    VrightTarget = VrightTarget*VMAX/VleftTarget;
+    VleftTarget = VMAX;
   }
-  if(Vback > VMAX)
+  if(VbackTarget > VMAX)
   {
-    Vleft = Vleft*VMAX/Vback;
-    Vright = Vright*VMAX/Vback;
-    Vback = VMAX;
+    VleftTarget = VleftTarget*VMAX/VbackTarget;
+    VrightTarget = VrightTarget*VMAX/VbackTarget;
+    VbackTarget = VMAX;
   }
-  if(Vright > VMAX)
+  if(VrightTarget > VMAX)
   {
-    Vback = Vback*VMAX/Vleft;
-    Vleft = Vleft*VMAX/Vleft;
-    Vright = VMAX;
+    VbackTarget = VbackTarget*VMAX/VleftTarget;
+    VleftTarget = VleftTarget*VMAX/VleftTarget;
+    VrightTarget = VMAX;
   }
 
   // caso em que o valor sature no negativo:
-  if(Vleft < -VMAX)
+  if(VleftTarget < -VMAX)
   {
-    Vback = Vback*VMAX/(-Vleft);
-    Vright = Vright*VMAX/(-Vleft); //vleft negativo preserva o sinal original
-    Vleft = -VMAX;
+    VbackTarget = VbackTarget*VMAX/(-VleftTarget);
+    VrightTarget = VrightTarget*VMAX/(-VleftTarget); //vleft negativo preserva o sinal original
+    VleftTarget = -VMAX;
   }
-  if(Vback < -VMAX)
+  if(VbackTarget < -VMAX)
   {
-    Vleft = Vleft*VMAX/(-Vback);
-    Vright = Vright*VMAX/(-Vback);
-    Vback = -VMAX;
+    VleftTarget = VleftTarget*VMAX/(-VbackTarget);
+    VrightTarget = VrightTarget*VMAX/(-VbackTarget);
+    VbackTarget = -VMAX;
   }
-  if(Vright < -VMAX)
+  if(VrightTarget < -VMAX)
   {
-    Vback = Vback*VMAX/(-Vright);
-    Vleft = Vleft*VMAX/(-Vright);
-    Vright = -VMAX;
+    VbackTarget = VbackTarget*VMAX/(-VrightTarget);
+    VleftTarget = VleftTarget*VMAX/(-VrightTarget);
+    VrightTarget = -VMAX;
   }
 }
 
@@ -188,13 +188,19 @@ void loop (void)
   */
   scaling();
 
+  cout << "V1: " << VbackTarget << "\n";
+  cout << "V2: " << VrightTarget << "\n";
+  cout << "V3: " << VleftTarget << "\n\n";
+
   Motor1.setSetpoint(VbackTarget);
   Motor2.setSetpoint(VrightTarget);
   Motor3.setSetpoint(VleftTarget);
 
+  /*
   cout << "x: " << yw << "\n";
   cout << "y: " << xw << "\n";
   cout << "z: " << theta << "\n\n";
+  */
 }
 
 
