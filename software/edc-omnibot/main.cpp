@@ -131,40 +131,40 @@ void scaling(void)
   //descobre qual a maior das três velocidades, mantem ela saturada no máximo, escala as outras para continuarem proporcionais
   if(VleftTarget > VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/VleftTarget;
-    VrightTarget = VrightTarget*VMAX/VleftTarget;
+    VbackTarget = VbackTarget*VMAX/abs(VleftTarget);
+    VrightTarget = VrightTarget*VMAX/abs(VleftTarget);
     VleftTarget = VMAX;
   }
   if(VbackTarget > VMAX)
   {
-    VleftTarget = VleftTarget*VMAX/VbackTarget;
-    VrightTarget = VrightTarget*VMAX/VbackTarget;
+    VleftTarget = VleftTarget*VMAX/abs(VbackTarget);
+    VrightTarget = VrightTarget*VMAX/abs(VbackTarget);
     VbackTarget = VMAX;
   }
   if(VrightTarget > VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/VleftTarget;
-    VleftTarget = VleftTarget*VMAX/VleftTarget;
+    VbackTarget = VbackTarget*VMAX/abs(VleftTarget);
+    VleftTarget = VleftTarget*VMAX/abs(VleftTarget);
     VrightTarget = VMAX;
   }
 
   // caso em que o valor sature no negativo:
   if(VleftTarget < -VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/(-VleftTarget);
-    VrightTarget = VrightTarget*VMAX/(-VleftTarget); //vleft negativo preserva o sinal original
+    VbackTarget = VbackTarget*VMAX/(-abs(VleftTarget));
+    VrightTarget = VrightTarget*VMAX/(-abs(VleftTarget)); //vleft negativo preserva o sinal original
     VleftTarget = -VMAX;
   }
   if(VbackTarget < -VMAX)
   {
-    VleftTarget = VleftTarget*VMAX/(-VbackTarget);
-    VrightTarget = VrightTarget*VMAX/(-VbackTarget);
+    VleftTarget = VleftTarget*VMAX/(-abs(VbackTarget));
+    VrightTarget = VrightTarget*VMAX/(-abs(VbackTarget));
     VbackTarget = -VMAX;
   }
   if(VrightTarget < -VMAX)
   {
-    VbackTarget = VbackTarget*VMAX/(-VrightTarget);
-    VleftTarget = VleftTarget*VMAX/(-VrightTarget);
+    VbackTarget = VbackTarget*VMAX/(-abs(VrightTarget));
+    VleftTarget = VleftTarget*VMAX/(-abs(VrightTarget));
     VrightTarget = -VMAX;
   }
 }
