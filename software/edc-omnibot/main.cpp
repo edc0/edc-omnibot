@@ -18,7 +18,7 @@
 #define uss 1000000   // microseconds per second
 #define rev 6.28314
 #define PMS 534.18
-#define VMAX 0.45 // verificar esse número
+#define VMAX 0.4 // verificar esse número
 
 // setando pinos para os testes
 int M1a = 2,  M1b = 3,
