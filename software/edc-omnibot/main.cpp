@@ -184,7 +184,7 @@ void loop (void)
   Vxw = 0;//Vxw + 0.5*xError;
   Vyw = 0;//Vyw + 0.5*xError;
   omegap = 0.3*thetaError;// + 0.0002*thetaAc;
-  if(thetaError == 0)
+  if(abs(thetaError) < 0.05)
     omegap = 0;
 
   inverseKinematicsWorld();
