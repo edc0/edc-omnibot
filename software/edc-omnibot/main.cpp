@@ -277,7 +277,7 @@ int main(void)
 
   retaW(0.25,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 4000000)
+  while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
@@ -285,9 +285,9 @@ int main(void)
   while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
-  retaW(0,-0.2);
+  retaW(0,-0.25);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 500000)
+  while(gpioTick() < tloop + 100000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
@@ -297,7 +297,7 @@ int main(void)
 
   retaW(-0.25,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 4000000)
+  while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
@@ -305,9 +305,9 @@ int main(void)
   while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
-  retaW(0,0.2);
+  retaW(0,0.25);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 500000)
+  while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
