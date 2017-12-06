@@ -192,7 +192,7 @@ void loop (void)
   }
   */
 
-  //inverseKinematicsWorld();
+  inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
