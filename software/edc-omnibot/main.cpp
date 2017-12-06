@@ -191,7 +191,7 @@ void loop (void)
     thetaAc = 0;
   }
 
-  inverseKinematicsWorld0();
+  inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
