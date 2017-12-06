@@ -277,31 +277,45 @@ int main(void)
 
   retaW(0.2,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 3000000)
-  {} // gira a pi rad/s durante meio segundo: 90 graus.
-
-  retaW(-0.2,-0.2);
-  tloop = gpioTick();
-  while(gpioTick() < tloop + 3000000)
-  {} // gira a pi rad/s durante meio segundo: 90 graus.
-
-  retaW(0.2,0);
-  tloop = gpioTick();
-  while(gpioTick() < tloop + 3000000)
-  {} // gira a pi rad/s durante meio segundo: 90 graus.
-  retaW(0,0);
-
-  giro(3.14/6);
-  tloop = gpioTick();
-  while(gpioTick() < tloop + 3000000)
-  {} // gira a pi rad/s durante meio segundo: 90 graus.
-
-  retaW(0.2,0);
-  tloop = gpioTick();
-  while(gpioTick() < tloop + 3000000)
+  while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0,-0.2);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0,0);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(-0.2,0);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 2000000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0,0);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0,0.2);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0,0);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+
 
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
