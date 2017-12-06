@@ -310,6 +310,10 @@ int main(void)
   while (stop!=0)
   {
     cin >> stop;
+    // para motores
+    Motor1.stop();
+    Motor2.stop();
+    Motor3.stop();
   }
 
   // cancela o loop:
