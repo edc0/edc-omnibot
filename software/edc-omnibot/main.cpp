@@ -190,13 +190,13 @@ void loop (void)
     thetaError = 0;
     thetaAc = 0;
   }
-  */
+
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
-
+  */
   scaling();
 
   Motor1.setSetpoint(VbackTarget);
