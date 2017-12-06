@@ -17,8 +17,8 @@
 #define ppr 341.2     // pulses per encoder revolution
 #define uss 1000000   // microseconds per second
 #define rev 6.28314
-#define PMS 534.18
-#define PMSc  610
+#define PMSc 534.18
+#define PMS  610
 #define VMAX 0.4 // verificar esse número
 
 // setando pinos para os testes
@@ -69,7 +69,6 @@ void dec_callback1(int way)
 
 void dec_callback2(int way)
 {
-  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   Motor2.t_pos = gpioTick();
   Motor2.pos += way; // para odometria
 
