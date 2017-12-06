@@ -18,7 +18,7 @@
 #define uss 1000000   // microseconds per second
 #define rev 6.28314
 #define PMSc 534.18
-#define PMS  610
+#define PMS  700
 #define VMAX 0.4 // verificar esse número
 
 // setando pinos para os testes
