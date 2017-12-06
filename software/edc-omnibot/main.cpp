@@ -219,13 +219,13 @@ void giro(double spd)
   omegap = spd;
 }
 
-void retaW(double x, double y);
+void retaW(double x, double y)
 {
   Vxw = y; // fazer em world ou mobile?
   Vyw = x; // na notação do ritter é ao contrário
 }
 
-void retaM(double x, double y);
+void retaM(double x, double y)
 {
   Vxm = y;
   Vxm = x;
@@ -275,7 +275,7 @@ int main(void)
   while(gpioTick() < tloop + 500000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
   giro(0);
-  
+
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
 
