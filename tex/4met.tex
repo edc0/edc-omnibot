@@ -247,8 +247,25 @@ Não linearidade do tipo zona morta, como será relatado a seguir. COrreção co
 
 \citet{lynch2017modern}:
 
-Loop de velocidade dentro do loop de posição. Posição das rodas ou posição em x e y e $\omega_z$?
+In most robotic applications, higher control update rates are of limited benefit, given
+time constants associated with the dynamics of the robot and environment.
 
+We can use feedforward control, which commands motion even when there
+is no error, in combination with feedback control to limit the accumulation of
+error:
+
+EQUAÇÃO (11.1) -> EQUAÇÃO (13.11), consigo adaptar pro sinal de controle do motor DC?
+
+This feedforward-feedback controller is the preferred velocity control law.
+
+Loop de velocidade dentro do loop de posição. Posição das rodas ou posição em x e y e $\omega_z$?
+Practical Bounds on Feedback Gains According to our simple model,
+we could increase K p and K d without bound to make the real components
+of the roots more and more negative, achieving arbitrarily fast response. In
+practice, however, large gains lead to actuator saturation, rapid torque changes
+(chattering), vibrations of the structure due to unmodeled flexibility in the joints
+and links, and possibly even instability due to the finite servo rate frequency.
+Thus there are practical limits on the set of useful gains.
 
 
 \citet{rojas2006holonomic}: Sugerem que utilizar um controlador para cada roda é melhor do que para cada grau de liberdade. No nosso caso, é tranquilo pois temos apenas 3 rodas, mantendo o mesmo número de controladores. Devido à realimentação externa lenta, utilizam um preditor no robô. Não entram em detalhes.

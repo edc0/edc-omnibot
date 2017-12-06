@@ -110,11 +110,11 @@ void odometry()
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
-
+  /*
   Vleft = PMS*(Motor1.pos-Motor1.pos_old)/double(t_diff);
   Vback = PMS*(Motor2.pos-Motor2.pos_old)/double(t_diff);
   Vright =PMS*(Motor3.pos-Motor3.pos_old)/double(t_diff);
-
+  */
   forwardKinematicsWorld();
 
   xw += Vxw*double(t_diff)/double(uss);
@@ -177,7 +177,7 @@ void loop (void)
   /*
   xError     = xTarget - xw;
   yError     = yTarget - yw;
-  */
+
   thetaError = thetaTarget - theta;
   thetaAc += thetaError;
 
@@ -190,6 +190,7 @@ void loop (void)
     thetaError = 0;
     thetaAc = 0;
   }
+  */
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
@@ -231,12 +232,12 @@ int main(void)
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
 
-  cout << "\nTheta: ";
-  cin >> thetaTarget;/*
+  cout << "\nX: ";
+  cin >> Vyw;
   cout << "Y: ";
   cin >> Vxw;
   cout << "Theta: ";
-  cin >> omegap;*/
+  cin >> omegap;
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
