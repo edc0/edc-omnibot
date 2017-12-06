@@ -17,7 +17,8 @@
 #define ppr 341.2     // pulses per encoder revolution
 #define uss 1000000   // microseconds per second
 #define rev 6.28314
-#define PMS 534.18
+#define PMSc 534.18
+#define PMS  610
 #define VMAX 0.4 // verificar esse número
 
 // setando pinos para os testes
@@ -54,7 +55,8 @@ void dec_callback1(int way)
   Motor1.pos += way; // para odometria
 
   // atualiza os valores de velocidade, em rad/s
-  Motor1.rps[4]=Motor1.rps[3];
+  Motor
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);1.rps[4]=Motor1.rps[3];
   Motor1.rps[3]=Motor1.rps[2];
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
@@ -68,6 +70,7 @@ void dec_callback1(int way)
 
 void dec_callback2(int way)
 {
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   Motor2.t_pos = gpioTick();
   Motor2.pos += way; // para odometria
 
@@ -192,6 +195,8 @@ void loop (void)
 
   */
 
+  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
+
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
@@ -277,21 +282,26 @@ int main(void)
   while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   retaW(-0.2,-0.2);
   tloop = gpioTick();
   while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
+
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   retaW(0.2,0);
   tloop = gpioTick();
   while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   giro(3.14/4);
   tloop = gpioTick();
   while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
+  gpioSleep(PI_TIME_RELATIVE, 1, 0);
   retaW(0.2,0);
   tloop = gpioTick();
   while(gpioTick() < tloop + 2000000)
