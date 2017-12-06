@@ -216,24 +216,24 @@ void loop (void)
   */
 }
 
-void giro(double spd)
+void giro(double spdf)
 {
   Vxw = 0;
   Vyw = 0;
-  omegap = spd;
+  omegap = spdf;
 }
 
-void retaW(double x, double y)
+void retaW(double xf, double yf)
 {
-  Vxw = y; // fazer em world ou mobile?
-  Vyw = x; // na notação do ritter é ao contrário
+  Vxw = yf; // fazer em world ou mobile?
+  Vyw = xf; // na notação do ritter é ao contrário
   omegap=0;
 }
 
-void retaM(double x, double y)
+void retaM(double xf, double yf)
 {
-  Vxm = y;
-  Vxm = x;
+  Vxm = yf;
+  Vxm = xf;
   omegap=0;
 }
 
@@ -281,7 +281,8 @@ int main(void)
   while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
-  retaW(-0.08,-0.08);
+  retaW(-0.08,-0.08
+  );
   tloop = gpioTick();
   while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
