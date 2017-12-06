@@ -55,8 +55,7 @@ void dec_callback1(int way)
   Motor1.pos += way; // para odometria
 
   // atualiza os valores de velocidade, em rad/s
-  Motor
-  gpioSleep(PI_TIME_RELATIVE, 1, 0);1.rps[4]=Motor1.rps[3];
+  Motor1.rps[4]=Motor1.rps[3];
   Motor1.rps[3]=Motor1.rps[2];
   Motor1.rps[2]=Motor1.rps[1];
   Motor1.rps[1]=Motor1.rps[0];
