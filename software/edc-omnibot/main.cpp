@@ -110,11 +110,11 @@ void odometry()
   tempo_old = tempo;
   tempo = gpioTick();
   t_diff = tempo - tempo_old;
-  /*
+
   Vleft = PMS*(Motor1.pos-Motor1.pos_old)/double(t_diff);
   Vback = PMS*(Motor2.pos-Motor2.pos_old)/double(t_diff);
   Vright =PMS*(Motor3.pos-Motor3.pos_old)/double(t_diff);
-  */
+
   forwardKinematicsWorld();
 
   xw += Vxw*double(t_diff)/double(uss);
@@ -192,7 +192,7 @@ void loop (void)
   }
   */
 
-  inverseKinematicsWorld();
+  //inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
