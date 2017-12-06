@@ -194,7 +194,7 @@ void loop (void)
 
   */
 
-  theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
+  //theta = (Motor1.pos + Motor2.pos + Motor3.pos)*r*5.43/double(3*L*ppr);
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
