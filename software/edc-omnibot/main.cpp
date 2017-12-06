@@ -276,30 +276,30 @@ int main(void)
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
-  retaW(0.2,0);
+  retaW(0.1,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 1000000)
+  while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
-  retaW(-0.2,-0.2);
+  retaW(-0.1,-0.1);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 1000000)
+  while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
-  retaW(0.2,0);
+  retaW(0.1,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 1000000)
+  while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
   retaW(0,0);
 
-  giro(3.14/4);
+  giro(3.14/6);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 1000000)
+  while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0.2,0);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 1000000)
+  while(gpioTick() < tloop + 3000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
@@ -309,13 +309,13 @@ int main(void)
 
   while (stop!=0)
   {
-    cin >> stop;
     // cancela o loop:
     gpioSetTimerFunc(3, 10, NULL);
     // para motores
     Motor1.stop();
     Motor2.stop();
     Motor3.stop();
+    cin >> stop;
   }
 
 
