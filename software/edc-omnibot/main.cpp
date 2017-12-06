@@ -287,7 +287,7 @@ int main(void)
 
   retaW(0,-0.25);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 100000)
+  while(gpioTick() < tloop + 1000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   retaW(0,0);
