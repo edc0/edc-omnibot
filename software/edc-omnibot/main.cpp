@@ -270,9 +270,9 @@ int main(void)
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
-  giro(3.14);
+  giro(3.14/4);
   tloop = gpioTick();
-  while(gpioTick() < tloop + 500000)
+  while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
   giro(0);
 
