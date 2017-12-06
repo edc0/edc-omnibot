@@ -173,7 +173,6 @@ double thetaAc = 0;
 
 void loop (void)
 {
-  odometry();
   /*
   xError     = xTarget - xw;
   yError     = yTarget - yw;
@@ -191,17 +190,20 @@ void loop (void)
     thetaAc = 0;
   }
 
+  */
 
   inverseKinematicsWorld();
   VleftTarget=Vleft;
   VbackTarget=Vback;
   VrightTarget=Vright;
-  */
+
   scaling();
 
   Motor1.setSetpoint(VbackTarget);
   Motor2.setSetpoint(VrightTarget);
   Motor3.setSetpoint(VleftTarget);
+
+  //odometry();
 
   /*
   cout << "x: " << yw << "\n";
@@ -210,6 +212,26 @@ void loop (void)
   */
 }
 
+void giro(double spd)
+{
+  Vxw = 0;
+  Vyw = 0;
+  omegap = spd;
+}
+
+void retaW(double x, double y);
+{
+  Vxw = y; // fazer em world ou mobile?
+  Vyw = x; // na notação do ritter é ao contrário
+}
+
+void retaM(double x, double y);
+{
+  Vxm = y;
+  Vxm = x;
+}
+
+uint32_t tloop = 0;
 
 int main(void)
 {
@@ -232,23 +254,31 @@ int main(void)
   re_decoder dec2(E2a, E2b, dec_callback2);
   re_decoder dec3(E3a, E3b, dec_callback3);
 
-  cout << "\nX: ";
+  /*cout << "\nX: ";
   cin >> Vyw;
   cout << "Y: ";
   cin >> Vxw;
   cout << "Theta: ";
   cin >> omegap;
+  */
 
   inverseKinematicsWorld();
-  VleftTarget=Vleft;
-  VbackTarget=Vback;
-  VrightTarget=Vright;
+  VleftTarget=0;
+  VbackTarget=0;
+  VrightTarget=0;
 
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
+  giro(3.14);
+  tloop = gpioTick();
+  while(gpioTick() < tloop + 500000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+  giro(0);
+  
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
+
   while (stop!=0)
   {
     cin >> stop;
