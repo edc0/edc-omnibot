@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -30,6 +30,10 @@ Cunha, M. A.~B., 2001. Controle em cascata de um atuador hidráulico:
   contribuições teóricas e experimentais. Ph.D. thesis, UFSC,
   Florianópolis, SC, tese de doutorado em Controle, Automação e Informática
   Industrial.
+
+\bibitem[{Dorf and Bishop(2008)}]{dorf2008modern}
+Dorf, R., Bishop, R., 2008. Modern Control Systems. Pearson Prentice Hall.
+\newline\urlprefix\url{https://books.google.com.br/books?id=V-FpzJP5bEIC}
 
 \bibitem[{Feng et~al.(1989)Feng, Friedman, and Krogh}]{feng1989servo}
 Feng, D., Friedman, M.~B., Krogh, B.~H., 1989. The servo-control system for an

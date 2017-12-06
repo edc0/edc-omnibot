@@ -2,24 +2,23 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Proje\IeC {\c c}\IeC {\~a}o de crescimento do mercado de rob\IeC {\'o}tica m\IeC {\'o}vel at\IeC {\'e} 2020.\relax }}{1}{figure.caption.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de um rob\IeC {\^o} m\IeC {\'o}vel com tr\IeC {\^e}s rodas omnidirecionais.\relax }}{2}{figure.caption.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Desenho de uma roda omnidirecional.\relax }}{3}{figure.caption.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Chassi projetado.\relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Chassi projetado.\relax }}{11}{figure.caption.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Prot\IeC {\'o}tipo montado, sem as canetas.\relax }}{11}{figure.caption.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Sistemas de coordenadas global I e relativo ao centro do rob\IeC {\^o} R.\relax }}{13}{figure.caption.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Vista superior do rob\IeC {\^o}, mostrando as conven\IeC {\c c}\IeC {\~o}es adotadas. As grandezas $v_x$ e $v_y$ est\IeC {\~a}o no sistema de coordenadas do rob\IeC {\^o}.\relax }}{14}{figure.caption.7}
 \contentsline {figure}{\numberline {8}{\ignorespaces Deslocamento, velocidade e acelera\IeC {\c c}\IeC {\~a}o durante uma trajet\IeC {\'o}ria gerada por polin\IeC {\^o}mio de quinta ordem. Acelera\IeC {\c c}\IeC {\~a}o e velocidade s\IeC {\~a}o nulas tanto no ponto de origem quanto no ponto de destino.\relax }}{16}{figure.caption.8}
 \contentsline {figure}{\numberline {9}{\ignorespaces Deslocamento e velocidade durante um deslocamento com perfil de velocidades trapezoidal. Tal perfil foi adotado neste trabalho.\relax }}{16}{figure.caption.9}
 \contentsline {figure}{\numberline {10}{\ignorespaces Arquitetura de controle utilizada.\relax }}{17}{figure.caption.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Um tipo de corre\IeC {\c c}\IeC {\~a}o para n\IeC {\~a}o linearidades do tipo zona-morta.\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {11}{\ignorespaces Zona morta em um atuador e um tipo de corre\IeC {\c c}\IeC {\~a}o a ser aplicada no sinal de controle.\relax }}{18}{figure.caption.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Limites de velocidade translacional e rotacional em fun\IeC {\c c}\IeC {\~a}o dos limites de satura\IeC {\c c}\IeC {\~a}o dos motores reais.\relax }}{19}{figure.caption.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Estrutura e hierarquia dos subsistemas.\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Fluxograma de opera\IeC {\c c}\IeC {\~a}o do rob\IeC {\^o}. TROCAR FIGURA\relax }}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Trajet\IeC {\'o}ria retil\IeC {\'\i }nea pura.\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {13}{\ignorespaces Estrutura e hierarquia dos subsistemas propostos inicialmente.\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Um motor em satura\IeC {\c c}\IeC {\~a}o, enquanto o rob\IeC {\^o} sofre altera\IeC {\c c}\IeC {\~a}o de trajet\IeC {\'o}ria. O caminho preto \IeC {\'e} a rota desejada.\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Escalonamento de velocidade ativado.\relax }}{23}{figure.caption.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces Trajet\IeC {\'o}ria de giro.\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Trajet\IeC {\'o}ria combinada.\relax }}{26}{figure.caption.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Encoderdoderdoder.\relax }}{27}{figure.caption.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces An\IeC {\'a}lise da n\IeC {\~a}o-linearidade do tipo ``zona-morta'' presente nos motores utilizados.\relax }}{28}{figure.caption.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces An\IeC {\'a}lise da linearidade do tipo ``zona-morta'' presente nos motores utilizados.\relax }}{28}{figure.caption.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Blabla bla blab balbalbala.\relax }}{29}{figure.caption.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Motores em satura\IeC {\c c}\IeC {\~a}o.\relax }}{29}{figure.caption.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Escalonamento de velocidade ativado.\relax }}{30}{figure.caption.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Dimens\IeC {\~o}es dos elementos do chassi. TROCAR FIGURA\relax }}{40}{figure.caption.25}
+\contentsline {figure}{\numberline {17}{\ignorespaces Trajet\IeC {\'o}ria retil\IeC {\'\i }nea pura.\relax }}{25}{figure.caption.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Trajet\IeC {\'o}ria combinada.\relax }}{26}{figure.caption.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Encoderdoderdoder.\relax }}{27}{figure.caption.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces An\IeC {\'a}lise da n\IeC {\~a}o-linearidade do tipo ``zona-morta'' presente nos motores utilizados.\relax }}{28}{figure.caption.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces An\IeC {\'a}lise da linearidade do tipo ``zona-morta'' presente nos motores utilizados.\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Blabla bla blab balbalbala.\relax }}{29}{figure.caption.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Dimens\IeC {\~o}es dos elementos do chassi. TROCAR FIGURA\relax }}{40}{figure.caption.24}
