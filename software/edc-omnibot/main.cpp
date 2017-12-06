@@ -223,12 +223,14 @@ void retaW(double x, double y)
 {
   Vxw = y; // fazer em world ou mobile?
   Vyw = x; // na notação do ritter é ao contrário
+  omegap=0;
 }
 
 void retaM(double x, double y)
 {
   Vxm = y;
   Vxm = x;
+  omegap=0;
 }
 
 uint32_t tloop = 0;
@@ -270,11 +272,26 @@ int main(void)
   // chama função loop() a cada 10ms
   gpioSetTimerFunc(3, 10, loop);
 
+  retaW(0.1,0);
+  while(gpioTick() < tloop + 2000000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(-0.1,-0.1);
+  while(gpioTick() < tloop + 2000000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
+  retaW(0.1,0);
+  while(gpioTick() < tloop + 2000000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
+
   giro(3.14/4);
   tloop = gpioTick();
   while(gpioTick() < tloop + 2000000)
   {} // gira a pi rad/s durante meio segundo: 90 graus.
-  giro(0);
+
+  retaW(0.1,0);
+  while(gpioTick() < tloop + 2000000)
+  {} // gira a pi rad/s durante meio segundo: 90 graus.
 
   int stop = 1;
   cout << "\nPresione ZERO para parar:\n";
