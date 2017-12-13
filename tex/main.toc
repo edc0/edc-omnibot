@@ -1,11 +1,9 @@
 \select@language {brazil}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Agradecimentos}{iii}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Resumo}{v}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Abstract}{vii}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Figuras}{ix}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Tabelas}{xi}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Abreviaturas e Siglas}{xii}{Doc-Start}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de S\'imbolos}{xiii}{Doc-Start}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Resumo}{iii}{Doc-Start}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Figuras}{v}{Doc-Start}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Tabelas}{vii}{Doc-Start}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de Abreviaturas e Siglas}{viii}{Doc-Start}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Lista de S\'imbolos}{x}{section*.1}
 \contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{section.1}
 \contentsline {section}{\numberline {2}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{5}{subsection.2.1}
@@ -18,11 +16,8 @@
 \contentsline {subsection}{\numberline {4.4}Controle}{17}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Limita\IeC {\c c}\IeC {\~o}es de Velocidade}{18}{subsection.4.5}
 \contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{21}{section.5}
-\contentsline {section}{\numberline {6}Avalia\IeC {\c c}\IeC {\~a}o experimental}{25}{section.6}
-\contentsline {section}{\numberline {7}Resultados}{27}{section.7}
-\contentsline {section}{\numberline {8}Conclus\IeC {\~a}o e Trabalhos Futuros}{31}{section.8}
-\contentsline {section}{\numberline {9}Refer\^encias}{33}{section.9}
-\contentsline {section}{\hbox to\@tempdima {\hfil }Ap\^endices}{37}{section.9}
-\contentsline {subsection}{\numberline {A}Custo dos componentes utilizados}{38}{subsection.9.1}
-\contentsline {subsection}{\numberline {B}Fun\IeC {\c c}\IeC {\~a}o do loop de controle}{39}{subsection.9.2}
-\contentsline {subsection}{\numberline {C}Dimens\IeC {\~o}es da estrutura mec\IeC {\^a}nica}{40}{subsection.9.3}
+\contentsline {section}{\numberline {6}Teste Experimentais}{25}{section.6}
+\contentsline {subsection}{\numberline {6.1}Trajet\IeC {\'o}rias desejadas do sistema}{25}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Resultados}{26}{subsection.6.2}
+\contentsline {section}{\numberline {7}Conclus\IeC {\~a}o e Trabalhos Futuros}{31}{section.7}
+\contentsline {section}{\numberline {8}Refer\^encias}{33}{section.8}

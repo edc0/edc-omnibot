@@ -10,13 +10,13 @@ Banggood.com, 2017. Specifications for 6v 210rpm dc motor with encoder and
   \url{https://www.banggood.com/6V-210RPM-Encoder-Motor-DC-Gear-Motor-with-Mounting-Bracket-and-Wheel-p-1044064.html},
   acessado em 03/10/2017.
 
-\bibitem[{Campion et~al.(1996)Campion, Bastin, and
+\bibitem[{Campion et~al.(1996)Campion, Bastin, e
   Dandrea-Novel}]{campion1996structural}
 Campion, G., Bastin, G., Dandrea-Novel, B., 1996. Structural properties and
   classification of kinematic and dynamic models of wheeled mobile robots. IEEE
   transactions on robotics and automation 12~(1), 47--62.
 
-\bibitem[{Carrasco and da~Silva(2016)}]{lowcostIMU}
+\bibitem[{Carrasco e da~Silva(2016)}]{lowcostIMU}
 Carrasco, M.~M., da~Silva, A.~L., 2016. Attitude determination for low cost imu
   and processor board using the methods of triad, kalman filter and allan
   variance. Revista Brasileira de Iniciação Científica 3~(2), 26--41.
@@ -31,11 +31,11 @@ Cunha, M. A.~B., 2001. Controle em cascata de um atuador hidráulico:
   Florianópolis, SC, tese de doutorado em Controle, Automação e Informática
   Industrial.
 
-\bibitem[{Dorf and Bishop(2008)}]{dorf2008modern}
+\bibitem[{Dorf e Bishop(2008)}]{dorf2008modern}
 Dorf, R., Bishop, R., 2008. Modern Control Systems. Pearson Prentice Hall.
 \newline\urlprefix\url{https://books.google.com.br/books?id=V-FpzJP5bEIC}
 
-\bibitem[{Feng et~al.(1989)Feng, Friedman, and Krogh}]{feng1989servo}
+\bibitem[{Feng et~al.(1989)Feng, Friedman, e Krogh}]{feng1989servo}
 Feng, D., Friedman, M.~B., Krogh, B.~H., 1989. The servo-control system for an
   omnidirectional mobile robot. In: Robotics and Automation, 1989.
   Proceedings., 1989 IEEE International Conference on. IEEE, pp. 1566--1571.
@@ -44,7 +44,7 @@ Feng, D., Friedman, M.~B., Krogh, B.~H., 1989. The servo-control system for an
 Garcia-Saura, C., 2015. Self-calibration of a differential wheeled robot using
   only a gyroscope and a distance sensor. arXiv preprint arXiv:1509.02154.
 
-\bibitem[{Ginzburg and Nokleby(2013)}]{ginzburg2013indoor}
+\bibitem[{Ginzburg e Nokleby(2013)}]{ginzburg2013indoor}
 Ginzburg, S., Nokleby, S., 2013. Indoor localization of an omni-directional
   wheeled mobile robot. Transactions of the Canadian Society for Mechanical
   Engineering. Canada 37, 1043--1056.
@@ -61,7 +61,7 @@ Indiveri, G., 2009. Swedish wheeled omnidirectional mobile robots: Kinematics
 Invensense, 2013. Mpu6050. Acessado em 18/11/2017.
 \newline\urlprefix\url{https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf}
 
-\bibitem[{Jimenez et~al.(2009)Jimenez, Seco, Prieto, and
+\bibitem[{Jimenez et~al.(2009)Jimenez, Seco, Prieto, e
   Guevara}]{jimenez2009comparison}
 Jimenez, A.~R., Seco, F., Prieto, C., Guevara, J., 2009. A comparison of
   pedestrian dead-reckoning algorithms using a low-cost mems imu. In:
@@ -72,35 +72,35 @@ Jimenez, A.~R., Seco, F., Prieto, C., Guevara, J., 2009. A comparison of
 Joan, 2017. Reference for pigpio c interface. Acessado em 27/11/2017.
 \newline\urlprefix\url{http://abyz.me.uk/rpi/pigpio/cif.html}
 
-\bibitem[{Jung and Kim(2001)}]{jung2001fault}
+\bibitem[{Jung e Kim(2001)}]{jung2001fault}
 Jung, M.-J., Kim, J.-H., 2001. Fault tolerant control strategy for
   omnikity-iii. In: Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
   International Conference on. Vol.~4. IEEE, pp. 3370--3375.
 
-\bibitem[{Kim and Kim(2014)}]{kim2014minenergy}
+\bibitem[{Kim e Kim(2014)}]{kim2014minenergy}
 Kim, H., Kim, B.~K., 2014. Online minimum-energy trajectory planning and
   control on a straight-line path for three-wheeled omnidirectional mobile
   robots. IEEE Transactions on industrial electronics 61~(9), 4771--4779.
 
-\bibitem[{Krinkin et~al.(2015)Krinkin, Stotskaya, and
+\bibitem[{Krinkin et~al.(2015)Krinkin, Stotskaya, e
   Stotskiy}]{krinkin2015design}
 Krinkin, K., Stotskaya, E., Stotskiy, Y., 2015. Design and implementation
   raspberry pi-based omni-wheel mobile robot. In: Artificial Intelligence and
   Natural Language and Information Extraction, Social Media and Web Search
   FRUCT Conference (AINL-ISMW FRUCT), 2015. IEEE, pp. 39--45.
 
-\bibitem[{Loh et~al.(2003)Loh, Low, and Leow}]{loh2003mechatronics}
+\bibitem[{Loh et~al.(2003)Loh, Low, e Leow}]{loh2003mechatronics}
 Loh, W., Low, K.~H., Leow, Y., 2003. Mechatronics design and kinematic
   modelling of a singularityless omni-directional wheeled mobile robot. In:
   Robotics and Automation, 2003. Proceedings. ICRA'03. IEEE International
   Conference on. Vol.~3. IEEE, pp. 3237--3242.
 
-\bibitem[{Lynch and Park(2017)}]{lynch2017modern}
+\bibitem[{Lynch e Park(2017)}]{lynch2017modern}
 Lynch, K., Park, F., 2017. Modern Robotics: Mechanics, Planning, and Control.
   Cambridge University Press.
 \newline\urlprefix\url{https://books.google.com.br/books?id=86G0nQAACAAJ}
 
-\bibitem[{Markets and Markets(2015)}]{marketsmarkets}
+\bibitem[{Markets e Markets(2015)}]{marketsmarkets}
 Markets, Markets, 2015. Mobile robots market by environment (aerial, ground,
   and marine), component (hardware and software), application (professional
   service and personal service), and geography (north america, europe,
@@ -116,19 +116,19 @@ MPS, 2008. Synchronous rectified step-down converter. Acessado em 30/11/2017.
 Nexus, 2016. 58mm plastic omniwheel. Acessado em 8/10/2017.
 \newline\urlprefix\url{http://www.nexusrobot.com/product/58mm-plastic-omni-wheel-for-lego-nxt-and-servo-motor-14135.html}
 
-\bibitem[{Oubbati et~al.(2005)Oubbati, Schanz, Buchheim, and
+\bibitem[{Oubbati et~al.(2005)Oubbati, Schanz, Buchheim, e
   Levi}]{oubbati2005velocity}
 Oubbati, M., Schanz, M., Buchheim, T., Levi, P., 2005. Velocity control of an
   omnidirectional robocup player with recurrent neural networks. In: RoboCup.
   Springer, pp. 691--701.
 
-\bibitem[{Park et~al.(1996)Park, Chung, Chung, and Lee}]{park1996dead}
+\bibitem[{Park et~al.(1996)Park, Chung, Chung, e Lee}]{park1996dead}
 Park, K., Chung, D., Chung, H., Lee, J.~G., 1996. Dead reckoning navigation of
   a mobile robot using an indirect kalman filter. In: Multisensor Fusion and
   Integration for Intelligent Systems, 1996. IEEE/SICE/RSJ International
   Conference on. IEEE, pp. 132--138.
 
-\bibitem[{Pin and Killough(1994)}]{pin1994new}
+\bibitem[{Pin e Killough(1994)}]{pin1994new}
 Pin, F.~G., Killough, S.~M., 1994. A new family of omnidirectional and
   holonomic wheeled platforms for mobile robots. IEEE transactions on robotics
   and automation 10~(4), 480--489.
@@ -138,37 +138,37 @@ Ritter, G.~A., 2016. Modelo genérico de plataforma robótica omnidirecional em
   código aberto. Ph.D. thesis, UNISC, Santa Cruz do Sul, RS, trabalho de
   Conclusão de Curso de Engenharia de Computação.
 
-\bibitem[{R{\"o}hrig et~al.(2010)R{\"o}hrig, He{\ss}, Kirsch, and
+\bibitem[{R{\"o}hrig et~al.(2010)R{\"o}hrig, He{\ss}, Kirsch, e
   K{\"u}nemund}]{rohrig2010laser}
 R{\"o}hrig, C., He{\ss}, D., Kirsch, C., K{\"u}nemund, F., 2010. Localization
   of an omnidirectional transport robot using ieee 802.15. 4a ranging and laser
   range finder. In: Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ
   International Conference on. IEEE, pp. 3798--3803.
 
-\bibitem[{Rojas and F{\"o}rster(2006)}]{rojas2006holonomic}
+\bibitem[{Rojas e F{\"o}rster(2006)}]{rojas2006holonomic}
 Rojas, R., F{\"o}rster, A.~G., 2006. Holonomic control of a robot with an
   omnidirectional drive. KI-K{\"u}nstliche Intelligenz 20~(2), 12--17.
 
-\bibitem[{Samani et~al.(2007)Samani, Abdollahi, Ostadi, and
+\bibitem[{Samani et~al.(2007)Samani, Abdollahi, Ostadi, e
   DaneshPanah}]{samani2007comprehensive}
 Samani, H.~A., Abdollahi, A., Ostadi, H., DaneshPanah, M., 2007. Comprehensive
   omni-directional soccer player robots. International Journal of Advanced
   Robotic Systems.
 
-\bibitem[{Semiconductors(2000)}]{semiconductors2000i2c}
+\bibitem[{Semiconductors(2000)}]{semiconductors2000I2C}
 Semiconductors, P., 2000. The i2c-bus specification. Philips Semiconductors
   9397~(750), 00954.
 
-\bibitem[{Siciliano and Khatib(2016)}]{siciliano2016springer}
+\bibitem[{Siciliano e Khatib(2016)}]{siciliano2016springer}
 Siciliano, B., Khatib, O., 2016. Springer handbook of robotics. Springer.
 
-\bibitem[{Siegwart et~al.(2011)Siegwart, Nourbakhsh, and
+\bibitem[{Siegwart et~al.(2011)Siegwart, Nourbakhsh, e
   Scaramuzza}]{siegwart2011introduction}
 Siegwart, R., Nourbakhsh, I., Scaramuzza, D., 2011. Introduction to Autonomous
   Mobile Robots. Intelligent robotics and autonomous agents. MIT Press.
 \newline\urlprefix\url{https://books.google.com.br/books?id=4of6AQAAQBAJ}
 
-\bibitem[{Steinhoff and Schiele(2010)}]{steinhoff2010pocket}
+\bibitem[{Steinhoff e Schiele(2010)}]{steinhoff2010pocket}
 Steinhoff, U., Schiele, B., 2010. Dead reckoning from the pocket-an
   experimental study. In: Pervasive Computing and Communications (PerCom), 2010
   IEEE International Conference on. IEEE, pp. 162--170.
@@ -189,10 +189,10 @@ Treesatayapun, C., 2011. A discrete-time stable controller for an
   omni-directional mobile robot based on an approximated model. Control
   Engineering Practice 19~(2), 194--203.
 
-\bibitem[{Upton and Halfacree(2014)}]{upton2014raspberry}
+\bibitem[{Upton e Halfacree(2014)}]{upton2014raspberry}
 Upton, E., Halfacree, G., 2014. Raspberry Pi user guide. John Wiley \& Sons.
 
-\bibitem[{Williams et~al.(2002)Williams, Carter, Gallina, and
+\bibitem[{Williams et~al.(2002)Williams, Carter, Gallina, e
   Rosati}]{williams2002dynamic}
 Williams, R.~L., Carter, B.~E., Gallina, P., Rosati, G., 2002. Dynamic model
   with slip for wheeled omnidirectional robots. IEEE transactions on Robotics

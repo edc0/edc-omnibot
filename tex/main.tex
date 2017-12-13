@@ -8,45 +8,142 @@
 \author{Emílio Dolgener Cantú}
 \supervisor{Eduardo Perondi}
 
-\newacronym{rpi}{RPi}{\emph{Raspberry Pi}, computador embarcado}
-\newacronym{imu}{IMU}{\emph{Inertial Measurement Unit}, ou Unidade de Medidas Inerciais}
+\newacronym{rpi}{RPi}{\emph{Raspberry Pi}}
+\newacronym{imu}{IMU}{\emph{Inertial Measurement Unit}}
 \newacronym{pid}{PID}{Controlador Proporcional-Integral-Derivativo}
-\newacronym{pi}{PI}{Controlador Proporcional-Integral}
-\newacronym{tomr}{TOMR}{\emph{Three-wheeld Omnidirectional Mobile Robot}, ou Robô Móvel Omnidirecional de Três Rodas}
-\newacronym{ins}{INS}{\emph{Inertial Navigation System}, ou Sistema de Navegação Inercial}
-\newacronym{pkm}{PKM}{\emph{Posture Kinematic Model}, ou Modelo Cinemático de Postura}
-\newacronym{ckm}{CKM}{\emph{Configuration Kinematic Model}, ou Modelo Cinemático de Configuração}
-\newacronym{cdm}{CDM}{\emph{Configuration Dynamic Model}, ou Modelo Dinâmico de Configuração}
-\newacronym{pdm}{PDM}{\emph{Posture Dynamic Model}, ou Modelo Dinâmico de Postura}
-\newacronym{i2c}{I2C}{\emph{Inter-Integrated Circuit}, ou Circuito Inter-Integrado}
+\newacronym{tomr}{TOMR}{\emph{Three-wheeld Omnidirectional Mobile Robot}}
+\newacronym{i2c}{I2C}{\emph{Inter-Integrated Circuit}}
 \newacronym{arm}{ARM}{\emph{Advanced RISC Machine}}
 \newacronym{gpio}{GPIO}{\emph{General Purpose Input/Output}}
+\newacronym{agv}{AGV}{\emph{Automated Guided Vehicle}}
+\newacronym{gps}{GPS}{\emph{Global Positioning Sistem}}
+\newacronym{nicd}{NiCd}{Níquel-Cádmio}
+\newacronym{pwm}{PWM}{\emph{Pulse Width Modulation}}
 
 % Símbolos:
 \newglossaryentry{angvel}{
-  name = $\omega$ ,
+  name = $\omega_z$ ,
   description = Velocidade ângular,
 }
+
+\newglossaryentry{xi}{
+  name = $x_I$ ,
+  description = Posição no eixo X do sistema de coordenadas global,
+}
+
+\newglossaryentry{yi}{
+  name = $y_I$ ,
+  description = Posição no eixo Y do sistema de coordenadas global,
+}
+
+\newglossaryentry{xr}{
+  name = $x_R$ ,
+  description = Posição no eixo X do sistema de coordenadas do robô,
+}
+
+\newglossaryentry{yr}{
+  name = $y_R$ ,
+  description = Posição no eixo Y do sistema de coordenadas do robô,
+}
+
+\newglossaryentry{theta}{
+  name = $\theta$ ,
+  description = Orientação do robô,
+}
+
+\newglossaryentry{qr}{
+  name = $q_R$ ,
+  description = Vetor de posição no sistema de coordenadas do robô,
+}
+\newglossaryentry{dotqr}{
+  name = $\dot{q_R}$ ,
+  description = Vetor de velocidades no sistema de coordenadas do robô,
+}
+\newglossaryentry{n}{
+  name = $n$ ,
+  description = Número de rodas,
+}
+
+\newglossaryentry{dotqI}{
+  name = $\dot{q_I}$ ,
+  description = Vetor de velocidades no sistema de coordenadas global,
+}
+
+\newglossaryentry{qI}{
+  name = $q_I$ ,
+  description = Vetor de posição no sistema de coordenadas global,
+}
+
+
+\newglossaryentry{t}{
+  name = $t$ ,
+  description = Tempo,
+}
+
+
+
 \newglossaryentry{vx}{
   name = ${v_x}$ ,
-  description = Velocidade linear no eixo X do sistema de coordenadas cartesiano,
+  description = Velocidade linear no eixo X do sistema de coordenadas do robô,
 }
 \newglossaryentry{vy}{
   name = ${v_y}$,
-  description = Velocidade linear no eixo Y do sistema de coordenadas cartesiano,
-}
-\newglossaryentry{deltam}{
-  name = $\delta_m$,
-  description = Grau de mobilidade,
-}
-\newglossaryentry{deltas}{
-  name = $\delta_s$,
-  description = Grau de dirigibilidade,
+  description = Velocidade linear no eixo Y do sistema de coordenadas do robô,
 }
 \newglossaryentry{velw}{
-  name =$\phi_i$,
+  name =${\dot{\phi_i}}$,
   description = Velocidade angular da roda \emph{i},
 }
+
+\newglossaryentry{velw_vec}{
+  name =${\dot{\phi}}$,
+  description = Vetor de velocidades das rodas,
+}
+
+\newglossaryentry{posw}{
+  name =${\phi_i}$,
+  description = Posição angular da roda \emph{i},
+}
+
+
+\newglossaryentry{kp}{
+  name =$K_P$,
+  description = Ganho proporcional,
+}
+\newglossaryentry{ki}{
+  name =$K_I$,
+  description = Ganho integral,
+}
+\newglossaryentry{kd}{
+  name =$K_D$,
+  description = Ganho derivativo,
+}
+
+
+\newglossaryentry{zme}{
+  name =$z_{me}$,
+  description = Limite inferior da zona morta,
+}
+
+\newglossaryentry{zmd}{
+  name =$z_{md}$,
+  description = Limite superior da zona morta,
+}
+
+\newglossaryentry{ccd}{
+  name =$c_{cd}$,
+  description = Coeficiente de compensação de zona morta superior,
+}
+
+\newglossaryentry{cce}{
+  name =$c_{ce}$,
+  description = Coeficiente de compensação de zona morta inferior,
+}
+\newglossaryentry{posw_vec}{
+  name =$\phi$,
+  description = Vetor de posições angulares das rodas,
+}
+
 \newglossaryentry{raio}{
   name = $r$,
   description = Raio das rodas utilizadas,
@@ -56,10 +153,10 @@
   description = Distância de cada roda até o centro geométrico da estrutura,
 }
 
-\agradecimentos{Agradeço a todo mundo que ajudou.}
 
-\resumo{O presente trabalho apresenta a implementação de uma base robótica omnidirecional holonômica, utilizando 3 omniwheels. Foram implementados um sistema de controle e um método de odometria em malha aberta. Os resultados foram xxxx.}
-\myabstract{This work shows the implementation of a holonomic omnidirectional robotic platform, using 3 omniwheels. Were also implemented a control system and a method for open loop odometry. As a result, xxxx.}
+%\agradecimentos{Agradeço a todo mundo que ajudou.}
+
+\resumo{O presente trabalho apresenta a implementação de uma base robótica omnidirecional, utilizando 3 \textit{omniwheels}. É desenvolvido e implementado o modelo cinemático do robô e um controlador de velocidade. Também é descrita uma proposta de algoritmo de odometria e de testes de seguimento de trajetória. Se comprovou o modelo utilizado e foram avaliadas algumas trajetórias em malha aberta para validação do controle de velocidade.}
 
 \begin{document}
 
@@ -80,9 +177,11 @@
 \bibliography{biblio}
 
 %% Anexos e Apêndices
-\apendices
+%\apendices
   \include{7ape1}
-  \include{8ape2}
-  \include{9ape3}
+  %\include{8ape2}
+  %\include{9ape3}
+
+\glsaddallunused
 
 \end{document}

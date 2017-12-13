@@ -122,7 +122,7 @@
 
 %% Bibliografia
 %  https://gking.harvard.edu/files/natnotes2.pdf
-\bibliographystyle{elsarticle-harv} % TODO: dá pra escolher um estilo melhor que esse
+\bibliographystyle{elsarticle-harv-copy} % TODO: dá pra escolher um estilo melhor que esse
 \setcitestyle{authoryear,open={(},close={)},aysep={,}}
 
 %% Personalização/formatação das figuras e tabelas

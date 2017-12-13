@@ -1,48 +1,40 @@
 \section{Conclusão e Trabalhos Futuros}
 \label{sec:conclusao}
 
-CONCLUSÕES ESPECÍCFICAS:
+%%%%%%% Conclusões específicas:
 
-[10:34, 6/12/2017] +55 51 9702-9006: é um trabalho bastante abrangente, cobrindo desde especificação de componentes, projeto mecânico, desenvolvimento de software, teoria de controle, processamento de sinais, etc etc etc
+Diante dos resultados obtidos é possível concluir que o protótipo desenvolvido mostrou estar apto para o desenvolvimento do tipo de trabalho proposto. Como o desenvolvimento teórico e implementação de \textit{softwares} são relativamente flexíveis e não envolvem nenhum custo de material, a utilização de uma plataforma pronta em trabalhos futuros é bastante desejável.
 
-[10:35, 6/12/2017] +55 51 9702-9006: o sistema todo é composto por diversos subsistemas, e todos eles são interdependentes, em uma maneira mais ou menos hierárquica
+A modelagem cinemática desenvolvida para o robô se mostrou adequada, sendo possível converter os valores de velocidade desejados em termos de coordenadas globais em velocidades das rodas de maneira bastante adequada.
 
-[10:36, 6/12/2017] +55 51 9702-9006: ou seja: pros sistemas mais de cima funcionarem bem, os de baixo nível devem estar perfeitos
+Os motores utilizados apresentam uma faixa relativamente restrita de velocidades, sendo que os efeitos de atrito da caixa de redução afeta os limites mais baixos e a própria relação de redução aliada à tensão nominal do robô limita a velocidade máxima. Os limites mínimos podem ser melhorados por meio de técnicas de controle melhores do que a utilizada. Para aplicações reais, se estima que a velocidade máxima esteja adequada na maioria das situações domésticas e industriais. Uma exceção importante seria, por exemplo, o uso do protótipo para futebol de robôs, onde a agilidade é valorizada. Neste caso, também seria necessário um método para decodificação mais rápida dos \textit{encoders}, aumento da taxa de amostragem do controlador e um possível estudo sobre a derrapagem das rodas.
 
-[10:37, 6/12/2017] +55 51 9702-9006: como cada um desses blocos é uma área em si (dá pra fazer um doutorado em cada bloquinho), a falta de profundidade nos subsistemas inferiores afetou a pilha como um todo (por mais q estes subsistemas isolados estejam legais)
+O controle de velocidade das rodas apresenta limitações, devido à sua implementação simples. No entanto, para a maioria das aplicações e situações experimentadas, apresentou resultados satisfatórios. As rodas apresentaram deslizamento em relação ao chão apenas em situações extremas (reversão instantânea sobre chão empoeirado).
 
-a estrutura se mostrou pronta para receber os trabalhos futuros, necessitando talvez de alguns reparos na parte elétrica.
+A instrumentação, para fins de controle de velocidade na faixa de velocidades utilizada, se mostrou suficiente. Para realização das integrações necessárias à odometria, no entanto, se deve investigar melhor os resultados obtidos.
 
-o raspberry se mostrou capaz, caso a complexidade do sistema não aumente muito
+Foram realizados seguimentos de trajetória simples, em malha aberta, sem contar com dados da odometria, apresentando alguns desvios significativos. Em trajetos curtos (menores do que 1 m), tais desvios poderiam ser desprezados em aplicações que não necessitem precisão. No entanto, como os desvios se propagam conforme a trajetória aumenta, se mostrou que um sistema de controle de posição é essencial para utilização prolongada.
 
-TRABALHOS FUTUROS:
-
-Terminar a implementação dos sensores inerciais e da bússola, aplicando algum algoritmo de fusão de sensores a esses dados e a odometria. Cabeamento de 4 vias para a rede I2C da bússola e da IMU.
-
-O chassi podia ser menos espesso, e as peças poderiam ser melhor distribuídas, para utilizar uma área menor da placa. Assim, se poderia instalar mais sensores, ou simplesmente reduzir o tamanho do robô.
-
-Modelagem dinâmica.
-
-Motores melhores.
-
-IMplementar mais trajetórias.
-
-Verificar a temporização do programa, e otimizar. Talvez instalar algum kernel em tempo real, ou utilizar um microprocessador externamente ao comptador para executar os loops de controle.
-
-Caso se deseje utilizar a plataforma projetada para futuros projetos e expansões, talvez seja uma boa ideia organizar melhor os códigos, documentações, verificar se alguma otimização pode ser realizada nas bibliotecas para tornar o software mais robusto, modular e de fácil manutenção. GIthub blaalba.
-
-Láaaaaa no fim, melhorar a interface com o usuário, implementando aplicações práticas para o robô. Exemplos: n sei.
-
-Sensores que utilizam a mesma tensão. Aumentar o número de reguladores ou achar um regulador mais potente para os motores (ou eu posso ligar direto na bateria???). POde ser bacana também adicionar mais uma bateria, exclusivamente para o acionamento dos motores (conforme utilizado em diversos trabalhos, como ACHAR UM TRABALHO).
-
-Os motores representaram 38\% do custo total do projeto, e são o componente mais caro de todos. Fica o questionamento.
-
-Processamento na GPU.
-
-CONCLUSÕES GERAIS:
-
-É bacana ter a estrutura pronta e bem estudada para saber os seus limites, e a profundidade dos algoritmos que podem ser desenvolvidos para a plataforma. Ao mesmeo tempo, se deve saber onde se deseja chegar com uma certa plataforma, para poder projetá-la para um ifm específico, mas sem esquecer de que ela deve poder ser utilizada para outras coisas também, visto que esse tipo de rrecurso é menos fléxível e mais caro do q desenvover software novo.
+%%%%%%%%% Conclusões gerais:
 
 De um modo geral, se percebeu a forte interdependência entre todas as partes que compoem um sistema robótico. Se compreendeu que para o desenvolvimento de um projeto em robótica, é necessário que o engenheiro tenha um conhecimento profundo de todas as partes, isoladamente, e que saiba prever a influência de um componente na integração do todo. No caso de um trabalho em equipe, onde cada membro seja responsável por (e especialista em) um tipo específico de subsistema, ainda assim é necessário entender a influência da sua área nas demais, reforçando o caráter interdisciplinar da área e a importância de uma boa comunicação entre as partes.
 
-Dentre os tipos de subsistema a serem projetados, se destacou a importância de uma boa seleção de hardware, visto que esta parte é bem menos flexível do que o desenvolvimento dos algoritmos de acionamento, por exemplo. No caso em que se deseja alguma modificação de software, basta reprogramar o sistema. Mesmo que tal ato envolva mão-de-obra especializada e tempo de trabalho, não envolve os custos de material, prazos de entrega, disponibilidade comercial e demais requisitos de um sistema físico.
+Dentre os tipos de subsistema a serem projetados, se destaca a importância de uma boa seleção de hardware, visto que esta parte é bem menos flexível do que o desenvolvimento dos algoritmos de acionamento, por exemplo. No caso em que se deseja alguma modificação de software, basta reprogramar o sistema. Mesmo que tal ato envolva mão-de-obra especializada e tempo de trabalho, não envolve os custos de material, prazos de entrega, disponibilidade comercial e demais requisitos de um sistema físico.
+
+%%%%%%%%%%%%%%TRABALHOS FUTUROS:
+
+Se considera duas abordagens possíveis para trabalhos futuros relacionados ao tema. Se pode finalizar a implementação de um sistema completo, conforme o diagrama da Figura \ref{fig:sistema}, ou realizar esforços no sentido de aprimorar um subsistema específico. As duas abordagens são complementares.
+
+Em se adotando uma abordagem mais geral, trabalhos futuros podem ser tocados no desenvolvimento um algoritmo de odometria mais preciso e um controle de posição capaz de seguir trajetórias em malha fechada. O trabalho de desenvolvimento de uma interface com o usuário também é importante e poderia ser focado.
+
+Para melhorias específicas, futuros trabalhos podem ser sobre estudos relacionados aos seguintes tópicos:
+\begin{itemize}
+  \item{desenvolver uma modelagem dinâmica para o robô, considerando as massas e distribuição geométrica dos componentes utilizados;}
+  \item{aprimorar o controle de velocidade para operação em velocidades baixas;}
+  \item{terminar a implementação dos sensores inerciais e da bússola, aplicando algum algoritmo de fusão de sensores a esses dados e a odometria;}
+  \item{implementação de uma biblioteca com diversas trajetórias pré computadas;}
+  \item{realizar estudos sobre o desempenho real do computador utilizado, e otimizar a operação do código para ciclos de execução mais rápidos. Alternativas incluem a utilização de \textit{kernel} de tempo real, \textit{multithreading} e utilização da GPU do computador;}
+  \item{quantificar o consumo de energia do robô, e implementar estratégias de operação mais eficientes;}
+  \item{organizar e documentar o código-fonte seguindo boas práticas de programação, para agilizar o desenvolvimento de futuros trablahos utilizando os mesmos recursos;}
+  \item{desenvolver aplicações práticas para o robô.}
+\end{itemize}
