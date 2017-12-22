@@ -7,6 +7,6 @@
 \beamer@sectionintoc {4}{Protótipo}{14}{0}{4}
 \beamer@subsubsectionintoc {4}{0}{1}{Especificação dos Componentes}{14}{0}{4}
 \beamer@subsubsectionintoc {4}{0}{2}{Fabricação e Montagem}{15}{0}{4}
-\beamer@sectionintoc {5}{Implementação do Software}{17}{0}{5}
-\beamer@sectionintoc {6}{Resultados}{18}{0}{6}
-\beamer@sectionintoc {7}{Conclusão e Trabalhos Futuros}{19}{0}{7}
+\beamer@sectionintoc {5}{Implementação do Software}{18}{0}{5}
+\beamer@sectionintoc {6}{Resultados}{19}{0}{6}
+\beamer@sectionintoc {7}{Conclusão e Trabalhos Futuros}{20}{0}{7}

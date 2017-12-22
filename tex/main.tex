@@ -3,6 +3,14 @@
 
 \documentclass[portugues]{automatex}
 
+\usepackage{caption}
+\usepackage[list=true]{subcaption}
+%\usepackage{hyperref}
+%\usepackage{cleveref}
+%\crefname{subfigure}{figura}{figuras}
+%\Crefname{subfigure}{Figura}{Figuras}
+
+
 \title{Desenvolvimento de plataforma robótica omnidirecional}
 \shorttitle{Robô móvel omnidirecional}
 \author{Emílio Dolgener Cantú}
@@ -90,6 +98,16 @@
   name = ${v_y}$,
   description = Velocidade linear no eixo Y do sistema de coordenadas do robô,
 }
+
+\newglossaryentry{vxi}{
+  name = ${v_{x_I}}$ ,
+  description = Velocidade linear no eixo X do sistema de coordenadas global,
+}
+\newglossaryentry{vyi}{
+  name = ${v_{yI}}$,
+  description = Velocidade linear no eixo Y do sistema de coordenadas global,
+}
+
 \newglossaryentry{velw}{
   name =${\dot{\phi_i}}$,
   description = Velocidade angular da roda \emph{i},

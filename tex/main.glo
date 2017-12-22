@@ -12,6 +12,8 @@
 \glossaryentry{$t$?\glossentry{t}|setentrycounter[]{page}\glsignore}{38}
 \glossaryentry{${v_x}$?\glossentry{vx}|setentrycounter[]{page}\glsignore}{38}
 \glossaryentry{${v_y}$?\glossentry{vy}|setentrycounter[]{page}\glsignore}{38}
+\glossaryentry{${v_{x_I}}$?\glossentry{vxi}|setentrycounter[]{page}\glsignore}{38}
+\glossaryentry{${v_{yI}}$?\glossentry{vyi}|setentrycounter[]{page}\glsignore}{38}
 \glossaryentry{${\dot {\phi _i}}$?\glossentry{velw}|setentrycounter[]{page}\glsignore}{38}
 \glossaryentry{${\dot {\phi }}$?\glossentry{velw_vec}|setentrycounter[]{page}\glsignore}{38}
 \glossaryentry{${\phi _i}$?\glossentry{posw}|setentrycounter[]{page}\glsignore}{38}

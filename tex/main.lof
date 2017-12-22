@@ -9,7 +9,9 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Deslocamento, velocidade e acelera\IeC {\c c}\IeC {\~a}o durante uma trajet\IeC {\'o}ria gerada por polin\IeC {\^o}mio de quinta ordem. Fonte: \citet {lynch2017modern}.\relax }}{16}{figure.caption.10}
 \contentsline {figure}{\numberline {9}{\ignorespaces Deslocamento e velocidade durante um deslocamento com perfil de velocidades trapezoidal. Fonte: \citet {lynch2017modern}\relax }}{16}{figure.caption.11}
 \contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de blocos da estrat\IeC {\'e}gia de controle utilizada.\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {11}{\ignorespaces Zona morta em um atuador e um tipo de corre\IeC {\c c}\IeC {\~a}o a ser aplicada no sinal de controle.\relax }}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {11}{\ignorespaces \relax }}{18}{figure.caption.13}
+\contentsline {subfigure}{\numberline {a}{\ignorespaces N\IeC {\~a}o-linearidade do tipo ``zona-morta''. \relax }}{18}{figure.caption.13}
+\contentsline {subfigure}{\numberline {b}{\ignorespaces Corre\IeC {\c c}\IeC {\~a}o a ser aplicada no sinal de controle.\relax }}{18}{figure.caption.13}
 \contentsline {figure}{\numberline {12}{\ignorespaces Limites de velocidade translacional e rotacional em fun\IeC {\c c}\IeC {\~a}o dos limites de satura\IeC {\c c}\IeC {\~a}o dos motores reais. Fonte: Adaptado de \citet {lynch2017modern} para as coordenadas utilizadas.\relax }}{19}{figure.caption.14}
 \contentsline {figure}{\numberline {13}{\ignorespaces Estrutura e hierarquia dos subsistemas propostos inicialmente.\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {14}{\ignorespaces Um motor em satura\IeC {\c c}\IeC {\~a}o, enquanto o rob\IeC {\^o} sofre altera\IeC {\c c}\IeC {\~a}o de trajet\IeC {\'o}ria. O caminho preto \IeC {\'e} a rota desejada.\relax }}{23}{figure.caption.16}

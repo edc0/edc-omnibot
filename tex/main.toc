@@ -12,11 +12,11 @@
 \contentsline {section}{\numberline {4}Desenvolvimento Te\IeC {\'o}rico}{13}{section.4}
 \contentsline {subsection}{\numberline {4.1}Modelagem Cinem\IeC {\'a}tica}{13}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Odometria}{15}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Planejamento de Trajet\IeC {\'o}ria}{15}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Planejamento de Trajet\IeC {\'o}ria}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Controle}{17}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Limita\IeC {\c c}\IeC {\~o}es de Velocidade}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.5}Limita\IeC {\c c}\IeC {\~o}es de Velocidade}{19}{subsection.4.5}
 \contentsline {section}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o dos algoritmos}{21}{section.5}
-\contentsline {section}{\numberline {6}Teste Experimentais}{25}{section.6}
+\contentsline {section}{\numberline {6}Testes Experimentais}{25}{section.6}
 \contentsline {subsection}{\numberline {6.1}Trajet\IeC {\'o}rias desejadas do sistema}{25}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Resultados}{26}{subsection.6.2}
 \contentsline {section}{\numberline {7}Conclus\IeC {\~a}o e Trabalhos Futuros}{31}{section.7}

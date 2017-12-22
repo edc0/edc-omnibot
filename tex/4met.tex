@@ -10,7 +10,7 @@ Conforme mencionado nas seções anteriores, o robô construído possui três ro
 
 Além da utilização dos \textit{encoders} para implementação da odometria, também foi instalada na estrutura uma bússola, para garantir uma medida absoluta da orientação do robô (sem os erros que se acumulam nos métodos de \textit{dead-reckoning}). O modelo utilizado é a HMC5883L, já instalada em uma placa com alguns componentes necessários para seu funcionamento. A precisão do circuito, de acordo com o fabricante, é de 2 graus \citep{HMC5883L}. Este modelo foi escolhido pela compatibilidade com o computador utilizado e por apresentar uma boa precisão em relação ao seu baixo custo. Para complementar a odometria, também foi instalada no robô uma unidade de medidas inerciais MPU6050, uma placa adicionada ao projeto pelo seu baixo custo e por possuir acelerômetro e giroscópio em torno dos três eixos utilizados \citep{MPU6050}. Os sensores descritos neste parágrafo foram adquiridos e montados à estrutura para serem utilizados em aplicações futuras. Nenhum software foi desenvolvido para os mesmos. Os dois periféricos utilizam o protocolo de comunicação \acrshort{i2c} \citep{semiconductors2000I2C}, também compatível com o computador utilizado.
 
-Foi adquirida também uma bateria \acrshort{nicd}, com capacidade de carga de 2000 mAh e 7,2 V de tensão nominal. Este tipo de bateria se caracteriza por apresentar recarga rá\acrshort{pid}a e boa capacidade de utilização com correntes altas. Ligados à bateria, se tem 2 reguladores de tensão \textit{step down} MP2307, especificados para fornecer corrente constante de até 3 A cada um, suportando picos de até 4 A \citep{MP2307}. A tensão de saída dos reguladores foi configurada em 5.1 V (para o computador) e 6 V (para os motores). Como cada motor opera em geral com correntes abaixo de 1 A, o regulador utilizado é adequado, porém apresenta margens de operação consideravelmente pequenas. Os \textit{encoders} sãp alimentados pelo próprio computador, que possui saída regulada de 3,3 V capaz de fornecer até 500 mA \citep{upton2014raspberry}. A bússola e a \acrshort{imu} tem tensão de alimentação de 3,3 V, podendo ser adicionado ao sistema mais um regulador de tensão quando forem eventualmente integradas ao sistema, pois há espaço suficiente no chassi para tal. Neste caso, se recomenda alimentar os \textit{encoders} a partir do mesmo regulador.
+Foi adquirida também uma bateria \acrshort{nicd}, com capacidade de carga de 2000 mAh e 7,2 V de tensão nominal. Este tipo de bateria se caracteriza por apresentar recarga rápida e boa capacidade de utilização com correntes altas. Ligados à bateria, se tem 2 reguladores de tensão \textit{step down} MP2307, especificados para fornecer corrente constante de até 3 A cada um, suportando picos de até 4 A \citep{MP2307}. A tensão de saída dos reguladores foi configurada em 5.1 V (para o computador) e 6 V (para os motores). Como cada motor opera em geral com correntes abaixo de 1 A, o regulador utilizado é adequado, porém apresenta margens de operação consideravelmente pequenas. Os \textit{encoders} sã alimentados pelo próprio computador, que possui saída regulada de 3,3 V capaz de fornecer até 500 mA \citep{upton2014raspberry}. A bússola e a \acrshort{imu} tem tensão de alimentação de 3,3 V, podendo ser adicionado ao sistema mais um regulador de tensão quando forem eventualmente integradas ao sistema, pois há espaço suficiente no chassi para tal. Neste caso, se recomenda alimentar os \textit{encoders} a partir do mesmo regulador.
 
 O acionamento dos motores se dá por um circuito de pontes H. Há duas destas placas, e cada uma pode acionar dois motores. Assim, se tem a possibilidade de utilizar mais um motor (ou outro atuador) em trabalhos futuros. Os \textit{drivers} são desenvolvidos baseados no circuito L298N, que pode fornecer 4 A de corrente contínua distribuída entre as cargas \citep{L298N}. O chaveamento de cada canal dos \textit{drivers} é feito por meio de modulação de largura de pulso, programada e fornecida pelo computador. Assim como os demais componentes, os \textit{drivers} foram fornecidos integrados a uma placa montada, com terminais para fixação de cabeamento e dissipadores de calor.
 
@@ -27,7 +27,7 @@ Para unir todos os componentes descritos, se projetou uma estrutura central, com
 
 Todos os componentes adquiridos possuem furos para fixação por meio de parafusos com 3 mm de diâmetro. A estrutura foi projetada com furos de 3,5 mm de diâmetro, para compensar possíveis erros de medição (visto que nem todos os componentes apresentaram seus desenhos nas informações técnicas) e possíveis tolerâncias de fabricação. Além dos furos de fixação dos componentes, também foram introduzidos orifícios próximos aos motores, para passagem dos cabos de um lado a outro da placa, e orifícios para fixação da bateria com presilhas plásticas. Na mesma área destinada à fixação da bateria, se adicionou furação capaz de receber uma placa Arduino MEGA, caso se deseje utilizar um microcontrolador em trabalhos futuros. Também foram adicionados 6 furos na periferia do chassi, para possibilitar a montagem de outra chapa sobre a dos componentes, caso sejam realizados trabalhos que exijam a expansão da estrutura.
 
-A plataforma projetada foi então fabricada, utilizando chapas de acrílico transparente de 5 mm de espessura. Se cogitou produzir tal estrutura em alumínio, porém optou-se por utilizar o acrílica por conta da facilidade de obtenção, baixo custo, isolamento elétrico (permitindo montar os componentes eletrônicos diretamente sobre o chassi) e a possibilidade de fabricação utilizando uma máquina de corte a \textit{laser}. A espessura foi escolhida empiricamente, dentro das disponíveis, de maneira relativamente conservadora, e atendeu as necessidades. Na Figura \ref{fig:montagem} se pode ver a montagem final do protótipo.
+A plataforma projetada foi então fabricada, utilizando chapas de acrílico transparente de 5 mm de espessura. Se cogitou produzir tal estrutura em alumínio, porém optou-se por utilizar o acrílico por conta da facilidade de obtenção, baixo custo, isolamento elétrico (permitindo montar os componentes eletrônicos diretamente sobre o chassi) e a possibilidade de fabricação utilizando uma máquina de corte a \textit{laser}. A espessura foi escolhida empiricamente, dentro das disponíveis, de maneira relativamente conservadora, e atendeu as necessidades. Na Figura \ref{fig:montagem} se pode ver a montagem final do protótipo.
 
 \begin{figure}[h]
   \centering
@@ -47,7 +47,7 @@ O custo de aquisição dos componentes selecionados pode ser visto detalhado no 
 %PARK: pg 468
 \subsection{Modelagem Cinemática}
 
-Para análise de desempenho e projeto de controladores é geralmente adequado dispor de um modelo matemático do robô. Tal modelo permite relacionar o ambiente com o robô e suas partes, em termos de posições e velocidades. Para referenciamento, primeiramente se define dois sistemas de coordenadas. O primeiro, $(x_I,y_I)$, é o sistema de coordenadas global, fixo no ambiente. O segundo, $(x_R,y_R)$, está centrado no próprio robô. Ainda se pode definir o ângulo $\theta$ como a orientação do robô -- ou seja, o ângulo entre os dois sistemas de coordenadas. Tal relação pode ser vista na Figura \ref{fig:ref}, e a transformação de um sistema para o outro é descrita na Equação (\ref{eq:world_ref}), conforme \citet{siegwart2011introduction} e \citet{ritter2016modelagem}.
+Para análise de desempenho e projeto de controladores é geralmente adequado dispor de um modelo matemático do robô. Tal modelo permite relacionar o ambiente com o robô e suas partes, em termos de posições e velocidades. Para referenciamento, primeiramente se define dois sistemas de coordenadas. O primeiro, $(x_I,y_I)$, é o sistema de coordenadas global, fixo no ambiente. O segundo, $(x_R,y_R)$, está centrado no próprio robô. Ainda se pode definir o ângulo $\theta$ como a orientação do robô -- ou seja, o ângulo entre os dois sistemas de coordenadas. Tal relação pode ser vista na Figura \ref{fig:ref}, e a transformação homogênea de um ponto no sistema do robô para o global é descrita na Equação (\ref{eq:world_ref}), conforme \citet{siegwart2011introduction} e \citet{ritter2016modelagem}.
 
 \begin{figure}[h]
   \centering
@@ -61,20 +61,42 @@ Para análise de desempenho e projeto de controladores é geralmente adequado di
   \begin{pmatrix}
     x_I \\
     y_I \\
-    \theta
+    1
   \end{pmatrix}
   =
   \begin{pmatrix}
-    cos \theta & -sen \theta & 0 \\
-    sen\theta  &  cos \theta & 0 \\
+    cos (\theta) & -sen (\theta) & x \\
+    sen(\theta)  &  cos (\theta) & y \\
     0          & 0          & 1
   \end{pmatrix}
   \begin{pmatrix}
     x_R \\
     y_R \\
-    \theta
+    1
   \end{pmatrix}
   \label{eq:world_ref}
+\end{equation}
+
+No entanto, a modelagem cinemática utilizada se preocupa apenas com as velocidades do corpo do robô e das rodas. Utilizando as velocidades ao invés das posições, não interessa a distância entre um sistema de coordenadas e o outro, apenas a orientação. Assim, pode-se utilizar a matriz de rotação apresentada na Equação (\ref{eq:world_vel}) durante os cálculos da cinemática.
+
+\begin{equation}
+  \begin{pmatrix}
+    v_{xI} \\
+    v_{yI} \\
+    \omega_z
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    cos (\theta) & -sen (\theta) & 0 \\
+    sen(\theta)  &  cos (\theta) & 0 \\
+    0          & 0          & 1
+  \end{pmatrix}
+  \begin{pmatrix}
+    v_x \\
+    v_y \\
+    \omega_z
+  \end{pmatrix}
+  \label{eq:world_vel}
 \end{equation}
 
 O último termo da Equação (\ref{eq:world_ref}) também pode ser descrito como $q_R$, e o vetor de velocidades $[v_x, v_y, \omega_z]^T$, centrado no sistema de coordenadas do robô, como $\dot{q_R}$. Com o objetivo de mapear a velocidade de giro das rodas $\dot{\phi} = [\dot{\phi}_1, \dot{\phi}_2, \dot{\phi}_3]^T$ correspondente ao vetor de velocidades $\dot{q_R}$, se utiliza a modelagem cinemática apresentada por \citet{siegwart2011introduction}, com as referências apresentadas na Figura \ref{fig:robo_vel}, na qual a mesma configuração é apresentada conforme utilizada por \citet{ritter2016modelagem}, porém com outra sequência e sentido de giro para as rodas.
@@ -141,13 +163,13 @@ Nota-se que esta inversão é simplificada no caso do robô com 3 rodas, visto q
 % lynch, pg 492 do pdf
 \subsection{Odometria}
 
-Após movimentações, se torna necessário calcular a nova posição do robô, para que se possa relacionar novamente o robô ao ambiente utilizando as relações obtidas na modelagm. Para o cálculo da odometria, se utiliza a metodologia apresentada em \citet{lynch2017modern}, assumindo que durante um certo intervalo de tempo $\Delta t$ se tenha velocidades de rotação constantes nas rodas, o que permite considerar $\dot{\phi_i}\ \Delta t = \Delta \phi_i$. Considera-se também que a unidade de tempo deste período é arbitrária, e como se deseja integrar no mesmo intervalo posteriormente, se assume um período unitário $\Delta t = 1$. Este procedimento pode ser implantado na Equação (\ref{eq:odo}), modificada a partir da Equação (\ref{eq:dk}). Na prática, é fácil contar os deslocamentos angulares $\Delta \phi_i$, visto que o número de pulsos por revolução dos \textit{encoders} é conhecido.
+Após movimentações, se torna necessário calcular a nova posição do robô, para que se possa relacionar novamente o robô ao ambiente utilizando as relações obtidas na modelagm. Para o cálculo da odometria, se utiliza a metodologia apresentada em \citet{lynch2017modern}, assumindo que durante um certo intervalo de tempo $\Delta t$ se tenha velocidades de rotação constantes nas rodas, o que permite considerar $\dot{\phi_i}\ \Delta t = \Delta \phi_i$. Este procedimento pode ser implantado na Equação (\ref{eq:odo}), modificada a partir da Equação (\ref{eq:dk}). Na prática, é fácil contar os deslocamentos angulares $\Delta \phi_i$, visto que o número de pulsos por revolução dos \textit{encoders} é conhecido.
 
 \begin{equation}
   \begin{pmatrix}
-    v_x \\
-    v_y \\
-    \omega_z
+    \Delta x_R \\
+    \Delta y_R \\
+    \Delta\theta
   \end{pmatrix}
   =
   \frac{r}{3R}
@@ -166,7 +188,7 @@ Após movimentações, se torna necessário calcular a nova posição do robô, 
 
 De posse das velocidades da plataforma durante o período de tempo unitário $\Delta t$ -- lembrando que $v_x$, $v_y$ e $\omega_z$ estão vinculados ao sistema de coordenadas centrado no corpo do robô --, se deve avaliar o deslocamento em relação ao centro do robô na posição anterior. Para o caso em que $\omega_z = 0$, em uma trajetória retilínea, se tem simplesmente que $\Delta q_R = \dot{q_R}$.
 
-No entanto, quando houver mudança de orientação no período e, consequentemente, $\omega_z \neq 0$, se deve levar em consideração os desvios de trajetória causados por essa rotação. Assim, se obtem $\Delta q_R$ de acordo com a Equação (\ref{eq:desvio}) \citep{lynch2017modern}, onde $k$ é o instante anterior ao período de tempo analisado. Para se obter a nova posição $q_I$ do robô no sistema de coordenadas global, se deve utilizar a rotação $R(\theta_k)$ apresentada na Equação (\ref{eq:world_ref}), e atualizar os valores da última iteração conforme a Equação (\ref{eq:new_odo}).
+No entanto, quando houver mudança de orientação no período e, consequentemente, $\omega_z \neq 0$, se deve levar em consideração os desvios de trajetória causados por essa rotação. Assim, se obtem $\Delta q_R$ de acordo com a Equação (\ref{eq:desvio}) \citep{lynch2017modern}, onde $k$ é o instante anterior ao período de tempo analisado. Para se obter a nova posição $q_I$ do robô no sistema de coordenadas global, se deve utilizar a rotação $R(\theta_k)$ apresentada na Equação (\ref{eq:world_vel}), e atualizar os valores da última iteração conforme a Equação (\ref{eq:new_odo}).
 
 \begin{equation}
   \Delta q_R
@@ -178,16 +200,16 @@ No entanto, quando houver mudança de orientação no período e, consequentemen
   \end{pmatrix}
   =
   \begin{pmatrix}
-    (v_x sen(\omega_z)) + v_y (cos(\omega_z) - 1)/\omega_z \\
-    (v_y sen(\omega_z)) + v_x (1-cos(\omega_z)) / \omega_z \\
-    \omega_z
+    ((v_x  \Delta t)  sen(\omega_z  \Delta t ) + (v_y  \Delta t)  (cos(\omega_z  \Delta t  ) - 1))/(\omega_z   \Delta t  ) \\
+    ((v_y  \Delta t)  sen(\omega_z  \Delta t ) + (v_x  \Delta t) (1-cos(\omega_z   \Delta t  )))/ (\omega_z  \Delta t  ) \\
+    \omega_z   \Delta t
   \end{pmatrix}
   \label{eq:desvio}
 \end{equation}
 
 
 \begin{equation}
-  q_{I(k+1)} = q_{I(k)} + \Delta q_I = q_{I(k)} + R(\theta_k) \Delta q_I
+  q_{I(k+1)} = q_{I(k)} + \Delta q_I = q_{I(k)} + R(\theta_k) \Delta q_R
   \label{eq:new_odo}
 \end{equation}
 %\cite{samani2007comprehensive}: Adicionam um modelo de ruído dos encoders à estimativa. TIRAR OU ELABORAR?
@@ -241,16 +263,28 @@ Como o sistema de controle foi implementado em um computador, a atualização do
   \label{eq:PIDorf}
 \end{equation}
 
-Em um sistema como um motor elétrico, ganhos mais altos costumam tornar a resposta do sistema mais rá\acrshort{pid}a. Entretanto, ganhos relativamente grandes podem acarretar na saturação de atuadores, mudanças repentinas de torque, vibrações na estrutura e até mesmo instabilidade \citep{lynch2017modern}.
+Em um sistema como um motor elétrico, ganhos mais altos costumam tornar a resposta do sistema mais rápida. Entretanto, ganhos relativamente grandes podem acarretar na saturação de atuadores, mudanças repentinas de torque, vibrações na estrutura e até mesmo instabilidade \citep{lynch2017modern}.
 
-Outro fator inerente às aplicações de sistemas de controle é a possível presença de não-linearidades. Em motores elétricos que utilizam um trem de engrenagens como redução mecânica é muito comum haver a não-linearidade chamada de ``zona-morta'', conforme ilustra a Figura \ref{fig:zonamorta}. Como se pode ver no gráfico da esquerda, um atuador só responde para valores do sinal de controle $u_{eq}$ acima de $z_{md}$ ou abaixo de $z_{me}$. Uma estratégia de compensação simples está ilustrada na Figura \ref{fig:zonamorta}: se adiciona ao sinal de controle calculado $u_{ec}$ um coeficiente $c_{ed}$, no caso de sinal positivo. No caso de sinal negativo, se subtrai um coeficiente $c_{ce}$. Nota-se que nem sempre a zona morta é simétrica.
+Outro fator inerente às aplicações de sistemas de controle é a possível presença de não-linearidades. Em motores elétricos que utilizam um trem de engrenagens como redução mecânica é muito comum haver a não-linearidade chamada de ``zona-morta'', conforme ilustra a Figura \ref{fig:cont_zma}. Como se pode ver no gráfico, um atuador só responde para valores do sinal de controle $u_{eq}$ acima de $z_{md}$ ou abaixo de $z_{me}$. Uma estratégia de compensação simples está ilustrada na Figura \ref{fig:cont_zmb}: se adiciona ao sinal de controle calculado $u_{ec}$ um coeficiente $c_{ed}$, no caso de sinal positivo. No caso de sinal negativo, se subtrai um coeficiente $c_{ce}$. Nota-se que nem sempre a zona morta é simétrica.
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width = 0.65\textwidth]{imagens/zonamorta0}
-  \caption{Zona morta em um atuador e um tipo de correção a ser aplicada no sinal de controle.}
-  \source{Adaptado de \citet{cunha2001zm}}
-  \label{fig:cont_zm}
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 0.65\textwidth]{imagens/zonamorta0a}
+        \subcaption{Não-linearidade do tipo ``zona-morta''. }
+        \label{fig:cont_zma}
+    \end{subfigure}%
+    ~
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 0.65\textwidth]{imagens/zonamorta0b}
+        \caption{Correção a ser aplicada no sinal de controle.}
+        \label{fig:cont_zmb}
+    \end{subfigure}
+    \caption{ }
+    \label{fig:cont_zm}
+    \source{Adaptado de \citet{cunha2001zm}}
 \end{figure}
 
 O controle de posição de um robô móvel, de acordo com \citet{siegwart2011introduction}, pode ser de três tipos. Se pode desejar atingir uma certa configuração estática, seguir uma trajetória dependentente do tempo ou seguir um caminho geométrico. As soluções mais precisas utilizam controle com realimentação, e dependem fortemente do bom funcionamento do sistema de odometria \citep{samani2007comprehensive}. Há, também, robôs que operam em malha aberta, decompondo trajetórias em trajetos simples (retas e curvas). Nessa estratégia, o controle se torna um problema de computar com antecedência ao movimento o perfil de velocidade a ser executado \citep{siegwart2011introduction}.
@@ -291,7 +325,7 @@ O \textit{software} de controle foi implementado em um computador embarcado Rasp
 %-análise dos códigos de cinemática
 %-desmembramento das funções do ritter
 
-A primeira etapa do desenvolvimento foi a de separar o código desenvolvido por \citet{ritter2016modelagem} em duas partes: uma destinada aos comandos de acionamento, que naquele trabalho eram realizados em um s\acrshort{imu}lador, e outra relacionada à modelagem cinemática do robô. Esta segunda parte foi encapsulada em uma biblioteca, analisada e testada no computador embarcado.
+A primeira etapa do desenvolvimento foi a de separar o código desenvolvido por \citet{ritter2016modelagem} em duas partes: uma destinada aos comandos de acionamento, que naquele trabalho eram realizados em um simulador, e outra relacionada à modelagem cinemática do robô. Esta segunda parte foi encapsulada em uma biblioteca, analisada e testada no computador embarcado.
 
 %-código de acionamento dos motores
 %-bilbioteca orientada a objetos para o acionamento de cada motor e modularização do código\\
@@ -299,32 +333,32 @@ Em seguida, foram realizados testes de acionamento e leitura dos sensores dos mo
 %-controle de velocidade
 Na mesma classe se implementou a função de atualização da lei de controle de velocidade de cada motor, com variáveis destinadas aos ganhos proporcional, integral e derivativo pré-alocadas.
 
-Para os testes iniciais, foi usado apenas o ganho proporcional, e a lei de controle similiar a da Equação (\ref{eq:PIDorf}) foi aplicada nos três motores, sendo executada a cada 10 ms. Este período de tempo arbitrário foi escolhido por ser o menor permitido por uma das funções da biblioteca Pi\acrshort{gpio}, mas de fácil substituição. Apesar de simples, este controlador apresentou bons resultados durante os testes, e a única mudança realizada durante o desenvolvimento do trabalho foram alguns ajustes do ganho $K_P$.
+Para os testes iniciais, foi usado apenas o ganho proporcional, e a lei de controle similar a da Equação (\ref{eq:PIDorf}) foi aplicada nos três motores, sendo executada a cada 10 ms. Este período de tempo arbitrário foi escolhido por ser o menor permitido por uma das funções da biblioteca Pi\acrshort{gpio}, mas de fácil substituição. Apesar de simples, este controlador apresentou bons resultados durante os testes, e a única mudança realizada durante o desenvolvimento do trabalho foram alguns ajustes do ganho $K_P$.
 
 Após esta configuração inicial do controlador, foram revisadas as conversões de velocidade. O encoder é dividido em 341,2 pulsos por rotação, e a unidade de tempo utilizada para a leitura é de $\mu$s. A biblioteca de cinemática utiliza as velocidades lineares das rodas, em m/s, e utilizando as dimensões do robô, das rodas e as características dos sensores, se encontrou o fator de conversão de uma relação para a outra. Assim, internamente ao programa se têm todas as velocidades na mesma unidade (com exceção da velocidade angular do chassi).
 
 A decodificação dos \textit{encoders} é feito por meio de ``interrupções'', que, em contraste com sistemas que utilizam microcontroladores, não são executadas imediatamente. No caso, um pedido de interrupção é feito ao sistema operacional e assim que possível uma função pré-definida é executada (no caso, a função que atualiza o estado dos sensores). Este sistema não garante temporização com alta precisão, porém se mostrou satisfatório para a aplicação.
 
 %algoritmo de limitação de velocidade, escalonamento \\
-Conforme descrito na \hyperref[sec:software][Seção 4], robôs holonômicos possuem uma limitação de velocidade. Durante a movimentação, caso seja exigida uma velocidade muito alta, pode ocorrer a saturação de algum dos motores. Caso a velocidade desejada continue aumentando, as rodas mais lentas continuarão acelerando enquanto a roda saturada se mantém na mesma velocidade. Este novo conjunto de velocidades para as rodas corresponde a uma trajetória não desejada. Tal efeito pode ser visualizado na Figura \ref{fig:scaling_off}.
+Conforme descrito na \hyperref[sec:software]{Seção 4}, robôs holonômicos possuem uma limitação de velocidade. Durante a movimentação, caso seja exigida uma velocidade muito alta, pode ocorrer a saturação de algum dos motores. Caso a velocidade desejada continue aumentando, as rodas mais lentas continuarão acelerando enquanto a roda saturada se mantém na mesma velocidade. Este novo conjunto de velocidades para as rodas corresponde a uma trajetória não desejada. Tal efeito pode ser visualizado na Figura \ref{fig:scaling_off}.
 
 Procurando atenuar este problema, foi implementado um algoritmo similar ao descrito por \citet{indiveri2009swedish}: caso a cinemática resolva para alguma roda uma velocidade acima de um certo limite, esta roda tem sua velocidade fixada no valor máximo, enquanto as outras são diminuídas também, sem perder a proporcionalidade. Na Figura \ref{fig:scaling_on} é mostrado o efeito deste algoritmo na movimentação retílinea do robô (com o mesmo comando da situação anterior). Após experimentos, se fixou este valor limite em 0,45 m/s.
 
 %implementação dos algoritmos de odometria
 Após a verificação do sistema de controle de velocidade, foram implementadas da maneira descrita na s\hyperref[sec:software][Seção 4] a Equação (\ref{eq:odo}) relacionada à odometria. Para evitar acúmulos de possíveis erros de medição, se evitou utilizar a velocidade computada. Os dados utilizados foram a própria contagem de pulsos de cada \textit{encoder}, de forma que, avaliando a taxa de variação desta contagem e de uma contagem imediatamente anterior, se estimaram as velocidades no referencial de coordenadas do robô.
 
-A função de odometria, em tese, é invocada logo antes da lei de controle dos motores ser atualizada, também a cada 10 ms. No entanto, a função não apresentou bons resultados, e deixou de ser utilizada durante os últimos testes. Assim, controle de posição proposto no diagrama da Figura \ref{fig:sistema} teve de ser abandonado, visto que seu desempenho é muito dependente da precisão do algoritmo de odometria.
+A função de odometria, em tese, é invocada logo antes da lei de controle dos motores ser atualizada, também a cada 10 ms. No entanto, a função não apresentou bons resultados, e deixou de ser utilizada durante os últimos testes. Assim, o controle de posição proposto no diagrama da Figura \ref{fig:sistema} teve de ser abandonado, visto que seu desempenho é muito dependente da precisão do algoritmo de odometria.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width = 0.85\textwidth]{imagens/scaling_off}
+  \includegraphics[width = 0.75\textwidth]{imagens/scaling_off}
   \caption{Um motor em saturação, enquanto o robô sofre alteração de trajetória. O caminho preto é a rota desejada.}
   \label{fig:scaling_off}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 0.85\textwidth]{imagens/scaling_on}
+  \includegraphics[width = 0.75\textwidth]{imagens/scaling_on}
   \caption{Escalonamento de velocidade ativado.}
   \label{fig:scaling_on}
 \end{figure}

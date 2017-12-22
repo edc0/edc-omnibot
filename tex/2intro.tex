@@ -2,7 +2,7 @@
 
 %\subsection{Motivação}
 
-O interesse na área da robótica se dá pela multi-disciplinaridade do tema, que abrange um espectro de conhecimentos que vai desde mecânica estrutural até a aplicação de teorias de controle sofisticadas. A área ainda se extende por eletrônica, elétrica, computação e até mesmo psicologia. Assim, considera-se que esta área é bastante adequada a um trabalho de conclusão de um curso igualmente abrangente, que é a Engenharia de Controle e Automação.
+O interesse na área da robótica se dá pela multi-disciplinaridade do tema, que abrange um espectro de conhecimentos que vai desde mecânica estrutural até a aplicação de teorias de controle sofisticadas. A área ainda se estende por eletrônica, elétrica, computação e até mesmo psicologia. Assim, considera-se que esta área é bastante adequada a um trabalho de conclusão de um curso igualmente abrangente, que é a Engenharia de Controle e Automação.
 
 Em aplicações industriais, a maioria dos robôs utilizados são manipuladores, que realizam tarefas repetitivas -- como soldagem ou montagem de peças -- com precisão e rapidez adequados a cada aplicação. Estes robôs, no entanto, são em geral fixos, e daí surge o estudo da robótica móvel: como um robô pode se mover sem supervisão humana e interagir com o mundo real? \citep{siegwart2011introduction} Além do interesse acadêmico, existe um significativo interesse comercial, visto que o mercado de robôs móveis, que estava em torno de 4,5 bilhões de dólares americanos em 2014, tende a duplicar até 2020 \citep{marketsmarkets}.
 
@@ -18,7 +18,7 @@ Segundo \citet{lynch2017modern}, robôs móveis são divididos em não-holonômi
 
 %\subsection{Descrição do Trabalho}
 
-O presente trabalho consiste no desenvolvimento (tanto teórico quanto experimental) de uma plataforma robótica que possa se movimentar de maneira autônoma em qualquer direção do plano sem necessidade de reorientação -- apresentando holonomicidade. Após uma avaliação na bibliografia sobre os tipos de robôs factíveis de serem construídos no tempo previsto e com os recursos financeiros disponíveis, optou-se pela configuração descrita na sequência. A plataforma considerada mais adequada utiliza 3 \emph{omniwheels}, cada uma acionada por um motor elétrico dedicado, conforme o modelo mostrado na Figura \ref{fig:tomr_ritter}. Como as rodas são montadas de maneira fixa no chassi, este tipo de robô ainda oferece a vantagem de ser construído com uma estrutura mecânica mais simples, como mencionado por \citet{siciliano2016springer}. As rodas omnidirecionais utilizadas podem ser vistas em detalhess na Figura \ref{fig:omniwheel}. O sistema de movimentação é controlado por software processado em um computador embarcado a partir dos sinais fornecidos por sensores inerciais e de odometria.
+O presente trabalho consiste no desenvolvimento (tanto teórico quanto experimental) de uma plataforma robótica que possa se movimentar de maneira autônoma em qualquer direção do plano sem necessidade de reorientação -- apresentando holonomicidade. Após uma avaliação na bibliografia sobre os tipos de robôs factíveis de serem construídos no tempo previsto e com os recursos financeiros disponíveis, optou-se pela configuração descrita na sequência. A plataforma considerada mais adequada utiliza 3 \emph{omniwheels}, cada uma acionada por um motor elétrico dedicado, conforme o modelo mostrado na Figura \ref{fig:tomr_ritter}. Como as rodas são montadas de maneira fixa no chassi, este tipo de robô ainda oferece a vantagem de ser construído com uma estrutura mecânica mais simples, como mencionado por \citet{siciliano2016springer}. As rodas omnidirecionais utilizadas podem ser vistas em detalhes na Figura \ref{fig:omniwheel}. O sistema de movimentação é controlado por software processado em um computador embarcado a partir dos sinais fornecidos por sensores inerciais e de odometria.
 
 \begin{figure}[h]
   \centering
@@ -44,7 +44,8 @@ Este trabalho tem como \textbf{objetivo geral} projetar, construir, colocar em o
   \item{Modelagem do robô;} %especificar se é cinemática ou dinâmica
   \item{Especificação e construção de um protótipo;}
   \item{Implantação de um algoritmo de controle;} % eu tinha colocado implementação, mas perondi pediu implantação
-  \item{Implantação de instrumentação e de algoritmo de localização;}
+  \item{Implantação de instrumentação;}
+  \item{Análise de uma proposta preliminar de algoritmo de odometria;}
   \item{Realizar experimentos de seguimento de trajetórias e analisar os resultados obtidos.}
 \end{itemize}
 

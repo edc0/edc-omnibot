@@ -2,57 +2,61 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{glssymbols}\relax \glsresetentrylist %
 \glossentry{kd}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{ki}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{kp}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{Raio}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{dotqI}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{dotqr}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{angvel}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{posw_vec}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{theta}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{ccd}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{cce}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{n}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{qI}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{qr}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{raio}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{t}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{xi}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{xr}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{yi}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{yr}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{zmd}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{zme}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{velw}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{velw_vec}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{posw}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{vx}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
 \glossentry{vy}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsignore{39}}}%
+		\setentrycounter[]{page}\glsignore{38}}}%
+\glossentry{vxi}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{38}}}%
+\glossentry{vyi}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{38}}}%
 \end{theglossary}\glossarypostamble

@@ -13,34 +13,34 @@ Warning--empty journal in indiveri2009swedish
 Warning--there's a number but no volume in indiveri2009swedish
 You've used 38 entries,
             2821 wiz_defined-function locations,
-            864 strings with 12242 characters,
-and the built_in function-call counts, 18642 in all, are:
-= -- 1983
+            863 strings with 12244 characters,
+and the built_in function-call counts, 18596 in all, are:
+= -- 1977
 > -- 804
 < -- 39
 + -- 312
 - -- 264
-* -- 1466
-:= -- 3225
+* -- 1460
+:= -- 3213
 add.period$ -- 127
 call.type$ -- 38
 change.case$ -- 301
 chr.to.int$ -- 38
 cite$ -- 40
-duplicate$ -- 780
-empty$ -- 1338
+duplicate$ -- 778
+empty$ -- 1334
 format.name$ -- 374
-if$ -- 3896
+if$ -- 3886
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 34
 newline$ -- 131
 num.names$ -- 152
-pop$ -- 286
+pop$ -- 288
 preamble$ -- 1
 purify$ -- 239
 quote$ -- 0
-skip$ -- 645
+skip$ -- 643
 stack$ -- 0
 substring$ -- 1018
 swap$ -- 170
@@ -51,5 +51,5 @@ type$ -- 324
 warning$ -- 2
 while$ -- 163
 width$ -- 0
-write$ -- 437
+write$ -- 431
 (There were 2 warnings)

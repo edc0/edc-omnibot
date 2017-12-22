@@ -1,0 +1,103 @@
+% INTRO
+o trabalho consiste no desenvolvimento de um robô omnidirecional, ou seja, que tem a capacidade de se mover em qualquer direção em uma linha reta sem a necessidade de nenhuma reorientação.
+
+no caso, foi utilizada uma estrutura com três rodas omnidirecionais instaladas de maneira simétrica. essas rodas não apresentam restrição de movimento no sentido transversal ao 
+plano de giro do motor, e assim podemos evitar estruturas mecânicas mais complexas (citar os caras?)
+
+% MOTIVAÇÃO
+a implementação de um sistema robótico apresenta desafios que passam por praticamente todas as disciplinas do curso: projeto mecânico, eletrônica, instrumentação, teoria de controle, desenvolvimento de software, acionamento.... sendo assim uma área interessante para ser explorada em um TCC de eng. de controle e automação.
+
+na indústria, a robótica tem se concentrado em robôs fixos ao chão, e a robótica móvel introduz novos desafios que devem ser desenvolvidos para aplicação num futuro próximo.
+
+os robôs omnidirecionais, por sua vez, são aplicados em situações em que necessitam de grande agilidade (como em futebol de robôs) ou para operação em ambientes confinados (como em corredores de hospitais).
+
+além disso, há ainda o meu interesse pessoal na área da robótica, na qual estou envolvido desde 2013, em projetos de pesquisa, estágio e agora o TCC.
+
+% OBJETIVOS
+o principal objetivo deste trabalho foi o de obter uma plataforma que pudesse ser prontamente utilizada no desenvolvimento de trabalhos futuros mais aprofundados (e por isso se fez questão de construir um protótipo funcional)
+
+Específicos:
+• Modelagem do robô;
+• Especificação e construção de um protótipo;
+• Implantação de um algoritmo de controle;
+• Implantação de instrumentação e de algoritmo de localização;
+• Realizar experimentos de seguimento de trajetórias e analisar os resultados obtidos.
+
+% MONTAGEM
+não foi realizada nenhuma simulação do robô, pois isso já foi feito pelo guilherme ritter, aqui do larose, no trabalho de conclusão dele em 2016.
+
+foram especificados e comprados os seguintes componentes:
+• omniwheels (importadas do canadá)
+• motores DC (6V, com caixa de redução)
+• drivers (duplos, portanto temos um canal sobrando para expansão)
+• reguladores de tensão (5V para o computador, 6V para os motores) 
+• uma bateria 2000 mAh, NiCd
+• raspberry pi 3 b+
+• IMU
+• bússola (q não foram aplicadas)
+
+a estrutura foi desenhada em software de CAD, conforme as dimensões obtidas de todos os componentes e foi utilizado o corte a laser do LIFE para recortar a estrutura a partir de uma chapa de acrílico com 5 mm de espessura. a ideia inicial era de fazer em alumínio na fresadora CNC, mas o acrílico foi fácil de obter, pode ser utilizado no corte a laser, que não tem limitação de raio para os furos e é isolante, sendo possível montar todos os componentes diretamente sobre a placa.
+
+esse é o robô montado. 
+
+% MODELAGEM
+se utiliza dois sistemas de coordenadas: um global, e outro centrado no robô, e a transposição de um para o outro é dada por uma matriz de rotação.
+
+a modelagem do robô em si adotada foi apenas cinemática, sem levar em consideração massas e inércias do robô. também foi desprezada a questão do atrito das rodas com o solo, um problema importante em aplicações de alta velocidade.
+
+a modelagem cinemática para o robô omnidirecional de três rodas é conhecida, variando apenas conforme a orientação do eixo de referências adotado pelo autor. nesse trabalho, se adotou essa aqui, mostrando a cinemática direta, e essa aqui para a cinemática inversa. vale ressaltar q no caso de um robô com três rodas, a cinemática inversa é facilitada, visto que essa matriz é a inversa da outra, mapeando 3 velocidades nas rodas, para 3 velocidades nas coordenadas do robô. se tivesse mais rodas, essa inversão de uma matriz não quadrada tem q ser levada em conta.
+
+% ODOMETRIA
+para se implementar um controle de posição, é necessário q o robô "saiba onde está", e portanto se deve utilizar algum método de localização. no caso, foi apenas considerada odometria baseada na integração dos dados fornecidos pelos encoders das rodas.
+
+métodos de odometria são discutidos em diversos trabalhos, principalmente pelo aspecto da introdução de erros que são propagados pelas incertezas introduzidas pelos sensores.
+
+lynch, kevin e park descrevem a odometria dessa maneira, em um intervalo de tempo dT unitário:
+• medir o ângulo de rotação no intervalo considerado
+• realizar a cinemática inversa para as coordenadas locais do robô
+• no caso de não haver rotação, é tranquilo
+• quando há rotação, se deve levar ela em conta, visto que houve variação na orientação do sistema de coordenadas do robô em relação ao início do período analisado e o fim
+• se obtendo a variação de posição no período no sistema de coordenadas do robô, se utiliza a rotação para transportar isso para o sistema global e depois acumular com a posição global anterior
+
+% LIMITAÇÃO DE VELOCIDADE
+já ligando agora o desenvolvimento teórico com a implementação do robô, surge um problema prático que é uma limitação de velocidade presente nos robôs holonômicos, representada por esse volume aqui (no caso do robô com 3 rodas). por exemplo, quando se está realizando uma trajetória retilínea na velocidade máxima, e se deseja sobrepor uma rotação a essa velocidade, a gente vai sair aqui do sólido e alguma das rodas vai entrar em saturação, e a trajetória vai ser alterada.
+
+foi implementada em software uma função que detecta quando alguma das velocidades exigidas é maior do q um certo limite e reescalona todas as velocidades para manter a proporcionalidade e a trajetória desejada (diminuindo a velocidade, obviamente).
+
+% CONTROLE DE VELOCIDADE
+foi implementada uma lei de controle simples para um PID digital, conforme (dorf), e para fins de testes se ajustou apenas este termo proporcional à leitura da velocidade. testando vários valores, se descobriu que 20 causa instabilidade, então foi reduzido pra 15 e foram continuados os testes.
+
+se constatou que os motores apresentam uma zona morta bastante grande, devido à relação de redução do motor. no caso de operar o robô numa situação em que se exigem várias velocidades diferentes, cada roda é acionada em um momento diferente, afetando a trajetória desejada. se realizou a compensação dessa zona morta, e os resultados foram bastante bons. se nota que para velocidades baixas ocorre uma oscilação grande em torno da velocidade desejada, e isso pode ser resolvido com uma suavização da correção da zona morta.
+
+DERRAPAGEM
+
+% RESULTADOS DA ODOMETRIA
+com o controle de velocidade aceitável, foi implementada a odometria descrita, porém os resultados precisam ser avaliados com mais cuidado.
+
+• em trajetória circular, ok após algumas compensações. se viu q o angulo reportado pela odometria estava errado, porém proporcional em diversos testes. se multiplicou por um fato de conversão e se obtiveram resultados mais ou menos ok.
+• em trajetória retilínea, acúmulo de erros muito grande na direção transversal ao movimento. percorrendo cerca de 1.5 m sem rotação, a odometria em x reportava valores entre 1.3 m e 1.6 m, e ângulo próximo a 0. no eixo y, no entanto, se notaram valores até 1 m nos dois sentidos, sendo que deveria ser 0.
+• foi abandonada a odometria, e em consequência disso não foi implementado nenhum controle de posição em malha fechada.
+
+% RESULTADOS DAS TRAJETÓRIAS
+foram feitos alguns testes em trajetórias circulares e retilíneas em diversas direções, e se comprovou que a cinemática desenvolvida está correta. trajetórias puramente circulares foram círculos praticamente perfeitos, e trajetórias retilíneas mostraram alguns desvios, muito provavelmente pelo acionamento das rodas em velocidades diferentes.
+
+não foi testada nenhuma trajetória retilínea com rotação pois essa necessitaria recalcular os vetores de velocidade a todo instante, e para isso precisa da odometria funcionando direitinho.
+
+% CONCLUSÕES
+se concluiu que o trabalho atendeu (em partes?) o objetivo principal proposto, de ter um robô pronto para desenvolvimento futuro. durante todo o desenvolvimento não se teve nenhum problema com o hardware especificado.
+
+a cinemática funciona, o escalonamento de velocidade também. o acionamento e a leitura dos sensores também se mostrou eficaz. o controle de velocidade também funciona, mas pode ser melhorado, e a odometria precisa ser reavaliada. como mencionado, não foi feito nada relacionado ao controle de posição em malha fechada.
+ 
+% TRABALHOS FUTUROS
+
+• resolver a odometria;
+• controle de posição;
+• interface; (com estes três, se pode ter um sistema completo funcional. a partir daí,....)
+• desenvolver uma modelagem dinâmica para o robô, considerando as massas e distribuição geométrica dos componentes utilizados;
+• aprimorar o controle de velocidade para operação em velocidades baixas;
+• terminar a implementação dos sensores inerciais e da bússola, aplicando algum algoritmo de fusão de sensores a esses dados e a odometria;
+• implementação de uma biblioteca com diversas trajetórias pré computadas;
+• realizar estudos sobre o desempenho real do computador utilizado, e otimizar a operação do código para ciclos de execução mais rápidos. Alternativas incluem a utilização de kernel de tempo real, multithreading e utilização da GPU do computador;
+• quantificar o consumo de energia do robô, e implementar estratégias de operação mais eficientes;
+• organizar e documentar o código-fonte seguindo boas práticas de programação, para agilizar o desenvolvimento de futuros trablahos utilizando os mesmos recursos;
+• desenvolver aplicações práticas para o robô.

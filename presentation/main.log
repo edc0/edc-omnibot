@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2017.7.2)  13 DEC 2017 19:48
+This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2017.7.2)  14 DEC 2017 18:50
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.125 seconds
+luaotfload | main : initialization completed in 0.263 seconds
 Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2017/01/22 v3.40 A class for typesetting presentations
@@ -1431,7 +1431,17 @@ Package luatex.def Info: imagens/omniwheel.png used on input line 36.
 (luatex.def)             Requested size: 215.10196pt x 132.96706pt.
  [4
 
-<./imagens/omniwheel.png>] [5
+<./imagens/omniwheel.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [5
 
 ]
 .................................................
@@ -1461,16 +1471,6 @@ Package luatex.def Info: imagens/omniwheel.png used on input line 36.
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 . <->"FiraSansItalic:mode=node;script=latn;language=DFLT;+tlig;+tnum;+smcp;"
 .................................................
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1500,14 +1500,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 . <->"FiraSansItalic:mode=node;script=latn;language=DFLT;+tlig;+tnum;+smcp;"
 .................................................
 
-<imagens/tomr_ritter_mod.png, id=94, 549.05125pt x 488.82625pt>
+<imagens/tomr_ritter_mod.png, id=95, 549.05125pt x 488.82625pt>
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
 
 <use imagens/tomr_ritter_mod.png>
-Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 68.
+Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 69.
 (luatex.def)             Requested size: 113.81102pt x 101.3214pt.
 
-Overfull \hbox (38.89699pt too wide) in paragraph at lines 68--68
+Overfull \hbox (38.89699pt too wide) in paragraph at lines 69--69
 [][]  
  []
 
@@ -1516,10 +1516,10 @@ Overfull \hbox (38.89699pt too wide) in paragraph at lines 68--68
 <./imagens/tomr_ritter_mod.png>]
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
  <use imagens/tomr_ritter_mod.png>
-Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 87.
+Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 88.
 (luatex.def)             Requested size: 113.81102pt x 101.3214pt.
 
-Overfull \hbox (38.89699pt too wide) in paragraph at lines 87--87
+Overfull \hbox (38.89699pt too wide) in paragraph at lines 88--88
 [][] 
  []
 
@@ -1528,19 +1528,19 @@ Overfull \hbox (38.89699pt too wide) in paragraph at lines 87--87
 ]
 File: imagens/tomr_ritter_mod.png Graphic file (type png)
  <use imagens/tomr_ritter_mod.png>
-Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 106.
+Package luatex.def Info: imagens/tomr_ritter_mod.png used on input line 107.
 (luatex.def)             Requested size: 113.81102pt x 101.3214pt.
 
-Overfull \hbox (38.89699pt too wide) in paragraph at lines 106--106
+Overfull \hbox (38.89699pt too wide) in paragraph at lines 107--107
 [][] 
  []
 
 [8
 
-] <imagens/ref.png, id=111, 1160.335pt x 634.37pt>
+] <imagens/ref.png, id=112, 1160.335pt x 634.37pt>
 File: imagens/ref.png Graphic file (type png)
  <use imagens/ref.png>
-Package luatex.def Info: imagens/ref.png used on input line 138.
+Package luatex.def Info: imagens/ref.png used on input line 139.
 (luatex.def)             Requested size: 184.3758pt x 100.79465pt.
 
 [9
@@ -1555,28 +1555,44 @@ Package luatex.def Info: imagens/ref.png used on input line 138.
 
 ] [14
 
-] [15
-
 ]
-<imagens/roboto.png, id=154, 1021.8175pt x 1039.885pt>
+<imagens/proto01.png, id=149, 469.755pt x 335.75438pt>
+File: imagens/proto01.png Graphic file (type png)
+
+<use imagens/proto01.png>
+Package luatex.def Info: imagens/proto01.png used on input line 174.
+(luatex.def)             Requested size: 215.10196pt x 153.74188pt.
+ [15
+
+<./imagens/proto01.png>]
+<imagens/chassidxf.png, id=155, 839.135pt x 660.4675pt>
+File: imagens/chassidxf.png Graphic file (type png)
+
+<use imagens/chassidxf.png>
+Package luatex.def Info: imagens/chassidxf.png used on input line 180.
+(luatex.def)             Requested size: 215.10196pt x 169.2988pt.
+ [16
+
+<./imagens/chassidxf.png>]
+<imagens/roboto.png, id=163, 1021.8175pt x 1039.885pt>
 File: imagens/roboto.png Graphic file (type png)
 
 <use imagens/roboto.png>
-Package luatex.def Info: imagens/roboto.png used on input line 176.
+Package luatex.def Info: imagens/roboto.png used on input line 187.
 (luatex.def)             Requested size: 215.10196pt x 218.89005pt.
 
-Overfull \vbox (24.7188pt too high) detected at line 176
+Overfull \vbox (24.7188pt too high) detected at line 187
  []
 
-[16
+[17
 
-<./imagens/roboto.png>] [17
-
-] [18
+<./imagens/roboto.png>] [18
 
 ] [19
 
 ] [20
+
+] [21
 
 ]
 \tf@nav=\write6
@@ -1588,24 +1604,24 @@ Overfull \vbox (24.7188pt too high) detected at line 176
 \tf@snm=\write8
 
 \openout8 = main.snm
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 04E8DAE08D6BB00C8D000CE5A4C69A4E;391.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30563 strings out of 494577
+ 30586 strings out of 494577
  100000,794899 words of node,token memory allocated
- 2718 words of node memory still in use:
-   12 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 229 glue, 3 kern, 8 penalty, 
-15 glyph, 108 attribute, 54 glue_spec, 108 attribute_list, 3 write, 4 pdf_colors
+ 2846 words of node memory still in use:
+   12 hlist, 6 vlist, 2 rule, 1 disc, 1 local_par, 245 glue, 3 kern, 8 penalty, 
+15 glyph, 112 attribute, 54 glue_spec, 112 attribute_list, 3 write, 4 pdf_colors
 tack nodes
-   avail lists: 1:2,2:537,3:178,4:194,5:159,6:687,7:444,8:41,9:288,10:11,11:86
- 33279 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:531,3:178,4:194,5:159,6:687,7:430,8:41,9:288,10:11,11:86
+ 33288 multiletter control sequences out of 65536+600000
  62 fonts using 12740767 bytes
  71i,17n,97p,1960b,678s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.o
@@ -1615,10 +1631,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (20 pages, 1438313 bytes).
+Output written on main.pdf (21 pages, 1556509 bytes).
 
-PDF statistics: 216 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 131072)
+PDF statistics: 225 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 131072)
  72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -47,25 +47,27 @@
 \headcommand {\beamer@framepages {15}{15}}
 \headcommand {\slideentry {4}{0}{3}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\sectionentry {5}{Implementação do Software}{17}{Implementação do Software}{0}}
-\headcommand {\beamer@sectionpages {14}{16}}
-\headcommand {\beamer@subsectionpages {14}{16}}
-\headcommand {\slideentry {5}{0}{1}{17/17}{}{0}}
+\headcommand {\slideentry {4}{0}{4}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {6}{Resultados}{18}{Resultados}{0}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {6}{0}{1}{18/18}{}{0}}
+\headcommand {\sectionentry {5}{Implementação do Software}{18}{Implementação do Software}{0}}
+\headcommand {\beamer@sectionpages {14}{17}}
+\headcommand {\beamer@subsectionpages {14}{17}}
+\headcommand {\slideentry {5}{0}{1}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {7}{Conclusão e Trabalhos Futuros}{19}{Conclusão e Trabalhos Futuros}{0}}
+\headcommand {\sectionentry {6}{Resultados}{19}{Resultados}{0}}
 \headcommand {\beamer@sectionpages {18}{18}}
 \headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {7}{0}{1}{19/19}{}{0}}
+\headcommand {\slideentry {6}{0}{1}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {7}{0}{2}{20/20}{}{0}}
+\headcommand {\sectionentry {7}{Conclusão e Trabalhos Futuros}{20}{Conclusão e Trabalhos Futuros}{0}}
+\headcommand {\beamer@sectionpages {19}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\slideentry {7}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\beamer@partpages {1}{20}}
-\headcommand {\beamer@subsectionpages {19}{20}}
-\headcommand {\beamer@sectionpages {19}{20}}
-\headcommand {\beamer@documentpages {20}}
-\headcommand {\def \inserttotalframenumber {16}}
+\headcommand {\slideentry {7}{0}{2}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@subsectionpages {20}{21}}
+\headcommand {\beamer@sectionpages {20}{21}}
+\headcommand {\beamer@documentpages {21}}
+\headcommand {\def \inserttotalframenumber {17}}

@@ -1,11 +1,11 @@
 
-\section{Teste Experimentais}
+\section{Testes Experimentais}
 \label{sec:experimental}
 \subsection{Trajetórias desejadas do sistema}
 
 Para validar o desenvolvimento exposto acima, se optou por utilizar um planejamento de trajetória em malha aberta. São sugeridos os modos de movimentação citados por \citet{loh2003mechatronics}: translação retilínea (sem alteração na orientação), rotação pura e uma trajetória híbrida, de translação e rotação. Para cada trajetória foi criada uma função específica, responsável pela geração da trajetória e dos perfis de velocidade a serem seguidos.
 
-No movimento de giro, ilustrado na Figura \ref{fig:giro}, se deseja avaliar a calibração da cinemática, com todas rodas girando ao mesmo tempo (e portanto diminuindo o efeito da zona morta dos motores).
+No movimento de giro, ilustrado na Figura \ref{fig:giro}, se deseja avaliar a calibração da cinemática e da estimação da orientação, com todas rodas girando na mesma velocidade. Por todas as rodas serem acionadas igualmente, nessa situação se espera que não haja efeitos relacionados à zona morta do atuador utilizado.
 
 \begin{figure}[h]
   \centering
@@ -114,8 +114,8 @@ Também é interessante observar a divergência das trajetórias em malha aberta
   \label{fig:traj_y}
 \end{figure}
 
-Após a implementação dos algoritmos de odometria, foram realizados testes do sistema, sendo que o equacionamento proposto por \citet{lynch2017modern} não apresentou resultados adequados. A causa disso ainda está sendo analisada. Foram também testadas as equações para o caso em que não se considera a velocidade angular. Sobre uma trajetória retilínea de aproximadamente 1,5 m no eixo X, se obtiveram valores razoáveis para a distância percorrida neste eixo: entre 1,2 m e 1,8 m. A variação entre os valores é grande, porém os experimentos se mostraram consistentes.
+Após a implementação dos algoritmos de odometria, foram realizados testes do sistema, sendo que o equacionamento proposto por \citet{lynch2017modern} não apresentou resultados adequados. A causa disso ainda está sendo analisada. Foram também testadas as equações para o caso em que não se considera a velocidade angular. Sobre uma trajetória retilínea de aproximadamente 1,5 m no eixo X, se obtiveram valores razoáveis para a distância percorrida neste eixo: entre 1,2 m e 1,8 m. A variação entre os valores é grande, porém as amostras se mostraram consistentes entre si, mantendo sempre a mesma ordem de grandeza.
 
 No eixo Y, perpendicular ao movimento, no entanto, foram contabilizadas distâncias variadas, na mesma ordem de grandeza que as do eixo X e para ambos os lados, com variação muito maior (de até 2 m, por exemplo). Tal resultado inviabilizou a utilização de algoritmos de controle de posição. Tal constatação é corroborada na mesma situação por \citet{siegwart2011introduction}: ``Note que a incerteza em Y cresce muito mais rápido do que na direção do movimento. Isso resulta da integração da incerteza a respeito da orientação do robô.''
 
-O algoritmo de odometria completo foi abandonado, pois o uso de variáveis globais na biblioteca de cinemática faz com que a função de atualização da odometria altere os parâmetros utilizados para acionamento. Foi, no entanto, aproveitada a parte do algoritmo que identifica a orientação do robô, já que o ângulo $\theta$ pode ser obtido diretamente das variáveis que acumulam todos os pulsos dos \textit{encoders} desde o início da execução do programa. Este estimação se mostrou relativamente precisa para trajetórias circulares ou com alguns segmentos pequenos de reta. Não foi avaliada a estimativa do ângulo de orientação em trajetos mais complexos pois não se tem implementada nenhuma função de acionamento deste tipo.
+O algoritmo de odometria completo foi abandonado, pois o uso de variáveis globais na biblioteca de cinemática faz com que a função de atualização da odometria altere os parâmetros utilizados para acionamento. Foi, no entanto, aproveitada a parte do algoritmo que identifica a orientação do robô, já que o ângulo $\theta$ pode ser obtido diretamente das variáveis que acumulam todos os pulsos dos \textit{encoders} desde o início da execução do programa. Esta estimação se mostrou relativamente precisa para trajetórias circulares ou com alguns segmentos pequenos de reta. Não foi avaliada a estimativa do ângulo de orientação em trajetos mais complexos pois não se tem implementada nenhuma função de acionamento deste tipo.
